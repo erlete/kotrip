@@ -1,0 +1,66 @@
+name: Revisión
+description: Solicitud de revisión de un tema sobre el que hay dudas, para validar enfoque/decisión antes de avanzar
+title: '[RV]: '
+labels:
+  - review
+  - full-stack
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Revisión
+        Usa esta plantilla para solicitar una revisión de un tema sobre el que no estás seguro/a, antes de ejecutar o comprometer cambios.
+
+  - type: textarea
+    id: alcance
+    attributes:
+      label: Alcance
+      description: Define qué entra y qué NO entra en la revisión. Límites, supuestos y restricciones.
+      placeholder: |
+        - Incluye:
+          - ...
+        - Excluye:
+          - ...
+        - Restricciones / supuestos:
+          - ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: solicitud-revision
+    attributes:
+      label: Solicitud de revisión
+      description: Qué necesitas que se revise y qué salida esperas (validación, alternativas, riesgos, recomendación).
+      placeholder: |
+        - Qué se revisa:
+          - ...
+        - Qué decisión necesitas tomar:
+          - ...
+        - Qué esperas como respuesta:
+          - ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: efectos-resultado
+    attributes:
+      label: Efectos del resultado
+      description: Qué cambia según el resultado de la revisión (si se aprueba / si se rechaza / si hay cambios).
+      placeholder: |
+        - Si se valida:
+          - ...
+        - Si NO se valida:
+          - ...
+        - Si requiere cambios:
+          - ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: contexto
+    attributes:
+      label: Contexto adicional
+      description: Links, capturas, decisiones previas, restricciones de negocio, código relevante, etc.
+      placeholder: Añade cualquier detalle que ayude a revisar más rápido.
+    validations:
+      required: false

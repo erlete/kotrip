@@ -1,0 +1,54 @@
+name: Feature General (Full Stack)
+description: Solicitud de nueva función generalizada a nivel de infraestructura
+title: '[GF]: '
+labels:
+  - full-stack
+  - feature
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Feature General (Full Stack)
+        Usa esta plantilla para solicitar una funcionalidad que involucra tanto frontend como backend.
+
+  - type: textarea
+    id: descripcion
+    attributes:
+      label: Descripción
+      description: '¿Qué se necesita implementar y por qué?'
+      placeholder: |
+        Se necesita que el sistema permita...
+        Para que los usuarios puedan...
+    validations:
+      required: true
+
+  - type: textarea
+    id: alcance
+    attributes:
+      label: Alcance
+      description: '¿Qué incluye esta funcionalidad? Menciona las partes de frontend y backend involucradas.'
+      placeholder: |
+        - Frontend: nueva página de X, componente Y
+        - Backend: endpoint Z, cambios en modelo W
+    validations:
+      required: true
+
+  - type: textarea
+    id: criterios
+    attributes:
+      label: Criterios de aceptación
+      description: Lista las condiciones que deben cumplirse para dar por completada la tarea.
+      placeholder: |
+        - [ ] La UI implementa el flujo descrito
+        - [ ] La API soporta las operaciones necesarias
+        - [ ] Los permisos están correctamente aplicados
+    validations:
+      required: true
+
+  - type: textarea
+    id: contexto
+    attributes:
+      label: Contexto adicional
+      description: 'Diseños, diagramas, issues relacionados, dependencias, o cualquier información extra.'
+    validations:
+      required: false

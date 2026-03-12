@@ -1,0 +1,51 @@
+name: Feature de Backend
+description: Solicitud de una nueva función, endpoint o cambio del backend
+title: '[BF]: '
+labels:
+  - backend
+  - feature
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Feature de Backend
+        Usa esta plantilla para solicitar una nueva funcionalidad, endpoint o cambio en el backend.
+
+  - type: input
+    id: modulo
+    attributes:
+      label: Módulo afectado
+      description: '¿Qué módulo del backend se verá afectado? (ej: auth, course, enrollment)'
+      placeholder: 'ej: course'
+    validations:
+      required: true
+
+  - type: textarea
+    id: descripcion
+    attributes:
+      label: Descripción
+      description: Describe la funcionalidad o cambio que se necesita.
+      placeholder: |
+        Se necesita un endpoint que permita...
+        Para que el sistema pueda...
+    validations:
+      required: true
+
+  - type: textarea
+    id: criterios
+    attributes:
+      label: Criterios de aceptación
+      description: Lista las condiciones que deben cumplirse para dar por completada la tarea.
+      placeholder: |
+        - [ ] El endpoint devuelve los datos esperados
+        - [ ] Se validan los permisos correctamente
+    validations:
+      required: true
+
+  - type: textarea
+    id: contexto
+    attributes:
+      label: Contexto adicional
+      description: 'Diagramas, PRs relacionados, dependencias, o cualquier información extra.'
+    validations:
+      required: false

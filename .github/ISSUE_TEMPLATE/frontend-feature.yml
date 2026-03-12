@@ -1,0 +1,51 @@
+name: Feature de Frontend
+description: Solicitud de una nueva función, endpoint o cambio del frontend
+title: '[FF]: '
+labels:
+  - frontend
+  - feature
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Feature de Frontend
+        Usa esta plantilla para solicitar una nueva funcionalidad o cambio en el frontend.
+
+  - type: input
+    id: pagina
+    attributes:
+      label: Página o componente afectado
+      description: '¿Dónde se implementará? (ej: /dashboard, sidebar, formulario de inscripción)'
+      placeholder: 'ej: /dashboard/courses'
+    validations:
+      required: true
+
+  - type: textarea
+    id: descripcion
+    attributes:
+      label: Descripción
+      description: Describe la funcionalidad o cambio que se necesita.
+      placeholder: |
+        Se necesita un componente que permita...
+        Para que el usuario pueda...
+    validations:
+      required: true
+
+  - type: textarea
+    id: criterios
+    attributes:
+      label: Criterios de aceptación
+      description: Lista las condiciones que deben cumplirse para dar por completada la tarea.
+      placeholder: |
+        - [ ] El componente muestra los datos correctamente
+        - [ ] Los estados de carga y error están manejados
+    validations:
+      required: true
+
+  - type: textarea
+    id: contexto
+    attributes:
+      label: Contexto adicional
+      description: 'Capturas, diseños en Figma, PRs relacionados, o cualquier información extra.'
+    validations:
+      required: false

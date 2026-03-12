@@ -1,0 +1,51 @@
+name: Styles de Frontend
+description: Solicitud de implementación, cambios o mejoras en los estilos del frontend
+title: '[SF]: '
+labels:
+  - frontend
+  - styles
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Styles de Frontend
+        Usa esta plantilla para solicitar nuevas implementaciones, cambios o mejoras en los estilos del frontend.
+
+  - type: input
+    id: pagina
+    attributes:
+      label: Página o componente afectado
+      description: '¿Dónde se implementará? (ej: /dashboard, sidebar, formulario de inscripción)'
+      placeholder: 'ej: /dashboard/courses'
+    validations:
+      required: true
+
+  - type: textarea
+    id: descripcion
+    attributes:
+      label: Descripción
+      description: Describe la implementación, cambio o mejora que se necesita.
+      placeholder: |
+        Se necesita un componente que permita...
+        Para que el usuario pueda...
+    validations:
+      required: true
+
+  - type: textarea
+    id: criterios
+    attributes:
+      label: Criterios de aceptación
+      description: Lista las condiciones que deben cumplirse para dar por completada la tarea.
+      placeholder: |
+        - [ ] El componente muestra los datos correctamente
+        - [ ] Los estados de carga y error están manejados
+    validations:
+      required: true
+
+  - type: textarea
+    id: contexto
+    attributes:
+      label: Contexto adicional
+      description: 'Capturas, diseños en Figma, PRs relacionados, o cualquier información extra.'
+    validations:
+      required: false

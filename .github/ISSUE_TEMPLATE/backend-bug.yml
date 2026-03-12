@@ -1,0 +1,61 @@
+name: Bug de Backend
+description: Solicitud de una corrección de comportamiento, integración o contrato del frontend debido a cambios en el backend
+title: '[BB]: '
+labels:
+  - backend
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Bug de Backend
+        Usa esta plantilla para reportar un error en el backend (endpoints, servicios, base de datos, lógica de negocio, etc.).
+
+  - type: input
+    id: modulo
+    attributes:
+      label: Módulo afectado
+      description: '¿Qué módulo o endpoint está relacionado? (ej: auth, course, enrollment)'
+      placeholder: 'ej: course'
+    validations:
+      required: true
+
+  - type: textarea
+    id: descripcion
+    attributes:
+      label: Descripción del bug
+      description: Describe el error de forma clara y concisa.
+      placeholder: |
+        Al hacer X, ocurre Y en vez de Z...
+    validations:
+      required: true
+
+  - type: textarea
+    id: pasos
+    attributes:
+      label: Pasos para reproducir
+      description: Lista los pasos para reproducir el error.
+      placeholder: |
+        1. Llamar al endpoint POST /api/v1/...
+        2. Con el body { ... }
+        3. Se obtiene error 500
+    validations:
+      required: true
+
+  - type: textarea
+    id: comportamiento-esperado
+    attributes:
+      label: Comportamiento esperado
+      description: '¿Qué debería pasar en su lugar?'
+      placeholder: |
+        Debería devolver un 200 con el objeto creado.
+    validations:
+      required: true
+
+  - type: textarea
+    id: contexto
+    attributes:
+      label: Contexto adicional
+      description: 'Logs, capturas, PRs relacionados, o cualquier información extra.'
+    validations:
+      required: false

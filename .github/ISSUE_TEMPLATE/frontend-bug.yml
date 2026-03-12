@@ -1,0 +1,61 @@
+name: Bug de Frontend
+description: Solicitud de una corrección de comportamiento, integración o contrato del frontend debido a cambios en el frontend
+title: '[FB]: '
+labels:
+  - frontend
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Bug de Frontend
+        Usa esta plantilla para reportar un error en el frontend (UI, componentes, navegación, estado, etc.).
+
+  - type: input
+    id: pagina
+    attributes:
+      label: Página o componente afectado
+      description: '¿Dónde ocurre el error? (ej: /dashboard, CourseCard, formulario de login)'
+      placeholder: 'ej: /dashboard/courses'
+    validations:
+      required: true
+
+  - type: textarea
+    id: descripcion
+    attributes:
+      label: Descripción del bug
+      description: Describe el error de forma clara y concisa.
+      placeholder: |
+        Al hacer X, ocurre Y en vez de Z...
+    validations:
+      required: true
+
+  - type: textarea
+    id: pasos
+    attributes:
+      label: Pasos para reproducir
+      description: Lista los pasos para reproducir el error.
+      placeholder: |
+        1. Ir a /dashboard
+        2. Hacer clic en "Editar curso"
+        3. El formulario muestra un error inesperado
+    validations:
+      required: true
+
+  - type: textarea
+    id: comportamiento-esperado
+    attributes:
+      label: Comportamiento esperado
+      description: '¿Qué debería pasar en su lugar?'
+      placeholder: |
+        El formulario debería cargar los datos del curso correctamente.
+    validations:
+      required: true
+
+  - type: textarea
+    id: contexto
+    attributes:
+      label: Contexto adicional
+      description: 'Capturas de pantalla, logs de consola, navegador/dispositivo, o cualquier información extra.'
+    validations:
+      required: false

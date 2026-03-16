@@ -36,6 +36,8 @@ interface MemberPermissionsProps {
   colorIndex: number;
   /** Indica si el usuario actual puede modificar miembros. */
   canModifyMembers: boolean;
+  /** Indica si este miembro es el usuario actual. */
+  isCurrentUser: boolean;
   /** Callback al alternar un permiso. */
   onToggle: (permissionKey: PermissionKey, newValue: boolean) => void;
   /** Callback al eliminar el miembro. */
@@ -53,6 +55,7 @@ export function MemberPermissions({
   member,
   colorIndex,
   canModifyMembers,
+  isCurrentUser,
   onToggle,
   onRemove,
 }: MemberPermissionsProps) {
@@ -112,31 +115,31 @@ export function MemberPermissions({
         )}
       </div>
 
-      {/* Permisos (solo si el usuario puede modificar miembros o es creador) */}
-      {(canModifyMembers || member.isCreator) && (
-        <div className="grid grid-cols-2 gap-2 pt-2 border-t border-[var(--border)]">
-          {PERMISSION_KEYS.map((key) => (
-            <div
-              key={key}
-              className="flex items-center justify-between gap-2 px-2 py-1"
+      {/* Permisos (siempre visibles para todos los miembros) */}
+      <div className="grid grid-cols-2 gap-2 pt-2 border-t border-[var(--border)]">
+        {PERMISSION_KEYS.map((key) => (
+          <div
+            key={key}
+            className="flex items-center justify-between gap-2 px-2 py-1"
+          >
+            <span className="text-[0.6875rem] text-[var(--text-muted)]">
+              {t(`permissions.${key}`)}
+            </span>
+            <Switch
+              size="sm"
+              isSelected={member.isCreator ? true : member[key]}
+              isDisabled={
+                member.isCreator || !canModifyMembers || isCurrentUser
+              }
+              onChange={() => onToggle(key, !member[key])}
             >
-              <span className="text-[0.6875rem] text-[var(--text-muted)]">
-                {t(`permissions.${key}`)}
-              </span>
-              <Switch
-                size="sm"
-                isSelected={member.isCreator ? true : member[key]}
-                isDisabled={member.isCreator || !canModifyMembers}
-                onChange={() => onToggle(key, !member[key])}
-              >
-                <Switch.Control>
-                  <Switch.Thumb />
-                </Switch.Control>
-              </Switch>
-            </div>
-          ))}
-        </div>
-      )}
+              <Switch.Control>
+                <Switch.Thumb />
+              </Switch.Control>
+            </Switch>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

@@ -210,18 +210,31 @@ export class TripInvitationService {
         invitation.status = InvitationStatus.ACCEPTED;
         await this.invitationRepository.save(invitation);
 
-        const member = this.tripMemberRepository.create({
-          user: { id: userId },
-          trip: { id: invitation.trip.id },
-          canEditBudget: false,
-          canEditTrip: false,
-          canEditDetails: false,
-          canModifyMembers: false,
-          canInviteMembers: false,
-          canManageTickets: false,
+        // Check for existing membership (including soft-deleted records)
+        const existing = await this.tripMemberRepository.findOne({
+          where: { user: { id: userId }, trip: { id: invitation.trip.id } },
+          withDeleted: true,
         });
 
-        await this.tripMemberRepository.save(member);
+        if (existing && existing.deletedAt) {
+          // Restore soft-deleted member
+          existing.deletedAt = null;
+          await this.tripMemberRepository.save(existing);
+        } else if (!existing) {
+          const member = this.tripMemberRepository.create({
+            user: { id: userId },
+            trip: { id: invitation.trip.id },
+            canEditBudget: false,
+            canEditTrip: false,
+            canEditDetails: false,
+            canModifyMembers: false,
+            canInviteMembers: false,
+            canManageTickets: false,
+          });
+
+          await this.tripMemberRepository.save(member);
+        }
+        // If existing and not deleted, user is already a member - skip insert
 
         return this.mapToOutput(invitation);
       } else {

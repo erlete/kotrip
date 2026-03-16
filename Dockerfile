@@ -53,12 +53,19 @@ RUN npm run build -w data
 
 # ==========================================================================
 # Stage: build-backend - Compilación de NestJS con SWC
+#
+# Se descargan las localidades de España (INE/OpenDataSoft) antes de compilar
+# para que NestJS las incluya como assets en dist/ junto con el seeder.
 # ==========================================================================
 FROM deps AS build-backend
 
+COPY --chown=node:node scripts/ scripts/
 COPY --chown=node:node backend/tsconfig*.json backend/
 COPY --chown=node:node backend/nest-cli*.json backend/
 COPY --chown=node:node backend/src/ backend/src/
+
+# Descargar localidades para que el seeder las tenga disponibles en producción:
+RUN node --input-type=module -e "import fn from './scripts/modules/fetch-localities.mjs'; await fn();"
 
 RUN npm run build:prod -w backend
 

@@ -1,6 +1,7 @@
 'use client';
 
 import { Link, useRouter } from '@/features/i18n';
+import { InviteModal } from '@/features/trips/components/invite-modal';
 import { MemberPermissions } from '@/features/trips/components/member-permissions';
 import { TripEditModal } from '@/features/trips/components/trip-edit-modal';
 import type {
@@ -20,11 +21,12 @@ import {
   Map,
   MapPin,
   Pencil,
+  UserPlus,
   Users,
   Wallet,
 } from 'lucide-react';
 import { useFormatter, useTranslations } from 'next-intl';
-import { useState, useTransition } from 'react';
+import { useMemo, useState, useTransition } from 'react';
 import { toast } from 'sonner';
 
 const STATUS_STYLES = {
@@ -70,6 +72,12 @@ export default function TripDetailView({
   const router = useRouter();
   const [, startTransition] = useTransition();
   const [isEditOpen, setIsEditOpen] = useState(false);
+  const [isInviteOpen, setIsInviteOpen] = useState(false);
+
+  const existingMemberUserIds = useMemo(
+    () => new Set(members.map((m) => m.user.id)),
+    [members],
+  );
 
   if (!trip) {
     return (
@@ -216,7 +224,7 @@ export default function TripDetailView({
           label={t('detailView.budget')}
         >
           <span className="text-sm text-[var(--text)] font-medium">
-            {budget != null ? `${budget.toLocaleString()} €` : '—'}
+            {budget != null ? `${budget.toLocaleString()} €` : '-'}
           </span>
         </InfoCard>
 
@@ -226,7 +234,7 @@ export default function TripDetailView({
           label={t('detailView.locality')}
         >
           <span className="text-sm text-[var(--text)]">
-            {localityFull ?? '—'}
+            {localityFull ?? '-'}
           </span>
         </InfoCard>
       </div>
@@ -300,6 +308,16 @@ export default function TripDetailView({
           <span className="bg-[rgba(42,168,148,0.15)] text-[var(--primary-400)] text-[0.625rem] font-bold px-[0.4375rem] py-0.5 rounded-full">
             {members.length}
           </span>
+          {currentMember?.canInviteMembers && (
+            <button
+              type="button"
+              onClick={() => setIsInviteOpen(true)}
+              className="ml-auto flex items-center gap-1.5 px-3 py-1.5 rounded-[var(--rounded-sm)] text-xs font-semibold text-[var(--primary-400)] bg-[rgba(42,168,148,0.1)] hover:bg-[rgba(42,168,148,0.18)] transition-colors"
+            >
+              <UserPlus size={14} />
+              {t('invitations.inviteButton')}
+            </button>
+          )}
         </div>
         <div className="grid grid-cols-2 gap-2 max-sm:grid-cols-1">
           {members.map((member, index) => (
@@ -308,6 +326,7 @@ export default function TripDetailView({
               member={member}
               colorIndex={index}
               canModifyMembers={currentMember?.canModifyMembers ?? false}
+              isCurrentUser={member.id === currentMember?.id}
               onToggle={(key, value) =>
                 handleTogglePermission(member.id, key, value)
               }
@@ -323,6 +342,16 @@ export default function TripDetailView({
           trip={trip}
           isOpen={isEditOpen}
           onOpenChange={setIsEditOpen}
+        />
+      )}
+
+      {/* Modal de invitación */}
+      {currentMember?.canInviteMembers && (
+        <InviteModal
+          tripId={trip.id}
+          existingMemberUserIds={existingMemberUserIds}
+          isOpen={isInviteOpen}
+          onOpenChange={setIsInviteOpen}
         />
       )}
     </div>

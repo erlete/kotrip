@@ -175,44 +175,46 @@ export const tripsBase: SeederPresetFn = (ctx: SeederContext): void => {
 
   // ═══════════════════════════════════════════════════════════════════════
   // Paradas de itinerario (13 total)
+  // Cada viaje tiene paradas dentro de la misma ciudad/zona para
+  // garantizar coherencia geográfica en el mapa.
   // ═══════════════════════════════════════════════════════════════════════
 
-  // ─── Ruta por Galicia - 4 paradas ──────────────────────────────────
+  // ─── Ruta por Galicia - 4 paradas (zona Vigo / Rías Baixas) ──────
   ctx.itineraryStop('Ruta por Galicia', {
-    name: 'Catedral de Santiago',
-    latitude: 42.8806,
-    longitude: -8.5446,
+    name: 'Casco Vello de Vigo',
+    latitude: 42.2372,
+    longitude: -8.7263,
     arriveAt: new Date('2026-04-15T10:00:00Z'),
   });
 
   ctx.itineraryStop('Ruta por Galicia', {
-    name: 'Playa de las Catedrales',
-    latitude: 43.5536,
-    longitude: -7.1569,
-    travelTime: 7200,
-    travelMethod: TravelMethod.CAR,
+    name: 'Parque del Castro',
+    latitude: 42.2318,
+    longitude: -8.7295,
+    travelTime: 900,
+    travelMethod: TravelMethod.WALKING,
     arriveAt: new Date('2026-04-16T11:00:00Z'),
   });
 
   ctx.itineraryStop('Ruta por Galicia', {
-    name: 'Bodega Albariño, Cambados',
-    latitude: 42.5147,
-    longitude: -8.8103,
-    travelTime: 10800,
-    travelMethod: TravelMethod.CAR,
+    name: 'Mercado da Pedra',
+    latitude: 42.2365,
+    longitude: -8.7248,
+    travelTime: 600,
+    travelMethod: TravelMethod.WALKING,
     arriveAt: new Date('2026-04-18T12:00:00Z'),
   });
 
   ctx.itineraryStop('Ruta por Galicia', {
-    name: 'Islas Cíes',
-    latitude: 42.228,
-    longitude: -8.9038,
-    travelTime: 3600,
+    name: 'Playa de Samil',
+    latitude: 42.2134,
+    longitude: -8.7614,
+    travelTime: 900,
     travelMethod: TravelMethod.CAR,
     arriveAt: new Date('2026-04-20T09:00:00Z'),
   });
 
-  // ─── Fin de semana en Madrid - 3 paradas ───────────────────────────
+  // ─── Fin de semana en Madrid - 3 paradas (centro de Madrid) ───────
   ctx.itineraryStop('Fin de semana en Madrid', {
     name: 'Museo del Prado',
     latitude: 40.4138,
@@ -238,55 +240,55 @@ export const tripsBase: SeederPresetFn = (ctx: SeederContext): void => {
     arriveAt: new Date('2026-05-11T10:00:00Z'),
   });
 
-  // ─── Aventura en Asturias - 3 paradas ─────────────────────────────
+  // ─── Aventura en Asturias - 3 paradas (centro de Oviedo) ─────────
   ctx.itineraryStop('Aventura en Asturias', {
-    name: 'Lagos de Covadonga',
-    latitude: 43.2717,
-    longitude: -4.9863,
+    name: 'Catedral de San Salvador',
+    latitude: 43.3625,
+    longitude: -5.8435,
     arriveAt: new Date('2026-02-02T09:00:00Z'),
   });
 
   ctx.itineraryStop('Aventura en Asturias', {
-    name: 'Playa de Gulpiyuri',
-    latitude: 43.4383,
-    longitude: -4.9217,
-    travelTime: 5400,
-    travelMethod: TravelMethod.CAR,
+    name: 'Plaza del Fontán',
+    latitude: 43.3608,
+    longitude: -5.8454,
+    travelTime: 600,
+    travelMethod: TravelMethod.WALKING,
     arriveAt: new Date('2026-02-04T11:00:00Z'),
   });
 
   ctx.itineraryStop('Aventura en Asturias', {
-    name: 'Casco antiguo de Oviedo',
-    latitude: 43.3614,
-    longitude: -5.8456,
-    travelTime: 3600,
-    travelMethod: TravelMethod.CAR,
+    name: 'Parque de San Francisco',
+    latitude: 43.3633,
+    longitude: -5.8497,
+    travelTime: 600,
+    travelMethod: TravelMethod.WALKING,
     arriveAt: new Date('2026-02-06T10:00:00Z'),
   });
 
-  // ─── Costa Brava en verano - 3 paradas ─────────────────────────────
+  // ─── Costa Brava en verano - 3 paradas (centro de Girona) ─────────
   ctx.itineraryStop('Costa Brava en verano', {
-    name: 'Cala Montjoi',
-    latitude: 42.305,
-    longitude: 3.1876,
+    name: 'Catedral de Girona',
+    latitude: 41.9876,
+    longitude: 2.8256,
     arriveAt: new Date('2026-07-20T12:00:00Z'),
   });
 
   ctx.itineraryStop('Costa Brava en verano', {
-    name: 'Tossa de Mar',
-    latitude: 41.7219,
-    longitude: 2.9312,
-    travelTime: 4800,
-    travelMethod: TravelMethod.CAR,
+    name: 'Barri Vell (Casas del Onyar)',
+    latitude: 41.9863,
+    longitude: 2.8243,
+    travelTime: 600,
+    travelMethod: TravelMethod.WALKING,
     arriveAt: new Date('2026-07-22T10:00:00Z'),
   });
 
   ctx.itineraryStop('Costa Brava en verano', {
-    name: 'Cadaqués',
-    latitude: 42.2884,
-    longitude: 3.2766,
-    travelTime: 5400,
-    travelMethod: TravelMethod.CAR,
+    name: 'Parc de la Devesa',
+    latitude: 41.9891,
+    longitude: 2.8189,
+    travelTime: 900,
+    travelMethod: TravelMethod.WALKING,
     arriveAt: new Date('2026-07-24T11:00:00Z'),
   });
 
@@ -306,7 +308,7 @@ export const tripsBase: SeederPresetFn = (ctx: SeederContext): void => {
       'ismael@kotrip.local',
       'paulo@kotrip.local',
     ],
-    stopName: 'Catedral de Santiago',
+    stopName: 'Casco Vello de Vigo',
   });
 
   ctx.expense('Ruta por Galicia', {
@@ -327,7 +329,7 @@ export const tripsBase: SeederPresetFn = (ctx: SeederContext): void => {
     quantity: 60.0,
     payerEmail: 'diego@kotrip.local',
     payeeEmails: ['diego@kotrip.local', 'paulo@kotrip.local'],
-    stopName: 'Bodega Albariño, Cambados',
+    stopName: 'Mercado da Pedra',
   });
 
   // ─── Fin de semana en Madrid - 2 gastos ────────────────────────────
@@ -342,7 +344,7 @@ export const tripsBase: SeederPresetFn = (ctx: SeederContext): void => {
       'ismael@kotrip.local',
       'paulo@kotrip.local',
     ],
-    stopName: 'Mercado de San Miguel',
+    stopName: 'Museo del Prado',
   });
 
   ctx.expense('Fin de semana en Madrid', {
@@ -364,7 +366,7 @@ export const tripsBase: SeederPresetFn = (ctx: SeederContext): void => {
       'ismael@kotrip.local',
       'paulo@kotrip.local',
     ],
-    stopName: 'Lagos de Covadonga',
+    stopName: 'Catedral de San Salvador',
   });
 
   ctx.expense('Aventura en Asturias', {
@@ -390,7 +392,7 @@ export const tripsBase: SeederPresetFn = (ctx: SeederContext): void => {
       'diego@kotrip.local',
       'ismael@kotrip.local',
     ],
-    stopName: 'Cala Montjoi',
+    stopName: 'Catedral de Girona',
   });
 
   // ═══════════════════════════════════════════════════════════════════════
@@ -398,25 +400,25 @@ export const tripsBase: SeederPresetFn = (ctx: SeederContext): void => {
   // ═══════════════════════════════════════════════════════════════════════
 
   // ─── Ruta por Galicia - 2 tickets ──────────────────────────────────
-  ctx.ticket('Ruta por Galicia', 'Catedral de Santiago', {
-    name: 'Entrada Catedral',
-    description: 'Entrada general a la Catedral de Santiago de Compostela',
+  ctx.ticket('Ruta por Galicia', 'Casco Vello de Vigo', {
+    name: 'Guía turística Vigo',
+    description: 'Folleto digital con ruta guiada por el casco histórico',
   });
 
-  ctx.ticket('Ruta por Galicia', 'Bodega Albariño, Cambados', {
-    name: 'Reserva Bodega',
-    description: 'Reserva para visita guiada con degustación de albariño',
+  ctx.ticket('Ruta por Galicia', 'Mercado da Pedra', {
+    name: 'Reserva degustación',
+    description: 'Reserva para degustación de ostras en el Mercado da Pedra',
   });
 
   // ─── Aventura en Asturias - 1 ticket ──────────────────────────────
-  ctx.ticket('Aventura en Asturias', 'Lagos de Covadonga', {
-    name: 'Parking Covadonga',
-    description: 'Reserva de plaza de aparcamiento en los Lagos',
+  ctx.ticket('Aventura en Asturias', 'Catedral de San Salvador', {
+    name: 'Entrada Catedral',
+    description: 'Entrada general a la Catedral de San Salvador de Oviedo',
   });
 
   // ─── Costa Brava en verano - 1 ticket ─────────────────────────────
-  ctx.ticket('Costa Brava en verano', 'Cala Montjoi', {
-    name: 'Reserva cala',
-    description: 'Reserva de acceso limitado a Cala Montjoi',
+  ctx.ticket('Costa Brava en verano', 'Catedral de Girona', {
+    name: 'Entrada Catedral Girona',
+    description: 'Entrada al Museo y Catedral de Girona',
   });
 };

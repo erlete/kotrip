@@ -1,7 +1,7 @@
 'use client';
 
 import type { Expense } from '@/features/trips/services/trips-api';
-import { Calendar, Users, Wallet } from 'lucide-react';
+import { Calendar, Pencil, Trash2, Users, Wallet } from 'lucide-react';
 import { useFormatter, useTranslations } from 'next-intl';
 
 /**
@@ -10,14 +10,26 @@ import { useFormatter, useTranslations } from 'next-intl';
 interface ExpenseCardProps {
   /** Datos del gasto a mostrar. */
   expense: Expense;
+  /** Indica si el usuario puede editar gastos. */
+  canEdit: boolean;
+  /** Callback al pulsar el botón de editar. */
+  onEdit: (expense: Expense) => void;
+  /** Callback al pulsar el botón de eliminar. */
+  onDelete: (expenseId: string) => void;
 }
 
 /**
  * Tarjeta visual para un gasto individual.
  *
  * Muestra el importe, el pagador, la fecha de pago y el número de beneficiarios.
+ * Incluye botones de edición y eliminación si el usuario tiene permisos.
  */
-export function ExpenseCard({ expense }: ExpenseCardProps) {
+export function ExpenseCard({
+  expense,
+  canEdit,
+  onEdit,
+  onDelete,
+}: ExpenseCardProps) {
   const t = useTranslations('Trips.expenses');
   const format = useFormatter();
 
@@ -59,6 +71,26 @@ export function ExpenseCard({ expense }: ExpenseCardProps) {
           </span>
         </div>
       </div>
+
+      {/* Acciones */}
+      {canEdit && (
+        <div className="flex items-center gap-1 shrink-0">
+          <button
+            type="button"
+            onClick={() => onEdit(expense)}
+            className="p-1.5 rounded-[var(--rounded-sm)] text-[var(--text-muted)] hover:text-[var(--primary-400)] hover:bg-[rgba(42,168,148,0.1)] transition-colors"
+          >
+            <Pencil size={14} />
+          </button>
+          <button
+            type="button"
+            onClick={() => onDelete(expense.id)}
+            className="p-1.5 rounded-[var(--rounded-sm)] text-[var(--text-muted)] hover:text-[var(--error-400)] hover:bg-[rgba(232,84,84,0.1)] transition-colors"
+          >
+            <Trash2 size={14} />
+          </button>
+        </div>
+      )}
     </div>
   );
 }

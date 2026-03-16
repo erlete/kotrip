@@ -21,6 +21,30 @@ export type UpdateTripInput = BackendTypes['UpdateTripDto'];
 /** Tipo de los datos para actualizar un miembro del viaje. */
 export type UpdateTripMemberInput = BackendTypes['UpdateTripMemberDto'];
 
+/** Tipo de los datos para crear un gasto. */
+export type CreateExpenseInput = BackendTypes['CreateExpenseDto'];
+
+/** Tipo de los datos para crear un ticket. */
+export type CreateTicketInput = BackendTypes['CreateTicketDto'];
+
+/** Tipo de los datos para actualizar un ticket. */
+export type UpdateTicketInput = BackendTypes['UpdateTicketDto'];
+
+/** Tipo de los datos para crear una parada de itinerario. */
+export type CreateItineraryStopInput = BackendTypes['CreateItineraryStopDto'];
+
+/** Tipo de los datos para actualizar una parada de itinerario. */
+export type UpdateItineraryStopInput = BackendTypes['UpdateItineraryStopDto'];
+
+/** Tipo de los datos para actualizar un gasto. */
+export type UpdateExpenseInput = BackendTypes['UpdateExpenseDto'];
+
+/** Tipo de los datos para invitar a un miembro. */
+export type InviteMemberInput = BackendTypes['InviteMemberDto'];
+
+/** Tipo de la información básica de un usuario (búsqueda). */
+export type UserInfo = BackendTypes['UserInfoDTO'];
+
 /**
  * Tipo de una localidad devuelta por el endpoint de búsqueda.
  *
@@ -381,4 +405,307 @@ export async function searchLocalities(
   }
 
   return { localities: data as unknown as LocalitySearchResult[] };
+}
+
+/**
+ * Crea un nuevo gasto en un viaje.
+ *
+ * @param tripId Identificador UUID del viaje.
+ * @param input Datos del gasto a crear.
+ * @returns Gasto creado o un objeto con error.
+ */
+export async function createExpense(
+  tripId: string,
+  input: CreateExpenseInput,
+): Promise<{ expense: Expense } | { error: string }> {
+  const { data, error } = await authenticatedClient.POST('/trip/{id}/expense', {
+    params: { path: { id: tripId } },
+    body: input,
+  });
+
+  if (error || !data) {
+    return { error: extractError(error) };
+  }
+
+  return { expense: data };
+}
+
+/**
+ * Actualiza un gasto existente en un viaje.
+ *
+ * @param tripId Identificador UUID del viaje.
+ * @param expenseId Identificador UUID del gasto.
+ * @param input Datos parciales del gasto a actualizar.
+ * @returns Gasto actualizado o un objeto con error.
+ */
+export async function updateExpense(
+  tripId: string,
+  expenseId: string,
+  input: UpdateExpenseInput,
+): Promise<{ expense: Expense } | { error: string }> {
+  const { data, error } = await authenticatedClient.PUT(
+    '/trip/{id}/expense/{expenseId}',
+    {
+      params: { path: { id: tripId, expenseId } },
+      body: input,
+    },
+  );
+
+  if (error || !data) {
+    return { error: extractError(error) };
+  }
+
+  return { expense: data };
+}
+
+/**
+ * Elimina un gasto de un viaje.
+ *
+ * @param tripId Identificador UUID del viaje.
+ * @param expenseId Identificador UUID del gasto.
+ * @returns Indicador de éxito o un objeto con error.
+ */
+export async function deleteExpense(
+  tripId: string,
+  expenseId: string,
+): Promise<{ success: true } | { error: string }> {
+  const { error } = await authenticatedClient.DELETE(
+    '/trip/{id}/expense/{expenseId}',
+    {
+      params: { path: { id: tripId, expenseId } },
+    },
+  );
+
+  if (error) {
+    return { error: extractError(error) };
+  }
+
+  return { success: true };
+}
+
+/**
+ * Envía una invitación a un usuario para unirse a un viaje.
+ *
+ * @param tripId Identificador UUID del viaje.
+ * @param input Datos de la invitación (receiverId).
+ * @returns Invitación creada o un objeto con error.
+ */
+export async function inviteTripMember(
+  tripId: string,
+  input: InviteMemberInput,
+): Promise<{ invitation: Invitation } | { error: string }> {
+  const { data, error } = await authenticatedClient.POST(
+    '/trip/{id}/invitation',
+    {
+      params: { path: { id: tripId } },
+      body: input,
+    },
+  );
+
+  if (error || !data) {
+    return { error: extractError(error) };
+  }
+
+  return { invitation: data };
+}
+
+/**
+ * Busca usuarios por nombre o email para autocompletado.
+ *
+ * @param query Texto de búsqueda.
+ * @returns Lista de usuarios o un objeto con error.
+ */
+export async function searchUsers(
+  query: string,
+): Promise<{ users: UserInfo[] } | { error: string }> {
+  const { data, error } = await authenticatedClient.GET('/user/search', {
+    params: { query: { q: query } },
+  });
+
+  if (error || !data) {
+    return { error: extractError(error) };
+  }
+
+  return { users: data };
+}
+
+/**
+ * Crea un nuevo ticket en un viaje.
+ *
+ * @param tripId Identificador UUID del viaje.
+ * @param input Datos del ticket a crear.
+ * @returns Ticket creado o un objeto con error.
+ */
+export async function createTicket(
+  tripId: string,
+  input: CreateTicketInput,
+): Promise<{ ticket: Ticket } | { error: string }> {
+  const { data, error } = await authenticatedClient.POST('/trip/{id}/ticket', {
+    params: { path: { id: tripId } },
+    body: input,
+  });
+
+  if (error || !data) {
+    return { error: extractError(error) };
+  }
+
+  return { ticket: data };
+}
+
+/**
+ * Actualiza un ticket existente en un viaje.
+ *
+ * @param tripId Identificador UUID del viaje.
+ * @param ticketId Identificador UUID del ticket.
+ * @param input Datos parciales del ticket a actualizar.
+ * @returns Ticket actualizado o un objeto con error.
+ */
+export async function updateTicket(
+  tripId: string,
+  ticketId: string,
+  input: UpdateTicketInput,
+): Promise<{ ticket: Ticket } | { error: string }> {
+  const { data, error } = await authenticatedClient.PUT(
+    '/trip/{id}/ticket/{ticketId}',
+    {
+      params: { path: { id: tripId, ticketId } },
+      body: input,
+    },
+  );
+
+  if (error || !data) {
+    return { error: extractError(error) };
+  }
+
+  return { ticket: data };
+}
+
+/**
+ * Elimina un ticket de un viaje.
+ *
+ * @param tripId Identificador UUID del viaje.
+ * @param ticketId Identificador UUID del ticket.
+ * @returns Indicador de éxito o un objeto con error.
+ */
+export async function deleteTicket(
+  tripId: string,
+  ticketId: string,
+): Promise<{ success: true } | { error: string }> {
+  const { error } = await authenticatedClient.DELETE(
+    '/trip/{id}/ticket/{ticketId}',
+    {
+      params: { path: { id: tripId, ticketId } },
+    },
+  );
+
+  if (error) {
+    return { error: extractError(error) };
+  }
+
+  return { success: true };
+}
+
+/**
+ * Crea una nueva parada de itinerario en un viaje.
+ *
+ * @param tripId Identificador UUID del viaje.
+ * @param input Datos de la parada a crear.
+ * @returns Parada creada o un objeto con error.
+ */
+export async function createItineraryStop(
+  tripId: string,
+  input: CreateItineraryStopInput,
+): Promise<{ stop: ItineraryStop } | { error: string }> {
+  const { data, error } = await authenticatedClient.POST(
+    '/trip/{id}/itinerary',
+    {
+      params: { path: { id: tripId } },
+      body: input,
+    },
+  );
+
+  if (error || !data) {
+    return { error: extractError(error) };
+  }
+
+  return { stop: data };
+}
+
+/**
+ * Actualiza una parada de itinerario existente.
+ *
+ * @param tripId Identificador UUID del viaje.
+ * @param stopId Identificador UUID de la parada.
+ * @param input Datos parciales a actualizar.
+ * @returns Parada actualizada o un objeto con error.
+ */
+export async function updateItineraryStop(
+  tripId: string,
+  stopId: string,
+  input: UpdateItineraryStopInput,
+): Promise<{ stop: ItineraryStop } | { error: string }> {
+  const { data, error } = await authenticatedClient.PUT(
+    '/trip/{id}/itinerary/{stopId}',
+    {
+      params: { path: { id: tripId, stopId } },
+      body: input,
+    },
+  );
+
+  if (error || !data) {
+    return { error: extractError(error) };
+  }
+
+  return { stop: data };
+}
+
+/**
+ * Elimina una parada de itinerario.
+ *
+ * @param tripId Identificador UUID del viaje.
+ * @param stopId Identificador UUID de la parada.
+ * @returns Indicador de éxito o un objeto con error.
+ */
+export async function deleteItineraryStop(
+  tripId: string,
+  stopId: string,
+): Promise<{ success: true } | { error: string }> {
+  const { error } = await authenticatedClient.DELETE(
+    '/trip/{id}/itinerary/{stopId}',
+    {
+      params: { path: { id: tripId, stopId } },
+    },
+  );
+
+  if (error) {
+    return { error: extractError(error) };
+  }
+
+  return { success: true };
+}
+
+/**
+ * Reordena las paradas de itinerario de un viaje.
+ *
+ * @param tripId Identificador UUID del viaje.
+ * @param stopIds Array ordenado de IDs de paradas.
+ * @returns Indicador de éxito o un objeto con error.
+ */
+export async function reorderItinerary(
+  tripId: string,
+  stopIds: string[],
+): Promise<{ success: true } | { error: string }> {
+  const { error } = await authenticatedClient.PUT(
+    '/trip/{id}/itinerary/reorder',
+    {
+      params: { path: { id: tripId } },
+      body: { stopIds },
+    },
+  );
+
+  if (error) {
+    return { error: extractError(error) };
+  }
+
+  return { success: true };
 }

@@ -4,15 +4,20 @@ import type { Ticket } from '@/features/trips/services/trips-api';
 import { getTicketDownloadUrl } from '@/features/trips/services/trips-api';
 import { triggerBrowserDownload } from '@/features/trips/utils/ticket-download';
 import { Button } from '@heroui/react';
-import { Download, File, FileImage, FileText, MapPin } from 'lucide-react';
+import {
+  Download,
+  File,
+  FileImage,
+  FileText,
+  MapPin,
+  Pencil,
+  Trash2,
+} from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { useState, useTransition } from 'react';
 
 /**
  * Detecta el tipo de icono según la extensión del archivo.
- *
- * @param url Path o URL del archivo.
- * @returns Componente de icono adecuado.
  */
 function getFileIcon(url: string | null) {
   if (!url) return File;
@@ -31,15 +36,24 @@ interface TicketCardProps {
   ticket: Ticket;
   /** Mapa de ID de parada a nombre, para resolver la referencia. */
   stopNameMap: Map<string, string>;
+  /** Si el usuario puede editar/eliminar tickets. */
+  canEdit: boolean;
+  /** Callback al pulsar editar. */
+  onEdit: (ticket: Ticket) => void;
+  /** Callback al pulsar eliminar. */
+  onDelete: (ticketId: string) => void;
 }
 
 /**
  * Tarjeta visual para un ticket de itinerario.
- *
- * Muestra el nombre, descripción, la parada vinculada y un botón de descarga.
- * Si el ticket no tiene archivo asociado, el botón se muestra deshabilitado.
  */
-export function TicketCard({ ticket, stopNameMap }: TicketCardProps) {
+export function TicketCard({
+  ticket,
+  stopNameMap,
+  canEdit,
+  onEdit,
+  onDelete,
+}: TicketCardProps) {
   const t = useTranslations('Trips.tickets');
   const [isPending, startTransition] = useTransition();
   const [downloading, setDownloading] = useState(false);
@@ -47,6 +61,7 @@ export function TicketCard({ ticket, stopNameMap }: TicketCardProps) {
   const objectUrl = ticket.objectUrl as unknown as string | null;
   const description = ticket.description as unknown as string | null;
   const tripItineraryId = ticket.tripItineraryId as unknown as string | null;
+  const expenseId = ticket.expenseId as unknown as string | null;
   const FileIcon = getFileIcon(objectUrl);
   const stopName = tripItineraryId
     ? stopNameMap.get(tripItineraryId)
@@ -55,6 +70,13 @@ export function TicketCard({ ticket, stopNameMap }: TicketCardProps) {
   const handleDownload = () => {
     if (!objectUrl) return;
     setDownloading(true);
+
+    if (objectUrl.startsWith('http://') || objectUrl.startsWith('https://')) {
+      triggerBrowserDownload(objectUrl, ticket.name);
+      setDownloading(false);
+      return;
+    }
+
     startTransition(async () => {
       const url = await getTicketDownloadUrl(objectUrl);
       if (url) {
@@ -84,6 +106,25 @@ export function TicketCard({ ticket, stopNameMap }: TicketCardProps) {
             </p>
           )}
         </div>
+        {/* Edit / Delete buttons */}
+        {canEdit && (
+          <div className="flex gap-1 shrink-0">
+            <button
+              type="button"
+              onClick={() => onEdit(ticket)}
+              className="p-1.5 rounded-[var(--rounded-sm)] text-[var(--text-muted)] hover:text-[var(--primary-400)] hover:bg-[rgba(42,168,148,0.1)] transition-colors border-0 bg-transparent cursor-pointer"
+            >
+              <Pencil size={14} />
+            </button>
+            <button
+              type="button"
+              onClick={() => onDelete(ticket.id)}
+              className="p-1.5 rounded-[var(--rounded-sm)] text-[var(--text-muted)] hover:text-red-400 hover:bg-[rgba(239,68,68,0.1)] transition-colors border-0 bg-transparent cursor-pointer"
+            >
+              <Trash2 size={14} />
+            </button>
+          </div>
+        )}
       </div>
 
       {/* Parada vinculada */}
@@ -96,6 +137,14 @@ export function TicketCard({ ticket, stopNameMap }: TicketCardProps) {
           <span>
             {t('linkedStop')}: {stopName}
           </span>
+        </div>
+      )}
+
+      {/* Gasto vinculado */}
+      {expenseId && (
+        <div className="flex items-center gap-1.5 text-xs text-[var(--text-muted)]">
+          <span className="text-[var(--primary-400)]">€</span>
+          <span>{t('linkedExpense')}</span>
         </div>
       )}
 

@@ -30,13 +30,15 @@ export const backendClient = createClient<paths>({
  * Next.js Server Actions no refleja valores establecidos con `cookies().set()`
  * dentro de la misma ejecución, por lo que el middleware no podría leer el
  * token recién guardado desde las cookies.
+ *
+ * Nota: `connection()` no se invoca en `onRequest` porque `openapi-fetch`
+ * llama a `Math.random()` (para generar IDs de middleware) antes de ejecutar
+ * `onRequest`. Next.js 16 prohíbe `Math.random()` en Server Components
+ * antes de señalizar dinamismo. Por ello, `connection()` se invoca en
+ * {@link withConnection} que envuelve cada método del cliente.
  */
 const authMiddleware: Middleware = {
   async onRequest({ request }) {
-    // Señalizar a Next.js que esta ruta es dinámica antes de acceder a
-    // operaciones criptográficas (randomBytes) en la lectura de cookies.
-    await connection();
-
     const accessToken = await getAccessToken();
     const refreshToken = await getRefreshToken();
 
@@ -95,8 +97,34 @@ const authMiddleware: Middleware = {
   },
 };
 
+const rawClient = createClient<paths>({
+  baseUrl: BACKEND_BASE_URL,
+});
+rawClient.use(authMiddleware);
+
+/**
+ * Envuelve una función del cliente para invocar `connection()` antes de
+ * delegar en `openapi-fetch`.
+ *
+ * `openapi-fetch` genera un ID aleatorio con `Math.random()` al inicio de
+ * cada petición (antes de ejecutar middlewares). En Next.js 16, las rutas
+ * Server Component no pueden llamar a `Math.random()` sin haber señalizado
+ * antes que la ruta es dinámica. `connection()` cumple esa función.
+ */
+function withConnection<F extends (...args: never[]) => Promise<unknown>>(
+  fn: F,
+): F {
+  return (async (...args: Parameters<F>) => {
+    await connection();
+    return fn(...args);
+  }) as unknown as F;
+}
+
 /**
  * Cliente autenticado que añade automáticamente los tokens en cada petición.
+ *
+ * Cada método HTTP está envuelto con `withConnection()` para señalizar
+ * dinamismo a Next.js antes de que `openapi-fetch` invoque `Math.random()`.
  *
  * El refresco de tokens se gestiona directamente en el `authMiddleware`:
  * cuando el backend responde con 401, se intenta refrescar el token y
@@ -105,7 +133,16 @@ const authMiddleware: Middleware = {
  * Como respaldo adicional, `handleApiRequest` (lib/fetch.ts) también maneja
  * respuestas 401 invocando `unauthorized()` para cerrar la sesión.
  */
-export const authenticatedClient = createClient<paths>({
-  baseUrl: BACKEND_BASE_URL,
-});
-authenticatedClient.use(authMiddleware);
+export const authenticatedClient = {
+  ...rawClient,
+  GET: withConnection(rawClient.GET),
+  POST: withConnection(rawClient.POST),
+  PUT: withConnection(rawClient.PUT),
+  PATCH: withConnection(rawClient.PATCH),
+  DELETE: withConnection(rawClient.DELETE),
+  OPTIONS: withConnection(rawClient.OPTIONS),
+  HEAD: withConnection(rawClient.HEAD),
+  TRACE: withConnection(rawClient.TRACE),
+  use: rawClient.use.bind(rawClient),
+  eject: rawClient.eject.bind(rawClient),
+};

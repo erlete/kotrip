@@ -52,7 +52,7 @@ jobs:
           <head>
             <meta charset="UTF-8" />
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-            <title>Kotrip — Documentación</title>
+            <title>Kotrip - Documentación</title>
             <style>
               :root { --primary: #2aa894; --bg: #0e1514; --surface: #161e1d; --text: #e8edec; --muted: #6b7f7c; }
               * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -74,15 +74,15 @@ jobs:
               <div class="cards">
                 <a class="card" href="docs/backend/">
                   <div class="title">Backend</div>
-                  <div class="desc">NestJS — API, módulos, servicios y controladores</div>
+                  <div class="desc">NestJS - API, módulos, servicios y controladores</div>
                 </a>
                 <a class="card" href="docs/frontend/">
                   <div class="title">Frontend</div>
-                  <div class="desc">Next.js — Componentes, hooks, vistas y servicios</div>
+                  <div class="desc">Next.js - Componentes, hooks, vistas y servicios</div>
                 </a>
                 <a class="card" href="docs/data/">
                   <div class="title">Data</div>
-                  <div class="desc">Tipos compartidos — Enums, interfaces y modelos</div>
+                  <div class="desc">Tipos compartidos - Enums, interfaces y modelos</div>
                 </a>
               </div>
             </div>

@@ -1,18 +1,12 @@
 import type { Role } from '@kotrip/data';
 
 /**
- * ### UserOutput
+ * Interfaz de salida con la informacion del perfil de un usuario.
  *
- * DTO para controlar los datos de salida al front-end que arrojará el back-end al recuperar la
- * información de un usuario registrado. Esta interfaz está relacionada con la entidad de user.
- * Si se quiere mostrar más datos, se deben poner aquí
+ * Contiene los datos publicos del usuario: correo, rol, avatar y
+ * fecha del ultimo inicio de sesion.
  *
- * @version     1.0.0a
-
-
-
-
- * @see         [User](../entities/user.entity.ts)
+ * @see User Entidad del usuario.
  */
 export interface UserOutput {
   mail: string;

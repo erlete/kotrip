@@ -516,8 +516,8 @@ function ItemStatusBadge({ children, className }: ItemStatusBadgeProps) {
 /**
  * Componente Item con subcomponentes compuestos.
  *
- * Proporciona una API de composición para construir tarjetas de items
- * (cursos, unidades, etc.) con estructura y estilos consistentes.
+ * Proporciona una API de composicion para construir tarjetas de items
+ * (viajes, recursos, etc.) con estructura y estilos consistentes.
  *
  * @example
  * ```tsx

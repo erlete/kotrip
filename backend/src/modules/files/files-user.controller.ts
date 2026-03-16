@@ -35,15 +35,11 @@ import { FileUrl } from './interfaces/file-url.interface';
 import FileService from './services/file-service.service';
 
 /**
- * ### FileController
+ * Controlador de gestion de archivos para usuarios autenticados.
  *
- * Controller con los endpoints para tratar los archivos de la plataforma.
- *
- * @version     1.1.0a
-
-
-
-
+ * Permite subir, descargar, eliminar y listar archivos en el bucket
+ * unificado de MinIO. Tambien expone endpoints para generar URLs de
+ * descarga y consultar los buckets disponibles.
 
 
  */

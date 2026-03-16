@@ -88,17 +88,9 @@ export class UserInfoDTO {
 }
 
 /**
- * ### AllUsersOutputDto
+ * DTO de respuesta con la lista completa de usuarios.
  *
- * DTO para controlar los datos de salida al front-end que arrojará el back-end al obtener la lista
- * de usuarios. Estos datos están relacionados con la interfaz de usuarios.
- * Si se modifica algo en esta interfaz, se debe modificar aquí también para asegurar la correcta devolución
- * de datos.
- *
- * @version     1.0.0a
-
-
-
+ * Encapsula un array de UserInfoDTO con la informacion publica de cada usuario.
 
  * @see         [AllUsersOutput](../interfaces/all-users.output.interface.ts)
  */

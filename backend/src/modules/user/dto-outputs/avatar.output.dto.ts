@@ -2,17 +2,11 @@ import { ApiProperty } from '@nestjs/swagger';
 import { IsBoolean, IsNotEmpty } from 'class-validator';
 
 /**
- * ### AvatarOutputDTO
+ * DTO de respuesta para la subida del avatar de usuario.
  *
- * DTO para controlar los datos de salida al front-end que arrojará el back-end al subir
- * un avatar para el usuario
+ * Contiene el nombre del archivo subido y el estado de la operacion.
  *
- * @version     1.0.0a
-
-
-
-
- * @see         [AvatarOutput](../interfaces/avatar.output.interface.ts)
+ * @see AvatarOutput Interfaz interna correspondiente.
  */
 export class AvatarOutputDTO {
   @ApiProperty({ example: 'avatar.png' })

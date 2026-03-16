@@ -10,14 +10,14 @@ import { Column, Entity, Index, PrimaryGeneratedColumn } from 'typeorm';
  * a través del módulo de autenticación.
  *
  * @remarks
- * **Alcance funcional**:
+ * Alcance funcional:
  * - Almacena credenciales y datos de perfil de usuarios verificados.
- * - Gestiona roles y permisos a través del campo `role`.
- * - Permite personalización de idioma y avatar.
+ * - Gestiona roles y permisos a traves del campo `role`.
+ * - Permite personalizacion de idioma y avatar.
  *
- * **Seguridad**:
- * - La contraseña se almacena hasheada con bcrypt (nunca en texto plano).
- * - El campo `password` tiene `select: false` para evitar exposición accidental.
+ * Seguridad:
+ * - La contrasena se almacena hasheada con bcrypt (nunca en texto plano).
+ * - El campo `password` tiene `select: false` para evitar exposicion accidental.
  *
  * @see Verification Entidad de invitaciones pendientes de verificación.
  */
@@ -101,7 +101,7 @@ export class User extends CUDTzEntity {
    * Contraseña del usuario (hasheada con bcrypt).
    *
    * @remarks
-   * - **NUNCA** se almacena en texto plano.
+   * - NUNCA se almacena en texto plano.
    * - Hasheada con bcrypt usando PASSWORDS_SALT_ROUNDS.
    * - `select: false` evita que se incluya en queries por defecto.
    * - Máximo 512 caracteres para el hash.

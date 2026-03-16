@@ -1,17 +1,8 @@
 /**
- * ### DurationUtils (TEST)
+ * Tests unitarios para las utilidades de parsing y manipulacion de duraciones temporales.
  *
- * Tests unitarios para las utilidades de parsing y manipulación de duraciones temporales.
- * Cubre todos los casos de uso incluyendo:
- * - Parsing de formatos válidos (ms, s, m, h, d, w)
- * - Manejo de errores para formatos inválidos
- * - Conversiones a diferentes unidades
- * - Cálculo de fechas de expiración
- * - Validación de formatos
- *
- * @version     1.0.0
- * @author      Kotrip
- * @copyright   2025, Kotrip
+ * Cubre parsing de formatos validos (ms, s, m, h, d, w), manejo de errores,
+ * conversiones a diferentes unidades, calculo de fechas de expiracion y validacion.
  */
 
 import {

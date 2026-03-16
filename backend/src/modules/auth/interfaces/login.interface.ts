@@ -7,13 +7,13 @@ import type { User } from '@/modules/user/entities/user.entity';
  * completa exitosamente el proceso de autenticación.
  *
  * @remarks
- * **Contenido**:
- * - Información del usuario (perfil público).
+ * Contenido:
+ * - Informacion del usuario (perfil publico).
  * - Tokens JWT para acceso y refresco.
  *
- * **Seguridad**:
- * - No incluye datos sensibles como contraseña.
- * - Los tokens tienen tiempo de expiración configurado en .env.
+ * Seguridad:
+ * - No incluye datos sensibles como contrasena.
+ * - Los tokens tienen tiempo de expiracion configurado en .env.
  *
  * @see LoginOutputDto DTO de Swagger correspondiente.
  * @see User Entidad de usuario.

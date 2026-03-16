@@ -1,18 +1,11 @@
 import { HttpException, HttpStatus, Logger } from '@nestjs/common';
 
 /**
- *  ### ErrorManager
+ * Clase centralizada de manejo de errores de la aplicacion.
  *
- *
- * Clase que centraliza el manejo de errores proporcionando un error personalizado
- * que facilita el lanzamiento de excepciones HTTP con códigos de estado y mensajes específicos.
- *
- * @version 1.0.0a
-
-
-
-
-
+ * Proporciona un error personalizado que facilita el lanzamiento de excepciones HTTP
+ * con codigos de estado y mensajes especificos. Incluye metodos estaticos para
+ * normalizar errores desconocidos al formato interno de Kotrip.
  */
 export class ErrorManager extends Error {
   /**

@@ -1,27 +1,27 @@
 import { convert } from 'convert';
 
 /**
- * Converts milliseconds to best fitting unit.
+ * Convierte milisegundos a la unidad mas adecuada.
  *
- * @param {number} milliseconds - Time in milliseconds
+ * @param {number} milliseconds - Tiempo en milisegundos.
  */
 export const convertMs = (milliseconds: number) => {
   return convert(milliseconds, 'ms').to('best');
 };
 
 /**
- * Converts bytes to best fitting unit.
+ * Convierte bytes a la unidad mas adecuada.
  *
- * @param {number} bytes - Size in bytes
+ * @param {number} bytes - Tamano en bytes.
  */
 export const convertBytes = (bytes: number) => {
   return convert(bytes, 'byte').to('best');
 };
 
 /**
- * Type representing a value with its unit for formatting.
+ * Tipo que representa un valor con su unidad para formateo.
  *
- * @template TUnit - The unit type
+ * @template TUnit - Tipo de la unidad.
  */
 type WithFormatParam<TUnit extends string> = {
   quantity: number;
@@ -29,11 +29,11 @@ type WithFormatParam<TUnit extends string> = {
 };
 
 /**
- * Formats a value with its unit.
+ * Formatea un valor numerico con su unidad.
  *
- * @param {WithFormatParam} value - The value and its unit to format
- * @returns {string} Formatted string
- * @template TUnit - The unit type
+ * @param {WithFormatParam} value - Valor y unidad a formatear.
+ * @returns {string} Cadena formateada.
+ * @template TUnit - Tipo de la unidad.
  */
 export const withFormat = <TUnit extends string>(
   value: WithFormatParam<TUnit>,

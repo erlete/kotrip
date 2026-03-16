@@ -8,19 +8,13 @@ import FileService from './services/file-service.service';
 import { StorageProxyController } from './storage-proxy.controller';
 
 /**
- * Files Module.
+ * Modulo de gestion de archivos.
  *
- * Clase con el módulo de gestión de archivos. Gestiona tanto la subida como la descarga
- * y almacenamiento de los archivos. Como método de almacenamiento se hace uso de buckets
- * en minio. Estos buckets contienen conjuntos de carpetas y archivos que permiten
- * almacenar información acerca de usuarios individuales y organizaciones.
+ * Gestiona la subida, descarga y almacenamiento de archivos en MinIO.
+ * Utiliza un bucket unificado (`kotrip`) con paths jerarquicos para
+ * organizar los recursos de usuarios y la plataforma.
  *
- * @version     1.0.2a
-
-
-
-
- * @see         [NestMinioModule](https://github.com/NestCrafts/nestjs-minio)
+ * @see {@link https://github.com/NestCrafts/nestjs-minio | NestMinioModule}
  */
 @Module({
   imports: [

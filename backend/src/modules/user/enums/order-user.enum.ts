@@ -1,12 +1,5 @@
 /**
- * ### OrderUsers
- * Clase define los campos por los cuales se puede ordenar la lista de usuarios.
- *
- * @version     1.0.0a
-
-
-
- *
+ * Enum que define los campos disponibles para ordenar la lista de usuarios.
  */
 export enum OrderUsers {
   ID = 'id',

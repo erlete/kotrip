@@ -1,6 +1,5 @@
 import { execSync } from 'child_process';
 import fetchLocalities from '../modules/fetch-localities.mjs';
-import generateLlmInstructions from '../modules/generate-llm-instructions.mjs';
 
 /**
  * Comprueba si git está instalado en el sistema.
@@ -41,11 +40,10 @@ function installLefthook() {
  * Función principal del módulo.
  *
  * @remarks Esta función es el punto de entrada único del módulo, ejecutada siempre de forma directa, sin exportación.
- * Ejecuta la instalación de lefthook y la generación de instrucciones LLM como pasos de postinstalación.
+ * Ejecuta la instalación de lefthook.
  */
 async function main() {
   installLefthook();
-  await generateLlmInstructions();
   await fetchLocalities();
 }
 

@@ -1,15 +1,10 @@
 import { SetMetadata } from '@nestjs/common';
 
 /**
- * ### EnableLogging
+ * Decorador para habilitar el registro de auditoria en un endpoint especifico.
  *
- * Este decorador se utiliza para habilitar el registro de auditoría en un endpoint específico.
- *
- * @version     1.0.0a
-
-
-
-
+ * Cuando se aplica a un controlador o metodo, activa el interceptor de logging
+ * para registrar la informacion de la peticion HTTP y la respuesta.
  */
 
 export const ENABLE_LOGGING = 'enable_logging';

@@ -4,8 +4,9 @@ import { PropsWithChildren } from 'react';
 import { ClientAuthGuard } from './client-auth-guard';
 
 /**
- * Client-side guard that resolves roles from the route registry using the
- * current pathname. Intended for layouts to avoid per-page guard boilerplate.
+ * Guard del lado del cliente que resuelve roles desde el registro de rutas
+ * usando el pathname actual. Pensado para layouts, evitando repetir
+ * la logica de proteccion en cada pagina.
  */
 export function RouteClientGuard({ children }: PropsWithChildren) {
   return <ClientAuthGuard>{children}</ClientAuthGuard>;

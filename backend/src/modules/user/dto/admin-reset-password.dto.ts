@@ -11,9 +11,7 @@ import { i18nValidationMessage } from 'nestjs-i18n';
 import { I18nTranslations } from 'src/i18n/generated/i18n.generated';
 
 /**
- * ### AdminResetPasswordDto
- *
- * DTO para el reinicio de contraseña por parte de un administrador.
+ * DTO para el reinicio de contrasena por parte de un administrador.
  * A diferencia de `UpdatePasswordDto`, no requiere la contraseña anterior,
  * ya que la operación es ejecutada por un administrador autorizado.
  *

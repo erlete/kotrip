@@ -1,7 +1,5 @@
 /**
- * ### RolesGuard (TEST)
- *
- * Tests unitarios para el guard de autorización basada en roles.
+ * Tests unitarios para el guard de autorizacion basada en roles (RolesGuard).
  * Cubre:
  * - Acceso sin restricción de roles
  * - Verificación de roles requeridos

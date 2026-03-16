@@ -2,10 +2,10 @@ import { ApiProperty } from '@nestjs/swagger';
 import { Type } from 'class-transformer';
 
 /**
- * DTO with "created at" timestamp with time zone.
+ * DTO con timestamp de creacion con zona horaria.
  *
  * @remarks
- * Creation date is read-only and automatically handled by TypeORM.
+ * La fecha de creacion es de solo lectura y se gestiona automaticamente por TypeORM.
  */
 export abstract class CTzDto {
   @ApiProperty({
@@ -17,12 +17,11 @@ export abstract class CTzDto {
 }
 
 /**
- * DTO with "updated at" timestamp with time zone.
+ * DTO con timestamps de creacion y actualizacion con zona horaria.
  *
  * @remarks
- * Extends CTzDTO, so it also includes "created at" timestamp with time zone.
- * Creation and update dates are read-only and automatically handled by
- * TypeORM.
+ * Extiende CTzDto, por lo que incluye tambien el timestamp de creacion.
+ * Ambas fechas son de solo lectura y se gestionan automaticamente por TypeORM.
  */
 export abstract class CUTzDTO extends CTzDto {
   @ApiProperty({
@@ -34,12 +33,11 @@ export abstract class CUTzDTO extends CTzDto {
 }
 
 /**
- * DTO with "deleted at" timestamp with time zone.
+ * DTO con timestamps de creacion, actualizacion y borrado logico con zona horaria.
  *
  * @remarks
- * Extends CUTzDTO, so it also includes "created at" and "updated at"
- * timestamps with time zone. Creation and update dates are read-only and
- * automatically handled by TypeORM.
+ * Extiende CUTzDTO, por lo que incluye los timestamps de creacion y actualizacion.
+ * Las fechas son de solo lectura y se gestionan automaticamente por TypeORM.
  */
 export abstract class CUDTzDTO extends CUTzDTO {
   @ApiProperty({

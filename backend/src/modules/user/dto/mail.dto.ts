@@ -4,15 +4,7 @@ import { i18nValidationMessage } from 'nestjs-i18n';
 import { I18nTranslations } from 'src/i18n/generated/i18n.generated';
 
 /**
- * ### CreateUserDto
- *
- * DTO para controlar los datos de entrada al borrar usuarios.
- *
- * @version     1.0.0a
-
-
-
-
+ * DTO que contiene un correo electronico para identificar al usuario a eliminar.
 
  * @see         [User](../entities/user.entity.ts)
  */

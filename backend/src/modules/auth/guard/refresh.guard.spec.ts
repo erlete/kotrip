@@ -1,7 +1,5 @@
 /**
- * ### RefreshGuard (TEST)
- *
- * Tests unitarios para el guard de renovación de tokens JWT.
+ * Tests unitarios para el guard de renovacion de tokens JWT (RefreshGuard).
  * Cubre:
  * - Validación de tokens de refresco válidos
  * - Manejo de tokens inválidos/expirados

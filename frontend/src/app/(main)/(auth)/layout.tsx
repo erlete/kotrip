@@ -1,17 +1,9 @@
 /**
  * @file layout.tsx
  * @description
- * -----------------------------------------------------
- * Layout de autenticación con diseño editorial oscuro.
+ * Layout de autenticacion con diseno editorial oscuro.
  * Presenta un panel decorativo a la izquierda y el formulario
- * de autenticación a la derecha, ambos sobre fondo oscuro.
- * -----------------------------------------------------
- * @version 2.2.0
- * @created 2025-11-24
- * @modified 2026-03-13
-
-
-
+ * de autenticacion a la derecha, ambos sobre fondo oscuro.
  */
 
 import LocaleSwitcher from '@/components/ui/locale/locale-switcher';

@@ -4,17 +4,12 @@ import { i18nValidationMessage } from 'nestjs-i18n';
 import { I18nTranslations } from 'src/i18n/generated/i18n.generated';
 
 /**
- * ### ThrotterGuardErrorDto
+ * DTO para la respuesta de error del ThrottlerGuard (rate limiting).
  *
- * DTO para controlar los datos de salida de los errores generados por el ThrottlerGuard.
- * Este DTO existe para facilitar a front la información recibida.
+ * Estructura el mensaje y codigo de estado que se envia al frontend
+ * cuando se superan los limites de peticiones configurados.
  *
- * @version     1.0.0a
-
-
-
-
- * @see         [ThrottlerGuard](https://docs.nestjs.com/security/rate-limiting#throttler-module)
+ * @see {@link https://docs.nestjs.com/security/rate-limiting | ThrottlerGuard}
  */
 export class ThrotterGuardErrorDto {
   @ApiProperty({ example: 'ThrottlerException: Too Many Requests' })

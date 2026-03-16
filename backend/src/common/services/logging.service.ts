@@ -10,16 +10,11 @@ import { BucketItem } from 'minio';
 import { LogAudit } from '../interfaces/logger.interface';
 
 /**
- * ### AuditLogService
+ * Servicio de auditoria que acumula registros de log en memoria y los
+ * persiste periodicamente en MinIO mediante un cron job configurable.
  *
- * Servicio que guarda los logs en un array.
- * Y a cada cierto tiempo intenta guardarlos en el almacenamiento de archivos.
- *
- * @version     1.0.0
-
-
-
-
+ * Los archivos de log se comprimen con gzip y, opcionalmente, se encriptan
+ * con AES-256-CBC antes de almacenarse.
  */
 @Injectable()
 export class AuditLogService implements OnModuleInit {

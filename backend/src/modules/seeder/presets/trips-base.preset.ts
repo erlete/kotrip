@@ -10,15 +10,15 @@ import type { SeederPresetFn } from '../seeder.types';
  * distintos roles y permisos. El superadmin no participa en viajes.
  *
  * @remarks
- * **Viajes creados (4)**:
+ * Viajes creados (4):
  * - "Ruta por Galicia" - viaje activo, 4 paradas, 3 gastos, 2 tickets
  * - "Fin de semana en Madrid" - viaje planificado, 3 paradas, 2 gastos
  * - "Aventura en Asturias" - viaje finalizado, 3 paradas, 2 gastos, 1 ticket
  * - "Costa Brava en verano" - viaje cancelado, 3 paradas, 1 gasto
  *
- * **Paradas totales**: 13 con coordenadas reales y variación de métodos de viaje.
+ * Paradas totales: 13 con coordenadas reales y variación de métodos de viaje.
  *
- * **Dependencias**: Requiere que los usuarios de `users-base.preset.ts`
+ * Dependencias: Requiere que los usuarios de `users-base.preset.ts`
  * estén creados previamente.
  */
 export const tripsBase: SeederPresetFn = (ctx: SeederContext): void => {

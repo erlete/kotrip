@@ -1,24 +1,24 @@
 /**
- * Custom Swagger plugin options.
- * Controls which plugins are enabled in the Swagger UI.
+ * Opciones de plugins personalizados de Swagger.
+ * Controla que plugins se habilitan en la interfaz de Swagger UI.
  */
 export interface SwaggerLibPluginOptions {
   /**
-   * Enable the auth plugin for quick user authentication in development.
-   * Shows buttons to authenticate as any user in the database.
+   * Habilita el plugin de autenticacion rapida en desarrollo.
+   * Muestra botones para autenticarse como cualquier usuario de la base de datos.
    *
-   * **⚠️ Security Warning:** Only enabled in non-production environments.
-   * Automatically disabled when NODE_ENV is 'production'.
+   * Aviso de seguridad: Solo se habilita en entornos no productivos.
+   * Se desactiva automaticamente cuando NODE_ENV es 'production'.
    *
    * @default false
    */
   authPlugin: boolean;
 
   /**
-   * Enable the collapse plugin for collapsing/expanding all endpoints.
-   * Adds "Collapse All" and "Expand All" buttons to the UI.
+   * Habilita el plugin de colapsar/expandir todos los endpoints.
+   * Anade botones "Collapse All" y "Expand All" a la interfaz.
    *
-   * Note: This plugin is automatically included when authPlugin is enabled.
+   * Este plugin se incluye automaticamente cuando authPlugin esta habilitado.
    *
    * @default false
    */
@@ -26,46 +26,34 @@ export interface SwaggerLibPluginOptions {
 }
 
 /**
- * Custom Swagger short-hand options.
- * Provides a simplified interface for configuring Swagger documentation.
+ * Opciones simplificadas para la configuracion de Swagger.
  *
- * @example
- * ```typescript
- * const options: SwaggerLibOptions = {
- *   title: 'My API',
- *   description: 'API documentation',
- *   endpoint: 'api-docs',
- *   plugins: {
- *     authPlugin: true,
- *     collapsePlugin: true
- *   }
- * };
- * ```
+ * Proporciona una interfaz abreviada para configurar la documentacion Swagger
+ * de la aplicacion, incluyendo titulo, descripcion, ruta y plugins.
  */
 export interface SwaggerLibOptions {
   /**
-   * Title displayed in the Swagger UI header.
+   * Titulo mostrado en la cabecera de Swagger UI.
    * @default 'Swagger Docs'
    */
   title?: string;
 
   /**
-   * Description displayed in the Swagger UI header.
+   * Descripcion mostrada en la cabecera de Swagger UI.
    * @default 'Swagger Docs'
    */
   description?: string;
 
   /**
-   * URL endpoint where Swagger UI will be served.
-   * Leading slashes are automatically removed.
+   * Ruta del endpoint donde se sirve Swagger UI.
+   * Las barras iniciales se eliminan automaticamente.
    * @default 'docs'
-   * @example 'api-docs' -> accessible at http://localhost:3000/api-docs
    */
   endpoint?: string;
 
   /**
-   * Plugin configuration options.
-   * Controls which Swagger UI plugins are enabled.
+   * Opciones de configuracion de plugins.
+   * Controla que plugins de Swagger UI se habilitan.
    */
   plugins: SwaggerLibPluginOptions;
 }

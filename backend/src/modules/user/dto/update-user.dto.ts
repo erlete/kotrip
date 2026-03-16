@@ -20,13 +20,10 @@ import { i18nValidationMessage } from 'nestjs-i18n';
 import { I18nTranslations } from 'src/i18n/generated/i18n.generated';
 
 /**
- * ### UpdateUserDto
+ * DTO para la actualizacion de informacion de un usuario por parte del administrador.
  *
- * DTO para controlar los datos de entrada al cambiar información de un usuario. Permite cambiar
- * todo menos la contraseña (controlado por UpdatePasswordDto). Los datos deben coincidir con el formato
- * que se encuentra en el NewRegisterDto.
- *
- * @version     1.0.0a
+ * Permite cambiar todos los campos excepto la contrasena (controlada por UpdatePasswordDto).
+ * Las validaciones de formato coinciden con las del registro.
 
 
 

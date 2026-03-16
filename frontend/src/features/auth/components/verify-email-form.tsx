@@ -1,14 +1,8 @@
 /**
  * @file verify-email-form.tsx
  * @description
- * -----------------------------------------------------
- * Formulario de verificación de email por código de 6 dígitos
- * -----------------------------------------------------
- * @version 0.0.1a
- * @created 2026-03-09
-
-
-
+ * Formulario de verificacion de email mediante codigo OTP de 6 digitos,
+ * utilizado durante el proceso de registro de usuarios.
  */
 
 'use client';

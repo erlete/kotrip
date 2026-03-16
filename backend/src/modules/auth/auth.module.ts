@@ -9,21 +9,13 @@ import { UserEmailVerification } from './entities/user-email-verification.entity
 import { AuthService } from './services/auth.service';
 
 /**
- * ### AuthModule
+ * Modulo de autenticacion de la aplicacion.
  *
- * Clase que tiene el módulo gestor de autentificaciones. Se controla la entrada del módulo JWT y la gestión del
- * ORM para la entidad de Verification. También tiene configurado el ThrottlerModule para gestión de excepciones
- * en caso de intentos reiterados en aquellas secciones del controlador que se designe.
+ * Gestiona la configuracion de JWT, TypeORM para la entidad de verificacion de email
+ * y ThrottlerModule para limitar intentos de acceso repetidos.
  *
- * @version     2.0.0
-
-
-
-
- * @see         [AuthService](../auth/auth.service.ts)
- * @see         [ThrottlerGuard](https://docs.nestjs.com/security/rate-limiting#throttler-module)
- * @see         [TypeOrmModule](https://docs.nestjs.com/techniques/database)
- * @see         [JwtService](https://github.com/nestjs/jwt)
+ * @see AuthService Servicio de autenticacion.
+ * @see {@link https://docs.nestjs.com/security/rate-limiting | ThrottlerModule}
  */
 @Module({
   controllers: [AuthController],

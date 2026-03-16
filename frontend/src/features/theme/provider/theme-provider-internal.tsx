@@ -1,15 +1,10 @@
 /**
- * @file ThemeProvider.tsx
+ * @file theme-provider-internal.tsx
  * @description
- * -----------------------------------------------------
- * Contexto de tema (claro o oscuro) para la aplicación
- * -----------------------------------------------------
- * @version 0.0.1a
- * @created 2025-11-04
-
-
-
- * */
+ * Contexto de tema (claro u oscuro) para la aplicacion.
+ * Provee el tema actual y la funcion para alternarlo a los
+ * componentes cliente.
+ */
 
 'use client';
 
@@ -21,6 +16,12 @@ const ThemeContext = createContext({
   toggleTheme: async () => {},
 });
 
+/**
+ * Provider interno de cliente que gestiona el estado del tema visual.
+ *
+ * Aplica el atributo `data-theme` al elemento raiz del documento
+ * y expone el tema actual junto con la funcion de alternancia.
+ */
 export function ThemeProviderInternal({
   children,
 }: {
@@ -40,6 +41,11 @@ export function ThemeProviderInternal({
   );
 }
 
+/**
+ * Acceso al contexto de tema.
+ *
+ * @throws Error si se usa fuera de `ThemeProviderInternal`.
+ */
 export function useThemeProvider() {
   const context = useContext(ThemeContext);
 

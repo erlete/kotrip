@@ -9,19 +9,12 @@ import { UserController } from './user.controller';
 import { UserService } from './user.service';
 
 /**
- * ### UserModule
+ * Modulo de gestion de usuarios.
  *
- * Clase que tiene el módulo gestor de usuarios. Este módulo gestiona todo el CRUD de
- * usuarios. Aún así, el módulo que se encarga de crear usuarios nuevos mediante
- * end-points será el AuthModule.
+ * Gestiona el CRUD de usuarios: consulta, actualizacion, eliminacion y gestion
+ * de avatares. La creacion de usuarios se realiza desde el modulo de autenticacion.
  *
- * @version     2.0.0
-
-
-
-
- * @see         [AuthModule](../auth/auth.module.ts)
- * @see         [TypeOrmModule](https://docs.nestjs.com/techniques/database)
+ * @see AuthModule Modulo encargado del registro de nuevos usuarios.
  */
 @Module({
   controllers: [UserController],

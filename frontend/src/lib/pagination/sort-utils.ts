@@ -1,21 +1,22 @@
 /**
- * @fileoverview Sort utilities for cursor pagination
+ * @fileoverview Utilidades de ordenamiento para paginacion por cursor
  *
- * Utilities for managing sorts in pagination state and query parameters.
+ * Funciones auxiliares para gestionar ordenamientos en el estado de
+ * paginacion y en los parametros de consulta.
  */
 
 import type { SortDir, SortValue } from './types';
 
 /**
- * Adds or updates a sort in the sort array.
+ * Agrega o actualiza un ordenamiento en el array.
  *
- * If a sort for the field already exists, it updates the direction.
- * If not, it adds a new sort at the beginning of the array.
+ * Si ya existe un ordenamiento para el campo, actualiza la direccion.
+ * Si no, agrega uno nuevo al inicio del array.
  *
- * @param sorts - Current sort array
- * @param field - Field to sort on
- * @param dir - Sort direction
- * @returns New sort array with the sort added/updated
+ * @param sorts - Array de ordenamientos actual.
+ * @param field - Campo a ordenar.
+ * @param dir - Direccion de ordenamiento.
+ * @returns Nuevo array con el ordenamiento agregado/actualizado.
  *
  * @example
  * addSort([], 'createdAt', 'desc')
@@ -34,11 +35,11 @@ export function addSort<K extends string = string>(
 }
 
 /**
- * Removes a sort from the sort array.
+ * Elimina un ordenamiento del array.
  *
- * @param sorts - Current sort array
- * @param field - Field to remove sort from
- * @returns New sort array with the sort removed
+ * @param sorts - Array de ordenamientos actual.
+ * @param field - Campo del ordenamiento a eliminar.
+ * @returns Nuevo array sin el ordenamiento eliminado.
  *
  * @example
  * removeSort(sorts, 'createdAt')
@@ -52,15 +53,15 @@ export function removeSort<K extends string = string>(
 }
 
 /**
- * Toggles sort direction for a field.
+ * Alterna la direccion de ordenamiento de un campo.
  *
- * If the field is not currently sorted, adds ascending sort.
- * If ascending, changes to descending.
- * If descending, removes the sort.
+ * Si el campo no esta ordenado, agrega orden ascendente.
+ * Si es ascendente, lo cambia a descendente.
+ * Si es descendente, elimina el ordenamiento.
  *
- * @param sorts - Current sort array
- * @param field - Field to toggle sort for
- * @returns New sort array with toggled sort
+ * @param sorts - Array de ordenamientos actual.
+ * @param field - Campo cuyo ordenamiento se alterna.
+ * @returns Nuevo array con el ordenamiento alternado.
  *
  * @example
  * toggleSort([], 'createdAt')
@@ -93,9 +94,9 @@ export function toggleSort<K extends string = string>(
 }
 
 /**
- * Clears all sorts.
+ * Limpia todos los ordenamientos.
  *
- * @returns Empty sort array
+ * @returns Array de ordenamientos vacio.
  *
  * @example
  * clearSorts()
@@ -106,11 +107,11 @@ export function clearSorts<K extends string = string>(): SortValue<K>[] {
 }
 
 /**
- * Gets sort direction for a field.
+ * Obtiene la direccion de ordenamiento de un campo.
  *
- * @param sorts - Current sort array
- * @param field - Field to get sort direction for
- * @returns Sort direction or undefined if not sorted
+ * @param sorts - Array de ordenamientos actual.
+ * @param field - Campo del cual obtener la direccion.
+ * @returns Direccion de ordenamiento o `undefined` si no esta ordenado.
  *
  * @example
  * getSortDir(sorts, 'createdAt')
@@ -125,11 +126,11 @@ export function getSortDir<K extends string = string>(
 }
 
 /**
- * Checks if a field is sorted.
+ * Verifica si un campo tiene ordenamiento aplicado.
  *
- * @param sorts - Current sort array
- * @param field - Field to check
- * @returns True if field is sorted
+ * @param sorts - Array de ordenamientos actual.
+ * @param field - Campo a verificar.
+ * @returns `true` si el campo tiene ordenamiento.
  *
  * @example
  * isSorted(sorts, 'createdAt')
@@ -143,12 +144,12 @@ export function isSorted<K extends string = string>(
 }
 
 /**
- * Converts sort array to backend-compatible string.
+ * Convierte un array de ordenamientos a una cadena compatible con el backend.
  *
- * Format: 'field:dir,field2:dir2'
+ * Formato: 'field:dir,field2:dir2'
  *
- * @param sorts - Sort array
- * @returns Sort string for backend
+ * @param sorts - Array de ordenamientos.
+ * @returns Cadena de ordenamiento para el backend.
  *
  * @example
  * sortsToString([{ key: 'createdAt', dir: 'desc' }, { key: 'id', dir: 'asc' }])
@@ -165,10 +166,10 @@ export function sortsToString<K extends string = string>(
 }
 
 /**
- * Parses sort string to sort array.
+ * Parsea una cadena de ordenamiento a un array de valores de ordenamiento.
  *
- * @param sortString - Sort string from backend (e.g., 'createdAt:desc,id:asc')
- * @returns Array of sort values
+ * @param sortString - Cadena de ordenamiento del backend (ej: 'createdAt:desc,id:asc').
+ * @returns Array de valores de ordenamiento.
  *
  * @example
  * parseSortString('createdAt:desc,id:asc')
@@ -191,10 +192,10 @@ export function parseSortString<K extends string = string>(
 }
 
 /**
- * Sets sorts from an array, replacing all existing sorts.
+ * Establece los ordenamientos desde un array, reemplazando todos los existentes.
  *
- * @param sorts - New sort array
- * @returns New sort array
+ * @param sorts - Nuevo array de ordenamientos.
+ * @returns Copia del nuevo array de ordenamientos.
  *
  * @example
  * setSorts([{ key: 'createdAt', dir: 'desc' }])

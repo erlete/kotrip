@@ -4,22 +4,16 @@ import { Injectable } from '@nestjs/common';
 import { glob } from 'glob';
 
 /**
- * ### I18nValidatorService
+ * Servicio de validacion de traducciones i18n.
  *
- * Servicio encargado de validar las traducciones i18n del proyecto.
- * Escanea todos los archivos TypeScript buscando llamadas a this.i18n.t()
+ * Escanea los archivos TypeScript del proyecto buscando llamadas a `this.i18n.t()`
  * y verifica si existen las traducciones correspondientes en los archivos JSON.
  *
  * Funcionalidades principales:
- * - Extraer todas las claves de traducción usadas en el código
- * - Cargar todas las traducciones disponibles desde archivos JSON
- * - Comparar claves usadas vs disponibles para encontrar faltantes
- * - Generar estadísticas de cobertura de traducciones
- *
- * @version 1.0.0
-
-
-
+ * - Extraer claves de traduccion usadas en el codigo.
+ * - Cargar traducciones disponibles desde archivos JSON.
+ * - Comparar claves usadas vs disponibles para encontrar faltantes.
+ * - Generar estadisticas de cobertura de traducciones.
  */
 @Injectable()
 export class I18nValidatorService {

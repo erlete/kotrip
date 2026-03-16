@@ -1,15 +1,8 @@
 /**
  * @file recover-password-success-view-page.tsx
  * @description
- * -----------------------------------------------------
- * Página de confirmación de recuperación de contraseña exitosa
- * -----------------------------------------------------
- * @version 1.0.0
- * @created 2026-03-10
- * @modified 2026-03-13
-
-
-
+ * Pagina de confirmacion tras la recuperacion exitosa de contrasena,
+ * con enlace para volver al inicio de sesion.
  */
 
 'use client';

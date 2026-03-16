@@ -11,12 +11,10 @@ import { i18nValidationMessage } from 'nestjs-i18n';
 import { I18nTranslations } from 'src/i18n/generated/i18n.generated';
 
 /**
- * ### UpdatePasswordDto
+ * DTO para el cambio de contrasena del usuario.
  *
- * DTO para controlar los datos de entrada al cambiar una contraseña. La nueva contraseña tiene diferentes
- * comprobciones de seguridad que deben coincider con las que se encuentran en el NewRegisterDto.
- *
- * @version     1.0.0a
+ * Requiere la contrasena anterior y la nueva. Las validaciones de seguridad
+ * de la nueva contrasena coinciden con las del registro (NewRegisterDto).
 
 
 

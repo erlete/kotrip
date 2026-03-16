@@ -1,18 +1,19 @@
 /**
- * @fileoverview Cursor utilities for pagination
+ * @fileoverview Utilidades de cursor para paginacion
  *
- * Utilities for working with pagination cursors and metadata from backend responses.
+ * Funciones auxiliares para trabajar con cursores de paginacion
+ * y metadatos de las respuestas del backend.
  */
 
 import type { CursorPaginationResponse, SortValue } from './types';
 
 /**
- * Parses sort string from backend response.
+ * Parsea una cadena de ordenamiento del backend.
  *
- * Converts 'field:dir,field2:dir2' format to array of SortValue objects.
+ * Convierte el formato 'field:dir,field2:dir2' a un array de objetos SortValue.
  *
- * @param sortString - Sort string from backend (e.g., 'createdAt:desc,id:asc')
- * @returns Array of sort values
+ * @param sortString - Cadena de ordenamiento del backend (ej: 'createdAt:desc,id:asc')
+ * @returns Array de valores de ordenamiento.
  *
  * @example
  * parseSortString('createdAt:desc,id:asc')
@@ -35,12 +36,12 @@ export function parseSortString<K extends string = string>(
 }
 
 /**
- * Formats sort values to backend-compatible string.
+ * Formatea valores de ordenamiento a una cadena compatible con el backend.
  *
- * Converts array of SortValue objects to 'field:dir,field2:dir2' format.
+ * Convierte un array de objetos SortValue al formato 'field:dir,field2:dir2'.
  *
- * @param sorts - Array of sort values
- * @returns Sort string for backend
+ * @param sorts - Array de valores de ordenamiento.
+ * @returns Cadena de ordenamiento para el backend.
  *
  * @example
  * formatSortString([{ key: 'createdAt', dir: 'desc' }, { key: 'id', dir: 'asc' }])
@@ -57,12 +58,12 @@ export function formatSortString<K extends string = string>(
 }
 
 /**
- * Extracts sort values from backend pagination response.
+ * Extrae los valores de ordenamiento de la respuesta paginada del backend.
  *
- * Parses the sortApplied field from meta to get active sorts.
+ * Parsea el campo sortApplied de los metadatos para obtener los ordenamientos activos.
  *
- * @param response - Backend pagination response
- * @returns Array of sort values
+ * @param response - Respuesta paginada del backend.
+ * @returns Array de valores de ordenamiento.
  *
  * @example
  * extractSortsFromResponse(response)
@@ -87,10 +88,10 @@ export function extractSortsFromResponse<TDto, K extends string = string>(
 }
 
 /**
- * Checks if pagination response has a next page.
+ * Verifica si la respuesta paginada tiene una pagina siguiente.
  *
- * @param response - Backend pagination response
- * @returns True if there are more items after current page
+ * @param response - Respuesta paginada del backend.
+ * @returns `true` si hay mas elementos despues de la pagina actual.
  */
 export function hasNextPage<TDto>(
   response: CursorPaginationResponse<TDto>,
@@ -99,10 +100,10 @@ export function hasNextPage<TDto>(
 }
 
 /**
- * Checks if pagination response has a previous page.
+ * Verifica si la respuesta paginada tiene una pagina anterior.
  *
- * @param response - Backend pagination response
- * @returns True if there are items before current page
+ * @param response - Respuesta paginada del backend.
+ * @returns `true` si hay elementos antes de la pagina actual.
  */
 export function hasPrevPage<TDto>(
   response: CursorPaginationResponse<TDto>,
@@ -111,10 +112,10 @@ export function hasPrevPage<TDto>(
 }
 
 /**
- * Gets the next cursor from pagination response.
+ * Obtiene el cursor de la pagina siguiente de la respuesta paginada.
  *
- * @param response - Backend pagination response
- * @returns Next cursor or undefined if no next page
+ * @param response - Respuesta paginada del backend.
+ * @returns Cursor siguiente o `undefined` si no hay pagina siguiente.
  */
 export function getNextCursor<TDto>(
   response: CursorPaginationResponse<TDto>,
@@ -123,10 +124,10 @@ export function getNextCursor<TDto>(
 }
 
 /**
- * Gets the previous cursor from pagination response.
+ * Obtiene el cursor de la pagina anterior de la respuesta paginada.
  *
- * @param response - Backend pagination response
- * @returns Previous cursor or undefined if no previous page
+ * @param response - Respuesta paginada del backend.
+ * @returns Cursor anterior o `undefined` si no hay pagina anterior.
  */
 export function getPrevCursor<TDto>(
   response: CursorPaginationResponse<TDto>,
@@ -135,10 +136,10 @@ export function getPrevCursor<TDto>(
 }
 
 /**
- * Gets total count from pagination response.
+ * Obtiene el conteo total de la respuesta paginada.
  *
- * @param response - Backend pagination response
- * @returns Total count or undefined if not requested
+ * @param response - Respuesta paginada del backend.
+ * @returns Total de elementos o `undefined` si no fue solicitado.
  */
 export function getTotalCount<TDto>(
   response: CursorPaginationResponse<TDto>,
@@ -147,10 +148,10 @@ export function getTotalCount<TDto>(
 }
 
 /**
- * Gets remaining count from pagination response.
+ * Obtiene el conteo de elementos restantes de la respuesta paginada.
  *
- * @param response - Backend pagination response
- * @returns Remaining count or undefined if not requested
+ * @param response - Respuesta paginada del backend.
+ * @returns Elementos restantes o `undefined` si no fue solicitado.
  */
 export function getRemainingCount<TDto>(
   response: CursorPaginationResponse<TDto>,
@@ -159,10 +160,10 @@ export function getRemainingCount<TDto>(
 }
 
 /**
- * Gets the actual number of items in current page.
+ * Obtiene la cantidad real de elementos en la pagina actual.
  *
- * @param response - Backend pagination response
- * @returns Number of items in data array
+ * @param response - Respuesta paginada del backend.
+ * @returns Numero de elementos en el array de datos.
  */
 export function getItemCount<TDto>(
   response: CursorPaginationResponse<TDto>,
@@ -171,10 +172,10 @@ export function getItemCount<TDto>(
 }
 
 /**
- * Gets the requested page size limit.
+ * Obtiene el limite de tamano de pagina solicitado.
  *
- * @param response - Backend pagination response
- * @returns Requested limit value
+ * @param response - Respuesta paginada del backend.
+ * @returns Valor del limite solicitado.
  */
 export function getLimit<TDto>(
   response: CursorPaginationResponse<TDto>,

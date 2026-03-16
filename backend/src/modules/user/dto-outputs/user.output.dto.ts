@@ -3,20 +3,11 @@ import { ApiProperty } from '@nestjs/swagger';
 import { IsEmail, IsEnum, IsNotEmpty } from 'class-validator';
 
 /**
- * ### UserOutputDto
+ * DTO de respuesta con la informacion basica del perfil de un usuario.
  *
- * DTO para controlar los datos de salida al front-end que arrojará el back-end al obtener la información
- * de un usuario. Estos datos están relacionados con la interfaz de usuario.
- * Si se modifica algo en esta interfaz, se debe modificar aquí también para asegurar la correcta devolución
- * de datos.
+ * Contiene el correo electronico y el rol del usuario.
  *
- * @version     1.0.0a
-
-
-
-
- * @see         [Role](../../common/enums/role.enum.ts)
- * @see         [UserOutput](../interfaces/user.output.interface.ts)
+ * @see UserOutput Interfaz interna correspondiente.
  */
 export class UserOutputDto {
   @ApiProperty({ example: 'correo1@hosting.com' })

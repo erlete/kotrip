@@ -9,16 +9,10 @@ import { Observable, throwError } from 'rxjs';
 import { catchError, tap } from 'rxjs/operators';
 
 /**
- * ### EndpointLogInterceptor
+ * Interceptor de desarrollo que registra en consola los endpoints ejecutados.
  *
- * Interceptor para recibir logs por pantalla con los endpoints lanzados, informará de que
- * método se lanza y su resultado, tanto si falla como si no.
- *
- * @version     1.0.0a
-
-
-
-
+ * Muestra el metodo HTTP, la URL, el codigo de respuesta y el tiempo de ejecucion.
+ * Solo se activa en el entorno de desarrollo.
  */
 @Injectable()
 export class EndpointLogInterceptor implements NestInterceptor {

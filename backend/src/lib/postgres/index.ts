@@ -1,3 +1,10 @@
+/**
+ * Configuracion de PostgreSQL y DataSource de TypeORM.
+ *
+ * Proporciona funciones para crear un DataSource y opciones de TypeORM
+ * a partir de las variables de entorno de PostgreSQL. Se utiliza
+ * principalmente para la configuracion de migraciones fuera del contexto de NestJS.
+ */
 import 'reflect-metadata';
 import * as path from 'node:path';
 import type { TypeOrmModuleOptions } from '@nestjs/typeorm';

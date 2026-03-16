@@ -1,20 +1,14 @@
 /**
- * ### ParseFunctions
- * Clase  con funciones estaticas para formatear texto
- *
- * @version 1.0.0a
-
-
-
-
+ * Clase con funciones estaticas para formateo de texto y decodificacion de tokens JWT.
  */
 import { ErrorManager } from '../error-handling/error.manager';
 
 export class ParseFunctions {
   /**
-   * Formatea un nombre eliminando espacios y manteniendo solamente numeros y carácteres alfanuméricos
-   * @param name Nombre que formatear
-   * @returns Nombre formateado
+   * Decodifica un token JWT sin verificar su firma.
+   *
+   * @param token Token JWT a decodificar.
+   * @returns Payload decodificado o null si el formato es invalido.
    */
   static decodeJWT(token: string) {
     try {

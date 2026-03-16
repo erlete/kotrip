@@ -5,6 +5,12 @@ import clsx from 'clsx';
 import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/navigation';
 
+/**
+ * Vista de error para datos no encontrados.
+ *
+ * Muestra un titulo, descripcion y boton para volver atras cuando
+ * un recurso especifico no existe o no se pudo cargar.
+ */
 export function DataNotFoundView({
   title,
   description,

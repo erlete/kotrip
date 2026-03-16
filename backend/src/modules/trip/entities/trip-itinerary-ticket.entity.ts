@@ -16,12 +16,12 @@ import type { Trip } from './trip.entity';
  * como entradas, reservas, billetes de transporte, etc.
  *
  * @remarks
- * **Alcance funcional**:
+ * Alcance funcional:
  * - Almacena metadatos del ticket (nombre, descripción).
  * - Puede referenciar un archivo almacenado en MinIO o una URL externa.
  * - Opcionalmente puede vincularse a un gasto para asociar el coste del ticket.
  *
- * **Almacenamiento de archivos**:
+ * Almacenamiento de archivos:
  * - El campo `objectUrl` puede contener tanto un path de MinIO como una URL externa.
  * - Para archivos almacenados en MinIO, se usa `getTripTicketPath()` de `@kotrip/data`.
  *

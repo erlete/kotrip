@@ -9,7 +9,7 @@
 /**
  * Genera un hash numérico a partir de una cadena de texto.
  *
- * Implementa una variante del algoritmo DJB2 de Daniel J. Bernstein.
+ * Implementa una variante del algoritmo de hash DJB2.
  *
  * @param str - Cadena de texto a hashear.
  * @returns Valor numérico entero positivo (32 bits).

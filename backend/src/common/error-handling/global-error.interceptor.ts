@@ -11,20 +11,13 @@ import { catchError } from 'rxjs/operators';
 import { ErrorManager } from './error.manager';
 
 /**
- *  ### GlobalErrorInterceptor
+ * Interceptor global para capturar y manejar errores de toda la aplicacion.
  *
- * Interceptor global de la aplicación para capturar y
- * manejar los errores lanzados en cualquier parte de la aplicación,
- * permitiendo una gestión centralizada de errores.
+ * Centraliza la gestion de errores convirtiendo instancias de ErrorManager
+ * en HttpExceptions y proporcionando una respuesta generica para errores
+ * inesperados.
  *
- *
- *
- * @version 1.0.0a
-
-
-
-
- * @see [Interceptor](https://docs.nestjs.com/interceptors)
+ * @see {@link https://docs.nestjs.com/interceptors | NestJS Interceptors}
  */
 
 @Injectable()

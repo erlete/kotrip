@@ -1,8 +1,8 @@
 /**
- * Backend client error.
+ * Error del cliente de backend.
  *
- * This error is used to handle OpenAPI client errors appeared while
- * communicating with the backend API.
+ * Representa un error producido por el cliente openapi-fetch al
+ * comunicarse con la API del backend.
  */
 export class BackendClientError extends Error {
   constructor(error: object) {

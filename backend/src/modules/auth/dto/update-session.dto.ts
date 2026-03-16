@@ -21,21 +21,16 @@ import { i18nValidationMessage } from 'nestjs-i18n';
 import { I18nTranslations } from 'src/i18n/generated/i18n.generated';
 
 /**
- * ### UpdateSessionDto
+ * DTO para actualizar parcialmente la sesion o perfil del usuario.
  *
- * DTO para controlar los datos de entrada al actualizar la sesión/perfil del usuario.
- * Permite cambiar campos del usuario sin necesidad de actualizar todos los datos.
- * Este DTO está diseñado para el endpoint de actualización de sesión en el AuthController.
+ * Permite modificar campos individuales como idioma, nombre, email, avatar,
+ * contrasena o rol sin necesidad de enviar todos los datos.
  *
- * **NOTA:** La contraseña debe actualizarse mediante el endpoint específico que usa UpdatePasswordDto
- * por razones de seguridad (requiere contraseña anterior).
+ * Nota: Si se cambia la contrasena, se debe proporcionar la contrasena anterior
+ * en el campo `oldPassword` para validar la operacion.
  *
- * @version     1.0.0
-
-
-
- * @see         [User](../../user/entities/user.entity.ts)
- * @see         [UpdatePasswordDto](../../user/dto/update-pass.dto.ts)
+ * @see User Entidad del usuario.
+ * @see UpdatePasswordDto DTO para cambio de contrasena desde el modulo de usuario.
  */
 export class UpdateSessionDto {
   @ApiPropertyOptional({

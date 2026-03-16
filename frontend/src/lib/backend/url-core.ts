@@ -1,7 +1,7 @@
 /**
  * Lógica pura de construcción de URL del backend.
  *
- * Este módulo **no** importa `server-only`, por lo que es compatible con
+ * Este modulo no importa `server-only`, por lo que es compatible con
  * el Edge Runtime de Next.js (middleware) y con cualquier otro contexto.
  *
  * @see {@link ./url.ts} para la variante con protección `server-only`.

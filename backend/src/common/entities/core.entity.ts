@@ -2,14 +2,12 @@ import { CUDTzEntity } from '@/lib/data/entities/timestamped.entity';
 import { PrimaryGeneratedColumn } from 'typeorm';
 
 /**
- * Core entity base class for all domain entities.
+ * Clase base para todas las entidades de dominio de Kotrip.
  *
- * @remarks
- * Provides:
- * - UUID primary key (`id`)
- * - Created/updated/deleted timestamps with timezone (from CUDTzEntity)
+ * Proporciona una clave primaria UUID (`id`) y timestamps con zona horaria
+ * de creacion, actualizacion y borrado logico (heredados de CUDTzEntity).
  *
- * All domain entities in the Kotrip should extend this class.
+ * Todas las entidades de dominio deben extender esta clase.
  */
 export abstract class CoreEntity extends CUDTzEntity {
   @PrimaryGeneratedColumn('uuid', {

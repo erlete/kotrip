@@ -10,7 +10,9 @@
  * la entidad `TripMember` y sus campos de permisos booleanos.
  */
 export enum Role {
+  /** Usuario estandar con acceso a funcionalidades de viaje. */
   USER = 'USER',
+  /** Administrador con acceso total al sistema. */
   ADMIN = 'ADMIN',
 }
 
@@ -23,8 +25,11 @@ export enum Role {
  * almacenado en base de datos es el código en minúsculas.
  */
 export enum Language {
+  /** Ingles. */
   EN = 'en',
+  /** Español. */
   ES = 'es',
+  /** Gallego. */
   GL = 'gl',
 }
 
@@ -44,10 +49,16 @@ export enum Language {
  * - `BLOCKED`: Usuario bloqueado manualmente por un administrador.
  */
 export enum UserStatus {
+  /** Usuario bloqueado manualmente por un administrador. */
   BLOCKED = 'BLOCKED',
+  /** Registro rechazado por un administrador. */
   REJECTED = 'REJECTED',
+  /** Email verificado, pendiente de revision por un administrador. */
   PENDING_REVIEW = 'PENDING_REVIEW',
+  /** Registrado pero pendiente de verificar su email. */
   PENDING_VERIFICATION = 'PENDING_VERIFICATION',
+  /** Usuario activo con acceso completo. */
   APPROVED = 'APPROVED',
+  /** Usuario importado externamente con acceso completo. */
   IMPORTED = 'IMPORTED',
 }

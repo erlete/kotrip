@@ -10,11 +10,11 @@ import type { SeederPresetFn } from '../seeder.types';
  * cinco usuarios estándar con nombres realistas.
  *
  * @remarks
- * **Usuarios creados (6)**:
+ * Usuarios creados (6):
  * - 1 Administrador (ADMIN) - no participa en viajes
  * - 5 Usuarios estándar (USER) con mezcla de idiomas ES/EN/GL
  *
- * **Convención**: Todos los usuarios comparten la contraseña `Password1!`
+ * Convención: Todos los usuarios comparten la contraseña `Password1!`
  * para facilitar las pruebas en desarrollo.
  */
 export const usersBase: SeederPresetFn = (ctx: SeederContext): void => {

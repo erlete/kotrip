@@ -25,23 +25,15 @@ import { UserModule } from './modules/user/user.module';
 const logger = new Logger('AppModule');
 
 /**
- * App Module.
+ * Modulo raiz de la aplicacion Kotrip.
  *
- * Clase que contiene el módulo general de la aplicación. Desde este módulo gestionamos la integración con el
- * resto de módulos del proyecto y, por defecto, generamos la base de datos al levantar la aplicación. Los
- * datos para la base de datos están declarados en el fichero .env que corresponda al tipo de despliegue que
- * se haga de la aplicación. También se configura el módulo de internacionalización para multiples idiomas.
+ * Integra todos los modulos del proyecto y configura la conexion a la base de datos
+ * PostgreSQL con TypeORM, la cola de trabajos con Bull/Redis y la internacionalizacion
+ * con nestjs-i18n. Los parametros de conexion se leen del fichero .env correspondiente
+ * al entorno de despliegue.
  *
- * @version     2.0.0
-
-
-
-
- * @see         [TypeOrmModule](https://docs.nestjs.com/techniques/database)
- * @see         [AuthModule](./auth/auth.module.ts)
- * @see         [SeederModule](./seeder/seeder.module.ts)
- * @see         [UserModule](./user/user.module.ts)
- * @see         [I18nModule](https://nestjs-i18n.com/quick-start)
+ * @see {@link https://docs.nestjs.com/techniques/database | TypeOrmModule}
+ * @see {@link https://nestjs-i18n.com/quick-start | I18nModule}
  */
 @Module({
   imports: [

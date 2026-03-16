@@ -1,15 +1,8 @@
 /**
  * @file verify-email-view-page.tsx
  * @description
- * -----------------------------------------------------
- * Página de vista de verificación de email
- * -----------------------------------------------------
- * @version 1.0.0
- * @created 2026-03-09
- * @modified 2026-03-13
-
-
-
+ * Pagina de verificacion de email mediante codigo OTP de 6 digitos
+ * enviado durante el registro de usuarios.
  */
 
 'use client';

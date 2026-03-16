@@ -1,13 +1,7 @@
 /**
- * ### DeleteFileInterface
+ * Interfaz de respuesta para la eliminacion de un archivo de MinIO.
  *
- * Interfaz para definir los datos que se devuelven al front-end a la hora de borrar
- * un fichero de minio
- *
- * @version     1.0.1a
-
-
-
+ * Contiene el identificador del archivo eliminado y el estado de la operacion.
 
 
  */

@@ -2,22 +2,13 @@ import type { ExecutionContext } from '@nestjs/common';
 import { createParamDecorator } from '@nestjs/common';
 
 /**
- * ### ActiveUser
+ * Decorador de parametro que extrae el usuario autenticado del contexto de ejecucion HTTP.
  *
- * Decorador personalizado que permite extraer la información del ExecutionContext de una
- * solicitud http y devuelve el usuario que lo está realizando. Es la forma que tenemos de
- * evitar tener que pasar párametros de usuario desde front al back. Usado por el middleware.
- * No modificar.
+ * Permite obtener la informacion del usuario activo (almacenada en `request.user` por el
+ * AuthGuard) sin necesidad de acceder manualmente al objeto de peticion.
  *
- * @version     1.0.0a
-
-
-
-
- * @see         [createParamDecorator](https://docs.nestjs.com/custom-decorators)
- * @see         [ExecutionContext](https://docs.nestjs.com/fundamentals/execution-context)
- * @returns         Una nueva función que se puede utilizar como decorador para aplicar autenticación y
- *                  autorización a las rutas en NestJS
+ * @see {@link https://docs.nestjs.com/custom-decorators | createParamDecorator}
+ * @returns El objeto del usuario activo asociado a la peticion.
  */
 export const ActiveUser = createParamDecorator(
   (data: unknown, ctx: ExecutionContext) => {

@@ -38,18 +38,14 @@ import { AvatarOutput } from './interfaces/avatar.output.interface';
 import { UserOutput } from './interfaces/user.output.interface';
 
 /**
- * ### UserService
+ * Servicio de gestion de usuarios (CRUD).
  *
- * Servicio encargado de del CRUD de usuarios. No confundir con la autentificación de usuarios
- * gestionado por el módulo de AuthModule donde registramos y autorizamos usuarios.
+ * Se encarga de consulta, actualizacion, eliminacion y gestion de avatares.
+ * No confundir con el servicio de autenticacion (AuthService), que gestiona
+ * el registro y la autorizacion de usuarios.
  *
- * @version     2.0.0
-
-
-
-
- * @see         [AuthModule](../auth/auth.module.ts)
- * @see         [User](./entities/user.entity.ts)
+ * @see AuthService Servicio de autenticacion.
+ * @see User Entidad del usuario.
  */
 @Injectable()
 export class UserService {

@@ -24,14 +24,14 @@ const gzip = promisify(zlib.gzip);
 const gunzip = promisify(zlib.gunzip);
 
 /**
- * ### FileService
+ * Servicio de gestion de archivos en MinIO.
  *
- * Servicio encargado de la gestión de archivos en MinIO. Todos los archivos
- * se almacenan en un único bucket (`kotrip`) con paths jerárquicos que reflejan
- * la estructura lógica de los recursos de la plataforma.
+ * Todos los archivos se almacenan en un unico bucket (`kotrip`) con paths
+ * jerarquicos que reflejan la estructura logica de los recursos de la plataforma.
+ * Incluye analisis de malware con ClamAV, encriptacion con AES-256-CBC y
+ * compresion gzip.
  *
  * @see {@link KOTRIP_BUCKET} Nombre del bucket unificado.
- * @see {@link @kotrip/data} Path builders centralizados.
  */
 @Injectable()
 export default class FileService {

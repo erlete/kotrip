@@ -1,17 +1,8 @@
 /**
  * @file recover-password-view-page.tsx
  * @description
- * -----------------------------------------------------
- * Pagina de vista de recuperacion de contrasena.
- * Permite al usuario introducir su correo electronico
- * para recibir instrucciones de restablecimiento.
- * -----------------------------------------------------
- * @version 2.0.0
- * @created 2026-03-10
- * @modified 2026-03-13
-
-
-
+ * Pagina de recuperacion de contrasena. Permite al usuario introducir
+ * su correo electronico para recibir instrucciones de restablecimiento.
  */
 
 'use client';

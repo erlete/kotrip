@@ -1,15 +1,7 @@
 import type { OrderDTO } from './dtos/order.dto';
 
 /**
- * ### Utils
- *
- * Funciones de útilidad para la aplicación
- *
- * @version     1.0.1a
-
-
-
-
+ * Funciones de utilidad compartidas para la aplicacion.
  */
 
 /**

@@ -1,18 +1,10 @@
 /**
- * @file TopbarComponent.tsx
+ * @file Topbar.tsx
  * @description
- * -----------------------------------------------------
- * Barra superior de navegación de la aplicación.
- * Contiene el logotipo, enlaces de navegación por iconos,
- * selector de idioma y menú desplegable del perfil de usuario.
- * -----------------------------------------------------
- * @version 1.0.0
- * @created 2025-01-20
- * @modified 2026-03-13
-
-
-
- * */
+ * Barra superior de navegacion de la aplicacion.
+ * Contiene el logotipo, enlaces de navegacion por iconos,
+ * selector de idioma y menu desplegable del perfil de usuario.
+ */
 
 'use client';
 

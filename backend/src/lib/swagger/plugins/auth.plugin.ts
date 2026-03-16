@@ -13,174 +13,158 @@ import type { Repository } from 'typeorm';
 import { CollapsePlugin } from './collapse.plugin';
 
 /**
- * Represents an immutable map-like data structure used by Swagger UI.
- * Provides type-safe access to configuration values.
+ * Estructura de datos inmutable tipo mapa utilizada por Swagger UI.
+ * Proporciona acceso tipado a valores de configuracion.
  */
 interface ImmutableMapLike {
   /**
-   * Retrieves a value from the map by key.
-   * @template T - The expected type of the value
-   * @param {string} key - The key to look up
-   * @returns {T} The value associated with the key
+   * Obtiene un valor del mapa por su clave.
+   * @template T - Tipo esperado del valor.
+   * @param {string} key - Clave a buscar.
+   * @returns {T} Valor asociado a la clave.
    */
   get<T = unknown>(key: string): T;
 }
 
 /**
- * Represents an immutable list-like data structure used by Swagger UI.
- * @template T - The type of elements in the list
+ * Estructura de datos inmutable tipo lista utilizada por Swagger UI.
+ * @template T - Tipo de los elementos de la lista.
  */
 interface ImmutableListLike<T extends ImmutableMapLike = ImmutableMapLike> {
   /**
-   * Converts the list to a standard JavaScript array.
-   * @returns {T[]} Array of elements
+   * Convierte la lista a un array estandar de JavaScript.
+   * @returns {T[]} Array de elementos.
    */
   toArray(): T[];
   /**
-   * Iterates over each element in the list.
-   * @param {Function} callback - Function to call for each element
+   * Itera sobre cada elemento de la lista.
+   * @param {Function} callback - Funcion a ejecutar por cada elemento.
    */
   forEach(callback: (value: T, key: string) => void): void;
 }
 
 /**
- * Represents an immutable map collection used by Swagger UI.
- * Combines list and map-like functionality.
- * @template T - The type of elements in the collection
+ * Coleccion inmutable tipo mapa utilizada por Swagger UI.
+ * Combina funcionalidad de lista y de mapa.
+ * @template T - Tipo de los elementos de la coleccion.
  */
 interface ImmutableMapCollection<
   T extends ImmutableMapLike = ImmutableMapLike,
 > extends ImmutableListLike<T> {
   /**
-   * Retrieves an element from the collection by key.
-   * @param {string} key - The key to look up
-   * @returns {T} The element associated with the key
+   * Obtiene un elemento de la coleccion por su clave.
+   * @param {string} key - Clave a buscar.
+   * @returns {T} Elemento asociado a la clave.
    */
   get(key: string): T;
 }
 
 /**
- * React-like interface provided by Swagger UI for creating UI elements.
- * Mimics a subset of React's API for plugin development.
+ * Interfaz similar a React proporcionada por Swagger UI para crear elementos de interfaz.
+ * Replica un subconjunto de la API de React para el desarrollo de plugins.
  */
 interface ReactLike {
   /**
-   * Creates a React element (similar to React.createElement).
-   * @param {...unknown[]} args - Element type, props, and children
-   * @returns {unknown} A React element
+   * Crea un elemento React (similar a React.createElement).
+   * @param {...unknown[]} args - Tipo de elemento, props e hijos.
+   * @returns {unknown} Un elemento React.
    */
   createElement: (...args: unknown[]) => unknown;
   /**
-   * React useState hook for managing component state.
-   * @template T - The type of the state value
-   * @param {T} initial - Initial state value
-   * @returns {[T, Function]} Tuple of current state and setter function
+   * Hook useState de React para gestionar el estado del componente.
+   * @template T - Tipo del valor del estado.
+   * @param {T} initial - Valor inicial del estado.
+   * @returns {[T, Function]} Tupla con el estado actual y la funcion setter.
    */
   useState<T>(initial: T): [T, (value: ((previous: T) => T) | T) => void];
 }
 
 /**
- * Represents a Swagger UI component function.
+ * Representa una funcion componente de Swagger UI.
  */
 type SwaggerComponent = (props: Record<string, unknown>) => unknown;
 
 /**
- * Represents the Swagger UI system object passed to plugins.
- * Provides access to selectors, actions, and React for building custom UI.
+ * Objeto del sistema de Swagger UI que se pasa a los plugins.
+ * Proporciona acceso a selectores, acciones y React para construir interfaz personalizada.
  */
 interface SwaggerSystem {
-  /** Selectors for accessing Swagger specification data */
+  /** Selectores para acceder a datos de la especificacion Swagger. */
   specSelectors: {
     /**
-     * Retrieves custom tokens from the Swagger specification.
-     * @returns {ImmutableListLike | undefined} List of custom tokens or undefined
+     * Recupera los tokens personalizados de la especificacion Swagger.
+     * @returns {ImmutableListLike | undefined} Lista de tokens o undefined.
      */
     customTokens(): ImmutableListLike | undefined;
     /**
-     * Retrieves security definitions from the Swagger specification.
-     * @returns {ImmutableMapCollection} Collection of security definitions
+     * Recupera las definiciones de seguridad de la especificacion Swagger.
+     * @returns {ImmutableMapCollection} Coleccion de definiciones de seguridad.
      */
     securityDefinitions(): ImmutableMapCollection;
   };
-  /** Selectors for accessing authorization state */
+  /** Selectores para acceder al estado de autorizacion. */
   authSelectors: {
     /**
-     * Retrieves currently authorized schemes.
-     * @returns {ImmutableMapCollection} Collection of authorized schemes
+     * Recupera los esquemas de autorizacion actuales.
+     * @returns {ImmutableMapCollection} Coleccion de esquemas autorizados.
      */
     authorized(): ImmutableMapCollection;
   };
-  /** Actions for managing authorization */
+  /** Acciones para gestionar la autorizacion. */
   authActions: {
     /**
-     * Authorizes with the given auth configuration and persists it.
-     * @param {Record<string, { schema: unknown; value: string }>} auth - Authorization configuration
+     * Autoriza con la configuracion proporcionada y la persiste.
+     * @param auth - Configuracion de autorizacion.
      */
     authorizeWithPersistOption(
       auth: Record<string, { schema: unknown; value: string }>,
     ): void;
     /**
-     * Configures authorization without persisting.
-     * @param {Record<string, { schema: unknown; value: string }>} auth - Authorization configuration
+     * Configura la autorizacion sin persistirla.
+     * @param auth - Configuracion de autorizacion.
      */
     configureAuth(
       auth: Record<string, { schema: unknown; value: string }>,
     ): void;
   };
-  /** React-like interface for creating UI elements */
+  /** Interfaz tipo React para crear elementos de interfaz. */
   React: ReactLike;
 }
 
 /**
- * Token information structure used by the auth plugin.
+ * Estructura de informacion de token utilizada por el plugin de autenticacion.
  */
 type TokenInfo = {
-  /** Display name for the token button */
+  /** Nombre a mostrar en el boton del token. */
   name: string;
-  /** User role associated with the token */
+  /** Rol del usuario asociado al token. */
   role: Role;
-  /** JWT token string */
+  /** Cadena del token JWT. */
   token: string;
 };
 
 /**
- * Decoded JWT payload with additional computed properties.
+ * Payload JWT decodificado con propiedades calculadas adicionales.
  */
 type DecodedTokenPayload = Record<string, unknown> & {
-  /** Token expiration timestamp (Unix time) */
+  /** Timestamp de expiracion del token (Unix time). */
   exp?: number;
-  /** Seconds until token expires */
+  /** Segundos restantes hasta la expiracion del token. */
   expiresIn?: number;
-  /** Token issued at timestamp (Unix time) */
+  /** Timestamp de emision del token (Unix time). */
   iat?: number;
-  /** Whether the token has expired */
+  /** Indica si el token ha expirado. */
   isExpired?: boolean;
-  /** ISO string of when token was issued */
+  /** Cadena ISO de cuando fue emitido el token. */
   issuedAt?: string;
 };
 
 /**
- * ### AuthPlugin
+ * Plugin de Swagger para autorizacion JWT mediante botones de usuario.
  *
- * Plugin de swagger para autorizar por JWT usuarios clicando en un botón.
- * El plugin toma los tokens de los usuarios de la extension llamada custom-tokens,
- * y a partir de ahi genera botones por cada token.
- *
- * La estructura de estos tokens debe ser un array con un objeto que contenga el nombre del token (para el boton)
- * y el token JWT:
- * ```
- * [
- *      {
- *          name: 'Usuario admin',
- *          token: 'eyHJTHFK...'
- *      }
- * ]
- * ```
- *
- * La función `buildAuthTokensSwagger` es la que define la estructura del token a usar
- * Dependiendo de lo que se quiera guardar en la autorización este método tiene que ser cambiado con la información que se necesite
- *
- * @version     1.0.0a
+ * Toma los tokens de la extension `x-custom-tokens` de la especificacion Swagger
+ * y genera botones de autenticacion rapida para cada usuario disponible.
+ * La funcion `buildAuthTokensSwagger` define la estructura de los tokens.
 
 
 
@@ -413,25 +397,15 @@ export const AuthPlugin = {
 };
 
 /**
- * Builds authentication tokens for Swagger UI from user information.
+ * Genera tokens JWT de autenticacion para Swagger UI a partir de la informacion de usuarios.
  *
- * This function generates JWT tokens for each user that can be used in the
- * Swagger UI auth plugin to quickly authenticate as different users during development.
+ * Crea un token firmado por cada usuario para poder autenticarse rapidamente
+ * como distintos usuarios durante el desarrollo.
  *
- * @param {JwtService} jwtService - NestJS JWT service for token generation
- * @param {string} jwtSecret - Secret key for signing JWT tokens
- * @param {UserActiveInterface[]} usersInfo - Array of user information to generate tokens for
- * @returns {Array<{ name: string; token: string }>} Array of token objects with user names and JWT tokens
- *
- * @example
- * ```typescript
- * const tokens = buildAuthTokensSwagger(
- *   jwtService,
- *   'secret-key',
- *   [{ id: 1, name: 'Admin User', email: 'admin@example.com', role: Role.ADMIN, ... }]
- * );
- * // Returns: [{ name: 'Admin User', token: 'eyJhbGc...' }]
- * ```
+ * @param jwtService - Servicio JWT de NestJS para la generacion de tokens.
+ * @param jwtSecret - Clave secreta para firmar los tokens JWT.
+ * @param usersInfo - Array de informacion de usuarios para generar tokens.
+ * @returns Array de objetos con nombre del usuario, rol y token JWT.
  */
 export function buildAuthTokensSwagger(
   jwtService: JwtService,
@@ -455,26 +429,17 @@ export function buildAuthTokensSwagger(
 }
 
 /**
- * Sets up the Swagger auth plugin for development environments.
+ * Configura el plugin de autenticacion de Swagger para entornos de desarrollo.
  *
- * This function configures the auth plugin to display user authentication buttons in Swagger UI.
- * The plugin is automatically disabled in production environments for security.
+ * Muestra botones de autenticacion rapida en Swagger UI para cada usuario
+ * de la base de datos. Se desactiva automaticamente en produccion por seguridad.
  *
- * **⚠️ Security Warning:** This plugin exposes user credentials and should only be used in
- * development environments. It is automatically disabled when NODE_ENV is 'production'.
+ * Aviso de seguridad: Este plugin expone credenciales de usuario y solo debe
+ * usarse en entornos de desarrollo. Se desactiva cuando NODE_ENV es 'production'.
  *
- * @param {NestApplication | NestFastifyApplication} app - The NestJS application instance
- * @param {DocumentBuilder} docBuilder - Swagger document builder instance
- * @param {SwaggerUiOptions} uiOptions - Swagger UI configuration options
- *
- * @example
- * ```typescript
- * import { setup as authPluginSetup } from './plugins/auth.plugin';
- *
- * const docBuilder = new DocumentBuilder();
- * const uiOptions = { operationsSorter: 'alpha' };
- * await authPluginSetup(app, docBuilder, uiOptions);
- * ```
+ * @param app - Instancia de la aplicacion NestJS.
+ * @param docBuilder - Builder del documento Swagger.
+ * @param uiOptions - Opciones de configuracion de Swagger UI.
  */
 export async function setup(
   app: NestApplication | NestFastifyApplication,

@@ -1,52 +1,25 @@
 /**
- * Swagger Library Module
+ * Modulo de la libreria Swagger de Kotrip.
  *
- * This library provides a comprehensive solution for setting up and configuring
- * Swagger documentation in NestJS applications. It includes:
+ * Proporciona una solucion para configurar la documentacion Swagger en la aplicacion NestJS.
  *
- * **Core Features:**
- * - Easy setup with sensible defaults
- * - Bearer token authentication
- * - Custom styling with dark theme support
- * - Deep route scanning for complete documentation
+ * Funcionalidades principales:
+ * - Configuracion sencilla con valores por defecto razonables.
+ * - Autenticacion por token Bearer.
+ * - Soporte de tema oscuro mediante CSS personalizado.
+ * - Escaneo profundo de rutas para documentacion completa.
  *
- * **Plugins:**
- * - **Auth Plugin**: Quick user authentication buttons (development only)
- * - **Collapse Plugin**: Collapse/expand all endpoints
+ * Plugins:
+ * - Auth Plugin: Botones de autenticacion rapida (solo en desarrollo).
+ * - Collapse Plugin: Colapsar/expandir todos los endpoints.
  *
- * **Security:**
- * - Auth plugin automatically disabled in production
- * - Only exposes user credentials in non-production environments
+ * Seguridad:
+ * - El plugin de autenticacion se desactiva automaticamente en produccion.
  *
  * @module @/lib/swagger
- * @version 1.0.0
-
-
-
-
  *
- * @example
- * ```typescript
- * import { setup } from '@/lib/swagger';
- *
- * // In your main.ts or bootstrap function
- * await setup(app, {
- *   title: 'My API',
- *   description: 'API Documentation',
- *   endpoint: 'docs',
- *   plugins: {
- *     authPlugin: true,
- *     collapsePlugin: true
- *   }
- * });
- *
- * // Access at: http://localhost:3000/docs
- * ```
- *
- * @see {@link setup} for main configuration function
- * @see {@link SwaggerLibOptions} for configuration options
- * @see {@link ./plugins/auth.plugin.ts} for auth plugin details
- * @see {@link ./plugins/collapse.plugin.ts} for collapse plugin details
+ * @see {@link setup} Funcion principal de configuracion.
+ * @see {@link SwaggerLibOptions} Opciones de configuracion.
  */
 
 export * from './interfaces';

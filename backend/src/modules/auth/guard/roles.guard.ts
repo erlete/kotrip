@@ -7,24 +7,17 @@ import { I18nService } from 'nestjs-i18n';
 import { I18nTranslations } from 'src/i18n/generated/i18n.generated';
 
 /**
- * ### RolesGuard
+ * Guard que verifica si el usuario tiene el rol requerido para acceder a un endpoint.
  *
- * Clase de tipo “guard” que extiende CanActivate de NestJS, comprueba si un usuario tiene permiso para
- * acceder a un método en base a su rol. El usuario ADMIN siempre tiene permiso de ejecución,
- * incluso aunque no esté escrito de forma estricta en la declaración del decorador antes del método
- * que se ejecutará.
+ * El usuario con rol ADMIN siempre tiene acceso, incluso si no esta listado
+ * explicitamente en los roles del decorador. Si un endpoint no tiene roles
+ * definidos, cualquier usuario autenticado puede acceder.
  *
- * @version     1.0.0a
 
 
 
 
-
-
-
- * @see         [CanActivate](https://docs.nestjs.com/guards)
- * @see         [ExecutionContext](https://docs.nestjs.com/fundamentals/execution-context)
- * @see         [Role](../../common/enums/role.enum.ts)
+ * @see {@link https://docs.nestjs.com/guards | NestJS Guards}
  */
 @Injectable()
 export class RolesGuard implements CanActivate {

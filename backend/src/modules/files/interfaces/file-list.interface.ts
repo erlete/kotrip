@@ -1,15 +1,8 @@
 /**
- * ### FileInterface
+ * Interfaz que define la estructura de un elemento del listado de archivos en MinIO.
  *
- * Interfaz para definir los datos que se devuelven al front-end y ocultar o encapsular datos de la
- * lista de ficheros que tiene un usuario almacenados en minio dentro de un bucket. Estos datos
- * están relacionados con los datos que tienen los archivos, si se modifican dichos datos, se debe
- * modificar esta interfaz para devolverlos.
- *
- * @version     1.0.1a
-
-
-
+ * Representa tanto archivos como directorios, incluyendo identificador,
+ * nombre, fecha de subida, tamano y ruta completa.
 
 
  */

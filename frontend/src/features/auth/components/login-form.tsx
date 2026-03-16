@@ -1,15 +1,8 @@
 /**
  * @file login-form.tsx
  * @description
- * -----------------------------------------------------
- * Formulario de inicio de sesion
- * -----------------------------------------------------
- * @version 0.0.2
- * @created 2025-11-24
- * @modified 2026-02-03
-
-
-
+ * Formulario de inicio de sesion con correo electronico y contrasena.
+ * Utiliza React Hook Form con Server Actions para la autenticacion.
  */
 
 'use client';

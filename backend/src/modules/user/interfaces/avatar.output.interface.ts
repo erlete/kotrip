@@ -1,14 +1,7 @@
 /**
- * ### AvatarOutput
+ * Interfaz de respuesta para la subida o actualizacion del avatar de usuario.
  *
- * DTO para controlar los datos de salida al front-end que arrojará el back-end al subir o
- * actualizar la foto de perfil
- *
- * @version     1.0.0a
-
-
-
-
+ * Contiene el nombre del archivo, el estado de la operacion y la URL publica del avatar.
  */
 export interface AvatarOutput {
   file_name: string;

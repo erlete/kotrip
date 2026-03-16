@@ -17,12 +17,12 @@ import type { Trip } from './trip.entity';
  * granulares y un rol decorativo opcional.
  *
  * @remarks
- * **Alcance funcional**:
+ * Alcance funcional:
  * - Define la relación usuario ↔ viaje con permisos booleanos individuales.
  * - El creador del viaje recibe automáticamente todos los permisos activados.
  * - El `decorativeRole` es un texto libre para etiquetas como "conductor", "fotógrafo", etc.
  *
- * **Permisos**:
+ * Permisos:
  * - `canEditTrip`: Modificar datos generales del viaje (nombre, fechas, etc.).
  * - `canEditBudget`: Gestionar gastos.
  * - `canEditDetails`: Modificar el itinerario.

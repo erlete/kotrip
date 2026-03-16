@@ -1,19 +1,12 @@
 import type { Order } from '../enums/order.enum';
 
 /**
- * ### OrderDTO
+ * DTO que representa el criterio de ordenacion de un campo en una consulta.
  *
- * DTO que representa el orden de un campo en una consulta.
- * Se usa en las consultas de usuarios para ordenar los resultados.
- * OrderPipe obtendrá un array de estos objetos para poder usarlos
- * posteriormente en el método de consulta.
+ * Utilizado por OrderPipe para transformar parametros de query string
+ * en un array de objetos con campo y direccion de ordenacion.
  *
- * @version     1.0.0a
-
-
-
-
- * @see         (OrderPipe)[../pipes/order.pipe.ts]
+ * @see OrderPipe Pipe que genera instancias de este DTO.
  */
 export class OrderDTO<T> {
   direction: Order;

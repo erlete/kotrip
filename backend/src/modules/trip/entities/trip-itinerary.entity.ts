@@ -21,13 +21,13 @@ import type { Trip } from './trip.entity';
  * la ordenación en consultas.
  *
  * @remarks
- * **Estructura de lista enlazada**:
+ * Estructura de lista enlazada:
  * - Cada parada puede apuntar a la siguiente y a la anterior.
  * - El campo `order` es un índice entero que refleja la posición en el itinerario.
  * - Las operaciones de inserción, eliminación y reordenamiento deben actualizar
  *   tanto los punteros como el campo `order` dentro de una transacción.
  *
- * **Información de desplazamiento**:
+ * Información de desplazamiento:
  * - `travelTime` indica el tiempo estimado para llegar a esta parada desde la anterior.
  * - `travelMethod` indica el medio de transporte utilizado (coche, a pie).
  *

@@ -21,17 +21,10 @@ import { i18nValidationMessage } from 'nestjs-i18n';
 import { I18nTranslations } from 'src/i18n/generated/i18n.generated';
 
 /**
- * ### CreateUserDto
+ * DTO para la creacion directa de un usuario (uso interno o seeder).
  *
- * DTO para controlar los datos de entrada al crear un usuario nuevo. La información aquí reglada está
- * relacionada directamente con la base de datos (entidad User), si se cambia algo en la entidad, se
- * debe reflejar aquí para el correcto funcionamiento.
- *
- * IMPORTANTE: Normalmente se crean los usuarios mediante AUTH, no mediante USER. Este DTO será usado solo
- * como CRUD básico para, por ejemplo, el seeder. Permite menos comproaciones de seguridad para la contraseña
- * o el nombre de usuario.
- *
- * @version     1.0.0a
+ * A diferencia del registro por AuthModule, este DTO permite menos
+ * validaciones de seguridad. Relacionado directamente con la entidad User.
 
 
 

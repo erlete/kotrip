@@ -1,7 +1,8 @@
 /**
- * @fileoverview Pagination hook for managing state and navigation
+ * @fileoverview Hook de paginacion para gestion de estado y navegacion
  *
- * React hook for managing cursor pagination state with URL synchronization.
+ * Hook de React para gestionar el estado de paginacion por cursor
+ * con sincronizacion automatica de la URL.
  */
 
 'use client';
@@ -21,51 +22,51 @@ import type {
 } from './types';
 
 /**
- * Configuration for pagination hook.
+ * Configuracion del hook de paginacion.
  */
 export interface UsePaginationConfig<K extends string = string> {
-  /** Base URL path (e.g., '/repositories') */
+  /** Ruta base de la URL (ej: '/repositories'). */
   basePath: string;
 
-  /** Default limit if not in URL */
+  /** Limite por defecto si no esta en la URL. */
   defaultLimit?: number;
 
-  /** Default sorts if not in URL */
+  /** Ordenamientos por defecto si no estan en la URL. */
   defaultSorts?: SortValue<K>[];
 
-  /** Whether to include total count in requests */
+  /** Si se debe incluir el conteo total en las peticiones. */
   includeTotal?: boolean;
 
-  /** Whether to include remaining count in requests */
+  /** Si se debe incluir el conteo de restantes en las peticiones. */
   includeRemaining?: boolean;
 }
 
 /**
- * Return type for pagination hook.
+ * Tipo de retorno del hook de paginacion.
  */
 export interface UsePaginationReturn<K extends string = string> {
-  /** Current pagination state */
+  /** Estado actual de paginacion. */
   state: PaginationState<K>;
 
-  /** Navigate to next page */
+  /** Navegar a la pagina siguiente. */
   goToNext: (response: CursorPaginationResponse<unknown>) => void;
 
-  /** Navigate to previous page */
+  /** Navegar a la pagina anterior. */
   goToPrev: (response: CursorPaginationResponse<unknown>) => void;
 
-  /** Navigate to first page (clear cursor) */
+  /** Navegar a la primera pagina (limpia el cursor). */
   goToFirst: () => void;
 
-  /** Add or update a sort */
+  /** Agregar o actualizar un ordenamiento. */
   addSort: (field: K, dir: SortDir) => void;
 
-  /** Remove a sort */
+  /** Eliminar un ordenamiento. */
   removeSort: (field: K) => void;
 
-  /** Toggle sort direction (asc -> desc -> none) */
+  /** Alternar direccion de ordenamiento (asc -> desc -> ninguno). */
   toggleSort: (field: K) => void;
 
-  /** Add or update a filter */
+  /** Agregar o actualizar un filtro. */
   addFilter: (
     field: K,
     op: FilterOp,
@@ -73,33 +74,34 @@ export interface UsePaginationReturn<K extends string = string> {
     type?: 'hard' | 'soft',
   ) => void;
 
-  /** Remove a specific filter */
+  /** Eliminar un filtro especifico. */
   removeFilter: (field: K, op: FilterOp, type?: 'hard' | 'soft') => void;
 
-  /** Remove all filters for a field */
+  /** Eliminar todos los filtros de un campo. */
   removeFieldFilters: (field: K) => void;
 
-  /** Clear all filters */
+  /** Limpiar todos los filtros. */
   clearFilters: () => void;
 
-  /** Clear all sorts and filters */
+  /** Limpiar todos los ordenamientos y filtros. */
   reset: () => void;
 
-  /** Set page limit */
+  /** Establecer el limite de pagina. */
   setLimit: (limit: number) => void;
 
-  /** Whether a navigation is pending */
+  /** Indica si hay una navegacion pendiente. */
   isPending: boolean;
 }
 
 /**
- * Hook for managing cursor pagination with URL synchronization.
+ * Hook para gestionar paginacion por cursor con sincronizacion de URL.
  *
- * Provides methods for navigation, sorting, and filtering with automatic URL updates.
- * Uses Next.js router for client-side navigation with transitions.
+ * Proporciona metodos de navegacion, ordenamiento y filtrado con
+ * actualizacion automatica de la URL. Utiliza el router de Next.js
+ * para navegacion en cliente con transiciones.
  *
- * @param config - Pagination configuration
- * @returns Pagination state and methods
+ * @param config - Configuracion de paginacion.
+ * @returns Estado de paginacion y metodos de control.
  *
  * @example
  * const pagination = usePagination({

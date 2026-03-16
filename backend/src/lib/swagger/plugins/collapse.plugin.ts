@@ -1,25 +1,14 @@
 /**
- * ### CollapsePlugin
+ * Plugin de Swagger para colapsar y expandir todos los menus.
  *
- * Plugin de swagger para colapsar y expandir todos los menus.
- * Añade botones de colapsar y expandir en la interfaz de Swagger.
- *
- * Este plugin proporciona dos botones en la interfaz de Swagger UI:
- * - **Collapse All**: Colapsa todos los endpoints expandidos
- * - **Expand All**: Expande todos los endpoints colapsados
+ * Proporciona dos botones en la interfaz de Swagger UI:
+ * - Collapse All: colapsa todos los endpoints expandidos.
+ * - Expand All: expande todos los endpoints colapsados.
  *
  * Los botones se posicionan en la parte superior de la lista de operaciones
- * para facilitar la navegación cuando hay muchos endpoints.
+ * para facilitar la navegacion cuando hay muchos endpoints.
  *
- * @version     1.0.0a
-
- * @see         [pluginApi](https://swagger.io/docs/open-source-tools/swagger-ui/customization/plugin-api/)
- *
- * @example
- * ```typescript
- * // Usage in Swagger setup
- * uiOptions['plugins'] = [CollapsePlugin];
- * ```
+ * @see {@link https://swagger.io/docs/open-source-tools/swagger-ui/customization/plugin-api/ | Plugin API}
  */
 export const CollapsePlugin = {
   wrapComponents: {

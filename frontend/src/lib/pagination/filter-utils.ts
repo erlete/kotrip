@@ -1,23 +1,24 @@
 /**
- * @fileoverview Filter utilities for cursor pagination
+ * @fileoverview Utilidades de filtrado para paginacion por cursor
  *
- * Utilities for managing filters in pagination state and query parameters.
+ * Funciones auxiliares para gestionar filtros en el estado de paginacion
+ * y en los parametros de consulta.
  */
 
 import { FilterOpSuffix } from './types';
 import type { FilterOp, FilterValue } from './types';
 
 /**
- * Adds a filter to the filter array.
+ * Agrega un filtro al array de filtros.
  *
- * If a filter with the same field and operation already exists, it replaces it.
+ * Si ya existe un filtro con el mismo campo y operacion, lo reemplaza.
  *
- * @param filters - Current filter array
- * @param field - Field to filter on
- * @param op - Filter operation
- * @param value - Filter value
- * @param type - Filter type (hard or soft)
- * @returns New filter array with the filter added/updated
+ * @param filters - Array de filtros actual.
+ * @param field - Campo a filtrar.
+ * @param op - Operacion del filtro.
+ * @param value - Valor del filtro.
+ * @param type - Tipo de filtro (hard o soft).
+ * @returns Nuevo array de filtros con el filtro agregado/actualizado.
  *
  * @example
  * addFilter([], 'ghName', 'contains', 'awesome', 'soft')
@@ -40,13 +41,13 @@ export function addFilter<K extends string = string>(
 }
 
 /**
- * Removes a filter from the filter array.
+ * Elimina un filtro del array de filtros.
  *
- * @param filters - Current filter array
- * @param field - Field to remove filter from
- * @param op - Filter operation to remove
- * @param type - Filter type (hard or soft)
- * @returns New filter array with the filter removed
+ * @param filters - Array de filtros actual.
+ * @param field - Campo del cual eliminar el filtro.
+ * @param op - Operacion del filtro a eliminar.
+ * @param type - Tipo de filtro (hard o soft).
+ * @returns Nuevo array de filtros sin el filtro eliminado.
  *
  * @example
  * removeFilter(filters, 'ghName', 'contains', 'soft')
@@ -64,11 +65,11 @@ export function removeFilter<K extends string = string>(
 }
 
 /**
- * Removes all filters for a specific field.
+ * Elimina todos los filtros de un campo especifico.
  *
- * @param filters - Current filter array
- * @param field - Field to remove all filters from
- * @returns New filter array with all filters for the field removed
+ * @param filters - Array de filtros actual.
+ * @param field - Campo del cual eliminar todos los filtros.
+ * @returns Nuevo array de filtros sin los filtros del campo indicado.
  *
  * @example
  * removeFieldFilters(filters, 'ghName')
@@ -82,9 +83,9 @@ export function removeFieldFilters<K extends string = string>(
 }
 
 /**
- * Clears all filters.
+ * Limpia todos los filtros.
  *
- * @returns Empty filter array
+ * @returns Array de filtros vacio.
  *
  * @example
  * clearFilters()
@@ -95,13 +96,13 @@ export function clearFilters<K extends string = string>(): FilterValue<K>[] {
 }
 
 /**
- * Gets filter value for a specific field and operation.
+ * Obtiene el valor de un filtro para un campo y operacion especificos.
  *
- * @param filters - Current filter array
- * @param field - Field to get filter for
- * @param op - Filter operation
- * @param type - Filter type (hard or soft)
- * @returns Filter value or undefined if not found
+ * @param filters - Array de filtros actual.
+ * @param field - Campo del filtro a buscar.
+ * @param op - Operacion del filtro.
+ * @param type - Tipo de filtro (hard o soft).
+ * @returns Valor del filtro o `undefined` si no se encontro.
  *
  * @example
  * getFilter(filters, 'ghName', 'contains', 'soft')
@@ -120,13 +121,13 @@ export function getFilter<K extends string = string>(
 }
 
 /**
- * Checks if a filter exists.
+ * Verifica si un filtro existe.
  *
- * @param filters - Current filter array
- * @param field - Field to check
- * @param op - Filter operation
- * @param type - Filter type (hard or soft)
- * @returns True if filter exists
+ * @param filters - Array de filtros actual.
+ * @param field - Campo a verificar.
+ * @param op - Operacion del filtro.
+ * @param type - Tipo de filtro (hard o soft).
+ * @returns `true` si el filtro existe.
  *
  * @example
  * hasFilter(filters, 'ghName', 'contains', 'soft')
@@ -144,12 +145,12 @@ export function hasFilter<K extends string = string>(
 }
 
 /**
- * Converts filter array to query parameters object.
+ * Convierte un array de filtros a un objeto de parametros de consulta.
  *
- * Uses the backend's filter format: {type}{FieldName}{Operation}={value}
+ * Utiliza el formato de filtros del backend: {type}{FieldName}{Operation}={value}
  *
- * @param filters - Filter array
- * @returns Query parameters object
+ * @param filters - Array de filtros.
+ * @returns Objeto de parametros de consulta.
  *
  * @example
  * filtersToQueryParams([
@@ -181,13 +182,13 @@ export function filtersToQueryParams<K extends string = string>(
 }
 
 /**
- * Parses filter from query parameter name and value.
+ * Parsea un filtro a partir del nombre y valor de un parametro de consulta.
  *
- * Converts backend filter format back to FilterValue object.
+ * Convierte el formato de filtro del backend de vuelta a un objeto FilterValue.
  *
- * @param paramName - Query parameter name (e.g., 'softGhNameContains')
- * @param value - Query parameter value
- * @returns FilterValue or null if unable to parse
+ * @param paramName - Nombre del parametro de consulta (ej: 'softGhNameContains').
+ * @param value - Valor del parametro de consulta.
+ * @returns Objeto FilterValue o `null` si no se puede parsear.
  *
  * @example
  * parseFilterFromParam('softGhNameContains', 'awesome')

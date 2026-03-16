@@ -1,14 +1,15 @@
 /**
- * @fileoverview Frontend cursor pagination types
+ * @fileoverview Tipos de paginacion por cursor para el frontend
  *
- * Type definitions for working with cursor-paginated responses from the backend.
- * Provides type-safe interfaces for navigation, filtering, and sorting.
+ * Definiciones de tipos para trabajar con respuestas paginadas por cursor
+ * del backend. Provee interfaces con tipado seguro para navegacion,
+ * filtrado y ordenamiento.
  */
 
 /**
- * Filter operations supported by the backend pagination library.
+ * Operaciones de filtrado soportadas por la libreria de paginacion del backend.
  *
- * Each operation maps to a specific SQL condition.
+ * Cada operacion se corresponde con una condicion SQL especifica.
  */
 export type FilterOp =
   | 'contains' // String contains (wrapped with %)
@@ -28,7 +29,7 @@ export type FilterOp =
   | 'startsWith'; // String starts with (suffixed with %)
 
 /**
- * Mapping of filter operations to their query parameter suffixes.
+ * Mapeo de operaciones de filtrado a sus sufijos de parametro de consulta.
  *
  * @example
  * FilterOpSuffix['gte'] = 'Gte'  // Query param: createdAtGte
@@ -53,17 +54,17 @@ export const FilterOpSuffix: Record<FilterOp, string> = {
 };
 
 /**
- * Sort direction: ascending or descending.
+ * Direccion de ordenamiento: ascendente o descendente.
  */
 export type SortDir = 'asc' | 'desc';
 
 /**
- * Cursor direction for pagination navigation.
+ * Direccion de cursor para la navegacion de paginacion.
  */
 export type CursorDir = 'next' | 'prev';
 
 /**
- * Sort value: a field key with direction.
+ * Valor de ordenamiento: clave de campo con direccion.
  *
  * @example
  * { key: 'createdAt', dir: 'desc' }
@@ -75,7 +76,7 @@ export interface SortValue<K extends string = string> {
 }
 
 /**
- * Filter value: field, operation, and value.
+ * Valor de filtro: campo, operacion y valor.
  *
  * @example
  * { field: 'ghName', op: 'contains', value: 'awesome' }
@@ -89,98 +90,98 @@ export interface FilterValue<K extends string = string> {
 }
 
 /**
- * Standard cursor pagination response from backend.
+ * Respuesta estandar de paginacion por cursor del backend.
  *
- * @template TDto - The DTO type of items in data array
+ * @template TDto - Tipo DTO de los elementos en el array de datos.
  */
 export interface CursorPaginationResponse<TDto> {
-  /** Array of items for this page */
+  /** Array de elementos de esta pagina. */
   data: TDto[];
 
-  /** Pagination metadata */
+  /** Metadatos de paginacion. */
   meta: {
-    /** Actual number of items returned */
+    /** Cantidad real de elementos devueltos. */
     count: number;
 
-    /** Applied filters with their operations and values */
+    /** Filtros aplicados con sus operaciones y valores. */
     filtersApplied: string[];
 
-    /** Whether there are more items after this page */
+    /** Indica si hay mas elementos despues de esta pagina. */
     hasNext: boolean;
 
-    /** Whether there are items before this page */
+    /** Indica si hay elementos antes de esta pagina. */
     hasPrev: boolean;
 
-    /** Requested page size */
+    /** Tamano de pagina solicitado. */
     limit: number;
 
-    /** Opaque cursor for next page (if hasNext is true) */
+    /** Cursor opaco para la siguiente pagina (si hasNext es true). */
     nextCursor?: string;
 
-    /** Opaque cursor for previous page (if hasPrev is true) */
+    /** Cursor opaco para la pagina anterior (si hasPrev es true). */
     prevCursor?: string;
 
-    /** Remaining items from current cursor position (only present if includeRemaining was true) */
+    /** Elementos restantes desde la posicion actual del cursor (solo presente si se solicito includeRemaining). */
     remaining?: number;
 
-    /** Applied sort configuration (normalized) */
+    /** Configuracion de ordenamiento aplicada (normalizada). */
     sortApplied: string[];
 
-    /** Total item count (only present if includeTotal was true) */
+    /** Conteo total de elementos (solo presente si se solicito includeTotal). */
     total?: number;
   };
 }
 
 /**
- * Pagination state for managing cursor navigation and filters.
+ * Estado de paginacion para gestionar la navegacion por cursor y filtros.
  *
- * @template K - Union of available field keys for sorting/filtering
+ * @template K - Union de claves de campo disponibles para ordenamiento/filtrado.
  */
 export interface PaginationState<K extends string = string> {
-  /** Current cursor (undefined for first page) */
+  /** Cursor actual (`undefined` para la primera pagina). */
   cursor?: string;
 
-  /** Cursor direction (for navigation) */
+  /** Direccion del cursor (para navegacion). */
   cursorDir?: CursorDir;
 
-  /** Page size limit */
+  /** Limite de tamano de pagina. */
   limit: number;
 
-  /** Active sort values */
+  /** Valores de ordenamiento activos. */
   sorts: SortValue<K>[];
 
-  /** Active filter values */
+  /** Valores de filtrado activos. */
   filters: FilterValue<K>[];
 
-  /** Whether to include total count */
+  /** Si se debe incluir el conteo total. */
   includeTotal?: boolean;
 
-  /** Whether to include remaining count */
+  /** Si se debe incluir el conteo de restantes. */
   includeRemaining?: boolean;
 }
 
 /**
- * Query parameters for cursor pagination requests.
+ * Parametros de consulta para peticiones de paginacion por cursor.
  */
 export interface PaginationQueryParams {
-  /** Opaque cursor string */
+  /** Cadena de cursor opaco. */
   cursor?: string;
 
-  /** Cursor direction */
+  /** Direccion del cursor. */
   cursorDir?: CursorDir;
 
-  /** Page size */
+  /** Tamano de pagina. */
   limit?: number;
 
-  /** Sort parameters (e.g., 'createdAt:desc,id:asc') */
+  /** Parametros de ordenamiento (ej: 'createdAt:desc,id:asc'). */
   sort?: string;
 
-  /** Whether to include total count */
+  /** Si se debe incluir el conteo total. */
   includeTotal?: boolean;
 
-  /** Whether to include remaining count */
+  /** Si se debe incluir el conteo de restantes. */
   includeRemaining?: boolean;
 
-  /** Dynamic filter parameters */
+  /** Parametros de filtrado dinamicos. */
   [key: string]: boolean | null | number | string | string[] | undefined;
 }

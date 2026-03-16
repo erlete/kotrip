@@ -18,12 +18,12 @@ import type { Trip } from './trip.entity';
  * cuánto se pagó y entre quiénes se divide el coste.
  *
  * @remarks
- * **Modelo de reparto**:
+ * Modelo de reparto:
  * - `payer`: El usuario que realizó el pago físico.
  * - `payees`: Los usuarios entre los que se reparte el gasto (quienes deben su parte).
  * - El importe por persona se calcula dividiendo `quantity` entre el número de `payees`.
  *
- * **Asociación**:
+ * Asociación:
  * - Siempre pertenece a un viaje (`trip`).
  * - Opcionalmente puede estar vinculado a una parada específica del itinerario.
  *

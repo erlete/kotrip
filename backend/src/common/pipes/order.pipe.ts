@@ -5,19 +5,11 @@ import { Order } from '../enums/order.enum';
 import { ErrorManager } from '../error-handling/error.manager';
 
 /**
- * ## OrderPipe
+ * Pipe que transforma cadenas de ordenacion con formato "campo:direccion"
+ * a un array de objetos OrderDTO.
  *
- * Pipe que transforma una cadena de ordenes en formato "campo:dirección"
- * a un un array de objetos OrderDTO. fieldEnum debe ser un enum con
- * los campos de la base de datos que se quiere ordenar. La clave del enum
- * se correponderá con el nombre del campo en el DTO de salida mientras que
- * el valor corresponderá con el nombre del campo en la base de datos.
- *
- * @version     1.0.0a
-
-
-
-
+ * El parametro fieldEnum debe ser un enum donde la clave corresponde al nombre
+ * del campo en el DTO de salida y el valor al nombre de la columna en la base de datos.
  */
 export class OrderPipe implements PipeTransform {
   constructor(private readonly fieldEnum: Record<string, string>) {

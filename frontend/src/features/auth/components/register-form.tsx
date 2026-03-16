@@ -1,14 +1,8 @@
 /**
  * @file register-form.tsx
  * @description
- * -----------------------------------------------------
- * Formulario de registro de nuevos usuarios
- * -----------------------------------------------------
- * @version 0.0.1a
- * @created 2026-02-03
-
-
-
+ * Formulario de registro de nuevos usuarios con campos de email,
+ * nombre, apellidos y contrasena.
  */
 
 'use client';

@@ -9,9 +9,9 @@ import Image from 'next/image';
  * Props del componente Poster.
  */
 interface PosterProps {
-  /** URL pública del poster. */
+  /** URL publica del poster. */
   posterUrl?: string;
-  /** Título del curso para el atributo alt. */
+  /** Titulo del elemento para el atributo alt. */
   title: string;
   /** Variante de tamaño del componente. */
   variant?: 'card' | 'header' | 'full';
@@ -40,11 +40,11 @@ const iconSizeClasses: Record<string, string> = {
 };
 
 /**
- * Componente que muestra el poster de un curso.
- * Si no hay poster disponible, muestra un placeholder con ícono.
+ * Componente que muestra la imagen de portada de un recurso.
+ * Si no hay imagen disponible, muestra un placeholder con icono.
  *
  * @param props - Props del componente.
- * @returns Elemento JSX del poster del curso.
+ * @returns Elemento JSX del poster.
  */
 export function Poster({
   posterUrl,

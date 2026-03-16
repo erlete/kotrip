@@ -5,15 +5,10 @@ import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
 import { I18nValidatorService } from './i18n-validator.service';
 
 /**
- * ### I18nValidatorController
+ * Controlador REST para la validacion de traducciones i18n.
  *
- * Controlador REST que expone endpoints para validar traducciones i18n.
- *
- *
- * @version 1.0.0
-
-
-
+ * Expone endpoints para detectar traducciones faltantes, obtener estadisticas
+ * de cobertura y listar claves completamente sin traducir. Solo accesible por ADMIN.
  */
 @Controller('i18n-validator')
 @ApiTags('i18n - Validador i18n')

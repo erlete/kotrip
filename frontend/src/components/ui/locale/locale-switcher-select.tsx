@@ -1,17 +1,9 @@
 /**
  * @file locale-switcher-select.tsx
  * @description
- * -----------------------------------------------------
  * Selector de idioma basado en HeroUI Select.
- * Permite al usuario cambiar el idioma de la aplicación
- * mediante un menú desplegable accesible.
- * -----------------------------------------------------
- * @version 2.0.0
- * @created 2024-12-19
- * @modified 2026-03-13
-
-
-
+ * Permite al usuario cambiar el idioma de la aplicacion
+ * mediante un menu desplegable accesible.
  */
 
 'use client';

@@ -20,7 +20,7 @@ import {
  * Cada registro contiene un hash bcrypt de un código OTP de 6 dígitos.
  *
  * @remarks
- * **Alcance funcional**:
+ * Alcance funcional:
  * - Verificación de email tras el registro de un usuario.
  * - Recuperación de contraseña mediante código OTP.
  * - El token almacenado es un hash bcrypt del código de 6 dígitos enviado por email.

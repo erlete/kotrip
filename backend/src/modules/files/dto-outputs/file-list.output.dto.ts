@@ -9,23 +9,12 @@ import {
 } from 'class-validator';
 
 /**
- * ### FileOutputDto
+ * DTO de respuesta para la lista de archivos y directorios.
  *
- * DTO para controlar los datos de salida al front-end que arrojará el back-end al obtener la lista de archivos.
- * Estos datos están relacionados con la interfaz de archivo.
- * Si se modifica algo en la interfaz, se debe modificar aquí también para asegurar la correcta devolución
- * de datos.
+ * Representa un elemento del listado de archivos almacenados en MinIO,
+ * ya sea un archivo o un directorio. Debe mantenerse sincronizado con FileListInterface.
  *
- * FIXED: Changed structure to match FileListInterface (flat array instead of nested)
- * FIXED: Changed id type from number to string to match MinIO etag
- * FIXED: Made upload_date nullable for directories
- *
- * @version     1.0.1a
-
-
-
-
- * @see         [FileListInterface](../interfaces/file-list.interface.ts)
+ * @see FileListInterface Interfaz interna correspondiente.
  */
 export class FileOutputDto {
   @ApiProperty({

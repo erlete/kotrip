@@ -1,7 +1,8 @@
 /**
- * @fileoverview Query builder for cursor pagination
+ * @fileoverview Constructor de consultas para paginacion por cursor
  *
- * Utilities for building URL query parameters from pagination state.
+ * Utilidades para construir parametros de consulta URL a partir del
+ * estado de paginacion.
  */
 
 import { filtersToQueryParams } from './filter-utils';
@@ -9,12 +10,12 @@ import { sortsToString } from './sort-utils';
 import type { PaginationQueryParams, PaginationState } from './types';
 
 /**
- * Builds query parameters object from pagination state.
+ * Construye un objeto de parametros de consulta a partir del estado de paginacion.
  *
- * Converts PaginationState to a flat object suitable for URL search params.
+ * Convierte PaginationState a un objeto plano adecuado para URLSearchParams.
  *
- * @param state - Current pagination state
- * @returns Query parameters object
+ * @param state - Estado actual de paginacion.
+ * @returns Objeto de parametros de consulta.
  *
  * @example
  * buildQueryParams({
@@ -76,13 +77,12 @@ export function buildQueryParams<K extends string = string>(
 }
 
 /**
- * Converts query parameters object to URLSearchParams.
+ * Convierte un objeto de parametros de consulta a URLSearchParams.
  *
- * Handles arrays by joining with commas.
- * Skips undefined values.
+ * Los arrays se unen con comas. Los valores `undefined` se omiten.
  *
- * @param params - Query parameters object
- * @returns URLSearchParams instance
+ * @param params - Objeto de parametros de consulta.
+ * @returns Instancia de URLSearchParams.
  *
  * @example
  * queryParamsToSearchParams({ limit: 20, sort: 'createdAt:desc' })
@@ -117,11 +117,11 @@ export function queryParamsToSearchParams(
 }
 
 /**
- * Builds complete URL with query parameters.
+ * Construye una URL completa con los parametros de consulta de paginacion.
  *
- * @param baseUrl - Base URL path
- * @param state - Pagination state
- * @returns Complete URL with query string
+ * @param baseUrl - Ruta base de la URL.
+ * @param state - Estado de paginacion.
+ * @returns URL completa con cadena de consulta.
  *
  * @example
  * buildUrl('/repositories', state)
@@ -143,13 +143,14 @@ export function buildUrl<K extends string = string>(
 }
 
 /**
- * Merges additional query parameters into pagination state.
+ * Combina parametros de consulta adicionales con el estado de paginacion.
  *
- * Useful for adding custom parameters that aren't part of pagination state.
+ * Util para agregar parametros personalizados que no forman parte del
+ * estado de paginacion.
  *
- * @param state - Pagination state
- * @param additionalParams - Additional query parameters
- * @returns Combined query parameters
+ * @param state - Estado de paginacion.
+ * @param additionalParams - Parametros de consulta adicionales.
+ * @returns Parametros de consulta combinados.
  *
  * @example
  * mergeQueryParams(state, { tab: 'active' })
@@ -164,12 +165,12 @@ export function mergeQueryParams<K extends string = string>(
 }
 
 /**
- * Extracts pagination parameters from URLSearchParams.
+ * Extrae parametros de paginacion de un objeto URLSearchParams.
  *
- * Useful for parsing current URL state.
+ * Util para parsear el estado actual de la URL.
  *
- * @param searchParams - URLSearchParams from current URL
- * @returns Partial query parameters object
+ * @param searchParams - URLSearchParams de la URL actual.
+ * @returns Objeto parcial de parametros de consulta.
  *
  * @example
  * extractFromSearchParams(new URLSearchParams('limit=20&sort=createdAt:desc'))

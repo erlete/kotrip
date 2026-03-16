@@ -1,5 +1,11 @@
 import * as crypto from 'node:crypto';
 
+/**
+ * Funciones utilitarias de encriptacion y desencriptacion con AES-256-CBC.
+ *
+ * Se utilizan para proteger archivos almacenados en MinIO cuando la encriptacion
+ * esta habilitada en la configuracion de la plataforma.
+ */
 export class EncryptFunctions {
   static readonly CYPHER_TO_USE = 'aes-256-cbc';
 

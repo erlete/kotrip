@@ -48,13 +48,10 @@ import { OrderUsers } from './enums/order-user.enum';
 import { UserService } from './user.service';
 
 /**
- * ### UserController
+ * Controlador de gestion de usuarios.
  *
- * Controlador para el módulo de gestión de usuarios. Los end-points aquí declarados son para
- * una gestión superficial del usuario, consulta y borrado de datos. La parte de creación del
- * CRUD se hace desde el módulo Auth.
- *
- * @version     1.0.1a
+ * Expone endpoints para consulta, actualizacion, eliminacion y gestion de avatares
+ * de los usuarios. La creacion de usuarios se realiza desde el modulo de autenticacion.
 
 
 
@@ -63,8 +60,7 @@ import { UserService } from './user.service';
 
 
 
- * @see         [AuthModule](../auth/auth.module.ts)
- * @see         [ApiBearerAuth](https://docs.nestjs.com/openapi/security)
+ * @see AuthModule Modulo encargado del registro de nuevos usuarios.
  */
 @ApiBearerAuth()
 @ApiUnauthorizedResponse({ description: 'Unauthorized.' })

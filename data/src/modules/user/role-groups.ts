@@ -1,16 +1,8 @@
 import { Role } from './enums.js';
 
 /**
- * Grupos predefinidos de roles para control de acceso consistente.
- *
- * @remarks
- * Estos grupos centralizan los patrones comunes de roles
- * para evitar inconsistencias en la configuración de permisos.
- */
-
-/**
  * Solo administradores.
- * Tienen acceso a configuración global, gestión de usuarios y funciones administrativas.
+ * Incluye acceso a configuracion global, gestion de usuarios y funciones administrativas.
  *
  * @example
  * ```typescript
@@ -29,7 +21,7 @@ export const ADMINS = [Role.ADMIN] as const;
 
 /**
  * Todos los roles del sistema.
- * Útil para endpoints autenticados donde cualquier usuario con sesión válida puede acceder.
+ * Util para endpoints autenticados donde cualquier usuario con sesion valida puede acceder.
  *
  * @example
  * ```typescript
@@ -40,7 +32,10 @@ export const ADMINS = [Role.ADMIN] as const;
 export const ALL_ROLES = [Role.USER, Role.ADMIN] as const;
 
 /**
- * Namespace que agrupa todas las constantes de role groups para importación más limpia.
+ * Grupos predefinidos de roles para control de acceso.
+ *
+ * Centraliza los patrones comunes de roles para evitar inconsistencias
+ * en la configuracion de permisos a lo largo de la plataforma.
  *
  * @example
  * ```typescript

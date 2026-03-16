@@ -1,16 +1,9 @@
 /**
- * @file TitleComponent.tsx
+ * @file title-component.tsx
  * @description
- * -----------------------------------------------------
- * Archivo que contiene el componente de título
- * -----------------------------------------------------
- * @version 0.0.2a
- * @created 2025-01-15
- * @modified 2025-05-02
-
-
-
- * */
+ * Componente de titulo de pagina reutilizable con soporte para
+ * boton de retroceso, descripcion y enlace de destino opcional.
+ */
 
 'use client';
 

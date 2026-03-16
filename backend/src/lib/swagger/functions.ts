@@ -12,51 +12,16 @@ import { CollapsePlugin } from './plugins/collapse.plugin';
 const logger = new Logger('SwaggerLib');
 
 /**
- * Set up Swagger documentation for a NestJS application.
+ * Configura la documentacion Swagger para la aplicacion NestJS.
  *
- * This function configures and initializes Swagger UI with customizable options including:
- * - Custom title and description
- * - Bearer token authentication
- * - Custom plugins (auth and collapse)
- * - Dark theme CSS styling
- * - Custom endpoint path
+ * Inicializa Swagger UI con opciones personalizables: titulo, descripcion,
+ * autenticacion Bearer, plugins (auth y collapse), tema oscuro CSS y ruta del endpoint.
  *
- * The function automatically applies:
- * - Alphabetical sorting for operations and tags
- * - Bearer authentication scheme
- * - Custom CSS styles if available
- * - Deep route scanning for comprehensive documentation
+ * Aplica automaticamente ordenacion alfabetica de operaciones y tags,
+ * esquema de autenticacion Bearer y escaneo profundo de rutas.
  *
- * @param {NestApplication | NestFastifyApplication} app - The NestJS application instance to configure
- * @param {SwaggerLibOptions} [options] - Configuration options for Swagger setup
- * @param {string} [options.title='Swagger Docs'] - Title for the API documentation
- * @param {string} [options.description='Swagger Docs'] - Description for the API documentation
- * @param {string} [options.endpoint='docs'] - URL path where Swagger UI will be accessible
- * @param {SwaggerLibPluginOptions} options.plugins - Plugin configuration
- * @param {boolean} options.plugins.authPlugin - Enable auth plugin (auto-disabled in production)
- * @param {boolean} options.plugins.collapsePlugin - Enable collapse/expand all buttons
- * @returns {Promise<void>} Resolves when Swagger setup is complete
- *
- * @example
- * ```typescript
- * import { setup } from '@/lib/swagger';
- *
- * // Basic setup with defaults
- * await setup(app);
- *
- * // Custom configuration
- * await setup(app, {
- *   title: 'My API Documentation',
- *   description: 'Comprehensive API docs for My Application',
- *   endpoint: 'api-docs',
- *   plugins: {
- *     authPlugin: true,  // Shows auth buttons in dev/staging
- *     collapsePlugin: true  // Shows collapse/expand buttons
- *   }
- * });
- * ```
- *
- * @throws {Error} If CSS file path is invalid (logs warning instead of throwing)
+ * @param app - Instancia de la aplicacion NestJS a configurar.
+ * @param options - Opciones de configuracion de Swagger.
  */
 export async function setup(
   app: NestApplication | NestFastifyApplication,

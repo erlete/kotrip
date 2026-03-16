@@ -26,7 +26,7 @@ import { TripMember } from './trip-member.entity';
  * y puede contener miembros, itinerarios y gastos asociados.
  *
  * @remarks
- * **Alcance funcional**:
+ * Alcance funcional:
  * - Define los datos generales del viaje (nombre, descripción, fechas, presupuesto).
  * - Gestiona el ciclo de vida mediante el campo `status` (PLANNED -> ACTIVE -> FINISHED).
  * - Puede asociarse opcionalmente a una localidad de referencia (municipio español).

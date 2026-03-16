@@ -17,12 +17,12 @@ import type { Trip } from './trip.entity';
  * para que se una como miembro.
  *
  * @remarks
- * **Ciclo de vida**:
+ * Ciclo de vida:
  * - Se crea con estado PENDING cuando un miembro con permiso `canInviteMembers` invita.
  * - El receptor puede aceptar (ACCEPTED) o rechazar (REJECTED).
  * - Al aceptarse, se crea automáticamente un `TripMember` para el receptor.
  *
- * **Restricción de unicidad**:
+ * Restricción de unicidad:
  * - Solo puede existir una invitación activa por par (viaje, receptor).
  *
  * @see Trip Entidad del viaje asociado.

@@ -31,9 +31,9 @@ interface ScopeNavProps {
 }
 
 /**
- * Componente genérico de navegación por pestañas dentro de un scope.
- * Componente único de navegación por pestañas para todos los scopes
- * (curso, unidad, etc.) proporcionando una interfaz unificada.
+ * Componente generico de navegacion por pestanas dentro de un scope.
+ * Proporciona una interfaz unificada de navegacion por pestanas
+ * para todos los scopes de la aplicacion (viaje, itinerario, etc.).
  *
  * @param props - Props del componente.
  * @returns Elemento JSX de la barra de navegación de scope.

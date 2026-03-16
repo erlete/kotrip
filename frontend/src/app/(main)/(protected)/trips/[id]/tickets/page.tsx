@@ -18,15 +18,21 @@ export default composePage({
 async function Page({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
 
-  const [tripResult, ticketsResult, itineraryResult, expensesResult, membersResult, session] =
-    await Promise.all([
-      fetchTrip(id),
-      fetchTickets(id),
-      fetchItinerary(id),
-      fetchExpenses(id),
-      fetchTripMembers(id),
-      getSession(),
-    ]);
+  const [
+    tripResult,
+    ticketsResult,
+    itineraryResult,
+    expensesResult,
+    membersResult,
+    session,
+  ] = await Promise.all([
+    fetchTrip(id),
+    fetchTickets(id),
+    fetchItinerary(id),
+    fetchExpenses(id),
+    fetchTripMembers(id),
+    getSession(),
+  ]);
 
   const trip = 'trip' in tripResult ? tripResult.trip : null;
   const tickets = 'tickets' in ticketsResult ? ticketsResult.tickets : [];

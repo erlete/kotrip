@@ -1,15 +1,8 @@
 /**
  * @file login-view-page.tsx
  * @description
- * -----------------------------------------------------
- * Página de vista de inicio de sesión
- * -----------------------------------------------------
- * @version 1.0.0
- * @created 2025-11-24
- * @modified 2026-03-13
-
-
-
+ * Pagina de vista de inicio de sesion con formulario, enlace a registro
+ * y enlace a recuperacion de contrasena.
  */
 
 'use client';

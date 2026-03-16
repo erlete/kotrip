@@ -1,15 +1,8 @@
 /**
  * @file register-view-page.tsx
  * @description
- * -----------------------------------------------------
- * Página de vista de registro
- * -----------------------------------------------------
- * @version 1.0.0
- * @created 2026-02-03
- * @modified 2026-03-13
-
-
-
+ * Pagina de vista de registro de nuevos usuarios con formulario
+ * y enlace a inicio de sesion.
  */
 
 'use client';

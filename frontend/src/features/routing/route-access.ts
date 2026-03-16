@@ -2,6 +2,12 @@ import { Role } from '@kotrip/data';
 import { ROUTE_REGISTRY } from './route-registry.generated';
 import type { RouteRegistryEntry, SidebarRoute } from './types';
 
+/**
+ * Normaliza una ruta eliminando barras finales.
+ *
+ * @param path - Ruta a normalizar.
+ * @returns Ruta normalizada sin barra final.
+ */
 const normalizePath = (path: string) => {
   if (!path) return '/';
   const normalized = path.replace(/\/+$/, '');
@@ -28,6 +34,16 @@ const findParentPath = (
   return candidateParents.sort((a, b) => b.length - a.length)[0];
 };
 
+/**
+ * Obtiene las rutas de sidebar permitidas para un rol, organizadas en arbol.
+ *
+ * Filtra las rutas del registro segun el rol proporcionado, las organiza
+ * jerarquicamente por su path y las ordena segun la propiedad `order`.
+ *
+ * @param role - Rol del usuario.
+ * @param routes - Registro de rutas (por defecto el generado automaticamente).
+ * @returns Arbol de rutas de sidebar permitidas para el rol.
+ */
 export const getSidebarRoutesForRole = (
   role: Role,
   routes: RouteRegistryEntry[] = ROUTE_REGISTRY,

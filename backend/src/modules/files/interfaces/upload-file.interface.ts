@@ -1,13 +1,7 @@
 /**
- * ### FileInterface
+ * Interfaz de respuesta para la subida de un archivo a MinIO.
  *
- * Interfaz para definir los datos que se devuelven al front-end cuando se sube de forma
- * Kotrip un fichero a minio.
- *
- * @version     1.0.1a
-
-
-
+ * Contiene el identificador del archivo, su nombre y el estado de la operacion.
 
 
  */

@@ -19,18 +19,10 @@ import { I18nTranslations } from 'src/i18n/generated/i18n.generated';
 import { MatchPasswords } from '../decorators/password-matches.decorator';
 
 /**
- * ### NewRegisterDto
+ * DTO para los datos de entrada de un nuevo registro de usuario.
  *
- * DTO para controlar los datos de entrada de un nuevo registro. Todos los datos aquí reglados son “heredados”
- * de la entidad de verificación y estos, a su vez, son “heredados” de la entidad de usuario. Afectaran
- * directamente a la base de datos. Si se cambia cualquier dato, añade o borra uno, debe verse reflejado en
- * este DTO.
- *
- * @version     1.0.0a
-
-
-
-
+ * Contiene email, nombre, apellidos, contrasena y su confirmacion.
+ * Estos datos afectan directamente a la base de datos.
 
 
  * @see         [User](../../user/entities/user.entity.ts)

@@ -1,10 +1,17 @@
 import { themedAsset } from '@/lib/themed-asset';
 import type { AppConfig } from './config.types';
 
+/**
+ * Configuracion por defecto de la aplicacion Kotrip.
+ *
+ * Define los valores base para marca, tema, internacionalizacion,
+ * contacto, legal, tipografia, espaciado, animacion, layout y roles.
+ * Los valores pueden ser sobreescritos parcialmente en `app.config.ts`.
+ */
 export const defaultConfig: AppConfig = {
   brand: {
     title: 'Kotrip',
-    description: 'Plataforma de gestión de aprendizaje para cursos en línea',
+    description: 'Plataforma de gestion colaborativa de viajes',
     logo: {
       path: {
         normal: '/assets/svg/brand.svg',

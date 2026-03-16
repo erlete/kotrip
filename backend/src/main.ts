@@ -23,20 +23,14 @@ const logger = new Logger('Bootstrap');
 const isProd = process.env.NODE_ENV === 'production';
 
 /**
- * App Entrypoint Bootstrap.
+ * Punto de entrada de la aplicacion Kotrip.
  *
- * Gestión de lanzamiento del proyecto, el lanzamiento varia dependiendo del modo de arranque (developer,
- * production o test) en función del .env que se carga al lanzarlo. Desde aquí se gestiona también el
- * arranque de swagger y diferente versionado del programa.
+ * Gestiona el lanzamiento del proyecto. El comportamiento varia segun el modo de arranque
+ * (development, production o test) en funcion del archivo .env cargado.
+ * Desde aqui se configura Swagger, los interceptores globales, CORS, multipart y Helmet.
  *
-
-
-
-
- * @see         [TypeOrmModule](https://docs.nestjs.com/techniques/database)
- * @see         [AuthModule](./auth/auth.module.ts)
- * @see         [SeederModule](./seeder/seeder.module.ts)
- * @see         [UserModule](./user/user.module.ts)
+ * @see {@link https://docs.nestjs.com/techniques/database | TypeOrmModule}
+ * @see AppModule Modulo raiz de la aplicacion.
  */
 async function bootstrap() {
   // Se crea el adaptador antes de pasarlo a NestFactory para poder registrar

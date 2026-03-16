@@ -102,20 +102,13 @@ class BackendTokensDTO {
 }
 
 /**
- * ### LoginOutputDto
+ * DTO de respuesta para un inicio de sesion exitoso.
  *
- * DTO para controlar los datos de salida al front-end que arrojará el back-end al resolver Correctamente
- * un inicio de sesión. Estos datos están relacionados con la entidad de usuario y con la interfaz de login.
- * Si se modifica algo en estas clases, se debe modificar aquí también para asegurar la correcta devolución
- * de datos.
+ * Contiene la informacion del usuario autenticado y los tokens JWT
+ * de acceso y refresco. Debe mantenerse sincronizado con LoginInterface.
  *
- * @version     1.0.0a
-
-
-
-
- * @see         [LoginInterface](../interfaces/login.interface.ts)
- * @see         [User](../../user/entities/user.entity.ts)
+ * @see LoginInterface Interfaz interna correspondiente.
+ * @see User Entidad del usuario.
  */
 export class LoginOutputDto {
   @ApiProperty({ type: BackendTokensDTO })

@@ -1,29 +1,10 @@
-.superpowers
-docs/superpowers
-
-### Backend ###
-backend/src/modules/seeder/inputs/data/*
-backend/src/modules/seeder/inputs/files/*
-
-### MCPs and AI agents ###
-.github/instructions/
-.github/copilot-instructions.md
-CLAUDE.md
-.claude/rules/
-.codacy
-.serena
-.playwright-mcp
-frontend/.playwright/
-
 ### Environments ###
 **/.env*
 !**/.env.example
 
-### Security ###
-**/*.pem
-
 ### Backend ###
-
+backend/src/modules/seeder/inputs/data/*
+backend/src/modules/seeder/inputs/files/*
 backend/documentation
 frontend/documentation
 data/documentation

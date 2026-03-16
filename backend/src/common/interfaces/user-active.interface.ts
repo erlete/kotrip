@@ -7,14 +7,14 @@ import type { User } from '@/modules/user/entities/user.entity';
  * y se propaga a través del sistema mediante el decorador `@ActiveUser()`.
  *
  * @remarks
- * **Uso principal**:
+ * Uso principal:
  * - Encapsulada en tokens JWT de acceso.
- * - Extraída mediante el decorador `@ActiveUser()` en controladores.
- * - Utilizada para verificación de permisos y personalización.
+ * - Extraida mediante el decorador `@ActiveUser()` en controladores.
+ * - Utilizada para verificacion de permisos y personalizacion.
  *
- * **Requisitos**:
+ * Requisitos:
  * - Los endpoints que usen esta interfaz deben estar protegidos con `@Auth()`.
- * - El campo `validated` indica si el usuario completó 2FA (si está habilitado).
+ * - El campo `validated` indica si el usuario completo 2FA (si esta habilitado).
  *
  * @see ActiveUser Decorador para extraer el usuario del request.
  * @see Auth Decorador para proteger endpoints.

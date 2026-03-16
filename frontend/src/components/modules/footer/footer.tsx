@@ -1,22 +1,21 @@
 'use client';
 
 /**
- * @file Footer.ts
+ * @file footer.tsx
  * @description
- * -----------------------------------------------------
- * Archivo que contiene el componente de Footer
- * -----------------------------------------------------
- * @version 0.0.1a
- * @created 2024-12-19
- * @modified 2025-01-16
-
-
-
- * */
+ * Pie de pagina de la aplicacion. Muestra los logos de patrocinadores
+ * o certificaciones y el copyright de Kotrip.
+ */
 import { appConfig } from '@/config';
 import { useTheme } from '@/features/theme';
 import Image from 'next/image';
 
+/**
+ * Componente de pie de pagina.
+ *
+ * Muestra los logos configurados en `appConfig.brand.footerImages` con
+ * soporte de tema claro/oscuro, y el copyright con el ano actual.
+ */
 const Footer = () => {
   const year = new Date().getFullYear();
   const { theme } = useTheme();

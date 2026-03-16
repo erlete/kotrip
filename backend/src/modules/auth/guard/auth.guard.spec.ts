@@ -1,7 +1,5 @@
 /**
- * ### AuthGuard (TEST)
- *
- * Tests unitarios para el guard de autenticación JWT.
+ * Tests unitarios para el guard de autenticacion JWT (AuthGuard).
  * Cubre:
  * - Validación de tokens válidos
  * - Manejo de tokens inválidos/expirados

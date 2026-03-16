@@ -1,17 +1,9 @@
 /**
  * @file use-format-date.ts
  * @description
- * -----------------------------------------------------
- * Utilidades para formatear la fecha
- * -----------------------------------------------------
- * @version 0.0.1a
- * @created 2025-03-11
- * @modified 2025-06-25
-
-
-
-
- * */
+ * Hooks para formatear fechas, horas, tiempo relativo y duraciones
+ * utilizando el sistema de internacionalizacion de next-intl.
+ */
 
 'use client';
 

@@ -12,17 +12,9 @@ import { i18nValidationMessage } from 'nestjs-i18n';
 import { I18nTranslations } from 'src/i18n/generated/i18n.generated';
 
 /**
- * ### LoginDto
+ * DTO para los datos de entrada de inicio de sesion.
  *
- * DTO para controlar los datos de entrada de un nuevo login. La información aquí reglada está relacionada con la
- * base de datos y los valores que tenga el usuario. Si se modifica la base de dato y se quieren pedir más datos
- * de entrada para el login, deben ponerse aquí los datos nuevos.
- *
- * @version     1.0.0a
-
-
-
-
+ * Contiene el email y la contrasena necesarios para autenticarse en la plataforma.
 
 
  */

@@ -11,6 +11,11 @@ import { cookies } from 'next/headers';
 import { defaultLocale, LOCALE_COOKIE_NAME } from './constants';
 import { Locale } from './types';
 
+/**
+ * Obtiene el locale del usuario desde la cookie de idioma.
+ *
+ * @returns Codigo de idioma almacenado en la cookie o el locale por defecto.
+ */
 export async function getUserLocale() {
   return (await cookies()).get(LOCALE_COOKIE_NAME)?.value || defaultLocale;
 }

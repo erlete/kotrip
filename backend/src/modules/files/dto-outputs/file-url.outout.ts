@@ -2,19 +2,12 @@ import { ApiProperty } from '@nestjs/swagger';
 import { IsNotEmpty, IsString } from 'class-validator';
 
 /**
- * ### FileUrlOut
+ * DTO de respuesta con la URL de descarga de un archivo.
  *
- * DTO para controlar los datos de salida al front-end que arrojará el back-end al generar una url para descargar un archivo.
- * Estos datos están relacionados con la interfaz url de un archivo.
- * Si se modifica algo en la interfaz, se debe modificar aquí también para asegurar la devolución
- * de datos.
+ * Contiene la URL prefirmada generada por MinIO para la descarga del archivo.
+ * Debe mantenerse sincronizado con FileUrl.
  *
- * @version     1.0.0a
-
-
-
-
- * @see         [FileUrl](../interfaces/file-url.interface.ts)
+ * @see FileUrl Interfaz interna correspondiente.
  */
 export class FileUrlOut {
   @ApiProperty({

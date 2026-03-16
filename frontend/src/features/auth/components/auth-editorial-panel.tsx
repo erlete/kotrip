@@ -1,16 +1,9 @@
 /**
  * @file auth-editorial-panel.tsx
  * @description
- * -----------------------------------------------------
- * Panel editorial izquierdo para las páginas de autenticación.
+ * Panel editorial izquierdo para las paginas de autenticacion.
  * Muestra la identidad de marca, un mensaje de bienvenida
- * y estadísticas de la plataforma.
- * -----------------------------------------------------
- * @version 1.0.0
- * @created 2026-03-13
-
-
-
+ * y estadisticas de la plataforma.
  */
 
 import { getTranslations } from 'next-intl/server';

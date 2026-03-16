@@ -1,13 +1,5 @@
 /**
- * ### FileUrl
- *
- * Interfaz para definir los datos que se devuelven al front-end y ocultar o encapsular la
- * url de un fichero devuelto por el sistema.
- *
- * @version     1.0.1a
-
-
-
+ * Interfaz que encapsula la URL de descarga de un archivo generada por MinIO.
 
  */
 export interface FileUrl {

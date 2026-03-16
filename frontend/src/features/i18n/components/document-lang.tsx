@@ -9,12 +9,12 @@ import { useEffect } from 'react';
  *
  * Se utiliza en lugar de establecer `lang` directamente en el layout
  * del servidor, ya que acceder a `cookies()` fuera de un boundary
- * `<Suspense>` bloquea el streaming de la página en Next.js.
+ * `<Suspense>` bloquea el streaming de la pagina en Next.js.
  *
- * Lo más importante, evita que Anta se queje de que establecer el lenguaje con
- * cookies genere errores de runtime de Next.js. :D
+ * Ademas, evita errores de runtime de Next.js al establecer el idioma
+ * mediante cookies desde el servidor.
  *
- * @returns `null` - no renderiza nada en el DOM.
+ * @returns `null`, no renderiza nada en el DOM.
  */
 export function DocumentLang() {
   const locale = useLocale();

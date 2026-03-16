@@ -14,20 +14,10 @@ import { FileListInterface } from './interfaces/file-list.interface';
 import FileService from './services/file-service.service';
 
 /**
- * ### FileExplorerLogsController
+ * Controlador para la consulta y descarga de archivos de logs de auditoria.
  *
- * Controller con los endpoints para recuperar los logs de la plataforma.
- *
- * @version     1.0.0a
-
-
-
-
- */
-/**
- * Controller for audit log file operations.
- * SECURITY: Admin-only access (ADMIN).
- * All operations use the bucket unificado (KOTRIP_BUCKET) con paths de audit logs.
+ * Acceso exclusivo para administradores (ADMIN).
+ * Todas las operaciones usan el bucket unificado con paths de logs de auditoria.
  */
 @Controller('logs')
 @ApiTags('logs - Explorar los archivos de logs')

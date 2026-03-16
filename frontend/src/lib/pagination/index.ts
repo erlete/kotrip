@@ -1,8 +1,9 @@
 /**
- * @fileoverview Frontend cursor pagination library
+ * @fileoverview Libreria de paginacion por cursor para el frontend
  *
- * A comprehensive library for working with cursor-paginated APIs from the frontend.
- * Provides type-safe utilities for navigation, sorting, filtering, and URL management.
+ * Libreria completa para trabajar con APIs paginadas por cursor desde el frontend.
+ * Proporciona utilidades con tipado seguro para navegacion, ordenamiento,
+ * filtrado y gestion de URLs.
  *
  * @example
  * ```tsx
@@ -29,7 +30,7 @@
  * ```
  */
 
-// Core types
+// Tipos principales
 export type {
   CursorDir,
   CursorPaginationResponse,
@@ -43,7 +44,7 @@ export type {
 
 export { FilterOpSuffix } from './types';
 
-// Cursor utilities
+// Utilidades de cursor
 export {
   extractSortsFromResponse,
   formatSortString,
@@ -58,7 +59,7 @@ export {
   parseSortString,
 } from './cursor-utils';
 
-// Filter utilities
+// Utilidades de filtrado
 export {
   addFilter,
   clearFilters,
@@ -70,7 +71,7 @@ export {
   removeFilter,
 } from './filter-utils';
 
-// Sort utilities
+// Utilidades de ordenamiento
 export {
   addSort,
   clearSorts,
@@ -83,7 +84,7 @@ export {
   toggleSort,
 } from './sort-utils';
 
-// Query builder
+// Constructor de consultas
 export {
   buildQueryParams,
   buildUrl,
@@ -92,6 +93,6 @@ export {
   queryParamsToSearchParams,
 } from './query-builder';
 
-// React hook
+// Hook de React
 export type { UsePaginationConfig, UsePaginationReturn } from './usePagination';
 export { usePagination } from './usePagination';

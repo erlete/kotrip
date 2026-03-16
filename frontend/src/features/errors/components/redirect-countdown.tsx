@@ -4,12 +4,24 @@ import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
+/**
+ * Props del componente RedirectCountdown.
+ */
 interface RedirectCountdownProps {
+  /** Ruta a la que se redirigira automaticamente. */
   redirectPath: string;
+  /** Tiempo de espera en segundos antes de la redireccion. */
   delay: number;
+  /** Nombre del destino para mostrar en el mensaje. */
   destination: string;
 }
 
+/**
+ * Componente de cuenta regresiva con redireccion automatica.
+ *
+ * Muestra un mensaje con el tiempo restante y redirige al usuario
+ * a la ruta indicada cuando el contador llega a cero.
+ */
 export function RedirectCountdown({
   redirectPath,
   delay,

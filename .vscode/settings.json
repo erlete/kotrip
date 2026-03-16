@@ -1,9 +1,4 @@
 {
-  // Reglas de aprobación automática de comandos en IA modo agente:
-  "chat.tools.terminal.autoApprove": {
-    // Permite la ejecución automática de comandos de QA, build y start:
-    "/^(npm run|pnpm (run )?)((qa($|:(?![^ ]*fix)[^ ]+))|(build|start):[^ ]+)$/": true
-  },
   // Acciones automáticas a llevar a cabo al guardar un archivo:
   "editor.codeActionsOnSave": {
     "source.fixAll.ts": "explicit",
@@ -16,14 +11,6 @@
   // Autoguardado y operaciones de formato:
   "files.autoSave": "onFocusChange",
   "files.trimTrailingWhitespace": false,
-  // Configuraciones de GitHub Copilot Chat:
-  "github.copilot.chat.agent.autoFix": true,
-  "github.copilot.chat.agent.currentEditorContext.enabled": true,
-  "github.copilot.chat.codesearch.enabled": true,
-  "github.copilot.chat.generateTests.codeLens": true,
-  "github.copilot.chat.languageContext.fix.typescript.enabled": true,
-  "github.copilot.chat.languageContext.inline.typescript.enabled": true,
-  "github.copilot.chat.languageContext.typescript.includeDocumentation": true,
   // Configuraciones de la extensión Jest (siempre con reporte de cobertura):
   "jest.coverageFormatter": "GutterFormatter",
   "jest.enable": true,
@@ -44,6 +31,5 @@
   },
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "claudeCode.allowDangerouslySkipPermissions": true
+  }
 }

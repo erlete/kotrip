@@ -1,17 +1,9 @@
 /**
- * @file ThemeToggle.tsx
+ * @file theme-toggle.tsx
  * @description
- * -----------------------------------------------------
  * Componente de alternancia de tema claro/oscuro.
- * Utiliza el Switch de HeroUI v3 como mecanismo de cambio.
- * -----------------------------------------------------
- * @version 0.1.0
- * @created 2025-07-16
- * @modified 2026-03-13
-
-
-
- * */
+ * Utiliza el Switch de HeroUI como mecanismo de cambio.
+ */
 
 'use client';
 

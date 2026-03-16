@@ -7,16 +7,16 @@ import { Column, Entity, Index, PrimaryGeneratedColumn } from 'typeorm';
  * de los datos oficiales del INE (Instituto Nacional de Estadística).
  *
  * @remarks
- * **Naturaleza de la tabla**:
+ * Naturaleza de la tabla:
  * - Es una tabla de referencia de solo lectura (no extiende `CUDTzEntity`).
  * - Utiliza clave primaria auto-incremental (no UUID) por ser datos de referencia.
  * - Contiene aproximadamente 8.131 municipios.
  *
- * **Uso**:
+ * Uso:
  * - Se utiliza para asociar viajes a un destino concreto mediante autocompletado.
  * - Cargada al inicio por el seeder de localidades.
  *
- * **Fuente de datos**:
+ * Fuente de datos:
  * - INE: Relación de municipios y sus códigos.
  * - Los datos se actualizan anualmente con cada publicación del INE.
  *

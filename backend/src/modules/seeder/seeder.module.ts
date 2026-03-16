@@ -6,7 +6,7 @@
  * secuencialmente a traves del {@link SeederOrchestrator}.
  *
  * @remarks
- * **Configuracion**:
+ * Configuracion:
  * - `ENABLE_SEEDING=false` deshabilita el seeding completamente.
  *
  * @see presets/index.ts Lista de presets activos.

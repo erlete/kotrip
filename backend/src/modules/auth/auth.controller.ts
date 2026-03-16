@@ -32,18 +32,12 @@ import { RefreshGuard } from './guard/refresh.guard';
 import { AuthService } from './services/auth.service';
 
 /**
- * ### AuthController
+ * Controlador de autenticacion de usuarios.
  *
- * Controlador para el módulo de autentificación de usuarios. Permite registrar un usuario, verificar
- * el email, iniciar sesión y gestionar tokens de acceso y refresco.
+ * Permite registrar usuarios, verificar el email, iniciar sesion
+ * y gestionar tokens JWT de acceso y refresco.
  *
- * @version     2.0.0
-
-
-
-
- * @see         [ThrottlerGuard](https://docs.nestjs.com/security/rate-limiting#throttler-module)
- * @see         [AuthService](../auth/auth.service.ts)
+ * @see AuthService Servicio que implementa la logica de autenticacion.
  */
 @ApiTags('auth - Autenticación de usuarios')
 @ApiBearerAuth()

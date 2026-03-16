@@ -6,10 +6,10 @@ import {
 } from 'typeorm';
 
 /**
- * Entity with "created at" timestamp with time zone.
+ * Entidad base con timestamp de creacion con zona horaria.
  *
  * @remarks
- * Creation date is read-only and automatically handled by TypeORM.
+ * La fecha de creacion es de solo lectura y se gestiona automaticamente por TypeORM.
  */
 export abstract class CTzEntity extends TypeORMBaseEntity {
   @CreateDateColumn({
@@ -22,12 +22,11 @@ export abstract class CTzEntity extends TypeORMBaseEntity {
 }
 
 /**
- * Entity with "updated at" timestamp with time zone.
+ * Entidad base con timestamps de creacion y actualizacion con zona horaria.
  *
  * @remarks
- * Extends CTzEntity, so it also includes "created at" timestamp with time
- * zone. Creation and update dates are read-only and automatically handled by
- * TypeORM.
+ * Extiende CTzEntity, por lo que incluye tambien el timestamp de creacion.
+ * Ambas fechas son de solo lectura y se gestionan automaticamente por TypeORM.
  */
 export abstract class CUTzEntity extends CTzEntity {
   @UpdateDateColumn({
@@ -40,12 +39,11 @@ export abstract class CUTzEntity extends CTzEntity {
 }
 
 /**
- * Entity with "deleted at" timestamp with time zone.
+ * Entidad base con timestamps de creacion, actualizacion y borrado logico con zona horaria.
  *
  * @remarks
- * Extends CUTzEntity, so it also includes "created at" and "updated at"
- * timestamps with time zone. Creation and update dates are read-only and
- * automatically handled by TypeORM.
+ * Extiende CUTzEntity, por lo que incluye los timestamps de creacion y actualizacion.
+ * Las fechas son de solo lectura y se gestionan automaticamente por TypeORM.
  */
 export abstract class CUDTzEntity extends CUTzEntity {
   @DeleteDateColumn({

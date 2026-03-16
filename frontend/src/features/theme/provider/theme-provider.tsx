@@ -1,22 +1,20 @@
 /**
- * @file ThemeServerBoundary.tsx
+ * @file theme-provider.tsx
  * @description
- * -----------------------------------------------------
- * Ensures theme availability and consistency during Server Components rendering.
- * It bridges server-side theme resolution with client hydration,
- * preventing UI flashes, mismatches, and undefined theme states.
- * -----------------------------------------------------
- * @version 0.0.1a
- * @created 2026-01-09
-
-
-
-
- * */
+ * Provider de tema en servidor. Resuelve el tema del usuario desde cookies
+ * y lo pasa al provider interno de cliente, evitando parpadeos y
+ * desincronizaciones durante la hidratacion.
+ */
 
 import { getUserTheme } from '../actions';
 import { ThemeProviderInternal } from './theme-provider-internal';
 
+/**
+ * Provider de tema en servidor.
+ *
+ * Obtiene el tema del usuario desde la cookie y lo inyecta en el
+ * contexto de cliente mediante ThemeProviderInternal.
+ */
 export async function ThemeProvider({
   children,
 }: {

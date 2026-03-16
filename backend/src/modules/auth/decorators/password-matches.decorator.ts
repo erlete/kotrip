@@ -7,20 +7,11 @@ import {
 } from 'class-validator';
 
 /**
- * Decorador para comprobar que dos propiedades de un DTO son iguales, en este caso
- * estamos comprobando que la propiedad repeatPassword sea igual a la propiedad password
+ * Decorador de validacion que comprueba que dos propiedades de un DTO son iguales.
  *
- * @version     1.0.0a
-
-
-
-
- * @see         [registerDecorator]
- * @see         [ValidationOptions]
- * @see         [ValidatorConstraint]
- * @see         [ValidatorConstraintInterface]
- * @see         [ValidationArguments]
- * */
+ * Se utiliza para verificar que la propiedad `repeatPassword` coincide con
+ * la propiedad `password` durante el registro o cambio de contrasena.
+ */
 
 @ValidatorConstraint({ async: false })
 class MatchPasswordsConstraint implements ValidatorConstraintInterface {

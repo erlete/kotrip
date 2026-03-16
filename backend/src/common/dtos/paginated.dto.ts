@@ -1,17 +1,10 @@
 import { ApiProperty } from '@nestjs/swagger';
 
 /**
- * ### PaginatedResponse
+ * Clase generica para estructurar respuestas paginadas.
  *
- * Clase generica para estructurar las respuestas de endpoint que devuelve datos paginados.
- * Permite utilizar la misma estructura para diferentes tipos de datos.
- *
- * @version     1.0.0a
-
-
-
-
-
+ * Encapsula la lista de resultados junto con la informacion de paginacion
+ * (pagina actual, tamano de pagina, total de elementos y total de paginas).
  */
 export class PaginatedResponse<T> {
   list: T[];

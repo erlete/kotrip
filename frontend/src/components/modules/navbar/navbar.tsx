@@ -1,16 +1,9 @@
 /**
- * @file Navbar.ts
+ * @file navbar.tsx
  * @description
- * -----------------------------------------------------
- * Archivo que contiene el componente de Nav
- * -----------------------------------------------------
- * @version 0.0.1a
- * @created 2025-01-27
- * @modified 2025-05-07
-
-
-
- * */
+ * Barra de navegacion publica con logotipo, selector de tema
+ * y selector de idioma.
+ */
 
 'use client';
 
@@ -20,6 +13,12 @@ import { appConfig } from '@/config';
 import Image from 'next/image';
 import Link from 'next/link';
 
+/**
+ * Barra de navegacion para paginas publicas.
+ *
+ * Muestra el logotipo de la marca con enlace al inicio, el toggle de tema
+ * (si esta habilitado) y el selector de idioma (si hay mas de un idioma).
+ */
 const Navbar = () => {
   const { path, alt, dimmensions } = appConfig.brand.logo;
   return (

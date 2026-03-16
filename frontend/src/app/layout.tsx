@@ -33,6 +33,13 @@ type Props = {
   children: React.ReactNode;
 };
 
+/**
+ * Layout raiz de la aplicacion Next.js.
+ *
+ * Envuelve toda la aplicacion con los providers de autenticacion, tema
+ * e internacionalizacion, junto con las fuentes tipograficas y el Toaster
+ * de notificaciones.
+ */
 export default function RootLayout({ children }: Props) {
   return (
     <html lang={appConfig.i18n.defaultLanguage}>

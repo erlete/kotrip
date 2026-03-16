@@ -9,7 +9,7 @@ export const MIN_NAME_LENGTH = 3;
 export const MAX_NAME_LENGTH = 30;
 
 /**
- * Longitud máxima de la contraseña de usuario.
+ * Longitud minima de la contraseña de usuario.
  */
 export const MIN_PASSWORD_LENGTH = 8;
 

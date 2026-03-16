@@ -1,0 +1,13 @@
+{
+  "SIMPLE": "Simple message",
+  "VARIABLE": "This is a message with a variable: {variable}",
+  "ARRAY": ["Array 1 english", "Array 2 english", "Array 3 english"],
+  "COMPLEX": "This is a complex message with variables: {variable1} and {variable2}",
+  "NESTED": {
+    "NESTED_1": "Nested message 1",
+    "NESTED_2": "Nested message 2"
+  },
+  "RESET_PASSWORD_SUBJECT": "Reset password",
+  "VERIFICATION_SUBJECT": "Your verification code",
+  "REGISTRATION_VERIFICATION_SUBJECT": "Verify your email address"
+}

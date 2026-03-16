@@ -1,0 +1,107 @@
+name: CD Documentation
+
+on:
+  push:
+    branches: [stable]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: cd-docs
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - run: npm ci
+
+      - name: Generate backend docs
+        run: npm run qa:docs --workspace=backend
+
+      - name: Generate frontend docs
+        run: npm run qa:docs --workspace=frontend
+
+      - name: Generate data docs
+        run: npm run qa:docs --workspace=data
+
+      - name: Assemble site
+        run: |
+          mkdir -p _site/docs
+          cp -r backend/documentation _site/docs/backend
+          cp -r frontend/documentation _site/docs/frontend
+          cp -r data/documentation _site/docs/data
+
+      - name: Generate index page
+        run: |
+          cat > _site/index.html <<'HTML'
+          <!DOCTYPE html>
+          <html lang="es">
+          <head>
+            <meta charset="UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <title>Kotrip — Documentación</title>
+            <style>
+              :root { --primary: #2aa894; --bg: #0e1514; --surface: #161e1d; --text: #e8edec; --muted: #6b7f7c; }
+              * { margin: 0; padding: 0; box-sizing: border-box; }
+              body { font-family: system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; display: flex; align-items: center; justify-content: center; }
+              .container { max-width: 640px; width: 100%; padding: 2rem; }
+              h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+              p { color: var(--muted); margin-bottom: 2rem; }
+              .cards { display: flex; flex-direction: column; gap: 1rem; }
+              a.card { display: block; background: var(--surface); border: 1px solid rgba(255,255,255,0.06); border-radius: 12px; padding: 1.25rem 1.5rem; text-decoration: none; color: var(--text); transition: border-color 0.2s, transform 0.2s; }
+              a.card:hover { border-color: var(--primary); transform: translateY(-2px); }
+              a.card .title { font-size: 1.125rem; font-weight: 600; margin-bottom: 0.25rem; }
+              a.card .desc { font-size: 0.875rem; color: var(--muted); }
+            </style>
+          </head>
+          <body>
+            <div class="container">
+              <h1>Kotrip</h1>
+              <p>Documentación técnica generada automáticamente.</p>
+              <div class="cards">
+                <a class="card" href="docs/backend/">
+                  <div class="title">Backend</div>
+                  <div class="desc">NestJS — API, módulos, servicios y controladores</div>
+                </a>
+                <a class="card" href="docs/frontend/">
+                  <div class="title">Frontend</div>
+                  <div class="desc">Next.js — Componentes, hooks, vistas y servicios</div>
+                </a>
+                <a class="card" href="docs/data/">
+                  <div class="title">Data</div>
+                  <div class="desc">Tipos compartidos — Enums, interfaces y modelos</div>
+                </a>
+              </div>
+            </div>
+          </body>
+          </html>
+          HTML
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

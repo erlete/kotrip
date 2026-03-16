@@ -1,0 +1,102 @@
+{
+  "COMPANY": {
+    "CREATED": "Company created successfully",
+    "DELETED": "Company deleted successfully",
+    "UPLOADED_LOGO": "Company logo uploaded successfully",
+    "DELETED_LOGO": "Company logo deleted successfully",
+    "UPDATED": "Company updated successfully",
+    "USER_ADDED": "User added successfully",
+    "USER_REMOVED": "User removed successfully",
+    "USER_UPDATED": "User updated successfully",
+    "LEAVED": "Leaved company successfully",
+    "DELEGATED": "Delegated company successfully",
+    "INFO_RETURNED": "Info from company returned successfully",
+    "FETCHED": "Info from company returned successfully",
+    "OWNER_FETCHED": "Checked owners from company successfully"
+  },
+  "DEVICE": {
+    "CREATED": "Device created successfully",
+    "GOT_ALL": "All Devices retrieved successfully",
+    "GOT_PAGINATED": "Devices retrieved successfully",
+    "FIND_ONE": "Returned device successfully",
+    "UPDATED": "Updated device successfully",
+    "DELETED": "Deleted device successfully"
+  },
+  "EXAMPLE": {
+    "WELCOME": "Returned welcome message successfully",
+    "SIMPLE_MESSAGE": "Returned message successfully",
+    "GOT_MESSAGE_ON_LANGUAGE": "Returned messages on specified language successfully",
+    "RETURNED_USER_LANGUAGE": "Returned messages on user language successfully",
+    "RETURNED_MESSAGE_VARIABLE": "Returned message with a variable successfully",
+    "RETURNED_MESSAGE_ARRAY": "Returned message with an array successfully",
+    "RETURNED_MESSAGE_NESTED": "Returned message with nested structure successfully",
+    "RETURNED_MESSAGE_TWO_VARS": "Returned message with two variables successfully",
+    "RETURNED_MESSAGE_POS": "Returned message from a position successfully",
+    "RETURN_SPECIFIED_LANGUAGE": "Returned message on the specified language"
+  },
+  "FILE": {
+    "UPLOADED_FILE": "Uploaded file successfully",
+    "DELETED_FILE": "Deleted file successfully",
+    "DOWNLOADED_FILE": "Downloaded file successfully",
+    "GENERATED_PUBLIC_URL": "Generated public url successfully",
+    "GOT_LIST_FILES_BUCKET_USER": "Retrieved all files from a bucket of an user successfully",
+    "GOT_LIST_FILES_BUCKET_COMPANY": "Retrieved all files from a bucket of a company successfully",
+    "GOT_ALL_BUCKETS": "Retrieved all buckets successfully"
+  },
+  "FILE_EXPLORER": {
+    "GOT_LIST_FILES_LOGS": "Retrieved list of files and directories from logs successfully",
+    "GOT_LOG_FILE": "Retrieved log file successfully"
+  },
+  "EMAIL": {
+    "SENT": "Sent email successfully"
+  },
+  "OPENSEARCH": {
+    "GOT_ALL_INDEX": "Retrieved all opensearch index successfully",
+    "INDEX_CREATED": "Index created successfully",
+    "INDEX_DELETED": "Index deleted successfully",
+    "CONTENT_ADDED": "Content added successfully",
+    "CONTENT_DELETED": "Content deleted successfully",
+    "CONTENT_RETRIEVED": "Content retrieved successfully",
+    "REINDEX_COMPLETED": "Reindex completed successfully"
+  },
+  "TICKET": {
+    "GOT_MY_TICKETS": "Retrieved tickets successfully",
+    "GOT_ALL_TICKETS": "Retrieved all tickets successfully",
+    "GOT_TICKET_INFO": "Retrieved ticket info successfully",
+    "UPDATED_TICKET": "Updated ticket successfully",
+    "DELETED_TICKET": "Deleted ticket successfully",
+    "CREATED_COMMENT": "Created comment for ticket successfully",
+    "GOT_CATEGORIES": "Retrieved all categories for a ticket successfully",
+    "GOT_STATUSES": "Retieved all status types for a ticket successfully",
+    "CREATED": "Created ticket successfully"
+  },
+  "USER": {
+    "GOT_ALL_USERS": "Retrieved all users successfully",
+    "GOT_PROFILE": "Retrieved profile info successfully",
+    "UPLOADED_AVATAR": "Uploaded avatar successfully",
+    "DOWNLOADED_AVATAR": "Downloaded avatar successfully",
+    "CHANGED_2FA_USER": "Changed 2FA of user successfully",
+    "UPDATED_SELF": "Updated own user successfully",
+    "UPDATE_USER": "Updated other user successfully",
+    "UPDATED_OWN_PASSWORD": "Updated password successfully",
+    "DELETED": "Deleted user successfully",
+    "DEACTIVATED_USER": "Deactivated user successfully"
+  },
+  "AUTH": {
+    "LOGGED": "Logged successfully",
+    "REGISTERED": "user registered successfully",
+    "VERIFIED": "User verified successfully",
+    "REJECTED": "User rejected successfully",
+    "GOT_REFRESHED_TOKEN": "Got refreshed token successfully",
+    "GOT_ALL_UNVERIFIED": "Got all unverified users",
+    "SENT_PASSWORD_RESET_EMAIL": "Sent password reset email successfully",
+    "RESETED_PASSWORD": "Reseted password successfully",
+    "VERIFIED_OTP": "Verified One-time-password successfully"
+  },
+  "REPORT": {
+    "CREATED": "Created report succesfully",
+    "LIST": "Listed all reports for the company succesfully",
+    "DOWNLOADED": "Downloaded a report succesfully",
+    "DELETED": "Deleted a report successfully"
+  }
+}

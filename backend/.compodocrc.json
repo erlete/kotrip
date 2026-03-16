@@ -1,0 +1,40 @@
+{
+  "$schema": "./node_modules/@compodoc/compodoc/src/config/schema.json",
+
+  "tsconfig": "tsconfig.json",
+  "output": "documentation",
+  "name": "Kotrip NestJS Documentation",
+  "theme": "material",
+  "language": "es-ES",
+
+  "disableCoverage": false,
+  "coverageTest": 0,
+  "coverageMinimumPerFile": 0,
+  "coverageTestThresholdFail": true,
+
+  "disablePrivate": true,
+  "disableProtected": true,
+  "disableInternal": true,
+
+  "disableGraph": false,
+  "disableRoutesGraph": true,
+
+  "disableSourceCode": false,
+  "disableSearch": false,
+  "hideGenerator": true,
+
+  "toggleMenuItems": [
+    "modules",
+    "controllers",
+    "injectables",
+    "guards",
+    "interceptors",
+    "pipes",
+    "interfaces",
+    "classes",
+    "miscellaneous",
+    "additionalPages"
+  ],
+
+  "assetsFolder": "assets"
+}

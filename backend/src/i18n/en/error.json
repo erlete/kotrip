@@ -1,0 +1,101 @@
+{
+  "USER": {
+    "ERROR_USER_NAME_AT_LEAST_4_CHAR": "Name must be at least 4 characters long",
+    "NOT_FOUND": "User not found",
+    "MAIL_DUPLICATED": "Email already in use",
+    "CANNOT_UPDATE_YOU_USER": "Cannot update yourself",
+    "CANNOT_DELETE_YOU_USER": "Cannot delete this user",
+    "AVATAR_NOT_FOUND": "Avatar not found",
+    "INVALID_OTP": "Invalid OTP",
+    "OTP_ALREADY_VALIDATED": "OTP already validated",
+    "OTP_EXPIRED": "OTP expired",
+    "INVALID_OLD_PASSWORD": "Invalid old password"
+  },
+  "TRIP": {
+    "NOT_FOUND": "Trip not found",
+    "ALREADY_MEMBER": "User is already a member of this trip",
+    "INVITATION_NOT_FOUND": "Invitation not found",
+    "INVITATION_ALREADY_EXISTS": "A pending invitation already exists for this user",
+    "INVITATION_ALREADY_RESPONDED": "Invitation has already been responded to",
+    "ITINERARY_NOT_FOUND": "Itinerary stop not found",
+    "TICKET_NOT_FOUND": "Ticket not found",
+    "EXPENSE_NOT_FOUND": "Expense not found",
+    "NOT_MEMBER": "You are not a member of this trip",
+    "PERMISSION_DENIED": "You do not have permission to perform this action on the trip",
+    "INVALID_DATE_RANGE": "End date must be after start date",
+    "INVALID_RATING": "Rating must be between 1 and 10",
+    "SELF_INVITE": "You cannot invite yourself",
+    "MEMBER_NOT_FOUND": "Trip member not found",
+    "INVALID_REORDER": "The provided stop list does not match the itinerary stops",
+    "LOCALITY_NOT_FOUND": "Locality not found"
+  },
+  "FILE": {
+    "FILE_IS_EMPTY": "Error, file is empty",
+    "FILE_NOT_FOUND": "File not found",
+    "SECTION_NOT_FOUND": "Section not found",
+    "FILE_UPLOAD_FAILED": "Error uploading file",
+    "BUCKET_NOT_FOUND": "The bucket does not exist",
+    "BUCKET_ACCESS_DENIED": "Access to this bucket is not allowed",
+    "BUCKET_CREATE_FAILED": "Error creating user bucket",
+    "ERROR_REMOVING_SECTION": "MinIO error while removing section",
+    "INVALID_FILE_TYPE": "Invalid file type",
+    "FILE_DELETE_FAILED": "Error deleting file",
+    "DEFAULT_LOGO_NOT_FOUND": "Default logo not found",
+    "FILE_PATH_EMPTY": "Error, file path is empty"
+  },
+  "COMMON": {
+    "PAGE_PAGESIZE_INVALID": "The page and pageSize query parameters must be numbers greater than or equal to 1.",
+    "INTERNAL_SERVER_ERROR": "Internal server error",
+    "NOT_FOUND": "{entity} with id {id} was not found.",
+    "ALREADY_EXISTS": "{entity} with id {id} already exists.",
+    "INVALID_ORDER": "Invalid order item: {order}.",
+    "INVALID_FIELD": "Invalid ordering field: {field}.",
+    "INVALID_ORDER_DIRECTION": "Invalid order direction: {direction}."
+  },
+  "VALIDATION": {
+    "NAME_MIN_LENGTH": "Name must be at least {min} characters long.",
+    "NAME_MAX_LENGTH": "Name must not be longer than {max} characters.",
+    "NAME_STARTS_UPPERCASE": "Name must start with an uppercase letter.",
+    "NAME_FORMAT": "Name format is incorrect.",
+    "PASSWORD_MIN_LENGTH": "Password must be at least {min} characters long.",
+    "PASSWORD_MAX_LENGTH": "Password must not be longer than {max} characters.",
+    "PASSWORD_NO_SPACES": "Password must not contain spaces.",
+    "PASSWORD_ONE_LOWERCASE": "Password must contain at least one lowercase letter.",
+    "PASSWORD_ONE_UPPERCASE": "Password must contain at least one uppercase letter.",
+    "PASSWORD_ONE_NUMBER": "Password must contain at least one number.",
+    "PASSWORD_ONE_SPECIAL_CHAR": "Password must contain at least one special character such as: !@#$%^&*()_+{}[]:;<>,.?/~_+-=|",
+    "PASSWORDS_NOT_MATCHING": "Passwords do not match.",
+    "MAIL_INVALID": "Email must be a valid address.",
+    "IS_NOT_EMPTY": "This field is required.",
+    "INVALID_PHONE_NUMBER": "Invalid phone number format."
+  },
+  "INTERNAL": {
+    "NOT_ESPECIFIED_MESSAGE": "MESSAGE NOT SPECIFIED BY THE BACKEND"
+  },
+  "MAIL": {
+    "COMPILE_ERROR": "Error compiling template {templateName}",
+    "SEND_ERROR": "Error sending email"
+  },
+  "AUTH": {
+    "INVALID_CREDENTIALS": "Invalid credentials",
+    "INVITATION_ACCEPTED": "Invitation has already been accepted",
+    "EMAILS_NOT_MATCHING": "Emails do not match",
+    "INVALID_TOKEN": "Invalid token",
+    "USER_EXISTS": "User already exists",
+    "INVITATION_ERROR": "Invitation not found",
+    "RESET_KEY_NOT_DEFINED": "RESET_KEY is not defined in .env",
+    "RESET_KEY_INVALID_LENGTH": "RESET_KEY must be 32 bytes (64 hex characters)",
+    "UNAUTHORIZED_USER": "Unauthorized user",
+    "INVALID_JWT": "Incorrect JWT token",
+    "ROLE_UNAUTHORIZED": "User does not have the required role",
+    "AUTH_GUARD_ERROR": "Error in authorization guard",
+    "LOGIN_DISABLED": "Login is disabled on the platform",
+    "REGISTRATION_DISABLED": "User registration is disabled on the platform",
+    "REGISTRATION_REJECTED": "New user registrations are not being accepted at this time",
+    "USER_BLOCKED": "User is blocked and cannot log in",
+    "STATUS_NOT_PERMITTED": "User status does not permit this operation",
+    "VERIFICATION_NOT_FOUND": "No pending verification found",
+    "INVALID_OTP": "Invalid OTP code",
+    "OTP_EXPIRED": "OTP code has expired"
+  }
+}

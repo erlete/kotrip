@@ -1,0 +1,102 @@
+{
+  "COMPANY": {
+    "CREATED": "Compañía creada correctamente",
+    "DELETED": "Compañía eliminada correctamente",
+    "UPLOADED_LOGO": "Logo subido satisfactoriamente",
+    "DELETED_LOGO": "Logo borrado satisfactoriamente",
+    "UPDATED": "Compañía actualizada correctamente",
+    "USER_ADDED": "Usuario añadido correctamente",
+    "USER_REMOVED": "Usuario borrado satisfactoriamente",
+    "USER_UPDATED": "Usuario actualizado satisfactoriamente",
+    "LEAVED": "Saliste de la compañía correctamente",
+    "DELEGATED": "Compañia delegada satisfactoriamente",
+    "INFO_RETURNED": "Información de la compañía devuelta correctamente",
+    "FETCHED": "Información de las compañías devuelta correctamente",
+    "OWNER_FETCHED": "Información de los dueños de las compañías devuelta satisfactoriamente"
+  },
+  "DEVICE": {
+    "CREATED": "Dispositivo creado correctamente",
+    "GOT_ALL": "Conseguidos todos los dispositivos correctamente",
+    "GOT_PAGINATED": "Conseguidos dispositivos paginados correctamente",
+    "FIND_ONE": "Dispositivo devuelto correctamente",
+    "UPDATED": "Dispositivo actualizado correctamente",
+    "DELETED": "Dispositivo eliminado correctamente"
+  },
+  "EXAMPLE": {
+    "WELCOME": "Devuelto mensaje de bienvenida correctamente",
+    "SIMPLE_MESSAGE": "Devuelto mensaje simple correctamente",
+    "GOT_MESSAGE_ON_LANGUAGE": "Devuelto mensajes en el lenguaje especificado correctamente",
+    "RETURNED_USER_LANGUAGE": "Devuelto mensajes en el lenguaje del usuario correctamente",
+    "RETURNED_MESSAGE_VARIABLE": "Devuelto mensaje con variable correctamente",
+    "RETURNED_MESSAGE_ARRAY": "Devuelto mensaje con array correctamente",
+    "RETURNED_MESSAGE_NESTED": "Devuelto mensaje con estructura anidada correctamente",
+    "RETURNED_MESSAGE_TWO_VARS": "Devuelto mensaje con dos variables correctamente",
+    "RETURNED_MESSAGE_POS": "Devuelto mensaje desde una posición correctamente",
+    "RETURN_SPECIFIED_LANGUAGE": "Returned message on the specified message"
+  },
+  "FILE": {
+    "UPLOADED_FILE": "Archivo subido correctamente",
+    "DELETED_FILE": "Archivo borrado correctamente",
+    "DOWNLOADED_FILE": "Archivo descargado correctamente",
+    "GENERATED_PUBLIC_URL": "Generada url pública correctamente",
+    "GOT_LIST_FILES_BUCKET_USER": "Devuelto lista de archivos de un bucket de un usuario correctamente",
+    "GOT_LIST_FILES_BUCKET_COMPANY": "Devuelto lista de archivos de un bucket de una compañía correctamente",
+    "GOT_ALL_BUCKETS": "Devuelto todos los buckets correctamente"
+  },
+  "FILE_EXPLORER": {
+    "GOT_LIST_FILES_LOGS": "Devuelto lista de archivos y directorios de logs correctamente",
+    "GOT_LOG_FILE": "Devuelto un archivo de log correctamente"
+  },
+  "EMAIL": {
+    "SENT": "Enviado email correctamente"
+  },
+  "OPENSEARCH": {
+    "GOT_ALL_INDEX": "Devueltos todos los indices de opensearch correctamente",
+    "INDEX_CREATED": "Índice creado correctamente",
+    "INDEX_DELETED": "Índice eliminado correctamente",
+    "CONTENT_ADDED": "Contenido añadido correctamente",
+    "CONTENT_DELETED": "Contenido eliminado correctamente",
+    "CONTENT_RETRIEVED": "Contenido recuperado correctamente",
+    "REINDEX_COMPLETED": "Reindexación completada correctamente"
+  },
+  "TICKET": {
+    "GOT_MY_TICKETS": "Deueltos todos los tickets correctamente",
+    "GOT_ALL_TICKETS": "Devueltos todos los tickets correctamente",
+    "GOT_TICKET_INFO": "Devuelto información de ticket correctamente",
+    "UPDATED_TICKET": "Ticket actualizado correctamente",
+    "DELETED_TICKET": "Eliminado ticket correctamente",
+    "CREATED_COMMENT": "Comentario creado para ticket correctamente",
+    "GOT_CATEGORIES": "Devuelto todas las categorias de tickets correctamente",
+    "GOT_STATUSES": "Devuelto todos los estados de tickets correctamente",
+    "CREATED": "Ticket creado correctamente"
+  },
+  "USER": {
+    "GOT_ALL_USERS": "Devueto todos los usuarios correctamente",
+    "GOT_PROFILE": "Devuelto información de perfil correctamente",
+    "UPLOADED_AVATAR": "Subido avatar correctamente",
+    "DOWNLOADED_AVATAR": "Descargado avatar correctamente",
+    "CHANGED_2FA_USER": "Cambiado 2FA de un usuario correctamente",
+    "UPDATED_SELF": "Actualizado usuario propio correctamente",
+    "UPDATE_USER": "Actualizado otro usuario correctamente",
+    "UPDATED_OWN_PASSWORD": "Actualizada contraseña correctamente",
+    "DELETED": "Borrado usuario correctamente",
+    "DEACTIVATED_USER": "Desactivado usuario correctamente"
+  },
+  "AUTH": {
+    "LOGGED": "Iniciado sesión correctamente",
+    "REGISTERED": "Usuario registrado correctamente",
+    "VERIFIED": "Usuario verificado correctamente",
+    "REJECTED": "Usuario rechazado correctamente",
+    "GOT_REFRESHED_TOKEN": "Devuelto token refrescado correctamente",
+    "GOT_ALL_UNVERIFIED": "Devueltos todos los usuarios no verificados",
+    "SENT_PASSWORD_RESET_EMAIL": "Enviado email de reinicio de contraseña correctamente",
+    "RESETED_PASSWORD": "Reiniciado contraseña correctamente",
+    "VERIFIED_OTP": "Verificado One-time-password correctamente"
+  },
+  "REPORT": {
+    "CREATED": "Creado informe correctamente",
+    "LIST": "Listado todos los informes de la compañía correctamente",
+    "DOWNLOADED": "Descargado informe correctamente",
+    "DELETED": "Borrado informe correctamente"
+  }
+}

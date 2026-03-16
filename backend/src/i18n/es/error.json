@@ -1,0 +1,101 @@
+{
+  "USER": {
+    "ERROR_USER_NAME_AT_LEAST_4_CHAR": "El nombre debe tener al menos 4 caracteres",
+    "NOT_FOUND": "Usuario no encontrado",
+    "MAIL_DUPLICATED": "Correo en uso",
+    "CANNOT_UPDATE_YOU_USER": "No puedes actualizarte a ti mismo",
+    "CANNOT_DELETE_YOU_USER": "No puedes eliminar este usuario",
+    "AVATAR_NOT_FOUND": "No se pudo encontrar el avatar",
+    "INVALID_OTP": "OTP no válido",
+    "ALREADY_VALIDATED_OTP": "OTP ya validado",
+    "OTP_EXPIRED": "OTP expirado",
+    "INVALID_OLD_PASSWORD": "Contraseña antigua no válida"
+  },
+  "TRIP": {
+    "NOT_FOUND": "Viaje no encontrado",
+    "ALREADY_MEMBER": "El usuario ya es miembro de este viaje",
+    "INVITATION_NOT_FOUND": "Invitación no encontrada",
+    "INVITATION_ALREADY_EXISTS": "Ya existe una invitación pendiente para este usuario",
+    "INVITATION_ALREADY_RESPONDED": "La invitación ya ha sido respondida",
+    "ITINERARY_NOT_FOUND": "Parada del itinerario no encontrada",
+    "TICKET_NOT_FOUND": "Ticket no encontrado",
+    "EXPENSE_NOT_FOUND": "Gasto no encontrado",
+    "NOT_MEMBER": "No eres miembro de este viaje",
+    "PERMISSION_DENIED": "No tienes permiso para realizar esta acción en el viaje",
+    "INVALID_DATE_RANGE": "La fecha de fin debe ser posterior a la fecha de inicio",
+    "INVALID_RATING": "La puntuación debe estar entre 1 y 10",
+    "SELF_INVITE": "No puedes invitarte a ti mismo",
+    "MEMBER_NOT_FOUND": "Miembro del viaje no encontrado",
+    "INVALID_REORDER": "La lista de paradas proporcionada no coincide con las paradas del itinerario",
+    "LOCALITY_NOT_FOUND": "Localidad no encontrada"
+  },
+  "FILE": {
+    "FILE_IS_EMPTY": "Error, el archivo está vacío",
+    "FILE_NOT_FOUND": "Archivo no encontrado",
+    "SECTION_NOT_FOUND": "Sección no encontrada",
+    "FILE_UPLOAD_FAILED": "Error al subir el archivo",
+    "BUCKET_NOT_FOUND": "El bucket no existe",
+    "BUCKET_ACCESS_DENIED": "Acceso a este bucket no permitido",
+    "BUCKET_CREATE_FAILED": "Error al crear el bucket de usuario",
+    "ERROR_REMOVING_SECTION": "Error de MinIO al eliminar la sección",
+    "INVALID_FILE_TYPE": "Tipo de archivo no válido",
+    "FILE_DELETE_FAILED": "Error al eliminar el archivo",
+    "DEFAULT_LOGO_NOT_FOUND": "Logo por defecto no encontrado",
+    "FILE_PATH_EMPTY": "Error, la ruta del archivo está vacía"
+  },
+  "COMMON": {
+    "PAGE_PAGESIZE_INVALID": "Los parámetros page y pageSize deben ser números mayores o iguales a 1.",
+    "INTERNAL_SERVER_ERROR": "Error interno del servidor",
+    "NOT_FOUND": "{entity} con id {id} no fue encontrado.",
+    "ALREADY_EXISTS": "{entity} con id {id} ya existe.",
+    "INVALID_ORDER": "Elemento de orden no válido: {order}.",
+    "INVALID_FIELD": "Campo de ordenamiento no válido: {field}.",
+    "INVALID_ORDER_DIRECTION": "Dirección de ordenamiento no válida: {direction}."
+  },
+  "VALIDATION": {
+    "NAME_MIN_LENGTH": "El nombre debe tener al menos {min} caracteres.",
+    "NAME_MAX_LENGTH": "El nombre no debe superar los {max} caracteres.",
+    "NAME_STARTS_UPPERCASE": "El nombre debe comenzar con una letra mayúscula.",
+    "NAME_FORMAT": "El formato del nombre no es correcto.",
+    "PASSWORD_MIN_LENGTH": "La contraseña debe tener al menos {min} caracteres.",
+    "PASSWORD_MAX_LENGTH": "La contraseña no debe superar los {max} caracteres.",
+    "PASSWORD_NO_SPACES": "La contraseña no debe contener espacios.",
+    "PASSWORD_ONE_LOWERCASE": "La contraseña debe contener al menos una letra minúscula.",
+    "PASSWORD_ONE_UPPERCASE": "La contraseña debe contener al menos una letra mayúscula.",
+    "PASSWORD_ONE_NUMBER": "La contraseña debe contener al menos un número.",
+    "PASSWORD_ONE_SPECIAL_CHAR": "La contraseña debe contener al menos un carácter especial como: !@#$%^&*()_+{}[]:;<>,.?/~_+-=|",
+    "PASSWORDS_NOT_MATCHING": "Las contraseñas no coinciden.",
+    "MAIL_INVALID": "El correo electrónico no tiene un formato válido.",
+    "IS_NOT_EMPTY": "Este campo no puede estar vacío.",
+    "INVALID_PHONE_NUMBER": "Formato de número de teléfono inválido."
+  },
+  "INTERNAL": {
+    "NOT_ESPECIFIED_MESSAGE": "MENSAJE NO ESPECIFICADO POR BACKEND"
+  },
+  "MAIL": {
+    "COMPILE_ERROR": "Error al compilar la plantilla {templateName}",
+    "SEND_ERROR": "Error al enviar el correo"
+  },
+  "AUTH": {
+    "INVALID_CREDENTIALS": "Credenciales inválidas",
+    "INVITATION_ACCEPTED": "La invitación ya ha sido aceptada",
+    "EMAILS_NOT_MATCHING": "Los correos electrónicos no coinciden",
+    "INVALID_TOKEN": "Token inválido",
+    "USER_EXISTS": "El usuario ya existe",
+    "INVITATION_ERROR": "Invitación no encontrada",
+    "RESET_KEY_NOT_DEFINED": "RESET_KEY no está definido en el archivo .env",
+    "RESET_KEY_INVALID_LENGTH": "RESET_KEY debe tener 32 bytes (64 caracteres hexadecimales)",
+    "UNAUTHORIZED_USER": "Usuario no autorizado",
+    "INVALID_JWT": "Token JWT incorrecto",
+    "ROLE_UNAUTHORIZED": "El usuario no tiene el rol requerido",
+    "AUTH_GUARD_ERROR": "Error en el guard de autorización",
+    "LOGIN_DISABLED": "El inicio de sesión está deshabilitado en la plataforma",
+    "REGISTRATION_DISABLED": "El registro de usuarios está deshabilitado en la plataforma",
+    "REGISTRATION_REJECTED": "El registro de nuevos usuarios no está siendo aceptado en este momento",
+    "USER_BLOCKED": "El usuario está bloqueado y no puede iniciar sesión",
+    "STATUS_NOT_PERMITTED": "El estado del usuario no permite esta operación",
+    "VERIFICATION_NOT_FOUND": "No se encontró una verificación pendiente",
+    "INVALID_OTP": "Código OTP no válido",
+    "OTP_EXPIRED": "El código OTP ha expirado"
+  }
+}

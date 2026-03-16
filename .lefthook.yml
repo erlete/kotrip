@@ -1,0 +1,46 @@
+min_version: 1.10.0
+
+pre-commit:
+  fail_on_changes: 'ci'
+
+  jobs:
+    - group:
+        piped: true # Evita colisiones entre fixes.
+
+        jobs:
+          - name: format
+            glob: '*'
+            run: npx prettier --write --cache --ignore-unknown {staged_files}
+            stage_fixed: true
+            fail_text: Algunos archivos han sido formateados por Prettier o no han superado el formateado. Revisa los cambios y vuelve a intentar el commit.
+
+          - name: lint
+            glob: '*'
+            run: npx eslint --fix --cache {staged_files}
+            stage_fixed: true
+            fail_text: Algunos archivos han sido corregidos por ESLint o no han superado la validación. Revisa los cambios y vuelve a intentar el commit.
+            skip: true # Se ignora temporalmente hasta solucionar problemas de linting.
+
+commit-msg:
+  commands:
+    commitlint:
+      run: npx commitlint --edit {1}
+      fail_text: 'El mensaje de commit no cumple con el formato de Conventional Commits. Usa el formato "tipo(scope): descripcion" en minusculas.'
+
+pre-push:
+  fail_on_changes: 'always'
+
+  jobs:
+    - group:
+        piped: false
+
+        jobs:
+          - name: typecheck
+            run: npm run qa:compile
+            fail_text: Se han detectado errores de tipado. Revisa los errores y vuelve a intentar el push.
+
+          - name: unit-tests
+            run: npm run qa:test
+            fail_text: Se han detectado errores en las pruebas unitarias. Revisa los errores y vuelve a intentar el push.
+            skip: true # Se ignora temporalmente hasta solucionar problemas de tests.
+

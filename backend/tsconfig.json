@@ -1,0 +1,37 @@
+{
+  "display": "Configuración base de TypeScript (sólo válida para extensión y compatibilidad con editores)",
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "declaration": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "forceConsistentCasingInFileNames": false,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noFallthroughCasesInSwitch": false,
+    "noImplicitAny": true,
+    "removeComments": true,
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "strictBindCallApply": false,
+    "strictNullChecks": true,
+    "target": "ES2021",
+
+    // Se incluyen estas opciones por compatibilidad con editores:
+    // Para compilación real se deben usar los archivos tsconfig específicos.
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"],
+      "@/common/*": ["src/common/*"],
+      "@/content/*": ["src/modules/content/*"],
+      "@/delivery/*": ["src/modules/delivery/*"],
+      "@/user/*": ["src/modules/user/*"],
+      "@/lib/*": ["src/lib/*"]
+    },
+    "types": ["jest", "node", "express", "multer"]
+  },
+
+  // Se incluyen estas fuentes por compatibilidad con editores:
+  // Para compilación real se deben usar los archivos tsconfig específicos.
+  "include": ["src/**/*", "src/**/*.spec.ts", "src/**/*.e2e-spec.ts"]
+}

@@ -1,0 +1,32 @@
+name: ${PROJECT_NAME:-kotrip}
+
+services:
+  # region Frontend Services
+
+  frontend:
+    image: ${PROJECT_NAME:-kotrip}/frontend:dev
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: frontend-dev
+    ports:
+      - '3${STACK_INDEX:-0}60:3000'
+    volumes:
+      - ./data/dist:/app/data/dist
+      - ./data/src:/app/data/src
+      - ./frontend/public:/app/frontend/public
+      - ./frontend/scripts:/app/frontend/scripts
+      - ./frontend/src:/app/frontend/src
+      - ./scripts:/app/scripts
+    environment:
+      NODE_ENV: development
+      NODE_PATH: /app/node_modules
+      CHOKIDAR_USEPOLLING: 'true'
+      CHOKIDAR_INTERVAL: '300'
+      WATCHPACK_POLLING: 'true'
+      BACKEND_CLUSTER_HOST: ${BACKEND_CLUSTER_HOST:-backend}
+      BACKEND_CLUSTER_PORT: ${BACKEND_CLUSTER_PORT:-3000}
+      NEXT_PUBLIC_BACKEND_WS_URL: ws://localhost:3050
+    # user: root es necesario en desarrollo para evitar problemas de permisos
+    # con los volúmenes montados. En producción se ejecuta como 'node'.
+    user: root

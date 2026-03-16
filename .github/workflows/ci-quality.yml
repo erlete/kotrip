@@ -1,0 +1,41 @@
+name: CI Quality
+
+on:
+  push:
+    branches: ['**']
+  pull_request:
+    branches: [core]
+
+concurrency:
+  group: ci-quality-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - run: npm ci
+
+      - name: Format check
+        run: npm run qa:format
+
+      - name: Dependency versions
+        run: npm run qa:versions
+
+      - name: TypeScript compile
+        run: npm run qa:compile
+
+      # Deshabilitados temporalmente - descomentar cuando se estabilicen:
+      # - name: Lint
+      #   run: npm run qa:lint
+
+      # - name: Unused code check
+      #   run: npm run qa:usage

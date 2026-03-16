@@ -1,0 +1,31 @@
+{
+  "$schema": "https://typedoc.org/schema.json",
+
+  "entryPoints": ["src"],
+  "entryPointStrategy": "expand",
+  "tsconfig": "tsconfig.json",
+
+  "out": "documentation",
+  "name": "Kotrip Data Documentation",
+  "includeVersion": true,
+
+  "plugin": ["typedoc-material-theme"],
+  "themeColor": "#2aa894",
+
+  "exclude": ["**/node_modules/**", "**/dist/**"],
+
+  "excludePrivate": true,
+  "excludeProtected": true,
+  "excludeInternal": true,
+  "excludeNotDocumented": false,
+
+  "searchInComments": true,
+  "categorizeByGroup": true,
+  "sort": ["source-order"],
+
+  "navigationLinks": {
+    "Repositorio": "https://github.com/kotrip",
+    "Frontend Docs": "../frontend/documentation/index.html",
+    "Backend Docs": "../backend/documentation/index.html"
+  }
+}

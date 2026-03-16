@@ -1,5 +1,40 @@
-# Created by https://www.toptal.com/developers/gitignore/api/windows,macos,linux,visualstudiocode,node,nextjs
-# Edit at https://www.toptal.com/developers/gitignore?templates=windows,macos,linux,visualstudiocode,node,nextjs
+.superpowers
+docs/superpowers
+
+### Backend ###
+backend/src/modules/seeder/inputs/data/*
+backend/src/modules/seeder/inputs/files/*
+
+### MCPs and AI agents ###
+.github/instructions/
+.github/copilot-instructions.md
+CLAUDE.md
+.claude/rules/
+.codacy
+.serena
+.playwright-mcp
+frontend/.playwright/
+
+### Environments ###
+**/.env*
+!**/.env.example
+
+### Security ###
+**/*.pem
+
+### Backend ###
+
+backend/documentation
+frontend/documentation
+data/documentation
+backend/src/seeder/*
+!backend/src/seeder/*.ts
+!backend/src/seeder/flags
+!backend/src/seeder/json_templates
+!src/core/documentation
+
+# Created by https://www.toptal.com/developers/gitignore/api/windows,macos,linux,node,nextjs,visualstudiocode
+# Edit at https://www.toptal.com/developers/gitignore?templates=windows,macos,linux,node,nextjs,visualstudiocode
 
 ### Linux ###
 *~
@@ -264,4 +299,9 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# End of https://www.toptal.com/developers/gitignore/api/windows,macos,linux,visualstudiocode,node,nextjs
+# End of https://www.toptal.com/developers/gitignore/api/windows,macos,linux,node,nextjs,visualstudiocode
+frontend/test-results/.last-run.json
+
+# Ignore app config file destine for client personalization
+# frontend/src/config/app.config.ts
+frontend/src/styles/generated

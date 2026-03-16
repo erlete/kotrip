@@ -1,0 +1,157 @@
+name: ${PROJECT_NAME:-kotrip}
+
+services:
+  # region Data Services
+
+  postgres:
+    ports:
+      - '3${STACK_INDEX:-0}30:5432'
+    networks:
+      - data
+      - egress
+
+  redis-backend:
+    ports:
+      - '3${STACK_INDEX:-0}31:6379'
+    networks:
+      - data
+      - egress
+
+  minio:
+    ports:
+      - '3${STACK_INDEX:-0}32:9000'
+      - '3${STACK_INDEX:-0}33:9001'
+    networks:
+      - data
+      - egress
+
+  # region Backend Services
+
+  backend:
+    image: ${PROJECT_NAME:-kotrip}/backend:dev
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: backend-dev
+    ports:
+      - '3${STACK_INDEX:-0}50:3000'
+    volumes:
+      - ./backend/assets:/app/backend/assets
+      - ./backend/scripts:/app/backend/scripts
+      - ./backend/src:/app/backend/src
+      - ./data/dist:/app/data/dist
+      - ./data/src:/app/data/src
+      - ./scripts:/app/scripts
+    environment:
+      NODE_ENV: development
+      NODE_PATH: /app/node_modules
+      CHOKIDAR_USEPOLLING: 'true'
+      CHOKIDAR_INTERVAL: '300'
+    # user: root es necesario en desarrollo para evitar problemas de permisos
+    # con los volúmenes montados. En producción se ejecuta como 'node'.
+    user: root
+
+  # region Development Tools Services
+
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    depends_on:
+      - postgres
+    ports:
+      - '3${STACK_INDEX:-0}40:80'
+
+    volumes:
+      - pgadmin-data:/var/lib/pgadmin:rw
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD}
+
+      # Provisioning (write/read from the persistent volume path)
+      PGADMIN_SERVER_JSON_FILE: /var/lib/pgadmin/servers.json
+      PGADMIN_REPLACE_SERVERS_ON_STARTUP: 'True'
+      PGADMIN_CONFIG_MASTER_PASSWORD_REQUIRED: 'False'
+
+      # Inputs for provisioning
+      DB_HOST: postgres
+      DB_PORT: '5432'
+      DB_MAINTENANCE_DB: postgres
+      DB_USER: ${POSTGRES_USER}
+      DB_PASSWORD: ${POSTGRES_PASSWORD}
+      DB_SSLMODE: disable
+    networks:
+      - data
+      - egress
+    command:
+      - |
+        mkdir -p /var/lib/pgadmin &&
+        printf '%s\n' \
+          '{' \
+          '  "Servers": {' \
+          '    "1": {' \
+          '      "Name": "'"$${PROJECT_NAME:-kotrip}"'",' \
+          '      "Group": "Servers",' \
+          '      "Host": "'"$${DB_HOST}"'",' \
+          '      "Port": '"$${DB_PORT}"',' \
+          '      "MaintenanceDB": "'"$${DB_MAINTENANCE_DB}"'",' \
+          '      "Username": "'"$${DB_USER}"'",' \
+          '      "ConnectionParameters": {' \
+          '        "sslmode": "'"$${DB_SSLMODE}"'",' \
+          '        "passfile": "/var/lib/pgadmin/pgpass",' \
+          '        "connect_timeout": 10' \
+          '      }' \
+          '    }' \
+          '  }' \
+          '}' \
+          > /var/lib/pgadmin/servers.json &&
+        printf '%s:%s:*:%s:%s\n' "$${DB_HOST}" "$${DB_PORT}" "$${DB_USER}" "$${DB_PASSWORD}" > /var/lib/pgadmin/pgpass &&
+        chmod 0600 /var/lib/pgadmin/pgpass /var/lib/pgadmin/servers.json &&
+        exec /entrypoint.sh
+
+    entrypoint: ['/bin/sh', '-c']
+    profiles: ['devtools']
+
+  redisinsight:
+    image: redis/redisinsight:latest
+    restart: unless-stopped
+    ports:
+      - '3${STACK_INDEX:-0}41:5540'
+    volumes:
+      - redisinsight-data:/data
+    environment:
+      RI_APP_HOST: 0.0.0.0
+      RI_APP_PORT: 5540
+      RI_ACCEPT_TERMS_AND_CONDITIONS: 'true'
+
+      # Preconfigured DB connection (ID 0)
+      RI_REDIS_HOST: redis-backend
+      RI_REDIS_PORT: 6379
+      RI_REDIS_ALIAS: redis-backend
+      RI_REDIS_USERNAME: default
+      RI_REDIS_PASSWORD: ${BACKEND_REDIS_PASSWORD}
+      RI_REDIS_TLS: 'false'
+    networks:
+      - data
+      - egress
+    profiles: ['devtools']
+
+  bullboard:
+    image: venatum/bull-board:latest
+    restart: unless-stopped
+    ports:
+      - '3${STACK_INDEX:-0}42:3000'
+    environment:
+      REDIS_HOST: redis-backend
+      REDIS_PORT: '6379'
+      REDIS_PASSWORD: ${BACKEND_REDIS_PASSWORD}
+      REDIS_DB: '0'
+
+      BULL_VERSION: 'BULL'
+      BULL_PREFIX: 'bull'
+    networks:
+      - data
+      - egress
+    profiles: ['devtools']
+
+volumes:
+  pgadmin-data:
+  redisinsight-data:

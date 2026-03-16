@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "compilerOptions": {
+    "assets": [
+      {
+        "include": "i18n/**/*",
+        "watchAssets": true
+      },
+      {
+        "include": "modules/seeder/inputs/**/*",
+        "watchAssets": true
+      },
+      {
+        "include": "db/**/*",
+        "watchAssets": true
+      },
+      {
+        "include": "templates/**/*",
+        "watchAssets": true
+      }
+    ],
+    "builder": "swc",
+    "deleteOutDir": false,
+    "tsConfigPath": "tsconfig.dev.json"
+  },
+  "entryFile": "main",
+  "generateOptions": {
+    "spec": true
+  },
+  "sourceRoot": "src"
+}

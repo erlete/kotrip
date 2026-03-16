@@ -1,0 +1,19 @@
+{
+  "display": "Configuración de TypeScript para producción",
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"],
+      "@/common/*": ["src/common/*"],
+      "@/content/*": ["src/modules/content/*"],
+      "@/delivery/*": ["src/modules/delivery/*"],
+      "@/user/*": ["src/modules/user/*"],
+      "@/lib/*": ["src/lib/*"]
+    },
+    "types": ["node", "express", "multer"]
+  },
+  "include": ["src"],
+  "exclude": ["src/**/*.spec.ts", "src/**/*.e2e-spec.ts"]
+}

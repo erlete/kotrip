@@ -1,0 +1,55 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Docker: Down Backend and Database (Development)",
+      "type": "shell",
+      "command": "docker compose -f compose.yml -f compose.dev.yml down -v backend postgres"
+    },
+    {
+      "label": "Docker: Up Backend and Database (Development)",
+      "type": "shell",
+      "command": "docker compose -f compose.yml -f compose.dev.yml up -d backend postgres"
+    },
+    {
+      "label": "Docker: Down All (Development)",
+      "type": "shell",
+      "command": "docker compose -f compose.yml -f compose.dev.yml down -v"
+    },
+    {
+      "label": "Docker: Up All (Development)",
+      "type": "shell",
+      "command": "docker compose -f compose.yml -f compose.dev.yml up -d"
+    },
+    {
+      "label": "Docker: Down + Up Backend and Database (Development)",
+      "type": "shell",
+      "dependsOn": [
+        "Docker: Down Backend and Database (Development)",
+        "Docker: Up Backend and Database (Development)"
+      ],
+      "dependsOrder": "sequence"
+    },
+    {
+      "label": "Docker: Down + Up All (Development)",
+      "type": "shell",
+      "dependsOn": [
+        "Docker: Down All (Development)",
+        "Docker: Up All (Development)"
+      ],
+      "dependsOrder": "sequence"
+    },
+    {
+      "label": "Docker Restart Backend (Development)",
+      "type": "shell",
+      "command": "docker compose -f compose.yml -f compose.dev.yml restart backend"
+    },
+    {
+      "label": "Docker Restart Frontend (Development)",
+      "type": "shell",
+      "command": "docker compose -f compose.yml -f compose.dev.yml restart frontend"
+    }
+  ]
+}

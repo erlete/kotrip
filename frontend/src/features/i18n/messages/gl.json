@@ -1,0 +1,2602 @@
+{
+  "AdminAudit": {
+    "action": {
+      "ADD_TEAM_MEMBER": "Engadir membro",
+      "ANONYMIZE_DATA": "Anonimizar datos",
+      "APPROVE_ENROLLMENT": "Aprobar inscrición",
+      "BULK_OPERATION": "Operación masiva",
+      "CHANGE_TEAM_ROLE": "Cambiar rol de equipo",
+      "CREATE": "Crear",
+      "CREATE_TEAM": "Crear equipo",
+      "DELETE": "Eliminar",
+      "DELETE_TEAM": "Eliminar equipo",
+      "ENROLL": "Inscribir",
+      "EXPIRE_ATTEMPT": "Expirar intento",
+      "EXPORT_DATA": "Exportar datos",
+      "FAILED_LOGIN": "Inicio de sesión fallido",
+      "GRANT_PERMISSION": "Conceder permiso",
+      "LOGIN": "Inicio de sesión",
+      "LOGOUT": "Peche de sesión",
+      "OVERRIDE_SCORE": "Sobrescribir nota",
+      "PASSWORD_CHANGE": "Cambio de contrasinal",
+      "PASSWORD_RESET": "Reinicio de contrasinal",
+      "READ": "Lectura",
+      "REJECT_ENROLLMENT": "Rexeitar inscrición",
+      "REMOVE_TEAM_MEMBER": "Eliminar membro",
+      "REQUEST_CLUE": "Solicitar pista",
+      "REVOKE_PERMISSION": "Revocar permiso",
+      "START_ATTEMPT": "Inicio de intento",
+      "SUBMIT_ATTEMPT": "Envío de intento",
+      "UNENROLL": "Desinscribir",
+      "UPDATE": "Actualizar",
+      "UPDATE_ANSWER": "Actualizar resposta",
+      "UPDATE_TEAM": "Actualizar equipo"
+    },
+    "anonymizedActor": "Anonimizado",
+    "category": {
+      "CONTENT": "Contido",
+      "DATA_PRIVACY": "Privacidade",
+      "DELIVERY": "Entrega",
+      "GRADING": "Cualificación",
+      "SECURITY": "Seguridade",
+      "SYSTEM": "Sistema",
+      "TEAM_MANAGEMENT": "Equipos",
+      "USER_MANAGEMENT": "Usuarios"
+    },
+    "columns": {
+      "action": "Acción",
+      "actor": "Actor",
+      "actorUserId": "ID de usuario actor",
+      "category": "Categoría",
+      "date": "Data",
+      "details": "Detalles",
+      "entity": "Entidade",
+      "entityId": "ID de entidade",
+      "ipAddress": "Enderezo IP"
+    },
+    "courseAudit": {
+      "backToCourse": "← Volver ao curso",
+      "description": "Rexistros de auditoría relacionados con este curso e os seus elementos",
+      "title": "Auditoría do Curso"
+    },
+    "description": "Rexistros de auditoría da plataforma",
+    "detail": {
+      "afterState": "Estado posterior",
+      "beforeState": "Estado anterior",
+      "changes": "Cambios de campos",
+      "changesCount": "{count} cambio(s)",
+      "field": "Campo",
+      "metadata": "Metadatos",
+      "newValue": "Valor novo",
+      "noChanges": "Sen cambios rexistrados",
+      "oldValue": "Valor anterior",
+      "relatedEntity": "Entidade relacionada",
+      "relatedEntityId": "ID",
+      "relatedEntityType": "Tipo",
+      "title": "Detalle do rexistro",
+      "viewDetails": "Ver detalles"
+    },
+    "emptyState": "Non hai rexistros de auditoría",
+    "errorLoading": "Erro ao cargar os rexistros de auditoría",
+    "exportCsv": "Exportar CSV",
+    "filters": {
+      "action": "Acción",
+      "actorUserId": "ID do actor",
+      "allActions": "Todas",
+      "allCategories": "Todas",
+      "apply": "Aplicar",
+      "category": "Categoría",
+      "clear": "Limpar",
+      "dateFrom": "Data dende",
+      "dateTo": "Data ata",
+      "entityId": "ID de entidade",
+      "entityType": "Tipo de entidade",
+      "entityTypePlaceholder": "Curso, Unidade, Actividade...",
+      "relatedEntityType": "Entidade relacionada",
+      "relatedEntityTypePlaceholder": "Curso, Unidade...",
+      "title": "Filtros"
+    },
+    "loading": "Cargando rexistros…",
+    "pagination": {
+      "nextPage": "Páxina seguinte",
+      "page": "Páxina {current} de {totalPages}",
+      "previousPage": "Páxina anterior",
+      "showing": "Mostrando {from} - {to} de {total}"
+    },
+    "systemActor": "Sistema",
+    "title": "Rexistros de auditoría"
+  },
+  "AdminUsers": {
+    "actions": {
+      "confirmDelete": "Estás seguro de que queres eliminar este usuario?",
+      "delete": "Eliminar",
+      "deleteError": "Erro ao eliminar o usuario",
+      "deleteSuccess": "Usuario eliminado correctamente",
+      "edit": "Editar",
+      "toggle2FA": "Activar/Desactivar 2FA",
+      "toggle2FAError": "Erro ao actualizar o estado de 2FA",
+      "toggle2FASuccess": "Estado de 2FA actualizado",
+      "updateError": "Erro ao actualizar o usuario",
+      "updateSuccess": "Usuario actualizado correctamente"
+    },
+    "description": "Xestiona todos os usuarios da plataforma",
+    "filters": {
+      "active": "Activo",
+      "allRoles": "Todos os roles",
+      "allStatuses": "Todos os estados",
+      "apply": "Aplicar filtros",
+      "clear": "Limpar",
+      "inactive": "Inactivo",
+      "role": "Rol",
+      "search": "Buscar usuario",
+      "searchPlaceholder": "Nome ou correo electrónico...",
+      "status": "Estado",
+      "title": "Filtros"
+    },
+    "table": {
+      "actions": "Accións",
+      "createdAt": "Data de rexistro",
+      "email": "Correo electrónico",
+      "loading": "Cargando usuarios...",
+      "name": "Nome",
+      "noResults": "Non se atoparon usuarios",
+      "role": "Rol",
+      "status": "Estado",
+      "twoFactor": "2FA"
+    },
+    "title": "Administración de usuarios"
+  },
+  "AlertDialogComponent": {
+    "cancel": "Cancelar",
+    "continue": "Continuar",
+    "triggerText": "Abrir"
+  },
+  "Analytics": {
+    "chart": {
+      "activityTypeBreakdown": "Tipos de actividade",
+      "attainmentByDifficulty": "Consecución por dificultade",
+      "completionByCourse": "Finalización por curso",
+      "performanceByCourse": "Rendemento por curso",
+      "scoreOverTime": "Histórico de puntuacións obtidas"
+    },
+    "error": "Erro ao cargar as analíticas. Téntao de novo máis tarde.",
+    "export": "Exportar Excel",
+    "exportRoleName": "Administrador",
+    "exportScope": "global",
+    "exportScopeParticipant": "participante",
+    "globalSubtitle": "Resumo analítico de todos os cursos",
+    "globalTitle": "Dashboard",
+    "kpi": {
+      "activeInstructors": "Instructores activos",
+      "activeLearners": "Estudantes activos",
+      "activeParticipants": "Participantes activos",
+      "activeTAs": "TAs activos",
+      "avgAttemptsPerSolve": "Intentos promedio para resolver",
+      "avgScore": "Puntuación media",
+      "completionRate": "Taxa de finalización",
+      "courses": "Cursos",
+      "hintsUsed": "Pistas usadas",
+      "progress": "Progreso",
+      "solvedActivities": "Actividades resoltas",
+      "totalActivities": "Total de actividades"
+    },
+    "loading": "Cargando analíticas...",
+    "loadingChart": "Cargando gráfico...",
+    "noData": "Sen datos no periodo de tempo seleccionado",
+    "noDataChart": "Sen datos no periodo de tempo seleccionado",
+    "table": {
+      "courseOverview": "Vista xeral de cursos",
+      "courseSummary": "Resumo de cursos"
+    },
+    "timeRange": {
+      "last24Hours": "Últimas 24 horas",
+      "lastHour": "Última hora",
+      "lastMonth": "Último mes",
+      "lastWeek": "Última semana"
+    }
+  },
+  "AnalyticsTables": {
+    "activityTypes": {
+      "EXERCISE_CLASSIFICATION": "Clasificar",
+      "EXERCISE_MATCHING": "Emparexar",
+      "EXERCISE_ORDERING": "Ordear",
+      "QUIZ_STANDARD": "Quiz",
+      "QUIZ_VIDEO_EXTERNAL": "Video Quiz (Externo)",
+      "QUIZ_VIDEO_INTERNAL": "Video Quiz (Interno)",
+      "QUIZ_VM_LINKED": "VM CTF (Enlazadas)",
+      "QUIZ_VM_SINGLE": "Máquina virtual"
+    },
+    "columns": {
+      "activityName": "Actividade",
+      "attainmentPct": "Consecución (%)",
+      "attemptNumber": "#",
+      "attempts": "Intentos",
+      "avgScore": "Puntuación media (%)",
+      "avgTimeSeconds": "Tempo medio (s)",
+      "bestScore": "Mellor puntuación (%)",
+      "completionRate": "Finalización (%)",
+      "courseName": "Curso",
+      "difficulty": "Dificultade",
+      "enrolled": "Inscritos",
+      "enrolledLearners": "Estudantes inscritos",
+      "hintsUsed": "Pistas",
+      "hintsUsedCount": "Pistas usadas",
+      "lastActivity": "Última actividade",
+      "lastActivityTs": "Última actividade",
+      "lastLoginTs": "Último acceso",
+      "participant": "Participante",
+      "participantName": "Participante",
+      "rank": "#",
+      "score": "Puntuación (%)",
+      "scoreRatio": "Puntuación (%)",
+      "solvedCount": "Resólto",
+      "solvedRate": "Tasa de resolución (%)",
+      "solvedTs": "Resólto o",
+      "submittedAt": "Enviado o",
+      "timeSeconds": "Tempo (s)",
+      "totalActivities": "Total de actividades",
+      "totalParticipants": "Total",
+      "totalUnits": "Total de unidades",
+      "type": "Tipo",
+      "uniqueUsers": "Usuarios únicos",
+      "unitName": "Unidade"
+    },
+    "difficulty": {
+      "0": "Principiante",
+      "1": "Fácil",
+      "2": "Intermedio",
+      "3": "Difícil"
+    },
+    "series": {
+      "attainment": "Consecución",
+      "avgScore": "Puntuación media",
+      "completion": "Finalización",
+      "participants": "Participantes",
+      "score": "Puntuación",
+      "solved": "Resólto %"
+    }
+  },
+  "Aria": {
+    "Activities": {
+      "matchFor": "Emparellamento para {text}",
+      "moveDown": "Mover abaixo",
+      "moveUp": "Mover arriba"
+    },
+    "Avatar": {
+      "userAvatar": "Avatar de usuario"
+    },
+    "Cards": {
+      "cardList": "Elementos",
+      "cardListRegion": "Lista de elementos",
+      "goToCompanyDetails": "Ir aos detalles de {company}"
+    },
+    "Dashboard": {
+      "graphsSection": "Sección de gráficos do dashboard"
+    },
+    "DifficultyChip": {
+      "difficultyLevel": "Dificultade: nivel {level} de {total}"
+    },
+    "InputOtp": {
+      "digit": "Díxito {index}",
+      "otpInput": "Campo de contrasinal dun só uso"
+    },
+    "InputPassword": {
+      "hidePassword": "Ocultar contrasinal",
+      "showPassword": "Amosar contrasinal"
+    },
+    "Landing": {
+      "goToLanding": "Ir á páxina de inicio",
+      "primaryNavigation": "Navegación principal"
+    },
+    "Modal": {
+      "closeModal": "Pechar modal",
+      "modalContent": "Contido do modal"
+    },
+    "Popover": {
+      "popoverContent": "Contido do popover"
+    },
+    "Poster": {
+      "coursePoster": "Poster do curso: {title}"
+    },
+    "PosterAvatar": {
+      "cancelPreview": "Cancelar previsualización",
+      "changeAvatar": "Cambiar avatar",
+      "selectImage": "Seleccionar unha imaxe"
+    },
+    "PosterUpload": {
+      "currentPoster": "Poster actual",
+      "posterPreview": "Vista previa do poster",
+      "selectImageFile": "Por favor selecciona un arquivo de imaxe"
+    },
+    "Select": {
+      "removeOption": "Eliminar {label}"
+    },
+    "Sidebar": {
+      "goToMainMenu": "Ir ás estatísticas xerais (dashboard)",
+      "mainNavigation": "Navegación principal",
+      "profileImage": "Imaxe de perfil do usuario",
+      "toggleProfileMenu": "Abrir/pechar o menú do perfil de usuario",
+      "toggleSidebar": "Contraer/expandir o menú lateral (sidebar)"
+    },
+    "Toggle": {
+      "2fa": "{checked, select, true {Desactivar} other {Activar}} a autenticación de dous factores (2FA)",
+      "theme": "{checked, select, true {Cambiar a tema claro} other {Cambiar a tema escuro}}"
+    },
+    "Topbar": {
+      "lastLoginTooltip": "Data e hora do último inicio de sesión",
+      "selectCompany": "Seleccionar a empresa activa",
+      "topbar": "Barra de ferramentas da aplicación"
+    }
+  },
+  "Auth": {
+    "editorial": {
+      "description": "Xestiona itinerarios, descobre rutas e comparte experiencias. Todo dende un só lugar.",
+      "headline1": "O teu próximo",
+      "headline2": "destino",
+      "headline3": "agárdache",
+      "stats": {
+        "destinations": {
+          "label": "Destinos",
+          "value": "580+"
+        },
+        "satisfaction": {
+          "label": "Satisfacción",
+          "value": "98%"
+        },
+        "trips": {
+          "label": "Viaxes creadas",
+          "value": "2.4k+"
+        }
+      },
+      "tag": "Plataforma de viaxes"
+    },
+    "invalidAuthResponse": "Resposta de autenticación inválida",
+    "invalidCredentials": "Credenciais inválidas",
+    "invalidRefreshResponse": "Resposta de refresco inválida",
+    "invalidUpdateResponse": "Resposta de actualización inválida",
+    "invalidVerificationResponse": "Resposta de verificación inválida",
+    "login": {
+      "notAccount?": "Non tes conta?",
+      "registerHere": "Rexístrate aquí"
+    },
+    "loginDisabled": "O inicio de sesión está desactivado temporalmente polo administrador da plataforma",
+    "loginDisabledBanner": "O inicio de sesión está desactivado para estudantes. Se es administrador ou instrutor, podes iniciar sesión igualmente.",
+    "loginStatusError": {
+      "BLOCKED": "A túa conta foi bloqueada. Contacta co administrador da plataforma.",
+      "PENDING_REVIEW": "A túa conta está pendente de revisión por un administrador.",
+      "PENDING_VERIFICATION": "Debes verificar o teu correo electrónico antes de iniciar sesión.",
+      "REJECTED": "O teu rexistro foi rexeitado. Contacta co administrador da plataforma.",
+      "verifyEmailLink": "Preme aquí para verificar o teu correo"
+    },
+    "mailInvalid": "Correo electrónico non válido",
+    "noAccessToken": "Non se atopou o token de acceso",
+    "noRefreshToken": "Non hai token de refresco dispoñible",
+    "password": {
+      "lowercase": "O contrasinal debe conter polo menos unha letra minúscula",
+      "minLength": "O contrasinal debe ter polo menos 8 caracteres",
+      "number": "O contrasinal debe conter polo menos un número",
+      "special": "O contrasinal debe conter polo menos un carácter especial",
+      "uppercase": "O contrasinal debe conter polo menos unha letra maiúscula"
+    },
+    "passwordsDoNotMatch": "Os contrasinais non coinciden",
+    "recoverPassword": {
+      "description": "Introduce o teu correo electrónico e enviarémosche instrucións para restablecer o teu contrasinal.",
+      "otpDescription": "Introduce o código de 6 díxitos enviado ao teu correo electrónico para recuperar o teu contrasinal.",
+      "successToast": "Enviouse un correo electrónico con instrucións para restablecer o teu contrasinal."
+    },
+    "register": {
+      "alreadyAccount?": "Xa tes conta?",
+      "checkEmail": "Revisa o teu correo electrónico",
+      "loginHere": "Inicia sesión aquí",
+      "successMessage": "Usuario rexistrado correctamente",
+      "verificationEmailSent": "Enviouse un código de verificación ao teu correo electrónico. Revisa a túa bandexa de entrada."
+    },
+    "registrationAdmitted": "A túa conta foi creada correctamente. Xa podes iniciar sesión.",
+    "registrationDisabled": "O rexistro de usuarios está desactivado temporalmente polo administrador da plataforma",
+    "registrationRejected": "O rexistro de novos usuarios non está sendo aceptado neste momento",
+    "serverConnectionError": "Non se puido conectar co servidor. Por favor, inténtao de novo.",
+    "unexpectedError": "Produciuse un erro inesperado",
+    "unknownError": "Erro descoñecido",
+    "verifyEmail": {
+      "admitted": "O teu correo electrónico foi verificado correctamente. Xa podes iniciar sesión.",
+      "backToLogin": "Volver ao inicio de sesión",
+      "codeLabel": "Código de verificación",
+      "codePlaceholder": "Introduce o código de 6 díxitos",
+      "description": "Introduce o código de verificación enviado a {email}",
+      "pending": "O teu correo electrónico foi verificado. A túa conta está pendente de revisión por un administrador.",
+      "rejected": "O teu correo electrónico foi verificado, pero o teu rexistro foi rexeitado. Contacta co administrador da plataforma."
+    }
+  },
+  "AutoConfirm": {
+    "accountConfirmed": "Conta confirmada!",
+    "adminApprovalRequired": "O administrador deberá aprobar a túa solicitude antes de que poidas acceder.",
+    "confirmationError": "Erro ao confirmar a conta",
+    "confirmingAccount": "Confirmando a conta...",
+    "error": "Erro",
+    "goToLogin": "Ir ao inicio de sesión",
+    "invalidToken": "Non se proporcionou un token de confirmación válido.",
+    "pleaseWait": "Agarda mentres confirmamos o teu rexistro.",
+    "redirectingToLogin": "Serás redirixido ao inicio de sesión nuns segundos...",
+    "title": "Confirmación da conta",
+    "unexpectedError": "Produciuse un erro inesperado ao confirmar a conta"
+  },
+  "AvailabilityBadge": {
+    "activityDependency": "• Actividade: {title}",
+    "closesAt": "Pecha: {date}",
+    "dateRestrictionTitle": "Restrición de data",
+    "dependenciesTitle": "Dependencias non completadas",
+    "opensAt": "Abre: {date}",
+    "unitDependency": "• Unidade: {title}"
+  },
+  "AvailabilityLockInfo": {
+    "activityBlocked": "Actividade bloqueada",
+    "activityLabel": "Esta actividade",
+    "blockedByBoth": "{itemLabel} está bloqueado/a ata {dateMessage} e ata que {dependencyMessage}",
+    "blockedByDate": "{itemLabel} está bloqueado/a ata {dateMessage}",
+    "blockedByDependencies": "{itemLabel} está bloqueado/a ata que {dependencyMessage}",
+    "closedDate": "o {date} (xa pechado)",
+    "connector": " e ",
+    "courseBlocked": "Curso bloqueado",
+    "courseLabel": "Este curso",
+    "lockedByDate": "{itemLabel} por data",
+    "lockedByPrerequisites": "{itemLabel} por prerrequisitos",
+    "multipleActivitiesCompleted": "as actividades \"{names}\" e \"{last}\" sexan completadas",
+    "multipleUnitsCompleted": "as unidades \"{names}\" e \"{last}\" sexan completadas",
+    "singleActivityCompleted": "a actividade \"{name}\" sexa completada",
+    "singleUnitCompleted": "a unidade \"{name}\" sexa completada",
+    "unitBlocked": "Unidade bloqueada",
+    "unitLabel": "Esta unidade"
+  },
+  "BarChart": {
+    "approved": "Aprobados",
+    "failed": "Suspensos",
+    "unresolved": "Non resoltos"
+  },
+  "Buttons": {
+    "buttonAccept": "Aceptar",
+    "buttonActivateAll": "Activar todas",
+    "buttonAdd": "Engadir",
+    "buttonAddClue": "Engadir pista",
+    "buttonAddFile": "Engadir arquivo",
+    "buttonAddLogToIncidence": "Engadir rexistro á incidencia",
+    "buttonAddNewModule": "Engadir novo módulo",
+    "buttonAddNote": "Engadir nota",
+    "buttonAddPlatform": "Nova plataforma",
+    "buttonAddPlaybook": "Engadir playbook",
+    "buttonAddStudents": "Engadir estudantes",
+    "buttonAddTeamMember": "Engadir membro ao equipo",
+    "buttonAddUser": "Engadir usuario",
+    "buttonAssignUser": "Asignar usuario",
+    "buttonAssigning": "Asignando...",
+    "buttonBack": "Volver",
+    "buttonBackHome": "Volver ao inicio",
+    "buttonBlock": "Bloquear",
+    "buttonCancel": "Cancelar",
+    "buttonChangePassword": "Cambiar contrasinal",
+    "buttonCleanForm": "Limpar formulario",
+    "buttonClickHere": "Fai clic aquí",
+    "buttonClose": "Pechar",
+    "buttonClue": "Pista",
+    "buttonColumns": "Columnas",
+    "buttonConfirm": "Confirmar",
+    "buttonContinue": "Continuar",
+    "buttonCreate": "Crear",
+    "buttonCreateCompany": "Crear empresa",
+    "buttonCreateIncidence": "Crear incidencia",
+    "buttonCreateModule": "Crear módulo",
+    "buttonCreateNewAgent": "Crear novo axente",
+    "buttonCreateNewInput": "Solicitar novo input",
+    "buttonCreatePlatform": "Crear plataforma",
+    "buttonCreateTeam": "Crear equipo",
+    "buttonCreateTicket": "Crear ticket",
+    "buttonCreating": "Creando...",
+    "buttonCreatingTeam": "Creando equipo...",
+    "buttonDeactivateAll": "Desactivar todas",
+    "buttonDeactivateUser": "Desactivar usuario",
+    "buttonDelegateCompany": "Delegar empresa",
+    "buttonDelete": "Eliminar",
+    "buttonDeleteAccount": "Darse de baixa",
+    "buttonDeleteCompany": "Eliminar empresa",
+    "buttonDeleteUser": "Eliminar usuario",
+    "buttonDetails": "Detalles",
+    "buttonEdit": "Editar",
+    "buttonEditCompany": "Editar empresa",
+    "buttonEditImage": "Editar imaxe",
+    "buttonEditProfile": "Editar perfil",
+    "buttonEditing": "Editando...",
+    "buttonEditingActivity": "Editar exercicio",
+    "buttonEditingName": "Modificar nome",
+    "buttonExamplePlaybooksBack": "Volver aos exemplos",
+    "buttonFilter": "Filtrar",
+    "buttonGenerateReport": "Xerar informe",
+    "buttonGetHint": "Obter pista",
+    "buttonHistoricalReport": "Histórico de informes",
+    "buttonHoverHere": "Pasa o cursor aquí",
+    "buttonJoinTeam": "Unirse ao equipo",
+    "buttonLeaveCompany": "Abandonar empresa",
+    "buttonLogin": "Iniciar sesión",
+    "buttonLoremIpsum": "LOREM IPSUM",
+    "buttonMakeQualifierPrivate": "Facer a clasificatoria privada",
+    "buttonMakeQualifierPublic": "Facer a clasificatoria pública",
+    "buttonManageUsers": "Xestionar usuarios",
+    "buttonNewActivity": "Novo exercicio",
+    "buttonNewCourse": "Novo curso",
+    "buttonNewUnit": "Nova unidade",
+    "buttonNo": "Non",
+    "buttonOpen": "Abrir",
+    "buttonPlaybooksBack": "Volver a playbooks",
+    "buttonPlaybooksExamples": "Exemplos de playbooks",
+    "buttonPreview": "Previsualizar",
+    "buttonProcessing": "Procesando...",
+    "buttonQualifier": "Clasificatoria",
+    "buttonRegister": "Rexistro",
+    "buttonRemoveStudents": "Eliminar estudantes",
+    "buttonReset": "Restablecer",
+    "buttonRetry": "Tentar de novo",
+    "buttonSave": "Gardar",
+    "buttonSaveChanges": "Gardar cambios",
+    "buttonSaveNote": "Gardar nota",
+    "buttonSaveQuestion": "Gardar pregunta",
+    "buttonSaveReply": "Gardar resposta",
+    "buttonSaving": "Gardando...",
+    "buttonSend": "Enviar",
+    "buttonSendMessage": "Enviar mensaxe",
+    "buttonSendReply": "Enviar resposta",
+    "buttonSending": "Enviando...",
+    "buttonShowToast": "Mostrar notificación",
+    "buttonStartSession": "Iniciar sesión",
+    "buttonStartingSession": "Iniciando sesión...",
+    "buttonSubmit": "Enviar",
+    "buttonUnblock": "Desbloquear",
+    "buttonUpdate": "Actualizar",
+    "buttonUploadFile": "Subir arquivo",
+    "buttonVerify": "Verificar",
+    "buttonVerifying": "Verificando...",
+    "buttonViewDashboard": "Ver panel de control",
+    "buttonViewMembers": "Ver membros",
+    "buttonYes": "Si"
+  },
+  "Cards": {
+    "Delete": "Desexas eliminar esta plataforma?",
+    "Manage": "Administrar",
+    "companyCard": {
+      "creationDate": "Data de creación"
+    },
+    "courses": {
+      "actions": "Accións",
+      "blocked": "Bloqueado",
+      "dashboard": "Panel de control",
+      "description": "Descrición",
+      "limitDate": "Data de peche",
+      "lockModule": "Bloquear módulo",
+      "lockModule?": "Desexas bloquear o módulo?",
+      "moduleAccess": "Acceder ao módulo",
+      "ranking": "Táboa clasificatoria",
+      "startDate": "Data de inicio",
+      "students": "Alumnos",
+      "teams": "Equipos",
+      "totalStudents": "Total de alumnos",
+      "totalTeams": "Total de equipos",
+      "unlockModule": "Desbloquear módulo",
+      "unlockModule?": "Desexas desbloquear o módulo?"
+    },
+    "individualPlatform": {
+      "description": "Descrición",
+      "moduleAccess": "Acceder ao módulo"
+    },
+    "platforms": {
+      "authenticationMethod": "Método de autenticación",
+      "authenticationToken": "Token de autenticación",
+      "keyConfiguration": "Configuración da clave",
+      "kid": "KID"
+    }
+  },
+  "CarouselComponent": {
+    "altText": "Imaxe do carrusel"
+  },
+  "ComboboxComponent": {
+    "clearSelection": "Limpar selección",
+    "noItemsFound": "Non se atoparon elementos.",
+    "openPopup": "Abrir despregable",
+    "placeholder": "Selecciona unha opción...",
+    "searchPlaceholder": "Buscar..."
+  },
+  "Common": {
+    "ACTIVE": "Activo",
+    "CANCELLED": "Cancelado",
+    "COMPLETED_ACTIVITIES": "Completado por actividades",
+    "COMPLETED_TIME": "Completado por tempo",
+    "DEFAULT": "Predeterminado",
+    "EXPIRED": "Expirado",
+    "EXPIRED_BY_TIME": "Expirado por tempo",
+    "LOADING": "Cargando...",
+    "PENDING": "Pendiente",
+    "REJECTED": "Rexeitado",
+    "SUBMITTED": "Enviado",
+    "WITHDRAWN": "Retirado",
+    "difficulty": "Dificultade",
+    "gridView": "Vista cuadrícula",
+    "hidden": "Oculto",
+    "itemLinkDisabledTooltip": "Acceso desactivado ata a data de inicio",
+    "listView": "Vista lista",
+    "page": "Páxina",
+    "total": "total",
+    "unexpectedError": "Produciuse un erro inesperado. Téntao de novo."
+  },
+  "Companies": {
+    "deleteError": "Erro ao eliminar a compañía",
+    "deleteSuccess": "Compañía eliminada correctamente"
+  },
+  "ConfigPage": {
+    "description": "Configura os axustes da plataforma",
+    "title": "Configuración"
+  },
+  "ConfigPlatform": {
+    "active": "activada",
+    "activeBtn": "Activar",
+    "authSection": "Autenticación",
+    "authSectionDescription": "Controla o acceso dos usuarios á plataforma",
+    "description": "Xestiona a configuración global da plataforma",
+    "inactive": "desactivada",
+    "inactiveBtn": "Desactivar",
+    "loading": "Cargando a configuración da plataforma...",
+    "login": "Controla o inicio de sesión dos usuarios. Se está deshabilitado, os estudantes non poderán iniciar sesión.",
+    "loginDisable": "Deshabilitado",
+    "loginEnabled": "Habilitado",
+    "loginT": "Inicio de sesión",
+    "policyDesc_AUTO_ADMIT": "Os usuarios actívanse automaticamente tras rexistrarse",
+    "policyDesc_AUTO_REJECT": "Os novos rexistros rexéitanse automaticamente",
+    "policyDesc_MANUAL_REVIEW": "Un administrador debe aprobar cada novo rexistro",
+    "policySection": "Política de admisión de usuarios",
+    "policySectionDescription": "Define que ocorre cando un novo usuario se rexistra",
+    "policy_AUTO_ADMIT": "Auto-admisión",
+    "policy_AUTO_REJECT": "Auto-rexeitamento",
+    "policy_MANUAL_REVIEW": "Revisión manual",
+    "register": "Controla o rexistro na aplicación. Se está deshabilitado, os usuarios non poderán solicitar novos rexistros.",
+    "registration": "Rexistro de usuarios",
+    "registrationDisable": "Deshabilitado",
+    "registrationEnabled": "Habilitado",
+    "saveButton": "Gardar configuración",
+    "saveError": "Erro ao gardar a configuración",
+    "saveSuccess": "Configuración gardada correctamente",
+    "title": "Configuración da plataforma"
+  },
+  "ContextMenuComponent": {
+    "trigger": "Fai clic aquí"
+  },
+  "Dashboard": {
+    "activeModules": "Cursos activos",
+    "approved": "Aprobados",
+    "averageStudentScore": "Nota media global",
+    "completed": "Completado",
+    "completedActivities": "Exercicios completados",
+    "courses": "Cursos",
+    "exerciseStatus": "Estado do exercicio",
+    "exercises": "Exercicios",
+    "failed": "Suspensos",
+    "loading": "Cargando...",
+    "module": "Módulo",
+    "moduleStatistics": "Estatísticas do módulo",
+    "monthlySuspensions": "Suspensos mensuais",
+    "noData": "Non hai datos",
+    "passedVsSuspended": "Aprobados vs. suspensos",
+    "pending": "Pendentes",
+    "points": "Puntos",
+    "pointsObtained": "Puntos obtidos",
+    "pointsPending": "Puntos pendentes",
+    "profileOf": "Perfil de",
+    "quantity": "Cantidade",
+    "students": "Estudantes",
+    "studentsPerModule": "Cursos con máis estudantes",
+    "teamRanking": "Táboa clasificatoria de equipos",
+    "title": "Inicio",
+    "totalScores": "Puntuación total",
+    "users": "Usuarios",
+    "usersDistribution": "Distribución de usuarios"
+  },
+  "DashboardView": {
+    "migrationNotice": "As estatísticas do dashboard aínda están en proceso de migración"
+  },
+  "Date": {
+    "InvalidDate": "Data non válida",
+    "InvalidDateFormat": "Formato de data non válido",
+    "OutOfDate": "Fóra de prazo",
+    "longDateTime": "{date} ás {time}"
+  },
+  "DialogComponent": {
+    "close": "Pechar",
+    "triggerText": "Abrir"
+  },
+  "DisabledStatus": {
+    "description": "Esta funcionalidade está temporalmente deshabilitada.",
+    "title": "Funcionalidade deshabilitada"
+  },
+  "DrawerComponent": {
+    "cancel": "Cancelar",
+    "submit": "Aceptar",
+    "triggerText": "Abrir"
+  },
+  "EmptyStatus": {
+    "noQuestions": "Non tes preguntas",
+    "title": "Non hai datos dispoñibles polo momento"
+  },
+  "Errors": {
+    "api": {
+      "accessForbidden": "Acceso denegado",
+      "noData": "Non se recibiron datos do servidor",
+      "resourceNotFound": "Recurso non atopado",
+      "serverError": "Erro do servidor, inténtao de novo máis tarde",
+      "unexpectedError": "Produciuse un erro inesperado",
+      "unknownError": "Erro descoñecido",
+      "validationError": "Erro de validación"
+    },
+    "avatarUpdateError": "O equipo actualizouse, pero non se puido actualizar o avatar",
+    "blockedDates": {
+      "actions": {
+        "goToCourses": "Ir aos teus cursos",
+        "goToUnits": "Ir ás unidades do curso"
+      },
+      "description": "Acceso deshabilitado até o {date}, espera ata entón para acceder a esta sección.",
+      "suggestions": {
+        "contactAdmin": "Contacta co teu administrador para solicitar acceso",
+        "goBack": "Volver á páxina anterior",
+        "goCourses": "Volver aos teus cursos",
+        "goUnits": "Volver ás unidades do curso"
+      },
+      "suggestionsTitle": "Que podes facer:",
+      "title": "Acceso deshabilitado"
+    },
+    "errorNoResults": "Non se atoparon resultados",
+    "errorOcurred": "Produciuse un erro",
+    "forbidden": {
+      "actions": {
+        "goToHome": "Ir ao inicio"
+      },
+      "description": "Non tes permiso para ver esta páxina. Normalmente, isto significa que a túa conta non ten o nivel de acceso requirido para esta sección.",
+      "suggestions": {
+        "contactAdmin": "Contacta co teu administrador para solicitar acceso",
+        "goBack": "Volver á páxina anterior",
+        "goHome": "Volver ao inicio"
+      },
+      "suggestionsTitle": "Que podes facer:",
+      "title": "Acceso denegado"
+    },
+    "imageFailed": "Erro ao cargar a imaxe",
+    "invalidUserId": "Erro: ID de usuario non válida",
+    "loadAvailableStudentsError": "Erro ao cargar os estudantes dispoñibles",
+    "loadCountriesError": "Erro ao cargar a lista de países",
+    "loadTeamDataError": "Erro ao cargar os datos do equipo",
+    "loadTeamDetailsError": "Erro ao cargar os detalles do equipo",
+    "makeScoreboardPublicError": "Erro ao facer pública a clasificatoria",
+    "moduleNotDefined": "Erro: o módulo non está definido",
+    "noUserTeam": "Non pertences a ningún equipo",
+    "notFound": {
+      "actions": {
+        "goBack": "Volver a {destination}",
+        "goTo": "Ir a {destination}"
+      },
+      "dashboard": "o panel de control",
+      "description": "A páxina que buscas non existe. Pode que se eliminase ou que a URL estea mal escrita.",
+      "home": "a páxina de inicio",
+      "suggestions": {
+        "checkUrl": "Verifica que a URL sexa correcta",
+        "goBack": "Volver á páxina anterior"
+      },
+      "suggestionsTitle": "Que podes facer:",
+      "title": "Páxina non atopada"
+    },
+    "redirect": {
+      "redirecting": "Redirixindo a {destination} en {count} segundos…"
+    },
+    "teamNameRequired": "O nome do equipo é obrigatorio",
+    "tryAgainLater": "Por favor, inténtao de novo máis tarde",
+    "unauthorized": {
+      "actions": {
+        "signIn": "Iniciar sesión"
+      },
+      "description": "Necesitas iniciar sesión para acceder a esta páxina. É posible que a túa sesión expirase ou que aínda non iniciaras sesión.",
+      "suggestions": {
+        "createAccount": "Crea unha nova conta se non tes unha",
+        "goBack": "Volver á páxina anterior",
+        "signIn": "Inicia sesión coa túa conta"
+      },
+      "suggestionsTitle": "Que podes facer:",
+      "title": "Autenticación requirida"
+    },
+    "updateScoreboardError": "Erro ao actualizar a clasificatoria",
+    "updateTeamError": "Erro ao actualizar o equipo"
+  },
+  "FilesFeature": {
+    "buckets": {
+      "loading": "Cargando buckets...",
+      "noBuckets": "Non hai buckets dispoñibles",
+      "title": "Buckets"
+    },
+    "description": "Xestiona os arquivos da plataforma",
+    "list": {
+      "actions": "Accións",
+      "confirmDelete": "Estás seguro de que queres eliminar este arquivo?",
+      "date": "Data",
+      "delete": "Eliminar",
+      "deleteError": "Erro ao eliminar o arquivo",
+      "deleteSuccess": "Arquivo eliminado correctamente",
+      "download": "Descargar",
+      "loading": "Cargando arquivos...",
+      "name": "Nome",
+      "noFiles": "Non hai arquivos",
+      "size": "Tamaño",
+      "title": "Lista de arquivos"
+    },
+    "title": "Arquivos",
+    "upload": {
+      "bucket": "Bucket de destino",
+      "dropzone": "Arrastra arquivos aquí ou fai clic para seleccionar",
+      "dropzoneActive": "Solta os arquivos aquí",
+      "error": "Erro ao subir o arquivo",
+      "noBucket": "Selecciona un bucket",
+      "noFile": "Selecciona un arquivo",
+      "selectBucket": "Selecciona un bucket",
+      "selectFile": "Seleccionar arquivo",
+      "submit": "Subir",
+      "success": "Arquivo subido correctamente",
+      "title": "Subir arquivo",
+      "uploading": "Subindo..."
+    }
+  },
+  "FlagData": {
+    "actions": "Accións",
+    "addFlag": "Engadir flag",
+    "deleteFlag?": "Eliminar flag?",
+    "editFlag": "Editar flag",
+    "index": "Índice",
+    "type": "Tipo",
+    "value": "Valor"
+  },
+  "ForgotPassword": {
+    "checkEmail": "Revisa a túa bandexa de entrada para atopar a ligazón de restablecemento.",
+    "description": "Introduce o teu correo electrónico e enviarémosche unha ligazón para restablecer o teu contrasinal.",
+    "rememberPassword": "Lembras o teu contrasinal?",
+    "successMessage": "Ligazón de restablecemento enviada!"
+  },
+  "General": {
+    "appTitle": "Kotrip - Kotrip",
+    "change": "Cambiar",
+    "clues": "Pistas",
+    "flagFrom": "Bandeira de {country}",
+    "lastLogin": "Último acceso",
+    "noInfo": "Sen información",
+    "noInfoAvailable": "Non hai información dispoñible",
+    "platform": "Plataforma",
+    "points": "puntos",
+    "preview": "Vista previa",
+    "remove": "Quitar"
+  },
+  "Globe": {
+    "subtitle": "Explora os teus destinos ao redor do mundo",
+    "title": "Mundo"
+  },
+  "Home": {
+    "defaultUser": "Usuario",
+    "empty": {
+      "createFirst": "Crea a túa primeira viaxe para comezar",
+      "noUpcomingTrips": "Non tes viaxes próximas"
+    },
+    "quickActions": {
+      "inviteFriends": "Invitar amigos",
+      "inviteFriendsDesc": "Engade persoas ás túas viaxes",
+      "manageExpenses": "Xestionar gastos",
+      "manageExpensesDesc": "Revisa o orzamento actual",
+      "newTrip": "Nova viaxe",
+      "newTripDesc": "Crea unha viaxe desde cero"
+    },
+    "sections": {
+      "noUpcomingTrips": "Non tes viaxes próximas",
+      "quickActions": "Accións rápidas",
+      "upcomingTrips": "Próximas viaxes",
+      "viewAll": "Ver todas"
+    },
+    "stats": {
+      "activeTrips": "Viaxes activas",
+      "destinationsVisited": "Destinos visitados",
+      "pendingInvitations": "Invitacións",
+      "totalTrips": "Total de viaxes"
+    },
+    "welcomeSubtitle": "Benvida ao teu espazo de viaxes",
+    "welcomeTitle": "Ola, {name}!"
+  },
+  "HoverCardComponent": {
+    "triggerText": "Pasa o cursor"
+  },
+  "Labels": {
+    "generalInfo": "Información xeral",
+    "label2FA": "2FA",
+    "labelAgent": "Axente",
+    "labelCategory": "Categoría",
+    "labelClues": "Xestionar pistas",
+    "labelCountry": "País",
+    "labelCreateTeams": "Permitir aos estudantes crear equipos",
+    "labelCreatedAt": "Data de creación",
+    "labelDescription": "Descrición",
+    "labelDownload": "Descargar",
+    "labelDownloadError": "Erro ao xerar o PDF",
+    "labelDownloadSuccess": "PDF descargado correctamente",
+    "labelFirstName": "Nome",
+    "labelFlagCountry": "Bandeira do país",
+    "labelGenerating": "Xerando...",
+    "labelLanguage": "Idioma preferido",
+    "labelLastName": "Apelidos",
+    "labelMail": "Correo electrónico",
+    "labelName": "Nome",
+    "labelNameCompany": "Nome da empresa",
+    "labelNamePlaybook": "Título do playbook",
+    "labelNewPassword": "Introduce o teu novo contrasinal",
+    "labelNote": "Nota",
+    "labelOSystem": "Sistema operativo",
+    "labelOldPassword": "Introduce o teu contrasinal actual",
+    "labelPassword": "Contrasinal",
+    "labelPort": "Porto",
+    "labelQualify": "Cualificar",
+    "labelRepeatNewPassword": "Repite o teu novo contrasinal",
+    "labelRepeatPassword": "Repetir contrasinal",
+    "labelRisk": "Risco",
+    "labelRole": "Rol",
+    "labelRowsPerPage": "Filas por páxina",
+    "labelSearch": "Buscar",
+    "labelSearchByName": "Buscar por nome",
+    "labelShowAnswers": "Ver respostas",
+    "labelShowFlags": "Ver bandeiras",
+    "labelStatus": "Estado",
+    "labelTitle": "Título",
+    "labelTypeInput": "Tipo de input",
+    "labelUser": "Usuario",
+    "labelVerificationCode": "Código de verificación"
+  },
+  "Landing": {
+    "description": "Lore lore lore lore.",
+    "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+  },
+  "Leaderboard": {
+    "attemptCount": "Intentos",
+    "buttons": {
+      "cancel": "Cancelar",
+      "confirm": "Confirmar",
+      "hideNames": "Ocultar nomes",
+      "recalculate": "Recalcular",
+      "refresh": "Actualizar",
+      "showNames": "Mostrar nomes"
+    },
+    "currentUser": {
+      "title": "A túa Posición"
+    },
+    "empty": {
+      "subtitle": "As posicións aparecerán cando os estudantes completen intentos.",
+      "title": "Aínda non hai participantes na táboa clasificatoria."
+    },
+    "enrolledAt": "Inscrito",
+    "loadError": "Erro ao cargar a táboa clasificatoria.",
+    "loading": "Cargando táboa clasificatoria...",
+    "pagination": {
+      "page": "Página {page} de {totalPages}",
+      "showing": "Mostrando {from} a {to} de {total} resultados"
+    },
+    "privacyError": "Erro ao cambiar privacidade: {error}",
+    "rankPlace": "Posición {rank}",
+    "recalculateConfirm": "¿Estás seguro de que queres recalcular a clasificación?",
+    "recalculateError": "Erro ao recalcular: {error}",
+    "recalculateSuccess": "Táboa clasificatoria recalculada correctamente",
+    "score": "Puntuación",
+    "stats": {
+      "hidden": "Oculto",
+      "privacyMode": "Modo de Privacidade",
+      "totalParticipants": "Total de Participantes",
+      "updated": "Actualizado",
+      "visible": "Visible"
+    },
+    "status": "Estado",
+    "table": {
+      "actions": "Accións",
+      "emptyState": "Non hai participantes na táboa clasificatoria.",
+      "position": "Posición",
+      "timeSpent": "Tempo empregado",
+      "totalScore": "Puntuación total",
+      "user": "Usuario",
+      "viewDetails": "Ver detalles"
+    },
+    "titles": {
+      "assignment": "Táboa Clasificatoria da Actividade",
+      "course": "Táboa Clasificatoria do Curso",
+      "unit": "Táboa Clasificatoria da Unidade"
+    },
+    "unknownError": "Erro descoñecido",
+    "userName": "Estudante",
+    "vacant": "Vacante",
+    "youBadge": "Ti"
+  },
+  "Loading": {
+    "loading": "Cargando..."
+  },
+  "Login": {
+    "link-forgot-password": "Restablecer contrasinal",
+    "link-register": "Rexístrate",
+    "subtitle": "TODO: translate this key term",
+    "text-link-forgot-password": "Esqueciches o teu contrasinal?",
+    "text-link-register": "Non tes conta?"
+  },
+  "LogoutButton": {
+    "ariaLabel": "Pechar sesión",
+    "cancelButton": "Cancelar",
+    "confirmButton": "Confirmar",
+    "logoutLink": "Pechar sesión",
+    "modalDescription": "¿Estás seguro de que desexas pechar sesión? Terás que iniciar sesión de novo para acceder á túa conta.",
+    "modalTitle": "Pechar sesión"
+  },
+  "LogoutForm": {
+    "logoutButton": "Pechar sesión"
+  },
+  "ManagementDashboard": {
+    "sections": {
+      "attempts": {
+        "description": "Ver historial completo de intentos do curso",
+        "title": "Historial de Intentos"
+      },
+      "enrollments": {
+        "description": "Xestionar inscricións, aprobar solicitudes, desinscribir",
+        "title": "Inscricións"
+      },
+      "scores": {
+        "description": "Ver puntuacións e progreso de todos os estudantes",
+        "title": "Puntuacións"
+      },
+      "teams": {
+        "description": "Xestionar equipos e membresías",
+        "title": "Equipos"
+      }
+    },
+    "title": "Xestión do Curso"
+  },
+  "MenuLanding": {
+    "title": "Benvido a Kotrip"
+  },
+  "Modals": {
+    "ChangePassword": {
+      "title": "Cambiar contrasinal"
+    },
+    "CloseSession": {
+      "description": "Estás seguro de que queres pechar sesión?",
+      "title": "Pechar sesión"
+    },
+    "Clue": {
+      "addClue": "Engadir pista",
+      "adding": "Engadindo pista...",
+      "deleteClue": "Eliminar pista",
+      "deleting": "Eliminando pista...",
+      "description-en": "Descrición (EN)",
+      "description-es": "Descrición (ES)",
+      "editClue": "Editar pista",
+      "editing": "Editando pista...",
+      "list": "Listado de pistas",
+      "penalty": "Penalización",
+      "request-clue": "Solicitar pista",
+      "request-clue-description": "Lembra que solicitar unha pista implica unha penalización de puntos.",
+      "request-clue-description-2": "Estás seguro de que queres solicitar esta pista?",
+      "request-clue-success": "Pista solicitada correctamente",
+      "requesting-clue": "Solicitando pista...",
+      "title": "Engadir pista ao exercicio",
+      "title-en": "Título (EN)",
+      "title-es": "Título (ES)"
+    },
+    "DeactivateUser": {
+      "description": "Estás seguro de que desexas desactivar este usuario?",
+      "title": "Desactivar usuario"
+    },
+    "DropZone": {
+      "avatar": "Cambiar avatar",
+      "description": "Selecciona un arquivo",
+      "file": "Subir arquivo",
+      "invalidFileType": "Tipo de arquivo non válido",
+      "selectedFile": "Arquivo seleccionado",
+      "upload": "Actualizar",
+      "uploadTeamAvatar": "Subir foto do equipo"
+    },
+    "addNote": {
+      "title": "Engadir nova nota"
+    },
+    "addUserToCompany": {
+      "title": "Engadir usuario"
+    },
+    "close": "Pechar",
+    "courses": {
+      "description": "Descrición do módulo",
+      "limitDate": "Data de peche",
+      "moduleType": "Tipo de módulo",
+      "name": "Nome do módulo",
+      "notes": "Notas sobre o módulo (opcional)",
+      "selectModuleType": "Selecciona o tipo de módulo",
+      "startDate": "Data de inicio",
+      "title": "Engadir novo módulo"
+    },
+    "createCompany": {
+      "title": "Engadir nova empresa"
+    },
+    "createNewAgent": {
+      "title": "Crear novo axente"
+    },
+    "createTicket": {
+      "title": "Engadir novo ticket"
+    },
+    "delegateCompany": {
+      "title": "Desexas delegar a empresa?",
+      "title-with-no-question": "Delegar empresa"
+    },
+    "deleteAccount": {
+      "title": "Desexas darte de baixa?"
+    },
+    "deleteCompany": {
+      "title": "Desexas eliminar a empresa?"
+    },
+    "deleteFile": {
+      "description": "Desexas eliminar o arquivo?",
+      "title": "Eliminar arquivo"
+    },
+    "deleteInput": {
+      "title": "Desexas eliminar o input?"
+    },
+    "deleteModule": {
+      "delete": "Borrar",
+      "title": "Desexas borrar o módulo?"
+    },
+    "deleteUser?": "Desexas eliminar este usuario do formulario?",
+    "deleteUserFromCompany": {
+      "title": "Desexas eliminar o usuario?"
+    },
+    "description": "Descrición",
+    "downloadActivityFile?": "Desexas descargar o arquivo do exercicio?",
+    "editCompany": {
+      "title": "Editar"
+    },
+    "editModule": {
+      "description": "Descrición do módulo",
+      "edit": "Modificar módulo",
+      "editing": "Modificando...",
+      "limitDate": "Data de peche",
+      "name": "Nome do módulo",
+      "notes": "Notas sobre o módulo (opcional)",
+      "startDate": "Data de inicio",
+      "title": "Editar módulo"
+    },
+    "editName": {
+      "title": "Editar nome"
+    },
+    "editPlatform": {
+      "accessUrl": "URL de acceso",
+      "addNewPlatform": "Engadir nova plataforma",
+      "authMethod": "Método de autenticación",
+      "authUrl": "URL de autenticación",
+      "idClient": "ID de cliente",
+      "key": "Clave",
+      "name": "Nome da plataforma",
+      "platformUrl": "URL da plataforma",
+      "title": "Editar plataforma"
+    },
+    "editUser": {
+      "title": "Editar usuario"
+    },
+    "exercises": {
+      "addNote": "Engadir nota",
+      "attemptsNumber": "Número de intentos",
+      "category": "Categoría",
+      "correct": "Correcta",
+      "correctQuestions": "Preguntas correctas",
+      "create": "Crear exercicio",
+      "creating": "Creando...",
+      "date": "Data",
+      "difficulty": "Dificultade do exercicio",
+      "editName": "Editar exercicio",
+      "exerciseAttempts": "Intentos do exercicio",
+      "exerciseResult": "Resultado do exercicio",
+      "flag": "Flag",
+      "framework": "Framework",
+      "incorrect": "Incorrecta",
+      "incorrectQuestions": "Preguntas incorrectas",
+      "limitDate": "Data de peche",
+      "modifyContent": "Modificar contido",
+      "name": "Nome do exercicio",
+      "note": "Nota",
+      "question": "Pregunta",
+      "questionsAnswered": "Preguntas respondidas",
+      "questionsUnanswered": "Preguntas sen responder",
+      "reply": "Resposta",
+      "startDate": "Data de inicio",
+      "title": "Engadir novo exercicio",
+      "type": "Tipo de exercicio"
+    },
+    "finishActivity?": "Estás seguro de que desexas finalizar a tarefa?",
+    "flags": {
+      "create": "Crear flag",
+      "edit": "Editar flag",
+      "test": "Probar a flag",
+      "testPlaceholder": "Proba un valor para comprobar a expresión regular",
+      "type": "Tipo de flag",
+      "typePlaceholder": "Selecciona un tipo",
+      "typeRequired": "O tipo de flag é obrigatorio",
+      "value": "Valor da flag",
+      "valuePlaceholderDynamic": "Escribe unha expresión regular",
+      "valuePlaceholderStatic": "Escribe o valor da flag",
+      "valueRequired": "O valor da flag é obrigatorio"
+    },
+    "leaveCompany": {
+      "title": "Desexas abandonar a empresa?"
+    },
+    "lockUser?": "Desexas bloquear este usuario?",
+    "questions": {
+      "addReply": "Engadir resposta",
+      "edit": "Editar pregunta",
+      "failSubtract": "Fallo resta",
+      "head": "Nova pregunta",
+      "reply": "Resposta",
+      "replyText": "Texto da resposta",
+      "successAdds": "Acierto suma",
+      "title": "Título da pregunta",
+      "valid": "Válida"
+    },
+    "resetPassword": {
+      "description": "O contrasinal cambiouse correctamente. Inicia sesión cando queiras.",
+      "title": "Perfecto!"
+    },
+    "resetUserActivity?": "Desexas reiniciar o exercicio do usuario?",
+    "sendEmail": {
+      "description": "Enviouse unha ligazón para restablecer o teu contrasinal ao enderezo de correo indicado, xunto cun código de verificación para completar esta acción.",
+      "title": "Correo electrónico enviado correctamente!"
+    },
+    "sendForm?": "Estás seguro de que queres enviar o formulario?",
+    "ticketDetails": {
+      "title": "Detalles do ticket"
+    },
+    "title": "Título",
+    "unlockUser?": "Desexas desbloquear este usuario?",
+    "userDetails": {
+      "title": "Detalles do usuario"
+    },
+    "users": {
+      "empty": "Non hai usuarios sen asignar",
+      "noUsers": "Non hai usuarios",
+      "selectUser": "Selecciona un usuario",
+      "title": "Asignar usuario"
+    }
+  },
+  "ModuleDashboard": {
+    "chartTitles": {
+      "cluesOrdered": "Exercicios ordenados polo maior número de pistas usadas",
+      "scoresOrdered": "Exercicios ordenados pola maior puntuación total acumulada"
+    },
+    "kpi": {
+      "approved": "Aprobados",
+      "failed": "Suspensos",
+      "totalActivities": "Exercicios totais",
+      "totalParticipants": "Participantes totais",
+      "totalTeams": "Equipos totais"
+    },
+    "loadError": "Non se puideron cargar os datos",
+    "neverLoggedIn": "Nunca",
+    "noData": {
+      "difficulty": "Non hai datos de dificultade dispoñibles",
+      "exerciseStatus": "Non hai datos do estado dos exercicios dispoñibles",
+      "exerciseType": "Non hai datos do tipo de exercicio dispoñibles",
+      "frameworkCategory": "Non hai datos de framework-categoría dispoñibles",
+      "moduleNotFoundData": "Non hai datos dispoñibles: módulo non atopado",
+      "noActivityDataForModule": "Non hai datos de exercicios dispoñibles para este módulo",
+      "scoreByDifficulty": "Non hai datos de puntuación por dificultade",
+      "scoreByFramework": "Non hai datos de puntuación por framework",
+      "scoreByType": "Non hai datos de puntuación por tipo",
+      "statusByFramework": "Non hai datos de estado por framework dispoñibles",
+      "statusByType": "Non hai datos de estado por tipo dispoñibles"
+    },
+    "noTeam": "Sen equipo",
+    "sections": {
+      "byActivityType": "Por tipo de exercicio",
+      "byDifficulty": "Por dificultade",
+      "byFrameworkCategory": "Por framework-categoría",
+      "cluesUsage": "Uso de pistas por exercicio",
+      "exerciseDistribution": "Distribución de exercicios",
+      "exerciseStatus": "Estado dos exercicios",
+      "participantLogins": "Inicios de sesión dos participantes",
+      "scoreAnalysis": "Análise de puntuacións",
+      "scoreBreakdown": "Desglose da puntuación por exercicio",
+      "scoreByDifficulty": "Puntuación por dificultade",
+      "scoreByFramework": "Puntuación por framework",
+      "scoreByType": "Puntuación por tipo",
+      "scoreProgress": "Progreso da puntuación",
+      "statusByFramework": "Estado por framework",
+      "statusByType": "Estado por tipo",
+      "teamLogins": "Inicios de sesión dos membros dos equipos"
+    },
+    "status": {
+      "approved": "Aprobados",
+      "failed": "Suspensos",
+      "unresolved": "Non resoltos"
+    },
+    "tableColumns": {
+      "email": "Correo electrónico",
+      "lastLogin": "Último inicio de sesión",
+      "name": "Nome",
+      "team": "Equipo"
+    },
+    "title": "Panel do módulo"
+  },
+  "ModuleUsers": {
+    "actions": "Accións",
+    "addNewModule": "Engade un novo módulo á plataforma",
+    "addUser": "Engadir usuario",
+    "completed": "Completado",
+    "courses": "Cursos",
+    "deleteUser": "Eliminar usuario",
+    "deleteUser?": "Desexas eliminar o usuario deste módulo?",
+    "description": "Descrición",
+    "empty": "Non hai usuarios dispoñibles",
+    "errorLoadingModules": "Erro ao cargar os módulos",
+    "limitDate": "Data de peche",
+    "mail": "Correo electrónico",
+    "module": "Módulo",
+    "moduleAccess": "Acceder ao módulo",
+    "name": "Nome",
+    "score": "Puntuación media",
+    "startDate": "Data de inicio",
+    "title": "Usuarios do módulo"
+  },
+  "NavComponent": {
+    "login": "Iniciar sesión",
+    "register": "Rexistro",
+    "resetPassword": "Restablecer contrasinal"
+  },
+  "NotFound": {
+    "description": "Sentímolo, a páxina que buscas non existe.",
+    "title": "Páxina non atopada"
+  },
+  "PendingApproval": {
+    "backToLogin": "Volver ao inicio de sesión",
+    "description": "A túa conta foi rexistrada correctamente. Un administrador da plataforma debe aprobar o teu acceso antes de que poidas iniciar sesión.",
+    "title": "Rexistro pendente de aprobación"
+  },
+  "Placeholders": {
+    "placeholder2FA": "2FA",
+    "placeholderActivity": {
+      "category": "Selecciona unha categoría",
+      "difficulty": "Selecciona unha dificultade para o exercicio",
+      "fileUpload": "Subida de ficheiro",
+      "flag": "Flag",
+      "form": "Formulario",
+      "framework": "Selecciona un framework",
+      "high": "Alta",
+      "higher": "Moi alta",
+      "low": "Baixa",
+      "medium": "Media",
+      "type": "Selecciona un tipo de exercicio",
+      "virtualMachine": "Máquina virtual"
+    },
+    "placeholderCategory": "Selecciona unha categoría",
+    "placeholderCountry": "Selecciona un país",
+    "placeholderCreatedAt": "Selecciona unha data",
+    "placeholderFirstName": "Nome",
+    "placeholderLanguage": "Selecciona un idioma",
+    "placeholderLastName": "Apelidos",
+    "placeholderMail": "Correo electrónico",
+    "placeholderName": "Nome",
+    "placeholderNameCompany": "Nome da empresa",
+    "placeholderNewPassword": "Introduce o teu novo contrasinal",
+    "placeholderNote": "Introduce unha nota",
+    "placeholderOldPassword": "Introduce o teu contrasinal actual",
+    "placeholderPassword": "Contrasinal",
+    "placeholderRepeatNewPassword": "Repite o teu novo contrasinal",
+    "placeholderRepeatPassword": "Repetir contrasinal",
+    "placeholderRole": "Selecciona un rol",
+    "placeholderSearch": "Buscar",
+    "placeholderStatus": "Selecciona un estado",
+    "placeholderTitle": "Introduce un título",
+    "placeholderTypeInput": "Selecciona un tipo de input",
+    "placeholderUserName": "Nome de usuario",
+    "placeholderVerificationCode": "Código de verificación",
+    "selectModule": "Selecciona un módulo"
+  },
+  "ProfileForm": {
+    "allFieldsRequired": "Todos os campos son requiridos",
+    "avatarModalTitle": "Foto de perfil",
+    "avatarUpdated": "Foto de perfil actualizada correctamente",
+    "cancelButton": "Cancelar",
+    "changeAvatarButton": "Cambiar foto",
+    "changeNameButton": "Cambiar nome",
+    "changeNameTitle": "Cambiar nome e apelidos",
+    "changePasswordButton": "Cambiar contrasinal",
+    "changePasswordTitle": "Cambiar contrasinal",
+    "confirmDeleteAvatarDescription": "Tes a certeza de que desexas eliminar a túa foto de perfil? Esta acción non se pode desfacer.",
+    "confirmDeleteAvatarTitle": "Eliminar foto de perfil",
+    "confirmPasswordPlaceholder": "Confirmar novo contrasinal",
+    "currentPasswordPlaceholder": "Contrasinal actual",
+    "deleteAvatarButton": "Eliminar foto",
+    "deleteAvatarFailed": "Erro ao eliminar a foto de perfil",
+    "deleteAvatarSuccess": "Foto de perfil eliminada correctamente",
+    "editNameButton": "Editar nome e apelidos",
+    "emailLabel": "Correo electrónico",
+    "firstNameMinLength": "O nome debe ter polo menos 3 caracteres",
+    "firstNamePlaceholder": "Nome",
+    "firstNameRequired": "O nome é requirido",
+    "fullNameLabel": "Nome completo",
+    "lastNameMinLength": "Os apelidos deben ter polo menos 3 caracteres",
+    "lastNamePlaceholder": "Apelidos",
+    "lastNameRequired": "Os apelidos son requiridos",
+    "nameUpdated": "Nome actualizado correctamente",
+    "newPasswordPlaceholder": "Novo contrasinal",
+    "noAvatarDescription": "Sube unha imaxe para establecer a túa foto de perfil.",
+    "noAvatarTitle": "Sen foto de perfil",
+    "passwordMinLength": "O contrasinal debe ter polo menos 8 caracteres",
+    "passwordUpdated": "Contrasinal actualizado correctamente",
+    "passwordsDoNotMatch": "Os contrasinais non coinciden",
+    "profileInfoTitle": "Información do perfil",
+    "roleInstructor": "Instrutor",
+    "roleLabel": "Rol",
+    "roleLearner": "Estudante",
+    "roleOrgAdmin": "Administrador da organización",
+    "roleSuperAdmin": "Superadministrador",
+    "roleTA": "Asistente de docencia",
+    "roleUnknown": "Descoñecido",
+    "saveButton": "Gardar",
+    "saveChanges": "Gardar cambios",
+    "updatingButton": "Actualizando...",
+    "uploadAvatarButton": "Subir foto de perfil",
+    "uploadFailed": "Erro ao subir a foto de perfil",
+    "uploadingAvatar": "Subindo foto de perfil..."
+  },
+  "ProfileView": {
+    "accountInfoTitle": "Información da conta",
+    "changeAvatarAriaLabel": "Cambiar foto de perfil",
+    "deleteAvatarAriaLabel": "Eliminar foto de perfil",
+    "deleteAvatarButton": "Eliminar avatar",
+    "editAvatarButton": "Editar avatar",
+    "emailLabel": "Correo electrónico",
+    "fullNameLabel": "Nome completo",
+    "languageLabel": "Idioma",
+    "lastLoginLabel": "Último inicio de sesión",
+    "profilePictureTitle": "Foto de perfil",
+    "settingsTitle": "Configuración"
+  },
+  "Qualifier": {
+    "individual": "Individual",
+    "loading": "Cargando clasificatorias...",
+    "team": "Equipo",
+    "typeOfQualifier": "Tipo de clasificatoria"
+  },
+  "QuestionData": {
+    "actions": "Accións",
+    "addQuestion": "Engadir pregunta",
+    "deleteQuestion": "Eliminar pregunta",
+    "deleteQuestion?": "Eliminar pregunta?",
+    "editQuestion": "Editar pregunta",
+    "subtract": "Resta",
+    "sum": "Suma",
+    "title": "Título da pregunta",
+    "totalReply": "Total de respostas"
+  },
+  "RankingPage": {
+    "completedActivities": "Exercicios realizados",
+    "passedActivitys": "Exercicios aprobados",
+    "teamName": "Equipo",
+    "title": "Táboa clasificatoria de equipos",
+    "titleUser": "Táboa clasificatoria de usuarios",
+    "totalScore": "Puntuación total"
+  },
+  "Register": {
+    "description": "Crea unha conta para comezar.",
+    "link-login": "Iniciar sesión",
+    "text-link-login": "Xa tes conta?"
+  },
+  "ResetPassword": {
+    "description": "Introduce o teu novo contrasinal a continuación.",
+    "invalidToken": "A ligazón para restablecer o contrasinal non é válida ou caducou.",
+    "successMessage": "Contrasinal restablecido correctamente!"
+  },
+  "ResponseMessages": {
+    "ADD_LOGS_TO_INCIDENCE": "Rexistros engadidos correctamente",
+    "ADD_USER": "Usuario engadido correctamente",
+    "ADD_USER_ERROR": "Erro ao engadir o usuario",
+    "CONFLICT_CREATE_INCIDENCE": "Xa existe unha incidencia con ese nome",
+    "CONFLICT_LOGS_FROM_INCIDENCE": "Erro ao eliminar os rexistros da incidencia",
+    "CORRECT_ANSWER": "Resposta correcta. Ben feito!",
+    "CREATE_COMPANY": "Empresa creada correctamente",
+    "CREATE_COMPANY_ERROR": "Erro ao crear a empresa",
+    "CREATE_INCIDENCE": "Incidencia creada correctamente",
+    "CREATE_PLAYBOOK": "Playbook creado correctamente",
+    "CREATE_PLAYBOOK_MARKDOWN": "Playbook en Markdown creado correctamente",
+    "CREATE_TICKET": "Ticket creado correctamente",
+    "DEACTIVATE_USER": "Usuario desactivado correctamente",
+    "DEACTIVATE_USER_ERROR": "Erro ao desactivar o usuario",
+    "DELETE_COMPANY": "Empresa eliminada correctamente",
+    "DELETE_COMPANY_ERROR": "Erro ao eliminar a empresa",
+    "DELETE_INCIDENCE": "Incidencia eliminada correctamente",
+    "DELETE_INCIDENCE_ERROR": "Erro ao eliminar a incidencia",
+    "DELETE_LOGS_FROM_INCIDENCE": "Rexistros eliminados correctamente",
+    "DELETE_PLAYBOOK": "Playbook eliminado correctamente",
+    "DELETE_PLAYBOOK_ERROR": "Erro ao eliminar o playbook",
+    "DELETE_TICKET": "Ticket eliminado correctamente",
+    "DELETE_TICKET_ERROR": "Erro ao eliminar o ticket",
+    "DELETE_USER": "Usuario eliminado correctamente",
+    "DELETE_USER_CONFLICT": "Non podes eliminar este usuario: ten privilexios",
+    "DELETE_USER_ERROR": "Erro ao eliminar o usuario",
+    "EDIT_COMPANY": "Empresa editada correctamente",
+    "EDIT_PLAYBOOK": "Playbook editado correctamente",
+    "EDIT_PLAYBOOK_CONFLICT": "Xa existe un playbook con ese nome",
+    "ERROR": "Erro",
+    "ERROR_ADD_LOGS_TO_INCIDENCE": "Erro ao engadir os rexistros á incidencia",
+    "ERROR_ASSIGN_USER_MODULE": "Erro ao asignar un usuario a un módulo",
+    "ERROR_BLOCK_USER": "Erro ao bloquear o usuario",
+    "ERROR_COMPANY": "Erro na compañía",
+    "ERROR_CREATE_INCIDENCE": "Erro ao crear a incidencia",
+    "ERROR_CREATE_MODULE": "Erro ao crear o módulo",
+    "ERROR_CREATE_PLATFORM": "Erro ao crear a plataforma",
+    "ERROR_DELETE_EXERCISE": "Erro ao eliminar o exercicio",
+    "ERROR_DELETE_USER": "Erro ao eliminar o usuario",
+    "ERROR_DELETE_VM": "Non se puido eliminar a máquina virtual",
+    "ERROR_DOWNLOAD_FILE": "Erro ao descargar o ficheiro",
+    "ERROR_EDITING_EXERCISE": "Erro ao editar o exercicio",
+    "ERROR_EDIT_DATE": "Erro ao editar a data",
+    "ERROR_IMAGE_FORMAT": "Formato de imaxe non permitido. Usa PNG, JPG, WEBP ou TIFF.",
+    "ERROR_LOADING_STUDENT_RESULTS": "Erro ao cargar os resultados do estudante",
+    "ERROR_LOCK_EXERCISE": "Erro ao bloquear o exercicio",
+    "ERROR_OBTAIN_CONNECTION": "Non se puido obter a conexión",
+    "ERROR_SAVE_CHANGES": "Erro ao gardar os cambios",
+    "ERROR_SEND_FORM": "Erro ao enviar o formulario",
+    "ERROR_SEND_NOTE": "Erro ao enviar a nota",
+    "ERROR_SEND_REPLY": "Erro ao enviar as respostas",
+    "ERROR_SEND_YOUR_REPLY": "Produciuse un erro ao enviar as túas respostas",
+    "ERROR_START_VM": "Non se puido iniciar a máquina virtual",
+    "ERROR_STOP_DELETE_VM": "Erro ao deter ou eliminar a máquina virtual",
+    "ERROR_STOP_VM": "Non se puido deter a máquina virtual; tentarase eliminar igualmente...",
+    "ERROR_TICKET": "Erro no ticket",
+    "ERROR_UNASSIGN_USER": "Erro ao desasignar o usuario:",
+    "ERROR_UNBLOCK_USER": "Erro ao desbloquear o usuario",
+    "ERROR_UPDATE_MODULE_STATUS": "Erro ao actualizar o estado do módulo:",
+    "ERROR_UPLOAD_IMAGE_BLOB": "Erro ao cargar a imaxe como blob",
+    "FILE_DELETED": "Ficheiro eliminado correctamente",
+    "FILE_DELETED_ERROR": "Erro ao eliminar o ficheiro",
+    "FILE_DOWNLOAD": "Ficheiro descargado correctamente",
+    "FILE_DOWNLOAD_ERROR": "Erro ao descargar o ficheiro",
+    "FILE_MAX_SIZE_EXCEED": "O ficheiro supera o tamaño máximo permitido de 50 MB.",
+    "FILE_UPLOAD": "Ficheiro subido correctamente",
+    "FILE_UPLOAD_ERROR": "Erro ao subir o ficheiro",
+    "FORBIDDEN": "Non tes permisos para realizar esta acción",
+    "IMAGE_UPLOAD": "Imaxe subida correctamente",
+    "IMAGE_UPLOAD_ERROR": "Erro ao subir a imaxe",
+    "INVALID_CREDENTIALS": "Credenciais non válidas",
+    "LEAVE_COMPANY": "Abandonaches a empresa correctamente",
+    "LEAVE_COMPANY_ERROR": "Erro ao abandonar a empresa",
+    "LIMIT_DATE_FUTURE": "A data límite debe ser unha data futura",
+    "MAX_FILE_SIZE_EXCEEDED": "O ficheiro supera o tamaño máximo permitido de",
+    "MAX_FILE_ZIP_200": "O ficheiro ZIP non pode superar os 200 MB",
+    "MODULE_NEME_REQUIRED": "O nome do módulo é obrigatorio",
+    "NOTE_OBLIGATORY": "A nota é obrigatoria",
+    "ONLY_ZIP_FILES": "Só se permiten ficheiros ZIP",
+    "PASSWORD_USER": "Contrasinal actualizado correctamente",
+    "PASSWORD_USER_ERROR": "Erro ao actualizar o contrasinal",
+    "REGISTER_DISABLED": "O rexistro de novos usuarios está deshabilitado actualmente",
+    "REPORTED_GENERATED": "Informe xerado correctamente",
+    "REPORTED_NOT_GENERATED": "Non se puido xerar o informe",
+    "SELECT_USER_BEFORE_ASSIGN": "Selecciona un usuario antes de asignar",
+    "SELECT_VALID_REPLY": "Debes seleccionar polo menos unha resposta válida",
+    "SERVER_ERROR": "Produciuse un erro",
+    "SUCCESS_DELETE_VM": "Máquina virtual eliminada correctamente",
+    "SUCCESS_OBTAIN_CONNECTION": "Conexión obtida correctamente",
+    "SUCCESS_START_VM": "Máquina virtual iniciada correctamente. Conectando...",
+    "SUCCESS_STOP_VM": "Máquina virtual detida correctamente. Procedendo á súa eliminación...",
+    "TABLE_ACTIONS_ERROR": "Erro ao obter as accións",
+    "TEAM_CREATED_ERROR": "Erro ao crear o equipo",
+    "TEAM_CREATED_SUCCESS": "Equipo creado correctamente",
+    "TEAM_DELETED_ERROR": "Erro ao eliminar o equipo",
+    "TEAM_DELETED_SUCCESS": "Equipo eliminado correctamente",
+    "TEAM_EDITED_ERROR": "Erro ao editar o equipo",
+    "TEAM_EDITED_SUCCESS": "Equipo editado correctamente",
+    "TEMPLATE_CLONED": "Plantilla clonada correctamente. Iniciando máquina virtual...",
+    "TEMPLATE_NOT_CLONED": "Non se puido clonar a plantilla",
+    "TEMPLATE_NOT_FOUND": "Non se atopou a plantilla seleccionada. Por favor, sae e volve entrar no exercicio.",
+    "UNAUTHORIZED": "Non tes permisos para realizar esta acción",
+    "UNEXPECTED_ERROR_OCCURRED": "Produciuse un erro inesperado",
+    "UPDATE_INCIDENCE": "Incidencia actualizada correctamente",
+    "UPDATE_INCIDENCE_ERROR": "Erro ao actualizar a incidencia",
+    "UPDATE_TICKET": "Ticket actualizado correctamente",
+    "UPDATE_TICKET_ERROR": "Erro ao actualizar o ticket",
+    "UPDATE_USER": "Usuario actualizado correctamente",
+    "UPDATE_USER_ERROR": "Erro ao actualizar o usuario",
+    "USER_ADDED_TO_TEAM": "Usuario engadido ao equipo correctamente",
+    "USER_ADDED_TO_TEAM_ERROR": "Erro ao engadir o usuario ao equipo",
+    "USER_REMOVED_FROM_TEAM": "Usuario eliminado do equipo correctamente",
+    "USER_REMOVED_FROM_TEAM_ERROR": "Erro ao eliminar o usuario do equipo",
+    "WRONG_ANSWER": "Resposta incorrecta. Téntao de novo"
+  },
+  "RichTextEditor": {
+    "alignCenter": "Centrar",
+    "alignLeft": "Aliñar á esquerda",
+    "alignRight": "Aliñar á dereita",
+    "blockquote": "Cita",
+    "bold": "Negriña",
+    "bulletList": "Lista con viñetas",
+    "code": "Código",
+    "heading1": "Encabezado 1",
+    "heading2": "Encabezado 2",
+    "heading3": "Encabezado 3",
+    "highlight": "Resaltado",
+    "insertImage": "Inserir imaxe",
+    "insertLink": "Inserir ligazón",
+    "insertTable": "Inserir táboa",
+    "italic": "Cursiva",
+    "loading": "Cargando editor...",
+    "orderedList": "Lista numerada",
+    "placeholder": "Escribe aquí...",
+    "promptImageUrl": "URL da imaxe:",
+    "promptLinkUrl": "URL da ligazón:",
+    "redo": "Refacer",
+    "strikethrough": "Tachado",
+    "underline": "Subliñado",
+    "undo": "Desfacer"
+  },
+  "Routes": {
+    "/admin/audit": "Auditoría",
+    "/admin/platform-config": "Configuración",
+    "/admin/users": "Xestión de usuarios",
+    "/categories": "Categorías",
+    "/companies": "Compañías",
+    "/components": "Compoñentes",
+    "/courses": "Cursos",
+    "/dashboard": "Panel",
+    "/exercises": "Exercicios",
+    "/files": "Ficheiros",
+    "/globe": "Mundo",
+    "/home": "Inicio",
+    "/invitations": "Invitacións",
+    "/login": "Iniciar sesión",
+    "/platform-admin/tenants": "Xestión de tenants",
+    "/platform-admin/tenants/new": "Novo tenant",
+    "/playground": "Playground",
+    "/profile": "O meu perfil",
+    "/scores": "Cualificacións",
+    "/student-dashboard": "Panel do estudante",
+    "/students": "Alumnos",
+    "/support": "Soporte",
+    "/teams": "Equipos",
+    "/teams-ranking": "Táboa clasificatoria de equipos",
+    "/tickets": "Tickets",
+    "/trips": "Viaxes",
+    "/units": "Unidades",
+    "/users-ranking": "Táboa clasificatoria de usuarios",
+    "/web-platform": "Plataformas",
+    "Analytics": "Analíticas",
+    "Attempt Audit": "Auditoría de intento",
+    "AttemptHistory": "Historial de intentos",
+    "Audit Logs": "Rexistros de auditoría",
+    "Course Audit": "Auditoría do curso",
+    "Course Scores": "Puntuacións do curso",
+    "Create New Course": "Crear novo curso",
+    "Create New Unit": "Crear nova unidade",
+    "Edit Course": "Editar metadatos do curso",
+    "Edit Unit": "Editar metadatos da unidade",
+    "Leaderboard": "Táboa clasificatoria",
+    "New Unit Description": "Completa a información para crear unha nova unidade neste curso",
+    "NewCourseDescription": "Completa a información para crear un novo curso na plataforma",
+    "Registration Management": "Xestión de inscricións",
+    "Team Management": "Xestión de equipos",
+    "User Activity": "Actividade do usuario",
+    "logout": "Pechar sesión",
+    "profile": "O meu perfil"
+  },
+  "ScopeHeader": {
+    "activityPrefix": "Actividade",
+    "backToCourse": "Volver ao curso",
+    "backToCourses": "Volver a cursos",
+    "backToUnit": "Volver á unidade",
+    "coursePrefix": "Curso",
+    "unitPrefix": "Unidade"
+  },
+  "Scoreboard": {
+    "general": "Xeral",
+    "top": "Top"
+  },
+  "Scores": {
+    "averageScore": "Puntuación media",
+    "certificateEN": "Inglés",
+    "certificateES": "Español",
+    "certificateGL": "Galego",
+    "completions": "Completacións",
+    "cumulativeScore": "Puntuación acumulada",
+    "downloadCertificate": "Descargar certificado",
+    "failed": "Suspenso",
+    "loading": "Cargando...",
+    "noCourses": "Non estás inscrito en ningún curso",
+    "noScoreDataAvailable": "Non hai datos de puntuación dispoñibles",
+    "noteAverageScoreMultiplied": "Nota: a puntuación media mostrada multiplícase x10 para mellorar a visualización",
+    "pageSubtitle": "Consulta as túas puntuacións nos cursos inscritos",
+    "pageTitle": "Cualificacións",
+    "paginationNext": "Seguinte",
+    "paginationOf": "de",
+    "paginationPage": "Páxina",
+    "paginationPrevious": "Anterior",
+    "paginationShowing": "Mostrando {from}-{to} de {total} exercicios",
+    "passed": "Aprobado",
+    "selectCertificateLanguage": "Selecciona o idioma do teu certificado:",
+    "totalScore": "Puntuación total",
+    "yAxisLabel": "Valores"
+  },
+  "ScoresManagement": {
+    "actions": "Accións",
+    "emptyState": "Non hai inscricións neste curso",
+    "kpi": {
+      "active": "Activos",
+      "avgScore": "Puntuación Promedio",
+      "completed": "Completados",
+      "passed": "Aprobados",
+      "total": "Total Inscritos"
+    },
+    "noTeam": "Sen equipo",
+    "statusActive": "Activo",
+    "statusCancelled": "Cancelado",
+    "statusCompletedActivities": "Completado",
+    "statusCompletedTime": "Completado",
+    "statusExpired": "Expirado",
+    "statusSubmitted": "Enviado",
+    "team": "Equipo",
+    "viewDetail": "Ver detalle"
+  },
+  "SelectComponent": {
+    "Options": {
+      "Administrador": "Administrador",
+      "Alerts": "Alertas",
+      "Assets_inventory": "Inventario de activos",
+      "Closed": "Pecha",
+      "Company": "Compañía",
+      "Dashboard": "Panel",
+      "Estándar": "Estándar",
+      "Incidence": "Incidencia",
+      "Log": "Rexistros",
+      "Open": "Aberto",
+      "Other": "Outro",
+      "Playbook": "Playbooks",
+      "Propietario": "Propietario",
+      "Review": "En progreso",
+      "User_functions": "Funcións de usuario",
+      "admin": "Administrador",
+      "en": "Inglés",
+      "es": "Español",
+      "free": "Usuario de proba",
+      "super_admin": "Superadministrador",
+      "user": "Usuario estándar"
+    }
+  },
+  "SelectedRowsPopupComponent": {
+    "more": "elementos seleccionados",
+    "one": "elemento seleccionado"
+  },
+  "SendResetMail": {
+    "description": "Introduce o teu correo electrónico e enviarémosche unha ligazón para restablecer o teu contrasinal",
+    "title": "Restablecer contrasinal"
+  },
+  "SiteConfig": {
+    "disableUserRegistration?": "Deshabilitar o autorrexistro de usuarios?",
+    "enableRegistration": "Habilitar autorrexistro",
+    "enableUserRegistration?": "Habilitar o autorrexistro de usuarios?"
+  },
+  "StudentDashboard": {
+    "defaultStudentName": "Estudante",
+    "kpi": {
+      "activeModules": "Cursos activos",
+      "completedActivities": "Exercicios completados",
+      "failedActivitys": "Exercicios suspensos",
+      "globalScore": "Puntuación global",
+      "hintsUsed": "Pistas utilizadas",
+      "passedActivitys": "Exercicios aprobados",
+      "pendingActivitys": "Exercicios pendentes",
+      "totalScores": "Puntuación total"
+    },
+    "loadError": "Erro ao cargar as estatísticas do estudante",
+    "loading": "Cargando...",
+    "noContent": "Sen contido",
+    "noData": "Sen datos",
+    "noDataAvailable": "Non se puideron cargar os datos",
+    "sections": {
+      "exerciseStats": "Estatísticas por exercicios",
+      "scoreByActivityType": "Puntuación por tipo de exercicio",
+      "scoreByCategory": "Puntuación por categoría",
+      "scoreByDifficulty": "Puntuación por dificultade",
+      "scoreByTime": "Puntuación por tempo",
+      "scoreStats": "Estatísticas de puntuación"
+    },
+    "title": "Panel do estudante"
+  },
+  "StudentProfile": {
+    "couldNotLoadStudentData": "Non se puideron cargar os datos do estudante.",
+    "errorLoadingData": "Erro ao cargar os datos",
+    "studentNotFound": "Estudante non atopado",
+    "studentNotFoundMessage": "Non se atopou o estudante seleccionado.",
+    "title": "Perfil do alumno"
+  },
+  "StudentsPage": {
+    "actions": "Accións",
+    "email": "Correo electrónico",
+    "name": "Nome",
+    "title": "Listaxe de estudantes"
+  },
+  "Success": {
+    "scoreboardUpdated": "Clasificatoria actualizada correctamente",
+    "teamUpdated": "Equipo actualizado correctamente"
+  },
+  "SuperAdmin": {
+    "allUsers": "Todos os usuarios",
+    "changePassword": "Cambiar contrasinal",
+    "changePasswordError": "Erro ao cambiar o contrasinal. Téntao de novo.",
+    "loading": "Cargando...",
+    "lockUser": "Bloquear usuario",
+    "unlockUser": "Desbloquear usuario"
+  },
+  "Support": {
+    "buttonSend": "Enviar mensaxe",
+    "checkFields": "Por favor, revisa os campos do formulario",
+    "description": "Completa o formulario para enviar a túa consulta ao equipo de soporte",
+    "dni": "DNI",
+    "email": "Correo electrónico",
+    "error": "Erro ao enviar a mensaxe",
+    "errorTitle": "Erro",
+    "invalidPhone": "Formato de número de teléfono non válido",
+    "lastName": "Apelidos",
+    "lastNamePlaceholder": "Doe",
+    "mailPlaceholder": "example@example.com",
+    "message": "Mensaxe",
+    "messagePlaceholder": "Escribe aquí a túa consulta",
+    "name": "Nome",
+    "namePlaceholder": "John",
+    "phone": "Teléfono",
+    "phonePlaceholder": "+34 600 000 000",
+    "resetForm": "Limpar campos",
+    "sending": "Enviando...",
+    "subject": "Asunto",
+    "subjectPlaceholder": "Describe brevemente a túa consulta",
+    "success": "Mensaxe enviada correctamente",
+    "successDescription": "O noso equipo de soporte responderá á túa consulta o antes posible.",
+    "successTitle": "Mensaxe enviada!",
+    "title": "Soporte técnico",
+    "unexpectedError": "Produciuse un erro inesperado"
+  },
+  "TableComponent": {
+    "Pagination": {
+      "byPage": "por páxina",
+      "firstPage": "Primeira páxina",
+      "lastPage": "Última páxina",
+      "nextPage": "Páxina seguinte",
+      "of": "de",
+      "page": "Páxina",
+      "previousPage": "Páxina anterior",
+      "results": "resultados",
+      "showing": "Mostrando",
+      "to": "a"
+    },
+    "TableContent": {
+      "actions": {
+        "addEndDate": "Engadir data de fin",
+        "addNote": "Engadir nota",
+        "banUser": "Banear usuario",
+        "block": "Bloquear exercicio",
+        "close": "Pechar exercicio",
+        "clue": "Pistas",
+        "delete": "Eliminar exercicio",
+        "deleteUser": "Eliminar usuario",
+        "downloadFile": "Descargar ficheiro",
+        "edit": "Ver/editar exercicio",
+        "editDate": "Modificar data",
+        "evaluate": "Avaliar exercicio",
+        "lockUnlockUser": "Bloquear/desbloquear usuario",
+        "open": "Abrir exercicio",
+        "openClose": "Abrir/pechar exercicio",
+        "restartActivity": "Reiniciar exercicio",
+        "unblock": "Desbloquear exercicio",
+        "unlockUser": "Desbloquear usuario",
+        "viewAllRecords": "Ver todos os rexistros",
+        "viewRecords": "Ver rexistros",
+        "viewReplyRecords": "Ver respostas dos rexistros",
+        "viewUser": "Ver usuario",
+        "watch": "Ver exercicio",
+        "watchTeams": "Ver equipos",
+        "watchUsers": "Ver usuarios"
+      },
+      "difficulty": {
+        "high": "Alta",
+        "higher": "Moi alta",
+        "low": "Baixa",
+        "medium": "Media",
+        "notEstimated": "Non estimada"
+      },
+      "status": {
+        "locked": "Bloqueado",
+        "noLocked": "Non bloqueado",
+        "private": "Privado",
+        "public": "Público"
+      },
+      "type": {
+        "fileUpload": "Subida de ficheiro",
+        "flag": "Flag",
+        "form": "Formulario",
+        "unknown": "Descoñecido",
+        "virtualMachine": "Máquina virtual",
+        "vm": "Máquina virtual"
+      }
+    },
+    "TableHeads": {
+      "2FA": "2FA",
+      "actions": "Accións",
+      "added": "Engadido o",
+      "category": "Categoría",
+      "completedActivities": "Exercicios completados",
+      "country": "País",
+      "createdAt": "Data de creación",
+      "exerciseDifficulty": "Dificultade",
+      "exerciseType": "Tipo de exercicio",
+      "firstAccess": "Primeiro acceso",
+      "framework": "Framework",
+      "id": "ID",
+      "limitDate": "Data límite",
+      "mail": "Enderezo de correo electrónico",
+      "members": "Membros",
+      "name": "Nome",
+      "noCategory": "Sen categoría",
+      "noDate": "Sen data",
+      "noFramework": "Sen framework",
+      "noNote": "Sen nota",
+      "noTime": "Sen tempo",
+      "note": "Nota",
+      "position": "Posición",
+      "rol": "Rol",
+      "showUser": "Ver usuario",
+      "startActivity": "Desexas iniciar o exercicio?",
+      "startDate": "Data de inicio",
+      "status": "Estado",
+      "studentsSubmitted": "Entregas",
+      "submitting": "Entrega",
+      "teamName": "Nome do equipo",
+      "timeSpent": "Tempo empregado",
+      "title": "Título",
+      "token": "Token de verificación",
+      "totalScore": "Puntuación total",
+      "totalStudents": "Total de estudantes",
+      "user": "Usuario"
+    },
+    "empty": "Táboa baleira",
+    "firstPage": "Primeira páxina",
+    "lastPage": "Última páxina",
+    "loading": "Cargando...",
+    "nextPage": "Páxina seguinte",
+    "noDataAvailable": "Non hai datos dispoñibles",
+    "of": "de",
+    "page": "Páxina",
+    "perPage": "por páxina",
+    "previousPage": "Páxina anterior",
+    "results": "resultados",
+    "search": "Buscar",
+    "showing": "Mostrando",
+    "to": "a"
+  },
+  "TeacherDashboard": {
+    "kpi": {
+      "failedActivitys": "Exercicios suspensos",
+      "globalScore": "Puntuación global",
+      "hintsUsed": "Pistas utilizadas",
+      "passedActivitys": "Exercicios aprobados"
+    },
+    "loadError": "Erro ao cargar as estatísticas",
+    "loading": "Cargando KPIs...",
+    "moduleStatistics": "Estatísticas por cursos",
+    "options": {
+      "individual": "Individual",
+      "teams": "Equipos"
+    },
+    "scoreStatistics": "Estatísticas de puntuación",
+    "sections": {
+      "exerciseStats": "Estatísticas por exercicios",
+      "scoreByActivityType": "Puntuación por tipo de exercicio",
+      "scoreByCategory": "Puntuación por categoría",
+      "scoreByDifficulty": "Puntuación por dificultade",
+      "scoreByTime": "Puntuación por tempo",
+      "scoreStats": "Estatísticas de puntuación",
+      "virtualizationStatus": "Estado da contorna de virtualización"
+    },
+    "title": "Panel do profesor",
+    "topActivitysResolved": "Top 10 exercicios máis resoltos - Porcentaxe de resolución",
+    "topActivitysWithClues": "Top 10 exercicios con máis pistas descubertas"
+  },
+  "TeacherDashboardCharts": {
+    "averageScore": "Puntuación media",
+    "cluesUsed": "Pistas utilizadas",
+    "difficulty": "Dificultade",
+    "exercises": "Exercicios",
+    "failedActivitys": "Exercicios suspensos",
+    "maxScore": "Puntuación máxima",
+    "noActivitysChartData": "Os datos do gráfico de exercicios non están dispoñibles",
+    "participants": "Participantes",
+    "passedActivitys": "Exercicios aprobados",
+    "percentage": "Porcentaxe (%)",
+    "quantity": "Cantidade",
+    "resolutionPercentage": "Porcentaxe de resolución",
+    "resolvedActivitys": "Exercicios resoltos",
+    "score": "Puntuación",
+    "teams": "Equipos",
+    "titleTop10": "Top 10 exercicios máis resoltos",
+    "top10ActivitysWithClues": "Top 10 exercicios con máis pistas utilizadas",
+    "totalCluesUsed": "Total de pistas utilizadas",
+    "totalParticipants": "Total de participantes",
+    "unsolvedActivitys": "Exercicios non resoltos"
+  },
+  "TeamForm": {
+    "cancelButton": "Cancelar",
+    "courseAndCodeRequired": "O curso e o código son requiridos",
+    "courseAndNameRequired": "O curso e o nome son requiridos",
+    "createButton": "Crear equipo",
+    "descriptionLabel": "Descrición",
+    "descriptionPlaceholder": "Describe brevemente o teu equipo...",
+    "maxMembersHint": "Déixao baleiro para permitir membros ilimitados",
+    "maxMembersLabel": "Número máximo de membros",
+    "maxMembersPlaceholder": "Sen límite",
+    "requiredMark": "*",
+    "saveButton": "Gardar cambios",
+    "savingButton": "Gardando...",
+    "teamNameLabel": "Nome do equipo",
+    "teamNamePlaceholder": "Ex: Os Programadores"
+  },
+  "TeamRequiredGuard": {
+    "availableTeams": "Equipos dispoñibles",
+    "createTeam": "Crear equipo",
+    "instructorManagedDescription": "Para participar neste curso, debes ser asignado a un equipo por un instrutor. Contacta co teu instrutor para máis información.",
+    "joinWithCode": "Unirse con código",
+    "learnerManagedDescription": "Para participar neste curso, debes crear un novo equipo ou unirte a un existente utilizando un código de invitación.",
+    "memberCount": "{count, plural, one {# membro} other {# membros}}",
+    "moreTeams": "e {count} máis...",
+    "teamLocked": "Pechado",
+    "teamRequiredTitle": "Este curso require un equipo",
+    "verifyingTeam": "Verificando o equipo..."
+  },
+  "Teams": {
+    "actions": "Accións",
+    "addUser": "Engadir membro ao equipo",
+    "allMyTeams": "Todos os meus equipos",
+    "allTeams": "Todos os equipos",
+    "availableStudents": "Estudantes dispoñibles ({count})",
+    "avatarUploadFailed": "O equipo creouse, pero non se puido subir o avatar",
+    "blockTeamTitle": "Bloquear equipo",
+    "canCreateOrJoinTeam": "Podes crear o teu propio equipo ou unirte a un existente.",
+    "cannotLeaveTeam": "Non podes abandonalo.",
+    "cannotManageOrDeleteTeam": "Non podes xestionalo nin eliminalo.",
+    "cluesChartDescription": "Exercicios e pistas utilizadas polo estudante",
+    "cluesChartSubtitle": "Exercicios e pistas utilizadas polo equipo",
+    "cluesChartTitle": "Uso de pistas por exercicio",
+    "createTeam": "Crear novo equipo",
+    "createdAt": "Data de creación",
+    "createdAtLabel": "Data de creación",
+    "createdByLabel": "Creado por",
+    "currentMembers": "Membros actuais: {count}",
+    "dashboardTitle": "Panel: {teamName}",
+    "delete": "Eliminar",
+    "deleteConfirm": "Queres eliminar o equipo?",
+    "deleteTeam": "Eliminar equipo",
+    "deleteTeamConfirm": "Eliminar o equipo \"{name}\"?",
+    "deleteUser": "Eliminar membro do equipo",
+    "deleteUserConfirm": "Queres eliminar o usuario do equipo?",
+    "deleting": "Eliminando...",
+    "distributionActivitysStatus": "Estado dos exercicios",
+    "distributionActivitysTitle": "Distribución de exercicios",
+    "distributionApproved": "Aprobados",
+    "distributionByCategory": "Por categoría",
+    "distributionByDifficulty": "Por dificultade",
+    "distributionByType": "Por tipo de exercicio",
+    "distributionFailed": "Suspendidos",
+    "distributionNoCategoryData": "Non hai datos de categoría dispoñibles",
+    "distributionNoDifficultyData": "Non hai datos de dificultade dispoñibles",
+    "distributionNoStatusByCategory": "Non hai datos de estado por categoría dispoñibles",
+    "distributionNoStatusByType": "Non hai datos de estado por tipo dispoñibles",
+    "distributionNoTypeData": "Non hai datos de tipo de exercicio dispoñibles",
+    "distributionStatusByCategory": "Estado por categoría",
+    "distributionStatusByType": "Estado por tipo de exercicio",
+    "distributionUnresolved": "Non resoltos",
+    "edit": "Editar",
+    "editTeam": "Editar equipo",
+    "email": "Correo electrónico do usuario",
+    "exerciseLabel": "Exercicio",
+    "fallbackCategory": "Sen categoría",
+    "fallbackDiff": "Sen dificultade",
+    "fallbackType": "Sen tipo",
+    "imageFormatInfo": "Formatos: JPG, PNG, WEBP (máx. 5 MB)",
+    "kpiApproved": "Aprobados",
+    "kpiAverageScore": "Puntuación media",
+    "kpiFailed": "Suspendidos",
+    "kpiGlobalScore": "Puntuación global",
+    "kpiHintsUsed": "Pistas utilizadas",
+    "kpiPending": "Pendentes",
+    "labelcountry": "País",
+    "leader": "Líder",
+    "leave": "Abandonar",
+    "loading": "Cargando...",
+    "loadingDetails": "Cargando detalles do equipo...",
+    "loadingMembers": "Cargando membros do equipo...",
+    "manageTeamTitle": "Xestionar equipo",
+    "manageUsers": "Xestionar usuarios",
+    "member": "Membro",
+    "membersColonLabel": "Membros:",
+    "membersCount": "Número de membros",
+    "membersLabel": "membros",
+    "membersManagement": "Xestión de membros",
+    "moreMembers": "máis...",
+    "name": "Nome do equipo",
+    "noAvailableStudents": "Non hai estudantes dispoñibles para engadir.",
+    "noMembersFound": "Non se atoparon membros con ese criterio.",
+    "noMembersInTeam": "Este equipo non ten membros.",
+    "noStudentsFound": "Non se atoparon estudantes con ese criterio.",
+    "noTeamsInModule": "Non tes equipos neste módulo",
+    "noTeamsYetDescription": "Este módulo aínda non ten equipos. Podes crear o primeiro ou permitir que os estudantes creen os seus propios equipos.",
+    "owner": "Propietario",
+    "placeholderCountry": "Selecciona un país (opcional)",
+    "promptName": "Introduce o nome do equipo",
+    "scoreAnalysisByCategory": "Puntuación por categoría",
+    "scoreAnalysisByDifficulty": "Puntuación por dificultade",
+    "scoreAnalysisByType": "Puntuación por tipo de exercicio",
+    "scoreAnalysisNoByCategory": "Non hai datos de puntuación por categoría",
+    "scoreAnalysisNoByDifficulty": "Non hai datos de puntuación por dificultade",
+    "scoreAnalysisNoByType": "Non hai datos de puntuación por tipo",
+    "scoreAnalysisProgress": "Progreso da puntuación ao longo do tempo",
+    "scoreAnalysisTitle": "Análise de puntuacións",
+    "scoresChartDescription": "Puntuacións obtidas polo estudante en cada exercicio",
+    "scoresChartSubtitle": "Puntuacións obtidas polo equipo en cada exercicio",
+    "scoresChartTitle": "Desglose da puntuación por exercicio",
+    "searchAddPlaceholder": "Buscar estudantes para engadir...",
+    "searchRemovePlaceholder": "Buscar estudantes do equipo...",
+    "selectUser": "Selecciona un usuario",
+    "studentAddToTeamError": "Erro ao engadir o estudante ao equipo",
+    "studentAddedToTeam": "Estudante engadido ao equipo correctamente",
+    "studentRemoveFromTeamError": "Erro ao eliminar o estudante do equipo",
+    "studentRemovedFromTeam": "Estudante eliminado do equipo correctamente",
+    "teacherAssignOrAllow": "O profesor debe asignarte a un equipo ou permitir que os estudantes creen equipos.",
+    "team": "Equipo",
+    "teamAssignedByTeacher": "Este equipo foi asignado polo profesor.",
+    "teamCreatedError": "O usuario xa pertence a un equipo",
+    "teamCreatedSuccess": "Equipo creado correctamente",
+    "teamHasMembers": "Este equipo ten {count} membros",
+    "teamMembers": "Membros do equipo ({count})",
+    "teamName": "Equipo: {name}",
+    "teamNameRequired": "O nome do equipo é obrigatorio",
+    "teamPhotoOptional": "Foto do equipo (opcional)",
+    "teamUpdatedError": "Erro ao actualizar o equipo",
+    "teamUpdatedSuccess": "Equipo actualizado correctamente",
+    "teams": "Equipos",
+    "unblockTeamTitle": "Desbloquear equipo",
+    "uploadTeamAvatar": "Subir foto do equipo",
+    "username": "Nome de usuario"
+  },
+  "TeamsFeature": {
+    "createTeam": {
+      "creating": "Creando...",
+      "error": "Erro ao crear o equipo",
+      "name": "Nome do equipo",
+      "namePlaceholder": "Introduce o nome do equipo",
+      "nameRequired": "O nome é obrigatorio",
+      "photo": "Foto do equipo (opcional)",
+      "submit": "Crear equipo",
+      "success": "Equipo creado correctamente",
+      "title": "Crear equipo"
+    },
+    "description": "Xestiona os equipos do curso",
+    "joinTeam": {
+      "code": "Código do equipo",
+      "codePlaceholder": "Introduce o código",
+      "codeRequired": "O código é obrigatorio",
+      "error": "Erro ao unirse ao equipo",
+      "invalidCode": "Código non válido",
+      "joining": "Uníndose...",
+      "submit": "Unirse",
+      "success": "Unícheste ao equipo correctamente",
+      "title": "Unirse a un equipo"
+    },
+    "members": {
+      "confirmRemove": "Estás seguro de que queres eliminar a este membro?",
+      "leader": "Líder",
+      "makeLeader": "Facer líder",
+      "member": "Membro",
+      "remove": "Eliminar",
+      "removeError": "Erro ao eliminar o membro",
+      "removeSuccess": "Membro eliminado correctamente",
+      "role": "Rol",
+      "title": "Membros do equipo"
+    },
+    "noTeams": "Non hai equipos dispoñibles",
+    "noTeamsDescription": "Crea un equipo ou únete a un existente cun código de invitación",
+    "teamCard": {
+      "codeCopied": "Código copiado",
+      "copyCode": "Copiar código",
+      "members": "{count} membros",
+      "regenerateCode": "Rexenerar código",
+      "viewDetails": "Ver detalles"
+    },
+    "teamDetail": {
+      "confirmDelete": "Estás seguro de que queres eliminar este equipo?",
+      "deleteError": "Erro ao eliminar o equipo",
+      "deleteSuccess": "Equipo eliminado correctamente",
+      "deleteTeam": "Eliminar equipo",
+      "inviteCode": "Código de invitación",
+      "members": "Membros",
+      "settings": "Configuración",
+      "title": "Detalle do equipo"
+    },
+    "title": "Equipos"
+  },
+  "TenantForm": {
+    "cancelButton": "Cancelar",
+    "createButton": "Crear tenant",
+    "createDescription": "Rexistra un novo tenant na plataforma",
+    "createSuccess": "Tenant creado exitosamente",
+    "createTitle": "Novo tenant",
+    "editDescription": "Modifica a información do tenant",
+    "editTitle": "Editar tenant",
+    "productNameLabel": "Nome do produto",
+    "productNamePlaceholder": "Ex: Campus Virtual",
+    "saveButton": "Gardar cambios",
+    "savingButton": "Gardando...",
+    "statusLabel": "Estado",
+    "tenantNameLabel": "Nome do tenant",
+    "tenantNamePlaceholder": "Ex: Universidade de Exemplo",
+    "updateSuccess": "Tenant actualizado exitosamente"
+  },
+  "TenantsPage": {
+    "addTenant": "Engadir tenant",
+    "columnActions": "Accións",
+    "columnId": "UUID",
+    "columnName": "Nome",
+    "columnProduct": "Produto",
+    "columnStatus": "Estado",
+    "copiedId": "UUID copiado ao portapapeis",
+    "copyId": "Copiar UUID",
+    "description": "Administra os tenants rexistrados na plataforma",
+    "editAction": "Editar",
+    "emptyTable": "Non hai tenants rexistrados",
+    "statusActive": "Activo",
+    "statusProvisioning": "Aprovisionando",
+    "statusSuspended": "Suspendido",
+    "title": "Xestión de tenants"
+  },
+  "Title": {
+    "AuditLogs": {
+      "changesCount": "{count} cambio(s)",
+      "columns": {
+        "action": "Acción",
+        "actor": "Actor",
+        "category": "Categoría",
+        "date": "Data",
+        "details": "Detalles",
+        "entity": "Entidade"
+      },
+      "description": "Rexistros de auditoría da plataforma",
+      "emptyState": "Non hai rexistros de auditoría",
+      "metadata": "+ metadatos",
+      "pagination": {
+        "page": "Páxina {current} de {totalPages}",
+        "showing": "Mostrando {from} - {to} de {total} rexistros"
+      },
+      "systemActor": "Sistema",
+      "title": "Rexistros de auditoría"
+    },
+    "Companies": {
+      "deleteError": "Erro ao eliminar a compañía",
+      "deleteSuccess": "Compañía eliminada correctamente",
+      "description": "Xestión das compañías",
+      "title": "Compañías"
+    },
+    "Dashboard": {
+      "description": "Páxina de inicio",
+      "title": "Panel"
+    },
+    "Files": {
+      "description": "Xestión dos arquivos",
+      "title": "Arquivos"
+    },
+    "Profile": {
+      "description": "Axustes do perfil",
+      "loading": "Cargando perfil...",
+      "title": "Perfil"
+    },
+    "Qualifier": {
+      "description": "Clasificación xeral dos módulos",
+      "title": "Clasificación"
+    },
+    "Tickets": {
+      "description": "Xestión dos tickets",
+      "title": "Tickets"
+    },
+    "Users": {
+      "description": "Xestión de usuarios da plataforma",
+      "title": "Xestión de usuarios"
+    }
+  },
+  "Titles": {
+    "forgotPassword": "Recuperar contrasinal",
+    "login": "Iniciar sesión",
+    "register": "Rexistro",
+    "resetPassword": "Restablecer contrasinal",
+    "twoFactor": "Autenticación de dous factores",
+    "verifyEmail": "Verificación de correo electrónico"
+  },
+  "Toast": {
+    "deleteError": "Erro ao eliminar o usuario",
+    "deleteSuccess": "Usuario eliminado correctamente"
+  },
+  "ToggleComponent": {
+    "ResetPassword": {
+      "title": "Restablecer contrasinal"
+    },
+    "ResetPasswordFinalStep": {
+      "description": "O contrasinal cambiouse correctamente",
+      "title": "Contrasinal cambiado!"
+    },
+    "active": "Activado",
+    "activeAction": "Activar",
+    "ariaDarkLabel": "Cambiar a modo claro",
+    "ariaLightLabel": "Cambiar a modo escuro",
+    "darkMode": "Modo escuro",
+    "deactivate": "Desactivado",
+    "deactivateAction": "Desactivar",
+    "lightMode": "Modo claro"
+  },
+  "Trips": {
+    "backToTrips": "Volver a viaxes",
+    "card": {
+      "budget": "{spent} / {total} €",
+      "members": "+{count}"
+    },
+    "create": "Crear viaxe",
+    "createFirst": "Crea a túa primeira viaxe",
+    "createForm": {
+      "budget": "Orzamento (€)",
+      "budgetPlaceholder": "Ex: 1500",
+      "creating": "Creando...",
+      "description": "Descrición",
+      "descriptionPlaceholder": "Describe a viaxe...",
+      "endDate": "Data de fin",
+      "locality": "Localidade",
+      "localityPlaceholder": "Buscar localidade...",
+      "name": "Nome da viaxe",
+      "namePlaceholder": "Ex: Ruta por Galicia",
+      "invalidDate": "Formato de data non válido. Usa o formato indicado.",
+      "startDate": "Data de inicio",
+      "submit": "Crear viaxe",
+      "title": "Nova viaxe"
+    },
+    "detail": "Detalle da viaxe",
+    "detailView": {
+      "budget": "Orzamento",
+      "dates": "Datas",
+      "description": "Descrición",
+      "duration": "Duración",
+      "locality": "Localidade",
+      "memberSince": "Membro desde {date}",
+      "members": "Membros",
+      "noDescription": "Sen descrición",
+      "notFound": "Viaxe non atopada",
+      "notFoundDescription": "A viaxe que buscas non existe ou non tes acceso a ela.",
+      "rating": "Puntuación",
+      "viewExpenses": "Ver gastos",
+      "viewItinerary": "Ver itinerario",
+      "viewTickets": "Ver tickets"
+    },
+    "editForm": {
+      "save": "Gardar cambios",
+      "saving": "Gardando...",
+      "title": "Editar viaxe"
+    },
+    "expenses": {
+      "allExpenses": "Todos os gastos",
+      "backToTrip": "Volver á viaxe",
+      "balance": "Balances",
+      "addExpense": "Engadir gasto",
+      "noExpenses": "Non hai gastos rexistrados",
+      "paidBy": "Pagado por",
+      "perPerson": "por persoa",
+      "settled": "Saldado",
+      "sharedBy": "Compartido por",
+      "simplifiedDebts": "Débedas simplificadas",
+      "title": "Gastos",
+      "totalSpent": "Total gastado",
+      "tripNotFound": "Viaxe non atopada",
+      "you": "ti",
+      "youAreOwed": "Débenche",
+      "youOwe": "Debes"
+    },
+    "filters": {
+      "active": "En curso",
+      "all": "Todas",
+      "cancelled": "Canceladas",
+      "finished": "Finalizadas",
+      "planned": "Planificadas"
+    },
+    "invitations": {
+      "accept": "Aceptar",
+      "decline": "Rexeitar",
+      "invitedBy": "Invitado por {name}",
+      "noInvitations": "Non tes invitacións pendentes",
+      "title": "Invitacións pendentes"
+    },
+    "itinerary": {
+      "allStops": "Todas",
+      "arriveAt": "Chegada",
+      "backToTrip": "Volver á viaxe",
+      "day": "Día",
+      "addStop": "Engadir parada",
+      "noStops": "Non hai paradas no itinerario",
+      "selectStop": "Selecciona unha parada",
+      "title": "Itinerario",
+      "travelMethodCar": "En coche",
+      "travelMethodWalking": "A pé",
+      "travelTime": "Tempo de viaxe",
+      "tripNotFound": "Viaxe non atopada",
+      "unscheduled": "Sen programar"
+    },
+    "newTrip": "Nova viaxe",
+    "noTrips": "Non tes viaxes aínda",
+    "permissions": {
+      "canEditBudget": "Editar orzamento",
+      "canEditDetails": "Editar detalles",
+      "canEditTrip": "Editar viaxe",
+      "canInviteMembers": "Invitar membros",
+      "canManageTickets": "Xestionar tickets",
+      "canModifyMembers": "Xestionar membros",
+      "confirmRemove": "Eliminarase a este membro da viaxe.",
+      "creator": "Creador",
+      "removeMember": "Eliminar membro"
+    },
+    "status": {
+      "ACTIVE": "En curso",
+      "CANCELLED": "Cancelada",
+      "FINISHED": "Finalizada",
+      "PLANNED": "Planificada"
+    },
+    "subtitle": "Xestiona e organiza todas as túas aventuras",
+    "tickets": {
+      "backToTrip": "Volver á viaxe",
+      "download": "Descargar",
+      "downloading": "Descargando...",
+      "linkedStop": "Parada",
+      "noDescription": "Sen descrición",
+      "noFile": "Sen arquivo",
+      "addTicket": "Engadir ticket",
+      "noTickets": "Non hai tickets",
+      "title": "Tickets",
+      "tripNotFound": "Viaxe non atopada"
+    },
+    "title": "As miñas viaxes"
+  },
+  "TwoFA": {
+    "enterCode": "Introduce o código de verificación que recibiches por correo electrónico",
+    "invalidCode": "Código de verificación non válido",
+    "title": "Verificación en dous pasos",
+    "unexpectedError": "Erro inesperado",
+    "verificationCode": "Código de verificación",
+    "verificationError": "Erro na verificación",
+    "verificationSuccess": "Verificación correcta",
+    "verify": "Verificar",
+    "verifying": "Verificando..."
+  },
+  "TwoFactor": {
+    "backToLogin": "Volver ao inicio de sesión",
+    "description": "Introduce o código de verificación enviado ao teu correo electrónico.",
+    "differentAccount": "Queres usar outra conta?"
+  },
+  "UsersPage": {
+    "adminPasswordModalTitle": "Restablecer contrasinal de {userName}",
+    "approveUser": "Aprobar usuario",
+    "approveUserDescription": "Permite ao usuario iniciar sesión na plataforma",
+    "blockError": "Erro ao cambiar o estado do usuario",
+    "blockSuccess": "Usuario bloqueado correctamente",
+    "blockUser": "Bloquear usuario",
+    "blockUserDescription": "Suspende o acceso do usuario á plataforma",
+    "cancelButton": "Cancelar",
+    "columnActions": "Accións",
+    "columnActionsEmpty": "",
+    "columnAvatar": "",
+    "columnEmail": "Correo electrónico",
+    "columnName": "Nome",
+    "columnRole": "Rol",
+    "columnStatus": "Estado",
+    "confirmApproveMessage": "Estás seguro de que desexas aprobar a {userName}? O usuario poderá iniciar sesión.",
+    "confirmApproveTitle": "Confirmar aprobación",
+    "confirmBlockMessage": "Estás seguro de que desexas bloquear a {userName}? O usuario non poderá iniciar sesión.",
+    "confirmBlockTitle": "Confirmar bloqueo",
+    "confirmButton": "Confirmar",
+    "confirmPasswordPlaceholder": "Confirmar novo contrasinal",
+    "confirmRejectMessage": "Estás seguro de que desexas rexeitar a {userName}? O usuario non poderá iniciar sesión.",
+    "confirmRejectTitle": "Confirmar rexeitamento",
+    "confirmUnblockMessage": "Estás seguro de que desexas desbloquear a {userName}? O usuario poderá iniciar sesión de novo.",
+    "confirmUnblockTitle": "Confirmar desbloqueo",
+    "description": "Administra os usuarios rexistrados na plataforma",
+    "emptyTable": "Non hai usuarios dispoñibles",
+    "filters": {
+      "allRoles": "Todos os roles",
+      "allStatuses": "Todos os estados",
+      "apply": "Aplicar",
+      "clear": "Limpar",
+      "email": "Correo electrónico",
+      "lastName": "Apelidos",
+      "name": "Nome",
+      "role": "Rol",
+      "status": "Estado",
+      "title": "Filtros"
+    },
+    "loading": "Cargando usuarios...",
+    "modalTitle": "Cambiar contrasinal",
+    "newPasswordPlaceholder": "Novo contrasinal",
+    "pagination": {
+      "next": "Seguinte",
+      "page": "Páxina {current} de {totalPages}",
+      "previous": "Anterior",
+      "showing": "Mostrando {from} a {to} de {total}"
+    },
+    "passwordMismatch": "Os contrasinais non coinciden",
+    "passwordResetError": "Erro ao actualizar o contrasinal",
+    "passwordResetSuccess": "Contrasinal actualizado correctamente",
+    "passwordTooShort": "O contrasinal debe ter polo menos 8 caracteres",
+    "pendingVerificationRestriction": "Ata que o usuario verifique a súa conta, non se poden realizar modificacións ao seu estado.",
+    "rejectUser": "Rexeitar usuario",
+    "rejectUserDescription": "Denega o acceso do usuario á plataforma",
+    "resetPassword": "Cambiar contrasinal",
+    "resetPasswordDescription": "Establece un novo contrasinal para o usuario",
+    "saveButton": "Gardar",
+    "savingButton": "Gardando...",
+    "sectionAccess": "Control de acceso",
+    "sectionAccount": "Conta",
+    "sectionReview": "Revisión",
+    "status": {
+      "APPROVED": "Aprobado",
+      "BLOCKED": "Bloqueado",
+      "IMPORTED": "Importado",
+      "PENDING_REVIEW": "Pendente de revisión",
+      "PENDING_VERIFICATION": "Pendente de verificación",
+      "REJECTED": "Rexeitado"
+    },
+    "statusApproved": "Aprobado",
+    "statusBlocked": "Bloqueado",
+    "statusImported": "Importado",
+    "statusPendingReview": "Pendente de revisión",
+    "statusPendingVerification": "Pendente de verificación",
+    "statusRejected": "Rexeitado",
+    "title": "Xestión de usuarios",
+    "unblockSuccess": "Usuario desbloqueado correctamente",
+    "unblockUser": "Desbloquear usuario",
+    "unblockUserDescription": "Restaura o acceso do usuario á plataforma",
+    "viewActivity": "Ver actividade",
+    "viewActivityDescription": "Consultar o historial de accións do usuario"
+  },
+  "UsersVerification": {
+    "description": "Aquí podes xestionar a verificación dos usuarios",
+    "errorUnverifyingUser": "Erro ao desverificar o usuario",
+    "errorVerifyingUser": "Erro ao verificar o usuario",
+    "title": "Verificación de usuarios",
+    "unverifyUser": "Desverificar usuario",
+    "userUnverified": "Usuario desverificado correctamente",
+    "userVerified": "Usuario verificado correctamente",
+    "verifyUser": "Verificar usuario"
+  },
+  "Validation": {
+    "badCredentials": "Credenciais non válidas",
+    "invalidDurationFormat": "Formato de duración non válido: \"{value}\". Formatos válidos: 15m, 30d, 1h, 500ms, 60s, 1w",
+    "languageEmpty": "Selecciona un idioma",
+    "mailInvalid": "Correo electrónico non válido",
+    "nameFormat": "O nome de usuario debe comezar cunha letra maiúscula e só pode conter letras e espazos",
+    "nameMaxLength": "O nome de usuario non pode ter máis de 30 caracteres",
+    "nameMinLength": "O nome de usuario debe ter polo menos 3 caracteres",
+    "passwordDigit": "O contrasinal debe ter polo menos un díxito",
+    "passwordDigits": "O contrasinal debe ter polo menos un díxito",
+    "passwordLowerCase": "O contrasinal debe ter polo menos unha letra minúscula",
+    "passwordMaxLength": "O contrasinal non pode ter máis de 24 caracteres",
+    "passwordMinLength": "O contrasinal debe ter polo menos 8 caracteres",
+    "passwordNoSpaces": "O contrasinal non pode conter espazos",
+    "passwordRequired": "O contrasinal é obrigatorio",
+    "passwordSpecialChar": "O contrasinal debe ter polo menos un carácter especial",
+    "passwordUpperCase": "O contrasinal debe ter polo menos unha letra maiúscula",
+    "repeatPassword": "Repetir contrasinal",
+    "repeatPasswordMismatch": "Os contrasinais deben coincidir",
+    "unsupportedTimeUnit": "Unidade de tempo non soportada: \"{unit}\""
+  }
+}

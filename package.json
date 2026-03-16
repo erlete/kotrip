@@ -1,0 +1,57 @@
+{
+  "name": "kotrip",
+  "version": "0.0.0",
+  "private": true,
+  "license": "UNLICENSED",
+  "author": "Kotrip",
+  "maintainers": [
+    {
+      "name": "Paulo Sánchez",
+      "email": "dev.szblzpaulo@gmail.com",
+      "url": "https://github.com/erlete"
+    }
+  ],
+  "workspaces": [
+    "frontend",
+    "backend",
+    "data"
+  ],
+  "scripts": {
+    "clean": "npm run --workspaces --if-present clean",
+    "postinstall": "node scripts/npm/postinstall.mjs",
+    "qa": "run-s qa:format qa:versions qa:lint qa:usage qa:compile",
+    "qa:compile": "npm run --workspaces --if-present qa:compile",
+    "qa:format": "prettier --check --cache --ignore-unknown .",
+    "qa:format:fix": "prettier --write --cache --ignore-unknown .",
+    "qa:lint": "npm run --workspaces --if-present qa:lint",
+    "qa:lint:fix": "npm run --workspaces --if-present qa:lint:fix",
+    "qa:usage": "npm run --workspaces --if-present qa:usage",
+    "qa:usage:fix": "npm run --workspaces --if-present qa:usage:fix",
+    "qa:versions": "syncpack lint",
+    "qa:versions:fix": "syncpack fix"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^20.4.3",
+    "@commitlint/config-conventional": "^20.4.3",
+    "@ianvs/prettier-plugin-sort-imports": "^4.7.1",
+    "@types/node": "^24.10.13",
+    "commander": "^14.0.3",
+    "dotenv": "^17.3.1",
+    "dotenv-cli": "^11.0.0",
+    "eslint": "^9.39.2",
+    "glob": "^13.0.6",
+    "globals": "^17.3.0",
+    "ignore": "^7.0.0",
+    "lefthook": "^2.1.1",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^3.8.1",
+    "prettier-plugin-packagejson": "^3.0.0",
+    "rimraf": "^6.1.3",
+    "syncpack": "^14.0.0",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.9.3"
+  },
+  "engines": {
+    "node": "24"
+  }
+}

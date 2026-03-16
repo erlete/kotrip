@@ -1,0 +1,2602 @@
+{
+  "AdminAudit": {
+    "action": {
+      "ADD_TEAM_MEMBER": "Add member",
+      "ANONYMIZE_DATA": "Anonymize data",
+      "APPROVE_ENROLLMENT": "Approve enrollment",
+      "BULK_OPERATION": "Bulk operation",
+      "CHANGE_TEAM_ROLE": "Change team role",
+      "CREATE": "Create",
+      "CREATE_TEAM": "Create team",
+      "DELETE": "Delete",
+      "DELETE_TEAM": "Delete team",
+      "ENROLL": "Enroll",
+      "EXPIRE_ATTEMPT": "Expire attempt",
+      "EXPORT_DATA": "Export data",
+      "FAILED_LOGIN": "Failed login",
+      "GRANT_PERMISSION": "Grant permission",
+      "LOGIN": "Login",
+      "LOGOUT": "Logout",
+      "OVERRIDE_SCORE": "Override score",
+      "PASSWORD_CHANGE": "Password change",
+      "PASSWORD_RESET": "Password reset",
+      "READ": "Read",
+      "REJECT_ENROLLMENT": "Reject enrollment",
+      "REMOVE_TEAM_MEMBER": "Remove member",
+      "REQUEST_CLUE": "Request clue",
+      "REVOKE_PERMISSION": "Revoke permission",
+      "START_ATTEMPT": "Start attempt",
+      "SUBMIT_ATTEMPT": "Submit attempt",
+      "UNENROLL": "Unenroll",
+      "UPDATE": "Update",
+      "UPDATE_ANSWER": "Update answer",
+      "UPDATE_TEAM": "Update team"
+    },
+    "anonymizedActor": "Anonymized",
+    "category": {
+      "CONTENT": "Content",
+      "DATA_PRIVACY": "Privacy",
+      "DELIVERY": "Delivery",
+      "GRADING": "Grading",
+      "SECURITY": "Security",
+      "SYSTEM": "System",
+      "TEAM_MANAGEMENT": "Teams",
+      "USER_MANAGEMENT": "Users"
+    },
+    "columns": {
+      "action": "Action",
+      "actor": "Actor",
+      "actorUserId": "Actor User ID",
+      "category": "Category",
+      "date": "Date",
+      "details": "Details",
+      "entity": "Entity",
+      "entityId": "Entity ID",
+      "ipAddress": "IP Address"
+    },
+    "courseAudit": {
+      "backToCourse": "← Back to course",
+      "description": "Audit logs related to this course and its elements",
+      "title": "Course Audit"
+    },
+    "description": "Platform audit logs",
+    "detail": {
+      "afterState": "After state",
+      "beforeState": "Before state",
+      "changes": "Field changes",
+      "changesCount": "{count} change(s)",
+      "field": "Field",
+      "metadata": "Metadata",
+      "newValue": "New value",
+      "noChanges": "No changes recorded",
+      "oldValue": "Old value",
+      "relatedEntity": "Related entity",
+      "relatedEntityId": "ID",
+      "relatedEntityType": "Type",
+      "title": "Log detail",
+      "viewDetails": "View details"
+    },
+    "emptyState": "No audit logs found",
+    "errorLoading": "Error loading audit logs",
+    "exportCsv": "Export CSV",
+    "filters": {
+      "action": "Action",
+      "actorUserId": "Actor ID",
+      "allActions": "All",
+      "allCategories": "All",
+      "apply": "Apply",
+      "category": "Category",
+      "clear": "Clear",
+      "dateFrom": "Date from",
+      "dateTo": "Date to",
+      "entityId": "Entity ID",
+      "entityType": "Entity type",
+      "entityTypePlaceholder": "Course, Unit, Activity...",
+      "relatedEntityType": "Related entity",
+      "relatedEntityTypePlaceholder": "Course, Unit...",
+      "title": "Filters"
+    },
+    "loading": "Loading logs…",
+    "pagination": {
+      "nextPage": "Next page",
+      "page": "Page {current} of {totalPages}",
+      "previousPage": "Previous page",
+      "showing": "Showing {from} - {to} of {total}"
+    },
+    "systemActor": "System",
+    "title": "Audit logs"
+  },
+  "AdminUsers": {
+    "actions": {
+      "confirmDelete": "Are you sure you want to delete this user?",
+      "delete": "Delete",
+      "deleteError": "Error deleting user",
+      "deleteSuccess": "User deleted successfully",
+      "edit": "Edit",
+      "toggle2FA": "Enable/Disable 2FA",
+      "toggle2FAError": "Error updating 2FA status",
+      "toggle2FASuccess": "2FA status updated",
+      "updateError": "Error updating user",
+      "updateSuccess": "User updated successfully"
+    },
+    "description": "Manage all platform users",
+    "filters": {
+      "active": "Active",
+      "allRoles": "All roles",
+      "allStatuses": "All statuses",
+      "apply": "Apply filters",
+      "clear": "Clear",
+      "inactive": "Inactive",
+      "role": "Role",
+      "search": "Search user",
+      "searchPlaceholder": "Name or email...",
+      "status": "Status",
+      "title": "Filters"
+    },
+    "table": {
+      "actions": "Actions",
+      "createdAt": "Registration date",
+      "email": "Email",
+      "loading": "Loading users...",
+      "name": "Name",
+      "noResults": "No users found",
+      "role": "Role",
+      "status": "Status",
+      "twoFactor": "2FA"
+    },
+    "title": "User Administration"
+  },
+  "AlertDialogComponent": {
+    "cancel": "Cancel",
+    "continue": "Continue",
+    "triggerText": "Open"
+  },
+  "Analytics": {
+    "chart": {
+      "activityTypeBreakdown": "Activity Types",
+      "attainmentByDifficulty": "Attainment by Difficulty",
+      "completionByCourse": "Completion by Course",
+      "performanceByCourse": "Performance by Course",
+      "scoreOverTime": "Score History"
+    },
+    "error": "Error loading analytics. Please try again later.",
+    "export": "Export Excel",
+    "exportRoleName": "Administrator",
+    "exportScope": "global",
+    "exportScopeParticipant": "participant",
+    "globalSubtitle": "Cross-course analytics overview",
+    "globalTitle": "Dashboard",
+    "kpi": {
+      "activeInstructors": "Active Instructors",
+      "activeLearners": "Active Learners",
+      "activeParticipants": "Active Participants",
+      "activeTAs": "Active TAs",
+      "avgAttemptsPerSolve": "Avg Attempts to Solve",
+      "avgScore": "Avg Score",
+      "completionRate": "Completion Rate",
+      "courses": "Courses",
+      "hintsUsed": "Hints Used",
+      "progress": "Progress",
+      "solvedActivities": "Solved Activities",
+      "totalActivities": "Total Activities"
+    },
+    "loading": "Loading analytics...",
+    "loadingChart": "Loading chart...",
+    "noData": "No data in the selected time period",
+    "noDataChart": "No data in the selected time period",
+    "table": {
+      "courseOverview": "Course Overview",
+      "courseSummary": "Course Summary"
+    },
+    "timeRange": {
+      "last24Hours": "Last 24 hours",
+      "lastHour": "Last hour",
+      "lastMonth": "Last month",
+      "lastWeek": "Last week"
+    }
+  },
+  "AnalyticsTables": {
+    "activityTypes": {
+      "EXERCISE_CLASSIFICATION": "Classification",
+      "EXERCISE_MATCHING": "Matching",
+      "EXERCISE_ORDERING": "Ordering",
+      "QUIZ_STANDARD": "Quiz",
+      "QUIZ_VIDEO_EXTERNAL": "Video Quiz (External)",
+      "QUIZ_VIDEO_INTERNAL": "Video Quiz (Internal)",
+      "QUIZ_VM_LINKED": "VM CTF (Linked)",
+      "QUIZ_VM_SINGLE": "Virtual Machine"
+    },
+    "columns": {
+      "activityName": "Activity",
+      "attainmentPct": "Attainment (%)",
+      "attemptNumber": "#",
+      "attempts": "Attempts",
+      "avgScore": "Avg Score (%)",
+      "avgTimeSeconds": "Avg Time (s)",
+      "bestScore": "Best Score (%)",
+      "completionRate": "Completion (%)",
+      "courseName": "Course",
+      "difficulty": "Difficulty",
+      "enrolled": "Enrolled",
+      "enrolledLearners": "Enrolled Learners",
+      "hintsUsed": "Hints",
+      "hintsUsedCount": "Hints Used",
+      "lastActivity": "Last Activity",
+      "lastActivityTs": "Last Activity",
+      "lastLoginTs": "Last Login",
+      "participant": "Participant",
+      "participantName": "Participant",
+      "rank": "#",
+      "score": "Score (%)",
+      "scoreRatio": "Score (%)",
+      "solvedCount": "Solved",
+      "solvedRate": "Solved Rate (%)",
+      "solvedTs": "Solved At",
+      "submittedAt": "Submitted At",
+      "timeSeconds": "Time (s)",
+      "totalActivities": "Total Activities",
+      "totalParticipants": "Total",
+      "totalUnits": "Total Units",
+      "type": "Type",
+      "uniqueUsers": "Unique Users",
+      "unitName": "Unit"
+    },
+    "difficulty": {
+      "0": "Beginner",
+      "1": "Easy",
+      "2": "Medium",
+      "3": "Hard"
+    },
+    "series": {
+      "attainment": "Attainment",
+      "avgScore": "Avg Score",
+      "completion": "Completion",
+      "participants": "Participants",
+      "score": "Score",
+      "solved": "Solved %"
+    }
+  },
+  "Aria": {
+    "Activities": {
+      "matchFor": "Match for {text}",
+      "moveDown": "Move down",
+      "moveUp": "Move up"
+    },
+    "Avatar": {
+      "userAvatar": "User avatar"
+    },
+    "Cards": {
+      "cardList": "Items",
+      "cardListRegion": "List of items",
+      "goToCompanyDetails": "Go to {company} details"
+    },
+    "Dashboard": {
+      "graphsSection": "Dashboard graphs section"
+    },
+    "DifficultyChip": {
+      "difficultyLevel": "Difficulty: level {level} of {total}"
+    },
+    "InputOtp": {
+      "digit": "Digit {index}",
+      "otpInput": "One-time password input"
+    },
+    "InputPassword": {
+      "hidePassword": "Hide password",
+      "showPassword": "Show password"
+    },
+    "Landing": {
+      "goToLanding": "Go to landing page",
+      "primaryNavigation": "Primary navigation"
+    },
+    "Modal": {
+      "closeModal": "Close modal",
+      "modalContent": "Modal content"
+    },
+    "Popover": {
+      "popoverContent": "Popover content"
+    },
+    "Poster": {
+      "coursePoster": "Course poster: {title}"
+    },
+    "PosterAvatar": {
+      "cancelPreview": "Cancel preview",
+      "changeAvatar": "Change avatar",
+      "selectImage": "Select an image"
+    },
+    "PosterUpload": {
+      "currentPoster": "Current poster",
+      "posterPreview": "Poster preview",
+      "selectImageFile": "Please select an image file"
+    },
+    "Select": {
+      "removeOption": "Remove {label}"
+    },
+    "Sidebar": {
+      "goToMainMenu": "Go to general statistics (dashboard)",
+      "mainNavigation": "Main navigation",
+      "profileImage": "User profile image",
+      "toggleProfileMenu": "Open/close profile menu",
+      "toggleSidebar": "Contract/expand sidebar menu"
+    },
+    "Toggle": {
+      "2fa": "{checked, select, true {Desactivate} other {Activate}} two-factor authentication",
+      "theme": "{checked, select, true {Switch to light mode} other {Switch to dark mode}}"
+    },
+    "Topbar": {
+      "lastLoginTooltip": "Last login date and time",
+      "selectCompany": "Select active company",
+      "topbar": "Application toolbar"
+    }
+  },
+  "Auth": {
+    "editorial": {
+      "description": "Manage itineraries, discover routes and share experiences. All from a single place.",
+      "headline1": "Your next",
+      "headline2": "destination",
+      "headline3": "awaits",
+      "stats": {
+        "destinations": {
+          "label": "Destinations",
+          "value": "580+"
+        },
+        "satisfaction": {
+          "label": "Satisfaction",
+          "value": "98%"
+        },
+        "trips": {
+          "label": "Trips created",
+          "value": "2.4k+"
+        }
+      },
+      "tag": "Travel platform"
+    },
+    "invalidAuthResponse": "Invalid authentication response",
+    "invalidCredentials": "Invalid credentials",
+    "invalidRefreshResponse": "Invalid refresh response",
+    "invalidUpdateResponse": "Invalid update response",
+    "invalidVerificationResponse": "Invalid verification response",
+    "login": {
+      "notAccount?": "Don't have an account?",
+      "registerHere": "Register here"
+    },
+    "loginDisabled": "Login is temporarily disabled by the platform administrator",
+    "loginDisabledBanner": "Login is currently disabled for students. If you are an administrator or instructor, you may still log in.",
+    "loginStatusError": {
+      "BLOCKED": "Your account has been blocked. Please contact the platform administrator.",
+      "PENDING_REVIEW": "Your account is pending review by an administrator.",
+      "PENDING_VERIFICATION": "You must verify your email before logging in.",
+      "REJECTED": "Your registration has been rejected. Please contact the platform administrator.",
+      "verifyEmailLink": "Click here to verify your email"
+    },
+    "mailInvalid": "Invalid email",
+    "noAccessToken": "No access token found",
+    "noRefreshToken": "No refresh token available",
+    "password": {
+      "lowercase": "Password must contain at least one lowercase letter",
+      "minLength": "Password must be at least 8 characters",
+      "number": "Password must contain at least one number",
+      "special": "Password must contain at least one special character",
+      "uppercase": "Password must contain at least one uppercase letter"
+    },
+    "passwordsDoNotMatch": "Passwords do not match",
+    "recoverPassword": {
+      "description": "Enter your email address and we'll send you instructions to reset your password.",
+      "otpDescription": "Enter the 6-digit code sent to your email to recover your password.",
+      "successToast": "An email has been sent to you with instructions on how to restore your password."
+    },
+    "register": {
+      "alreadyAccount?": "Already have an account?",
+      "checkEmail": "Check your email",
+      "loginHere": "Log in here",
+      "successMessage": "User registered successfully",
+      "verificationEmailSent": "A verification code has been sent to your email. Please check your inbox."
+    },
+    "registrationAdmitted": "Your account has been created successfully. You can now log in.",
+    "registrationDisabled": "User registration is temporarily disabled by the platform administrator",
+    "registrationRejected": "New user registrations are not being accepted at this time",
+    "serverConnectionError": "Unable to connect to the server. Please try again.",
+    "unexpectedError": "An unexpected error occurred",
+    "unknownError": "Unknown error",
+    "verifyEmail": {
+      "admitted": "Your email has been verified successfully. You can now log in.",
+      "backToLogin": "Back to login",
+      "codeLabel": "Verification code",
+      "codePlaceholder": "Enter 6-digit code",
+      "description": "Enter the verification code sent to {email}",
+      "pending": "Your email has been verified. Your account is pending review by an administrator.",
+      "rejected": "Your email has been verified, but your registration has been rejected. Please contact the platform administrator."
+    }
+  },
+  "AutoConfirm": {
+    "accountConfirmed": "Account confirmed!",
+    "adminApprovalRequired": "The administrator must approve your request before you can access.",
+    "confirmationError": "Error confirming account",
+    "confirmingAccount": "Confirming account...",
+    "error": "Error",
+    "goToLogin": "Go to login",
+    "invalidToken": "No valid confirmation token has been provided.",
+    "pleaseWait": "Please wait while we confirm your registration.",
+    "redirectingToLogin": "You will be redirected to login in a few seconds...",
+    "title": "Account confirmation",
+    "unexpectedError": "Unexpected error confirming account"
+  },
+  "AvailabilityBadge": {
+    "activityDependency": "• Activity: {title}",
+    "closesAt": "Closes: {date}",
+    "dateRestrictionTitle": "Date restriction",
+    "dependenciesTitle": "Incomplete dependencies",
+    "opensAt": "Opens: {date}",
+    "unitDependency": "• Unit: {title}"
+  },
+  "AvailabilityLockInfo": {
+    "activityBlocked": "Activity locked",
+    "activityLabel": "This activity",
+    "blockedByBoth": "{itemLabel} is locked until {dateMessage} and until {dependencyMessage}",
+    "blockedByDate": "{itemLabel} is locked until {dateMessage}",
+    "blockedByDependencies": "{itemLabel} is locked until {dependencyMessage}",
+    "closedDate": "{date} (already closed)",
+    "connector": " and ",
+    "courseBlocked": "Course locked",
+    "courseLabel": "This course",
+    "lockedByDate": "{itemLabel} by date",
+    "lockedByPrerequisites": "{itemLabel} by prerequisites",
+    "multipleActivitiesCompleted": "activities \"{names}\" and \"{last}\" are completed",
+    "multipleUnitsCompleted": "units \"{names}\" and \"{last}\" are completed",
+    "singleActivityCompleted": "activity \"{name}\" is completed",
+    "singleUnitCompleted": "unit \"{name}\" is completed",
+    "unitBlocked": "Unit locked",
+    "unitLabel": "This unit"
+  },
+  "BarChart": {
+    "approved": "Approved",
+    "failed": "Failed",
+    "unresolved": "Unresolved"
+  },
+  "Buttons": {
+    "buttonAccept": "Accept",
+    "buttonActivateAll": "Activate all",
+    "buttonAdd": "Add",
+    "buttonAddClue": "Add clue",
+    "buttonAddFile": "Add file",
+    "buttonAddLogToIncidence": "Add log to incident",
+    "buttonAddNewModule": "Add new module",
+    "buttonAddNote": "Add note",
+    "buttonAddPlatform": "New platform",
+    "buttonAddPlaybook": "Add playbook",
+    "buttonAddStudents": "Add students",
+    "buttonAddTeamMember": "Add team member",
+    "buttonAddUser": "Add user",
+    "buttonAssignUser": "Assign user",
+    "buttonAssigning": "Assigning...",
+    "buttonBack": "Back",
+    "buttonBackHome": "Back to home",
+    "buttonBlock": "Block",
+    "buttonCancel": "Cancel",
+    "buttonChangePassword": "Change password",
+    "buttonCleanForm": "Clear form",
+    "buttonClickHere": "Click here",
+    "buttonClose": "Close",
+    "buttonClue": "Clue",
+    "buttonColumns": "Columns",
+    "buttonConfirm": "Confirm",
+    "buttonContinue": "Continue",
+    "buttonCreate": "Create",
+    "buttonCreateCompany": "Create company",
+    "buttonCreateIncidence": "Create incident",
+    "buttonCreateModule": "Create module",
+    "buttonCreateNewAgent": "Create new agent",
+    "buttonCreateNewInput": "Request new input",
+    "buttonCreatePlatform": "Create platform",
+    "buttonCreateTeam": "Create team",
+    "buttonCreateTicket": "Create ticket",
+    "buttonCreating": "Creating...",
+    "buttonCreatingTeam": "Creating team...",
+    "buttonDeactivateAll": "Deactivate all",
+    "buttonDeactivateUser": "Deactivate user",
+    "buttonDelegateCompany": "Delegate company",
+    "buttonDelete": "Delete",
+    "buttonDeleteAccount": "Delete account",
+    "buttonDeleteCompany": "Delete company",
+    "buttonDeleteUser": "Delete user",
+    "buttonDetails": "Details",
+    "buttonEdit": "Edit",
+    "buttonEditCompany": "Edit company",
+    "buttonEditImage": "Edit image",
+    "buttonEditProfile": "Edit profile",
+    "buttonEditing": "Editing...",
+    "buttonEditingActivity": "Edit exercise",
+    "buttonEditingName": "Edit name",
+    "buttonExamplePlaybooksBack": "Back to examples",
+    "buttonFilter": "Filter",
+    "buttonGenerateReport": "Generate report",
+    "buttonGetHint": "Get hint",
+    "buttonHistoricalReport": "Report history",
+    "buttonHoverHere": "Hover here",
+    "buttonJoinTeam": "Join team",
+    "buttonLeaveCompany": "Leave company",
+    "buttonLogin": "Login",
+    "buttonLoremIpsum": "LOREM IPSUM",
+    "buttonMakeQualifierPrivate": "Make qualifier private",
+    "buttonMakeQualifierPublic": "Make qualifier public",
+    "buttonManageUsers": "Manage users",
+    "buttonNewActivity": "New exercise",
+    "buttonNewCourse": "New course",
+    "buttonNewUnit": "New unit",
+    "buttonNo": "No",
+    "buttonOpen": "Open",
+    "buttonPlaybooksBack": "Back to playbooks",
+    "buttonPlaybooksExamples": "Playbook examples",
+    "buttonPreview": "Preview",
+    "buttonProcessing": "Processing...",
+    "buttonQualifier": "Qualifier",
+    "buttonRegister": "Register",
+    "buttonRemoveStudents": "Remove students",
+    "buttonReset": "Reset",
+    "buttonRetry": "Retry",
+    "buttonSave": "Save",
+    "buttonSaveChanges": "Save changes",
+    "buttonSaveNote": "Save note",
+    "buttonSaveQuestion": "Save question",
+    "buttonSaveReply": "Save reply",
+    "buttonSaving": "Saving...",
+    "buttonSend": "Send",
+    "buttonSendMessage": "Send message",
+    "buttonSendReply": "Send reply",
+    "buttonSending": "Sending...",
+    "buttonShowToast": "Show toast",
+    "buttonStartSession": "Log in",
+    "buttonStartingSession": "Log in...",
+    "buttonSubmit": "Submit",
+    "buttonUnblock": "Unblock",
+    "buttonUpdate": "Update",
+    "buttonUploadFile": "Upload file",
+    "buttonVerify": "Verify",
+    "buttonVerifying": "Verifying...",
+    "buttonViewDashboard": "View dashboard",
+    "buttonViewMembers": "View members",
+    "buttonYes": "Yes"
+  },
+  "Cards": {
+    "Delete": "Do you want to delete this platform?",
+    "Manage": "Manage",
+    "companyCard": {
+      "creationDate": "Creation date"
+    },
+    "courses": {
+      "actions": "Actions",
+      "blocked": "Blocked",
+      "dashboard": "Dashboard",
+      "description": "Description",
+      "limitDate": "Deadline",
+      "lockModule": "Lock module",
+      "lockModule?": "Do you want to lock the module?",
+      "moduleAccess": "Access module",
+      "ranking": "Leaderboard",
+      "startDate": "Start date",
+      "students": "Students",
+      "teams": "Teams",
+      "totalStudents": "Total students",
+      "totalTeams": "Total teams",
+      "unlockModule": "Unlock module",
+      "unlockModule?": "Do you want to unlock the module?"
+    },
+    "individualPlatform": {
+      "description": "Description",
+      "moduleAccess": "Access module"
+    },
+    "platforms": {
+      "authenticationMethod": "Authentication method",
+      "authenticationToken": "Authentication token",
+      "keyConfiguration": "Key configuration",
+      "kid": "KID"
+    }
+  },
+  "CarouselComponent": {
+    "altText": "Carousel image"
+  },
+  "ComboboxComponent": {
+    "clearSelection": "Clear selection",
+    "noItemsFound": "No items found.",
+    "openPopup": "Open popup",
+    "placeholder": "Select an option...",
+    "searchPlaceholder": "Search..."
+  },
+  "Common": {
+    "ACTIVE": "Active",
+    "CANCELLED": "Cancelled",
+    "COMPLETED_ACTIVITIES": "Completed by activities",
+    "COMPLETED_TIME": "Completed by time",
+    "DEFAULT": "Default",
+    "EXPIRED": "Expired",
+    "EXPIRED_BY_TIME": "Expired by time",
+    "LOADING": "Loading...",
+    "PENDING": "Pending",
+    "REJECTED": "Rejected",
+    "SUBMITTED": "Submitted",
+    "WITHDRAWN": "Withdrawn",
+    "difficulty": "Difficulty",
+    "gridView": "Grid view",
+    "hidden": "Hidden",
+    "itemLinkDisabledTooltip": "Access disabled until the start date",
+    "listView": "List view",
+    "page": "Page",
+    "total": "total",
+    "unexpectedError": "An unexpected error occurred. Please try again."
+  },
+  "Companies": {
+    "deleteError": "Error deleting company",
+    "deleteSuccess": "Company deleted successfully"
+  },
+  "ConfigPage": {
+    "description": "Configure the platform settings",
+    "title": "Configuration"
+  },
+  "ConfigPlatform": {
+    "active": "active",
+    "activeBtn": "Activate",
+    "authSection": "Authentication",
+    "authSectionDescription": "Control user access to the platform",
+    "description": "Manage global platform settings",
+    "inactive": "inactive",
+    "inactiveBtn": "Deactivate",
+    "loading": "Loading platform configuration...",
+    "login": "Controls user login. If disabled, students will not be able to log in.",
+    "loginDisable": "Disable",
+    "loginEnabled": "Enable",
+    "loginT": "Login",
+    "policyDesc_AUTO_ADMIT": "Users are automatically activated after registering",
+    "policyDesc_AUTO_REJECT": "New registrations are automatically rejected",
+    "policyDesc_MANUAL_REVIEW": "An administrator must approve each new registration",
+    "policySection": "User admission policy",
+    "policySectionDescription": "Defines what happens when a new user registers",
+    "policy_AUTO_ADMIT": "Auto-admit",
+    "policy_AUTO_REJECT": "Auto-reject",
+    "policy_MANUAL_REVIEW": "Manual review",
+    "register": "Controls application registration. If disabled, users will not be able to request new registrations.",
+    "registration": "User registration",
+    "registrationDisable": "Disable",
+    "registrationEnabled": "Enable",
+    "saveButton": "Save configuration",
+    "saveError": "Error saving configuration",
+    "saveSuccess": "Configuration saved successfully",
+    "title": "Platform configuration"
+  },
+  "ContextMenuComponent": {
+    "trigger": "Click here"
+  },
+  "Dashboard": {
+    "activeModules": "Active courses",
+    "approved": "Approved",
+    "averageStudentScore": "Average student score",
+    "completed": "Completed",
+    "completedActivities": "Completed exercises",
+    "courses": "Courses",
+    "exerciseStatus": "Activity status",
+    "exercises": "Activities",
+    "failed": "Failed",
+    "loading": "Loading...",
+    "module": "Module",
+    "moduleStatistics": "Module statistics",
+    "monthlySuspensions": "Monthly failures",
+    "noData": "No data available",
+    "passedVsSuspended": "Passed vs Failed",
+    "pending": "Pending",
+    "points": "Points",
+    "pointsObtained": "Points obtained",
+    "pointsPending": "Points pending",
+    "profileOf": "Profile of",
+    "quantity": "Quantity",
+    "students": "Students",
+    "studentsPerModule": "Top courses by student count",
+    "teamRanking": "Team Leaderboard",
+    "title": "Home",
+    "totalScores": "Total scores",
+    "users": "Users",
+    "usersDistribution": "User distribution"
+  },
+  "DashboardView": {
+    "migrationNotice": "Dashboard statistics are still under migration"
+  },
+  "Date": {
+    "InvalidDate": "The date is invalid",
+    "InvalidDateFormat": "The date format is invalid",
+    "OutOfDate": "Out of date",
+    "longDateTime": "{date} at {time}"
+  },
+  "DialogComponent": {
+    "close": "Close",
+    "triggerText": "Open"
+  },
+  "DisabledStatus": {
+    "description": "The service is currently unavailable. Please try again later.",
+    "title": "Service unavailable"
+  },
+  "DrawerComponent": {
+    "cancel": "Cancel",
+    "submit": "Accept",
+    "triggerText": "Open"
+  },
+  "EmptyStatus": {
+    "noQuestions": "No questions",
+    "title": "No data available at the moment"
+  },
+  "Errors": {
+    "api": {
+      "accessForbidden": "Access forbidden",
+      "noData": "No data returned from server",
+      "resourceNotFound": "Resource not found",
+      "serverError": "Server error, please try again later",
+      "unexpectedError": "An unexpected error occurred",
+      "unknownError": "Unknown error",
+      "validationError": "Validation error"
+    },
+    "avatarUpdateError": "Team updated, but avatar could not be updated",
+    "blockedDates": {
+      "actions": {
+        "goToCourses": "Go to your courses",
+        "goToUnits": "Go to your units"
+      },
+      "description": "Access disabled until {date}, please wait until then to access this section .",
+      "suggestions": {
+        "contactAdmin": "Contact your administrator to request access",
+        "goBack": "Go back to the previous page",
+        "goCourses": "Go to your courses",
+        "goUnits": "Go to your units"
+      },
+      "suggestionsTitle": "What you can do:",
+      "title": "Access Disabled"
+    },
+    "errorNoResults": "No results found",
+    "errorOcurred": "An error occurred",
+    "forbidden": {
+      "actions": {
+        "goToHome": "Go to Home"
+      },
+      "description": "You don’t have permission to view this page. This usually means your account doesn’t have the required access level for this section.",
+      "suggestions": {
+        "contactAdmin": "Contact your administrator to request access",
+        "goBack": "Go back to the previous page",
+        "goHome": "Return to your Home"
+      },
+      "suggestionsTitle": "What you can do:",
+      "title": "Access Denied"
+    },
+    "imageFailed": "Image failed to load",
+    "invalidUserId": "Error: invalid user ID",
+    "loadAvailableStudentsError": "Error loading available students",
+    "loadCountriesError": "Error loading country list",
+    "loadTeamDataError": "Error loading team data",
+    "loadTeamDetailsError": "Error loading team details",
+    "makeScoreboardPublicError": "Error making scoreboard public",
+    "moduleNotDefined": "Error: The module is not defined",
+    "noUserTeam": "You are not in a team",
+    "notFound": {
+      "actions": {
+        "goBack": "Return to {destination}",
+        "goTo": "Go to {destination}"
+      },
+      "dashboard": "dashboard",
+      "description": "The page you are looking for does not exist. It might have been removed or you may have entered an incorrect URL.",
+      "home": "home page",
+      "suggestions": {
+        "checkUrl": "Check the URL for typos",
+        "goBack": "Go back to the previous page"
+      },
+      "suggestionsTitle": "What you can do:",
+      "title": "Page Not Found"
+    },
+    "redirect": {
+      "redirecting": "Redirecting to {destination} in {count} seconds…"
+    },
+    "teamNameRequired": "Team name is required",
+    "tryAgainLater": "Please try again later",
+    "unauthorized": {
+      "actions": {
+        "signIn": "Sign In"
+      },
+      "description": "You need to be logged in to access this page. Your session may have expired or you haven’t signed in yet.",
+      "suggestions": {
+        "createAccount": "Create a new account if you don’t have one",
+        "goBack": "Go back to the previous page",
+        "signIn": "Sign in with your account"
+      },
+      "suggestionsTitle": "What you can do:",
+      "title": "Authentication Required"
+    },
+    "updateScoreboardError": "Error updating scoreboard",
+    "updateTeamError": "Error updating team"
+  },
+  "FilesFeature": {
+    "buckets": {
+      "loading": "Loading buckets...",
+      "noBuckets": "No buckets available",
+      "title": "Buckets"
+    },
+    "description": "Manage platform files",
+    "list": {
+      "actions": "Actions",
+      "confirmDelete": "Are you sure you want to delete this file?",
+      "date": "Date",
+      "delete": "Delete",
+      "deleteError": "Error deleting file",
+      "deleteSuccess": "File deleted successfully",
+      "download": "Download",
+      "loading": "Loading files...",
+      "name": "Name",
+      "noFiles": "No files",
+      "size": "Size",
+      "title": "File list"
+    },
+    "title": "Files",
+    "upload": {
+      "bucket": "Destination bucket",
+      "dropzone": "Drag files here or click to select",
+      "dropzoneActive": "Drop files here",
+      "error": "Error uploading file",
+      "noBucket": "Select a bucket",
+      "noFile": "Select a file",
+      "selectBucket": "Select a bucket",
+      "selectFile": "Select file",
+      "submit": "Upload",
+      "success": "File uploaded successfully",
+      "title": "Upload file",
+      "uploading": "Uploading..."
+    }
+  },
+  "FlagData": {
+    "actions": "Actions",
+    "addFlag": "Add flag",
+    "deleteFlag?": "Delete flag?",
+    "editFlag": "Edit flag",
+    "index": "Index",
+    "type": "Type",
+    "value": "Value"
+  },
+  "ForgotPassword": {
+    "checkEmail": "Check your email inbox for the reset link.",
+    "description": "Enter your email address and we'll send you a link to reset your password.",
+    "rememberPassword": "Remember your password?",
+    "successMessage": "Reset link sent successfully!"
+  },
+  "General": {
+    "appTitle": "Kotrip - Kotrip - Kotrip",
+    "change": "Change",
+    "clues": "Clues",
+    "flagFrom": "Flag from {country}",
+    "lastLogin": "Last login",
+    "noInfo": "There is no information",
+    "noInfoAvailable": "No information available",
+    "platform": "Platform",
+    "points": "points",
+    "preview": "Preview",
+    "remove": "Remove"
+  },
+  "Globe": {
+    "subtitle": "Explore your destinations around the world",
+    "title": "World"
+  },
+  "Home": {
+    "defaultUser": "User",
+    "empty": {
+      "createFirst": "Create your first trip to get started",
+      "noUpcomingTrips": "You have no upcoming trips"
+    },
+    "quickActions": {
+      "inviteFriends": "Invite friends",
+      "inviteFriendsDesc": "Add people to your trips",
+      "manageExpenses": "Manage expenses",
+      "manageExpensesDesc": "Review the current budget",
+      "newTrip": "New trip",
+      "newTripDesc": "Create a trip from scratch"
+    },
+    "sections": {
+      "noUpcomingTrips": "You have no upcoming trips",
+      "quickActions": "Quick actions",
+      "upcomingTrips": "Upcoming trips",
+      "viewAll": "View all"
+    },
+    "stats": {
+      "activeTrips": "Active trips",
+      "destinationsVisited": "Destinations visited",
+      "pendingInvitations": "Invitations",
+      "totalTrips": "Total trips"
+    },
+    "welcomeSubtitle": "Welcome to your travel space",
+    "welcomeTitle": "Hello, {name}!"
+  },
+  "HoverCardComponent": {
+    "triggerText": "Hover"
+  },
+  "Labels": {
+    "generalInfo": "General Information",
+    "label2FA": "2FA",
+    "labelAgent": "Agent",
+    "labelCategory": "Category",
+    "labelClues": "Manage clues",
+    "labelCountry": "Country",
+    "labelCreateTeams": "Allow students to create teams",
+    "labelCreatedAt": "Creation date",
+    "labelDescription": "Description",
+    "labelDownload": "Download",
+    "labelDownloadError": "Error generating PDF",
+    "labelDownloadSuccess": "PDF downloaded successfully",
+    "labelFirstName": "First name",
+    "labelFlagCountry": "Country flag",
+    "labelGenerating": "Generating...",
+    "labelLanguage": "Preferred language",
+    "labelLastName": "Last name",
+    "labelMail": "Email",
+    "labelName": "Name",
+    "labelNameCompany": "Company name",
+    "labelNamePlaybook": "Playbook title",
+    "labelNewPassword": "Enter your new password",
+    "labelNote": "Note",
+    "labelOSystem": "Operating system",
+    "labelOldPassword": "Enter your current password",
+    "labelPassword": "Password",
+    "labelPort": "Port",
+    "labelQualify": "Grade",
+    "labelRepeatNewPassword": "Repeat your new password",
+    "labelRepeatPassword": "Repeat password",
+    "labelRisk": "Risk",
+    "labelRole": "Role",
+    "labelRowsPerPage": "Rows per page",
+    "labelSearch": "Search",
+    "labelSearchByName": "Search by name",
+    "labelShowAnswers": "Show answers",
+    "labelShowFlags": "Show flags",
+    "labelStatus": "Status",
+    "labelTitle": "Title",
+    "labelTypeInput": "Input type",
+    "labelUser": "User",
+    "labelVerificationCode": "Verification code"
+  },
+  "Landing": {
+    "description": "Lore lore lore lore.",
+    "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+  },
+  "Leaderboard": {
+    "attemptCount": "Attempts",
+    "buttons": {
+      "cancel": "Cancel",
+      "confirm": "Confirm",
+      "hideNames": "Hide names",
+      "recalculate": "Recalculate",
+      "refresh": "Refresh",
+      "showNames": "Show names"
+    },
+    "currentUser": {
+      "title": "Your Position"
+    },
+    "empty": {
+      "subtitle": "Positions will appear when students complete attempts.",
+      "title": "No participants in the leaderboard yet."
+    },
+    "enrolledAt": "Enrolled",
+    "loadError": "Error loading leaderboard.",
+    "loading": "Loading leaderboard...",
+    "pagination": {
+      "page": "Page {page} of {totalPages}",
+      "showing": "Showing {from} to {to} of {total} results"
+    },
+    "privacyError": "Error changing privacy: {error}",
+    "rankPlace": "Position {rank}",
+    "recalculateConfirm": "Are you sure you want to recalculate the classification?",
+    "recalculateError": "Error recalculating: {error}",
+    "recalculateSuccess": "Leaderboard recalculated successfully",
+    "score": "Score",
+    "stats": {
+      "hidden": "Hidden",
+      "privacyMode": "Privacy Mode",
+      "totalParticipants": "Total Participants",
+      "updated": "Updated",
+      "visible": "Visible"
+    },
+    "status": "Status",
+    "table": {
+      "actions": "Actions",
+      "emptyState": "No participants in the leaderboard yet.",
+      "position": "Position",
+      "timeSpent": "Time spent",
+      "totalScore": "Total score",
+      "user": "User",
+      "viewDetails": "View details"
+    },
+    "titles": {
+      "assignment": "Activity Leaderboard",
+      "course": "Course Leaderboard",
+      "unit": "Unit Leaderboard"
+    },
+    "unknownError": "Unknown error",
+    "userName": "Student",
+    "vacant": "Vacant",
+    "youBadge": "You"
+  },
+  "Loading": {
+    "loading": "Loading..."
+  },
+  "Login": {
+    "link-forgot-password": "Reset password",
+    "link-register": "Sign up",
+    "subtitle": "TODO: translate this key term",
+    "text-link-forgot-password": "Forgot your password?",
+    "text-link-register": "Don't have an account?"
+  },
+  "LogoutButton": {
+    "ariaLabel": "Log out",
+    "cancelButton": "Cancel",
+    "confirmButton": "Confirm",
+    "logoutLink": "Log out",
+    "modalDescription": "Are you sure you want to log out? You will need to sign in again to access your account.",
+    "modalTitle": "Log out"
+  },
+  "LogoutForm": {
+    "logoutButton": "Log out"
+  },
+  "ManagementDashboard": {
+    "sections": {
+      "attempts": {
+        "description": "View complete attempt history for the course",
+        "title": "Attempt History"
+      },
+      "enrollments": {
+        "description": "Manage enrollments, approve requests, unenroll",
+        "title": "Enrollments"
+      },
+      "scores": {
+        "description": "View scores and progress for all learners",
+        "title": "Scores"
+      },
+      "teams": {
+        "description": "Manage teams and memberships",
+        "title": "Teams"
+      }
+    },
+    "title": "Course Management"
+  },
+  "MenuLanding": {
+    "title": "Welcome to Kotrip"
+  },
+  "Modals": {
+    "ChangePassword": {
+      "title": "Change password"
+    },
+    "CloseSession": {
+      "description": "Are you sure you want to log out?",
+      "title": "Log out"
+    },
+    "Clue": {
+      "addClue": "Add clue",
+      "adding": "Adding clue...",
+      "deleteClue": "Delete clue",
+      "deleting": "Deleting clue...",
+      "description-en": "Description EN",
+      "description-es": "Description ES",
+      "editClue": "Edit clue",
+      "editing": "Editing clue...",
+      "list": "Clues list",
+      "penalty": "Penalty",
+      "request-clue": "Request clue",
+      "request-clue-description": "Remember that requesting a clue carries a point penalty.",
+      "request-clue-description-2": "Are you sure you want to request this clue?",
+      "request-clue-success": "Clue requested successfully",
+      "requesting-clue": "Requesting clue...",
+      "title": "Add clue to exercise",
+      "title-en": "Title EN",
+      "title-es": "Title ES"
+    },
+    "DeactivateUser": {
+      "description": "Are you sure you want to delete this user?",
+      "title": "Deactivate user"
+    },
+    "DropZone": {
+      "avatar": "Change avatar",
+      "description": "Select a file",
+      "file": "Upload file",
+      "invalidFileType": "Invalid file type",
+      "selectedFile": "Selected file",
+      "upload": "Update",
+      "uploadTeamAvatar": "Upload team photo"
+    },
+    "addNote": {
+      "title": "Add new note"
+    },
+    "addUserToCompany": {
+      "title": "Add user"
+    },
+    "close": "Close",
+    "courses": {
+      "description": "Module description",
+      "limitDate": "Deadline",
+      "moduleType": "Module type",
+      "name": "Module name",
+      "notes": "Notes about the module (optional)",
+      "selectModuleType": "Select module type",
+      "startDate": "Start date",
+      "title": "Add new module"
+    },
+    "createCompany": {
+      "title": "Add new company"
+    },
+    "createNewAgent": {
+      "title": "Create new agent"
+    },
+    "createTicket": {
+      "title": "Add new ticket"
+    },
+    "delegateCompany": {
+      "title": "Do you want to delegate the company?",
+      "title-with-no-question": "Delegate company"
+    },
+    "deleteAccount": {
+      "title": "Do you want to delete your account?"
+    },
+    "deleteCompany": {
+      "title": "Do you want to delete the company?"
+    },
+    "deleteFile": {
+      "description": "Do you want to delete the file?",
+      "title": "Delete file"
+    },
+    "deleteInput": {
+      "title": "Do you want to delete the input?"
+    },
+    "deleteModule": {
+      "delete": "Delete",
+      "title": "Do you want to delete the module?"
+    },
+    "deleteUser?": "Do you want to remove this user from the form?",
+    "deleteUserFromCompany": {
+      "title": "Do you want to remove the user?"
+    },
+    "description": "Description",
+    "downloadActivityFile?": "Do you want to download the exercise file?",
+    "editCompany": {
+      "title": "Edit"
+    },
+    "editModule": {
+      "description": "Module description",
+      "edit": "Edit module",
+      "editing": "Editing...",
+      "limitDate": "Deadline",
+      "name": "Module name",
+      "notes": "Notes about the module (optional)",
+      "startDate": "Start date",
+      "title": "Edit module"
+    },
+    "editName": {
+      "title": "Edit name"
+    },
+    "editPlatform": {
+      "accessUrl": "Access URL",
+      "addNewPlatform": "Add new platform",
+      "authMethod": "Authentication method",
+      "authUrl": "Authentication URL",
+      "idClient": "Client ID",
+      "key": "Key",
+      "name": "Platform name",
+      "platformUrl": "Platform URL",
+      "title": "Edit platform"
+    },
+    "editUser": {
+      "title": "Edit user"
+    },
+    "exercises": {
+      "addNote": "Add note",
+      "attemptsNumber": "Number of attempts",
+      "category": "Category",
+      "correct": "Correct",
+      "correctQuestions": "Correct questions",
+      "create": "Create exercise",
+      "creating": "Creating...",
+      "date": "Date",
+      "difficulty": "Activity difficulty",
+      "editName": "Edit exercise",
+      "exerciseAttempts": "Activity attempts",
+      "exerciseResult": "Activity result",
+      "flag": "Flag",
+      "framework": "Framework",
+      "incorrect": "Incorrect",
+      "incorrectQuestions": "Incorrect questions",
+      "limitDate": "Deadline",
+      "modifyContent": "Modify content",
+      "name": "Activity name",
+      "note": "Note",
+      "question": "Question",
+      "questionsAnswered": "Questions answered",
+      "questionsUnanswered": "Unanswered questions",
+      "reply": "Reply",
+      "startDate": "Start date",
+      "title": "Add new exercise",
+      "type": "Activity type"
+    },
+    "finishActivity?": "Are you sure you want to finish the task?",
+    "flags": {
+      "create": "Create flag",
+      "edit": "Edit flag",
+      "test": "Flag test",
+      "testPlaceholder": "Try a value to test your regex",
+      "type": "Flag type",
+      "typePlaceholder": "Select type",
+      "typeRequired": "The flag type is required",
+      "value": "Flag value",
+      "valuePlaceholderDynamic": "Write a regex expresion",
+      "valuePlaceholderStatic": "Write a flag value",
+      "valueRequired": "The flag value is required"
+    },
+    "leaveCompany": {
+      "title": "Do you want to leave the company?"
+    },
+    "lockUser?": "Do you want to lock this user?",
+    "questions": {
+      "addReply": "Add reply",
+      "edit": "Edit question",
+      "failSubtract": "Incorrect subtracts",
+      "head": "New question",
+      "reply": "Reply",
+      "replyText": "Reply text",
+      "successAdds": "Correct adds",
+      "title": "Question title",
+      "valid": "Valid"
+    },
+    "resetPassword": {
+      "description": "La contraseña se ha cambiado con éxito. Inicia sesión cuando quieras.",
+      "title": "¡Perfecto!"
+    },
+    "resetUserActivity?": "Do you want to reset the exercise for the user",
+    "sendEmail": {
+      "description": "We have sent you an email to reset your password. Please check your inbox and follow the instructions.",
+      "title": "Email sent successfully!"
+    },
+    "sendForm?": "Are you sure you want to submit the form?",
+    "ticketDetails": {
+      "title": "Ticket details"
+    },
+    "title": "Title",
+    "unlockUser?": "Do you want to unlock this user?",
+    "userDetails": {
+      "title": "User details"
+    },
+    "users": {
+      "empty": "No unassigned users",
+      "noUsers": "No users",
+      "selectUser": "Select a user",
+      "title": "Assign user"
+    }
+  },
+  "ModuleDashboard": {
+    "chartTitles": {
+      "cluesOrdered": "Activities ordered by most clues used",
+      "scoresOrdered": "Activities ordered by highest total accumulated score"
+    },
+    "kpi": {
+      "approved": "Approved",
+      "failed": "Failed",
+      "totalActivities": "Total Activities",
+      "totalParticipants": "Total Participants",
+      "totalTeams": "Total Teams"
+    },
+    "loadError": "Could not load data",
+    "neverLoggedIn": "Never",
+    "noData": {
+      "difficulty": "No difficulty data available",
+      "exerciseStatus": "No exercise status data available",
+      "exerciseType": "No exercise type data available",
+      "frameworkCategory": "No framework-category data available",
+      "moduleNotFoundData": "No data available - module not found",
+      "noActivityDataForModule": "No exercise data available for this module",
+      "scoreByDifficulty": "No score by difficulty data available",
+      "scoreByFramework": "No score by framework data available",
+      "scoreByType": "No score by type data available",
+      "statusByFramework": "No status by framework data available",
+      "statusByType": "No status by type data available"
+    },
+    "noTeam": "No team",
+    "sections": {
+      "byActivityType": "By Activity Type",
+      "byDifficulty": "By Difficulty",
+      "byFrameworkCategory": "By Framework-Category",
+      "cluesUsage": "Clues Usage by Activity",
+      "exerciseDistribution": "Activity Distribution",
+      "exerciseStatus": "Activity Status",
+      "participantLogins": "Participant Logins",
+      "scoreAnalysis": "Score Analysis",
+      "scoreBreakdown": "Score Breakdown by Activity",
+      "scoreByDifficulty": "Score by Difficulty",
+      "scoreByFramework": "Score by Framework",
+      "scoreByType": "Score by Type",
+      "scoreProgress": "Score Progress Over Time",
+      "statusByFramework": "Status by Framework",
+      "statusByType": "Status by Type",
+      "teamLogins": "Team Members Logins"
+    },
+    "status": {
+      "approved": "Approved",
+      "failed": "Failed",
+      "unresolved": "Unresolved"
+    },
+    "tableColumns": {
+      "email": "Email",
+      "lastLogin": "Last Login",
+      "name": "Name",
+      "team": "Team"
+    },
+    "title": "Module Dashboard"
+  },
+  "ModuleUsers": {
+    "actions": "Actions",
+    "addNewModule": "Add a new module to the platform",
+    "addUser": "Add user",
+    "completed": "Completed",
+    "courses": "Courses",
+    "deleteUser": "Delete user",
+    "deleteUser?": "Do you want to remove the user from this module?",
+    "description": "Description",
+    "empty": "No users available",
+    "errorLoadingModules": "Error loading courses",
+    "limitDate": "Deadline",
+    "mail": "Email",
+    "module": "Module",
+    "moduleAccess": "Access module",
+    "name": "Name",
+    "score": "Average score",
+    "startDate": "Start date",
+    "title": "Module users"
+  },
+  "NavComponent": {
+    "login": "Login",
+    "register": "Register",
+    "resetPassword": "Reset Password"
+  },
+  "NotFound": {
+    "description": "The page you are looking for does not exist or has been moved.",
+    "title": "Page not found"
+  },
+  "PendingApproval": {
+    "backToLogin": "Back to login",
+    "description": "Your account has been registered successfully. A platform administrator must approve your access before you can log in.",
+    "title": "Registration pending approval"
+  },
+  "Placeholders": {
+    "placeholder2FA": "2FA",
+    "placeholderActivity": {
+      "category": "Select a category",
+      "difficulty": "Select a difficulty for the exercise",
+      "fileUpload": "File upload",
+      "flag": "Flag",
+      "form": "Form",
+      "framework": "Select a framework",
+      "high": "High",
+      "higher": "Higher",
+      "low": "Low",
+      "medium": "Medium",
+      "type": "Select an exercise type",
+      "virtualMachine": "Virtual machine"
+    },
+    "placeholderCategory": "Select a category",
+    "placeholderCountry": "Select a country",
+    "placeholderCreatedAt": "Select a date",
+    "placeholderFirstName": "First name",
+    "placeholderLanguage": "Select a language",
+    "placeholderLastName": "Last name",
+    "placeholderMail": "Email",
+    "placeholderName": "Name",
+    "placeholderNameCompany": "Company name",
+    "placeholderNewPassword": "Enter your new password",
+    "placeholderNote": "Enter a note",
+    "placeholderOldPassword": "Enter your current password",
+    "placeholderPassword": "Password",
+    "placeholderRepeatNewPassword": "Repeat your new password",
+    "placeholderRepeatPassword": "Repeat password",
+    "placeholderRole": "Select role",
+    "placeholderSearch": "Search",
+    "placeholderStatus": "Select a status",
+    "placeholderTitle": "Enter a title",
+    "placeholderTypeInput": "Select input type",
+    "placeholderUserName": "User name",
+    "placeholderVerificationCode": "Verification code",
+    "selectModule": "Select module"
+  },
+  "ProfileForm": {
+    "allFieldsRequired": "All fields are required",
+    "avatarModalTitle": "Profile picture",
+    "avatarUpdated": "Profile picture updated successfully",
+    "cancelButton": "Cancel",
+    "changeAvatarButton": "Change picture",
+    "changeNameButton": "Change name",
+    "changeNameTitle": "Change name",
+    "changePasswordButton": "Change password",
+    "changePasswordTitle": "Change password",
+    "confirmDeleteAvatarDescription": "Are you sure you want to delete your profile picture? This action cannot be undone.",
+    "confirmDeleteAvatarTitle": "Delete profile picture",
+    "confirmPasswordPlaceholder": "Confirm new password",
+    "currentPasswordPlaceholder": "Current password",
+    "deleteAvatarButton": "Delete picture",
+    "deleteAvatarFailed": "Failed to delete profile picture",
+    "deleteAvatarSuccess": "Profile picture deleted successfully",
+    "editNameButton": "Edit name",
+    "emailLabel": "Email",
+    "firstNameMinLength": "First name must be at least 3 characters",
+    "firstNamePlaceholder": "First name",
+    "firstNameRequired": "First name is required",
+    "fullNameLabel": "Full name",
+    "lastNameMinLength": "Last name must be at least 3 characters",
+    "lastNamePlaceholder": "Last name",
+    "lastNameRequired": "Last name is required",
+    "nameUpdated": "Name updated successfully",
+    "newPasswordPlaceholder": "New password",
+    "noAvatarDescription": "Upload an image to set your profile picture.",
+    "noAvatarTitle": "No profile picture",
+    "passwordMinLength": "Password must be at least 8 characters",
+    "passwordUpdated": "Password updated successfully",
+    "passwordsDoNotMatch": "Passwords do not match",
+    "profileInfoTitle": "Profile information",
+    "roleInstructor": "Instructor",
+    "roleLabel": "Role",
+    "roleLearner": "Learner",
+    "roleOrgAdmin": "Organization Administrator",
+    "roleSuperAdmin": "Super Administrator",
+    "roleTA": "Teaching Assistant",
+    "roleUnknown": "Unknown",
+    "saveButton": "Save",
+    "saveChanges": "Save changes",
+    "updatingButton": "Updating...",
+    "uploadAvatarButton": "Upload profile picture",
+    "uploadFailed": "Failed to upload profile picture",
+    "uploadingAvatar": "Uploading profile picture..."
+  },
+  "ProfileView": {
+    "accountInfoTitle": "Account information",
+    "changeAvatarAriaLabel": "Change profile picture",
+    "deleteAvatarAriaLabel": "Delete profile picture",
+    "deleteAvatarButton": "Delete avatar",
+    "editAvatarButton": "Edit avatar",
+    "emailLabel": "Email",
+    "fullNameLabel": "Full name",
+    "languageLabel": "Language",
+    "lastLoginLabel": "Last login",
+    "profilePictureTitle": "Profile picture",
+    "settingsTitle": "Settings"
+  },
+  "Qualifier": {
+    "individual": "Individual",
+    "loading": "Loading qualifiers...",
+    "team": "Team",
+    "typeOfQualifier": "Type of qualifier"
+  },
+  "QuestionData": {
+    "actions": "Actions",
+    "addQuestion": "Add question",
+    "deleteQuestion": "Delete question",
+    "deleteQuestion?": "Delete question?",
+    "editQuestion": "Edit question",
+    "subtract": "Subtract",
+    "sum": "Add",
+    "title": "Question title",
+    "totalReply": "Total replies"
+  },
+  "RankingPage": {
+    "completedActivities": "Completed Activities",
+    "passedActivitys": "Passed Activities",
+    "teamName": "Team",
+    "title": "Team Leaderboard",
+    "titleUser": "User Leaderboard",
+    "totalScore": "Total Score"
+  },
+  "Register": {
+    "description": "Create an account to get started.",
+    "link-login": "Login",
+    "text-link-login": "Already have an account?"
+  },
+  "ResetPassword": {
+    "description": "Enter your new password below.",
+    "invalidToken": "The password reset link is invalid or has expired.",
+    "successMessage": "Password reset successfully!"
+  },
+  "ResponseMessages": {
+    "ADD_LOGS_TO_INCIDENCE": "Logs added successfully",
+    "ADD_USER": "User added successfully",
+    "ADD_USER_ERROR": "Error adding user",
+    "CONFLICT_CREATE_INCIDENCE": "An incident with that name already exists",
+    "CONFLICT_LOGS_FROM_INCIDENCE": "Error deleting logs from incident",
+    "CORRECT_ANSWER": "Correct answer. Well done!",
+    "CREATE_COMPANY": "Company created successfully",
+    "CREATE_COMPANY_ERROR": "Error creating company",
+    "CREATE_INCIDENCE": "Incident created successfully",
+    "CREATE_PLAYBOOK": "Playbook created successfully",
+    "CREATE_PLAYBOOK_MARKDOWN": "Playbook markdown created successfully",
+    "CREATE_TICKET": "Ticket created successfully",
+    "DEACTIVATE_USER": "User deactivated successfully",
+    "DEACTIVATE_USER_ERROR": "Error deactivating user",
+    "DELETE_COMPANY": "Company deleted successfully",
+    "DELETE_COMPANY_ERROR": "Error deleting company",
+    "DELETE_INCIDENCE": "Incident deleted successfully",
+    "DELETE_INCIDENCE_ERROR": "Error deleting incident",
+    "DELETE_LOGS_FROM_INCIDENCE": "Logs deleted successfully",
+    "DELETE_PLAYBOOK": "Playbook deleted successfully",
+    "DELETE_PLAYBOOK_ERROR": "Error deleting playbook",
+    "DELETE_TICKET": "Ticket deleted successfully",
+    "DELETE_TICKET_ERROR": "Error deleting ticket",
+    "DELETE_USER": "User deleted successfully",
+    "DELETE_USER_CONFLICT": "You cannot delete this user, they have privileges",
+    "DELETE_USER_ERROR": "Error deleting user",
+    "EDIT_COMPANY": "Company edited successfully",
+    "EDIT_PLAYBOOK": "Playbook edited successfully",
+    "EDIT_PLAYBOOK_CONFLICT": "A playbook with that name already exists",
+    "ERROR": "Error",
+    "ERROR_ADD_LOGS_TO_INCIDENCE": "Error adding logs to incident",
+    "ERROR_ASSIGN_USER_MODULE": "Error assigning user to module",
+    "ERROR_BLOCK_USER": "Error blocking user",
+    "ERROR_COMPANY": "Company error",
+    "ERROR_CREATE_INCIDENCE": "Error creating incident",
+    "ERROR_CREATE_MODULE": "Error creating module",
+    "ERROR_CREATE_PLATFORM": "Error creating platform",
+    "ERROR_DELETE_EXERCISE": "Error deleting exercise",
+    "ERROR_DELETE_USER": "Error deleting user",
+    "ERROR_DELETE_VM": "Could not delete the virtual machine",
+    "ERROR_DOWNLOAD_FILE": "Error downloading file",
+    "ERROR_EDITING_EXERCISE": "Error editing exercise",
+    "ERROR_EDIT_DATE": "Error editing date",
+    "ERROR_IMAGE_FORMAT": "Image format not allowed. Use PNG, JPG, WEBP or TIFF.",
+    "ERROR_LOADING_STUDENT_RESULTS": "Error loading student results",
+    "ERROR_LOCK_EXERCISE": "Error locking exercise",
+    "ERROR_OBTAIN_CONNECTION": "Could not obtain connection",
+    "ERROR_SAVE_CHANGES": "Error saving changes",
+    "ERROR_SEND_FORM": "Error submitting form",
+    "ERROR_SEND_NOTE": "Error sending note",
+    "ERROR_SEND_REPLY": "Error sending replies",
+    "ERROR_SEND_YOUR_REPLY": "An error occurred while sending your replies",
+    "ERROR_START_VM": "Could not start the virtual machine",
+    "ERROR_STOP_DELETE_VM": "Error stopping or deleting the virtual machine",
+    "ERROR_STOP_VM": "Could not stop the virtual machine, trying to delete it anyway...",
+    "ERROR_TICKET": "Ticket error",
+    "ERROR_UNASSIGN_USER": "Error unassigning user:",
+    "ERROR_UNBLOCK_USER": "Error unblocking user",
+    "ERROR_UPDATE_MODULE_STATUS": "Error updating module status:",
+    "ERROR_UPLOAD_IMAGE_BLOB": "Error uploading image as blob",
+    "FILE_DELETED": "File deleted successfully",
+    "FILE_DELETED_ERROR": "Error deleting file",
+    "FILE_DOWNLOAD": "File downloaded successfully",
+    "FILE_DOWNLOAD_ERROR": "Error downloading file",
+    "FILE_MAX_SIZE_EXCEED": "The file exceeds the maximum allowed size of 50MB.",
+    "FILE_UPLOAD": "File uploaded successfully",
+    "FILE_UPLOAD_ERROR": "Error uploading file",
+    "FORBIDDEN": "You do not have permission to perform this action",
+    "IMAGE_UPLOAD": "Image uploaded successfully",
+    "IMAGE_UPLOAD_ERROR": "Error uploading image",
+    "INVALID_CREDENTIALS": "Invalid credentials",
+    "LEAVE_COMPANY": "You have left the company successfully",
+    "LEAVE_COMPANY_ERROR": "Error leaving the company",
+    "LIMIT_DATE_FUTURE": "Deadline must be a future date",
+    "MAX_FILE_SIZE_EXCEEDED": "The file exceeds the maximum allowed size of",
+    "MAX_FILE_ZIP_200": "ZIP file cannot exceed 200 MB",
+    "MODULE_NEME_REQUIRED": "Module name is required",
+    "NOTE_OBLIGATORY": "Note is required",
+    "ONLY_ZIP_FILES": "Only ZIP files are allowed",
+    "PASSWORD_USER": "Password updated successfully",
+    "PASSWORD_USER_ERROR": "Error updating password",
+    "REGISTER_DISABLED": "Registration is currently disabled",
+    "REPORTED_GENERATED": "Report generated successfully",
+    "REPORTED_NOT_GENERATED": "Could not generate the report",
+    "SELECT_USER_BEFORE_ASSIGN": "Select a user before assigning",
+    "SELECT_VALID_REPLY": "You must select at least one valid reply",
+    "SERVER_ERROR": "An error occurred",
+    "SUCCESS_DELETE_VM": "Virtual machine deleted successfully",
+    "SUCCESS_OBTAIN_CONNECTION": "Connection obtained successfully",
+    "SUCCESS_START_VM": "Virtual machine started successfully. Connecting...",
+    "SUCCESS_STOP_VM": "Virtual machine stopped successfully. Proceeding to delete...",
+    "TABLE_ACTIONS_ERROR": "Error getting actions",
+    "TEAM_CREATED_ERROR": "Error creating team",
+    "TEAM_CREATED_SUCCESS": "Team created successfully",
+    "TEAM_DELETED_ERROR": "Error deleting team",
+    "TEAM_DELETED_SUCCESS": "Team deleted successfully",
+    "TEAM_EDITED_ERROR": "Error editing team",
+    "TEAM_EDITED_SUCCESS": "Team edited successfully",
+    "TEMPLATE_CLONED": "Template cloned successfully. Starting virtual machine...",
+    "TEMPLATE_NOT_CLONED": "Could not clone the template",
+    "TEMPLATE_NOT_FOUND": "The selected template was not found. Please exit and re-enter the exercise",
+    "UNAUTHORIZED": "You do not have permission to perform this action",
+    "UNEXPECTED_ERROR_OCCURRED": "An unexpected error occurred",
+    "UPDATE_INCIDENCE": "Incident updated successfully",
+    "UPDATE_INCIDENCE_ERROR": "Error updating incident",
+    "UPDATE_TICKET": "Ticket updated successfully",
+    "UPDATE_TICKET_ERROR": "Error updating ticket",
+    "UPDATE_USER": "User updated successfully",
+    "UPDATE_USER_ERROR": "Error updating user",
+    "USER_ADDED_TO_TEAM": "User added to team successfully",
+    "USER_ADDED_TO_TEAM_ERROR": "Error adding user to team",
+    "USER_REMOVED_FROM_TEAM": "User removed from team successfully",
+    "USER_REMOVED_FROM_TEAM_ERROR": "Error removing user from team",
+    "WRONG_ANSWER": "Incorrect answer. Try again"
+  },
+  "RichTextEditor": {
+    "alignCenter": "Center",
+    "alignLeft": "Align left",
+    "alignRight": "Align right",
+    "blockquote": "Quote",
+    "bold": "Bold",
+    "bulletList": "Bullet list",
+    "code": "Code",
+    "heading1": "Heading 1",
+    "heading2": "Heading 2",
+    "heading3": "Heading 3",
+    "highlight": "Highlight",
+    "insertImage": "Insert image",
+    "insertLink": "Insert link",
+    "insertTable": "Insert table",
+    "italic": "Italic",
+    "loading": "Loading editor...",
+    "orderedList": "Ordered list",
+    "placeholder": "Write here...",
+    "promptImageUrl": "Image URL:",
+    "promptLinkUrl": "Link URL:",
+    "redo": "Redo",
+    "strikethrough": "Strikethrough",
+    "underline": "Underline",
+    "undo": "Undo"
+  },
+  "Routes": {
+    "/admin/audit": "Audit logs",
+    "/admin/platform-config": "Settings",
+    "/admin/users": "User management",
+    "/categories": "Categorías",
+    "/companies": "Companies",
+    "/components": "Components",
+    "/courses": "Courses",
+    "/dashboard": "Dashboard",
+    "/exercises": "Activities",
+    "/files": "Files",
+    "/globe": "World",
+    "/home": "Home",
+    "/invitations": "Invitations",
+    "/login": "Login",
+    "/platform-admin/tenants": "Tenant management",
+    "/platform-admin/tenants/new": "New tenant",
+    "/playground": "Playground",
+    "/profile": "My profile",
+    "/scores": "Scores",
+    "/student-dashboard": "Student Dashboard",
+    "/students": "Students",
+    "/support": "Support",
+    "/teams": "Teams",
+    "/teams-ranking": "Teams Leaderboard",
+    "/tickets": "Tickets",
+    "/trips": "Trips",
+    "/units": "Units",
+    "/users-ranking": "Users Leaderboard",
+    "/web-platform": "Platforms",
+    "Analytics": "Analytics",
+    "Attempt Audit": "Attempt Audit",
+    "AttemptHistory": "Attempt History",
+    "Audit Logs": "Audit Logs",
+    "Course Audit": "Course Audit",
+    "Course Scores": "Course Scores",
+    "Create New Course": "Create New Course",
+    "Create New Unit": "Create New Unit",
+    "Edit Course": "Edit Course Metadata",
+    "Edit Unit": "Edit Unit Metadata",
+    "Leaderboard": "Leaderboard",
+    "New Unit Description": "Complete the information to create a new unit in this course",
+    "NewCourseDescription": "Complete the information to create a new course on the platform",
+    "Registration Management": "Registration Management",
+    "Team Management": "Team Management",
+    "User Activity": "User Activity",
+    "logout": "Log out",
+    "profile": "My profile"
+  },
+  "ScopeHeader": {
+    "activityPrefix": "Activity",
+    "backToCourse": "Back to course",
+    "backToCourses": "Back to courses",
+    "backToUnit": "Back to unit",
+    "coursePrefix": "Course",
+    "unitPrefix": "Unit"
+  },
+  "Scoreboard": {
+    "general": "General",
+    "top": "Top"
+  },
+  "Scores": {
+    "averageScore": "Average score",
+    "certificateEN": "English",
+    "certificateES": "Spanish",
+    "certificateGL": "Galician",
+    "completions": "Completions",
+    "cumulativeScore": "Cumulative Score",
+    "downloadCertificate": "Download certificate",
+    "failed": "Failed",
+    "loading": "Loading...",
+    "noCourses": "You are not enrolled in any course",
+    "noScoreDataAvailable": "No score data available",
+    "noteAverageScoreMultiplied": "Note: Average score is shown x10 for better visualization",
+    "pageSubtitle": "Check your scores across enrolled courses",
+    "pageTitle": "Scores",
+    "paginationNext": "Next",
+    "paginationOf": "of",
+    "paginationPage": "Page",
+    "paginationPrevious": "Previous",
+    "paginationShowing": "Showing {from}-{to} of {total} exercises",
+    "passed": "Passed",
+    "selectCertificateLanguage": "Select the language for your certificate:",
+    "totalScore": "Total score",
+    "yAxisLabel": "Values"
+  },
+  "ScoresManagement": {
+    "actions": "Actions",
+    "emptyState": "No enrollments in this course",
+    "kpi": {
+      "active": "Active",
+      "avgScore": "Average Score",
+      "completed": "Completed",
+      "passed": "Passed",
+      "total": "Total Enrolled"
+    },
+    "noTeam": "No team",
+    "statusActive": "Active",
+    "statusCancelled": "Cancelled",
+    "statusCompletedActivities": "Completed",
+    "statusCompletedTime": "Completed",
+    "statusExpired": "Expired",
+    "statusSubmitted": "Submitted",
+    "team": "Team",
+    "viewDetail": "View detail"
+  },
+  "SelectComponent": {
+    "Options": {
+      "Administrador": "Admin",
+      "Alerts": "Alerts",
+      "Assets_inventory": "Asset inventory",
+      "Closed": "Closed",
+      "Company": "Company",
+      "Dashboard": "Dashboard",
+      "Estándar": "Standard",
+      "Incidence": "Incident",
+      "Log": "Logs",
+      "Open": "Open",
+      "Other": "Other",
+      "Playbook": "Playbooks",
+      "Propietario": "Owner",
+      "Review": "In progress",
+      "User_functions": "User functions",
+      "admin": "Admin",
+      "en": "English",
+      "es": "Spanish",
+      "free": "Trial user",
+      "super_admin": "Super admin",
+      "user": "Standard user"
+    }
+  },
+  "SelectedRowsPopupComponent": {
+    "more": "items selected",
+    "one": "item selected"
+  },
+  "SendResetMail": {
+    "description": "Enter your email and we will send you a link to reset your password",
+    "title": "Reset password"
+  },
+  "SiteConfig": {
+    "disableUserRegistration?": "Disable users to auto-register?",
+    "enableRegistration": "Enable auto-registration",
+    "enableUserRegistration?": "Enable users to auto-register?"
+  },
+  "StudentDashboard": {
+    "defaultStudentName": "Student",
+    "kpi": {
+      "activeModules": "Active courses",
+      "completedActivities": "Completed exercises",
+      "failedActivitys": "Failed exercises",
+      "globalScore": "Global score",
+      "hintsUsed": "Hints used",
+      "passedActivitys": "Passed exercises",
+      "pendingActivitys": "Pending exercises",
+      "totalScores": "Total scores"
+    },
+    "loadError": "Error loading student statistics",
+    "loading": "Loading...",
+    "noContent": "No content",
+    "noData": "No data",
+    "noDataAvailable": "Could not load data",
+    "sections": {
+      "exerciseStats": "Activity statistics",
+      "scoreByActivityType": "Score by exercise type",
+      "scoreByCategory": "Score by category",
+      "scoreByDifficulty": "Score by difficulty",
+      "scoreByTime": "Score by time",
+      "scoreStats": "Score statistics"
+    },
+    "title": "Student dashboard"
+  },
+  "StudentProfile": {
+    "couldNotLoadStudentData": "Could not load student data.",
+    "errorLoadingData": "Error loading data",
+    "studentNotFound": "Student not found",
+    "studentNotFoundMessage": "The selected student was not found.",
+    "title": "Student Profile"
+  },
+  "StudentsPage": {
+    "actions": "Actions",
+    "email": "Email",
+    "name": "Name",
+    "title": "Students list"
+  },
+  "Success": {
+    "scoreboardUpdated": "Scoreboard updated successfully",
+    "teamUpdated": "Team updated successfully"
+  },
+  "SuperAdmin": {
+    "allUsers": "All users",
+    "changePassword": "Change password",
+    "changePasswordError": "Error changing password. Please try again.",
+    "loading": "Loading...",
+    "lockUser": "Lock user",
+    "unlockUser": "Unlock user"
+  },
+  "Support": {
+    "buttonSend": "Send message",
+    "checkFields": "Please check the form fields",
+    "description": "Complete the form to send your inquiry to the support team",
+    "dni": "ID Number",
+    "email": "Email",
+    "error": "Error sending the message",
+    "errorTitle": "Error",
+    "invalidPhone": "Invalid phone number format",
+    "lastName": "Last Name",
+    "lastNamePlaceholder": "Doe",
+    "mailPlaceholder": "example@example.com",
+    "message": "Message",
+    "messagePlaceholder": "Write your inquiry here",
+    "name": "Name",
+    "namePlaceholder": "John",
+    "phone": "Phone",
+    "phonePlaceholder": "+34 600 000 000",
+    "resetForm": "Clear fields",
+    "sending": "Sending...",
+    "subject": "Subject",
+    "subjectPlaceholder": "Briefly describe your inquiry",
+    "success": "Message sent successfully",
+    "successDescription": "Our support team will respond to your inquiry as soon as possible.",
+    "successTitle": "Message sent!",
+    "title": "Technical Support",
+    "unexpectedError": "An unexpected error occurred"
+  },
+  "TableComponent": {
+    "Pagination": {
+      "byPage": "per page",
+      "firstPage": "First page",
+      "lastPage": "Last page",
+      "nextPage": "Next page",
+      "of": "of",
+      "page": "Page",
+      "previousPage": "Previous page",
+      "results": "results",
+      "showing": "Showing",
+      "to": "to"
+    },
+    "TableContent": {
+      "actions": {
+        "addEndDate": "Add end date",
+        "addNote": "Add note",
+        "banUser": "Ban user",
+        "block": "Block exercise",
+        "close": "Close exercise",
+        "clue": "Clues",
+        "delete": "Delete exercise",
+        "deleteUser": "Delete user",
+        "downloadFile": "Download file",
+        "edit": "View/Edit exercise",
+        "editDate": "Edit date",
+        "evaluate": "Evaluate exercise",
+        "lockUnlockUser": "Lock/unlock user",
+        "open": "Open exercise",
+        "openClose": "Open/close exercise",
+        "restartActivity": "Restart exercise",
+        "unblock": "Unblock exercise",
+        "unlockUser": "Unlock user",
+        "viewAllRecords": "View all records",
+        "viewRecords": "View records",
+        "viewReplyRecords": "View reply records",
+        "viewUser": "View user",
+        "watch": "View exercise",
+        "watchTeams": "View teams",
+        "watchUsers": "View users"
+      },
+      "difficulty": {
+        "high": "High",
+        "higher": "Higher",
+        "low": "Low",
+        "medium": "Medium",
+        "notEstimated": "Not estimated"
+      },
+      "status": {
+        "locked": "Locked",
+        "noLocked": "Unlocked",
+        "private": "Private",
+        "public": "Public"
+      },
+      "type": {
+        "fileUpload": "File upload",
+        "flag": "Flag",
+        "form": "Form",
+        "unknown": "Unknown",
+        "virtualMachine": "Virtual machine",
+        "vm": "Virtual machine"
+      }
+    },
+    "TableHeads": {
+      "2FA": "2FA",
+      "actions": "Actions",
+      "added": "Added on",
+      "category": "Category",
+      "completedActivities": "Completed exercises",
+      "country": "Country",
+      "createdAt": "Creation date",
+      "exerciseDifficulty": "Activity difficulty",
+      "exerciseType": "Activity type",
+      "firstAccess": "First access",
+      "framework": "Framework",
+      "id": "id",
+      "limitDate": "Deadline",
+      "mail": "Email",
+      "members": "Members",
+      "name": "Name",
+      "noCategory": "No category",
+      "noDate": "No date",
+      "noFramework": "No framework",
+      "noNote": "No note",
+      "noTime": "No time spent",
+      "note": "Note",
+      "position": "Position",
+      "rol": "Role",
+      "showUser": "Show user",
+      "startActivity": "Do you want to start the exercise?",
+      "startDate": "Start date",
+      "status": "Status",
+      "studentsSubmitted": "Submissions",
+      "submitting": "Submission",
+      "teamName": "Team name",
+      "timeSpent": "Time spent",
+      "title": "Title",
+      "token": "Verification token",
+      "totalScore": "Total score",
+      "totalStudents": "Total students",
+      "user": "User"
+    },
+    "empty": "Empty table",
+    "firstPage": "First page",
+    "lastPage": "Last page",
+    "loading": "Loading...",
+    "nextPage": "Next page",
+    "noDataAvailable": "No data available",
+    "of": "of",
+    "page": "Page",
+    "perPage": "per page",
+    "previousPage": "Previous page",
+    "results": "results",
+    "search": "Search",
+    "showing": "Showing",
+    "to": "to"
+  },
+  "TeacherDashboard": {
+    "kpi": {
+      "failedActivitys": "Failed exercises",
+      "globalScore": "Global score",
+      "hintsUsed": "Hints used",
+      "passedActivitys": "Passed exercises"
+    },
+    "loadError": "Error loading statistics",
+    "loading": "Loading KPIs...",
+    "moduleStatistics": "Module Statistics",
+    "options": {
+      "individual": "Individual",
+      "teams": "Teams"
+    },
+    "scoreStatistics": "Score Statistics",
+    "sections": {
+      "exerciseStats": "Activity statistics",
+      "scoreByActivityType": "Score by exercise type",
+      "scoreByCategory": "Score by category",
+      "scoreByDifficulty": "Score by difficulty",
+      "scoreByTime": "Score by time",
+      "scoreStats": "Score statistics",
+      "virtualizationStatus": "Virtualization environment status"
+    },
+    "title": "Teacher Dashboard",
+    "topActivitysResolved": "Top 10 most solved exercises - Resolution percentage",
+    "topActivitysWithClues": "Top 10 exercises with most clues discovered"
+  },
+  "TeacherDashboardCharts": {
+    "averageScore": "Average score",
+    "cluesUsed": "Clues used",
+    "difficulty": "Difficulty",
+    "exercises": "Activities",
+    "failedActivitys": "Failed exercises",
+    "maxScore": "Maximum score",
+    "noActivitysChartData": "Activity chart data not available",
+    "participants": "Participants",
+    "passedActivitys": "Passed exercises",
+    "percentage": "Percentage (%)",
+    "quantity": "Quantity",
+    "resolutionPercentage": "Resolution percentage",
+    "resolvedActivitys": "Resolved exercises",
+    "score": "Score",
+    "teams": "Teams",
+    "titleTop10": "Top 10 Most Solved Activities",
+    "top10ActivitysWithClues": "Top 10 Activities with most clues used",
+    "totalCluesUsed": "Total clues used",
+    "totalParticipants": "Total participants",
+    "unsolvedActivitys": "Unsolved exercises"
+  },
+  "TeamForm": {
+    "cancelButton": "Cancel",
+    "courseAndCodeRequired": "Course and code are required",
+    "courseAndNameRequired": "Course and name are required",
+    "createButton": "Create team",
+    "descriptionLabel": "Description",
+    "descriptionPlaceholder": "Briefly describe your team...",
+    "maxMembersHint": "Leave empty for unlimited members",
+    "maxMembersLabel": "Maximum number of members",
+    "maxMembersPlaceholder": "No limit",
+    "requiredMark": "*",
+    "saveButton": "Save changes",
+    "savingButton": "Saving...",
+    "teamNameLabel": "Team name",
+    "teamNamePlaceholder": "E.g.: The Programmers"
+  },
+  "TeamRequiredGuard": {
+    "availableTeams": "Available teams ({count})",
+    "createTeam": "Create team",
+    "instructorManagedDescription": "To participate in this course, you must be assigned to a team by an instructor. Contact your instructor for more information.",
+    "joinWithCode": "Join with code",
+    "learnerManagedDescription": "To participate in this course, you must create a new team or join an existing one using an invitation code.",
+    "memberCount": "{count} member{plural}",
+    "moreTeams": "and {count} more...",
+    "teamLocked": "Locked",
+    "teamRequiredTitle": "This course requires a team",
+    "verifyingTeam": "Verifying team..."
+  },
+  "Teams": {
+    "actions": "Actions",
+    "addUser": "Add user to team",
+    "allMyTeams": "All my teams",
+    "allTeams": "All teams",
+    "availableStudents": "Available Students ({count})",
+    "avatarUploadFailed": "Team created, but avatar upload failed",
+    "blockTeamTitle": "Block team",
+    "canCreateOrJoinTeam": "You can create your own team or join an existing one.",
+    "cannotLeaveTeam": "You cannot leave it.",
+    "cannotManageOrDeleteTeam": "You cannot manage or delete it.",
+    "cluesChartDescription": "Activities and hints used by the student",
+    "cluesChartSubtitle": "Activities and clues used by the team",
+    "cluesChartTitle": "Clue Usage per Activity",
+    "createTeam": "Create new team",
+    "createdAt": "Creation date",
+    "createdAtLabel": "Creation date",
+    "createdByLabel": "Created by",
+    "currentMembers": "Current members: {count}",
+    "dashboardTitle": "Dashboard: {teamName}",
+    "delete": "Delete",
+    "deleteConfirm": "Are you sure you want to delete this team?",
+    "deleteTeam": "Delete team",
+    "deleteTeamConfirm": "Delete team \"{name}\"?",
+    "deleteUser": "Delete user from team",
+    "deleteUserConfirm": "Are you sure you want to remove this user from the team?",
+    "deleting": "Deleting...",
+    "distributionActivitysStatus": "Activity Status",
+    "distributionActivitysTitle": "Activity Distribution",
+    "distributionApproved": "Approved",
+    "distributionByCategory": "By Category",
+    "distributionByDifficulty": "By Difficulty",
+    "distributionByType": "By Activity Type",
+    "distributionFailed": "Failed",
+    "distributionNoCategoryData": "No category data available",
+    "distributionNoDifficultyData": "No difficulty data available",
+    "distributionNoStatusByCategory": "No status by category data available",
+    "distributionNoStatusByType": "No status by type data available",
+    "distributionNoTypeData": "No exercise type data available",
+    "distributionStatusByCategory": "Status by Category",
+    "distributionStatusByType": "Status by Activity Type",
+    "distributionUnresolved": "Unresolved",
+    "edit": "Edit",
+    "editTeam": "Edit team",
+    "email": "User email",
+    "exerciseLabel": "Activity",
+    "fallbackCategory": "No category",
+    "fallbackDiff": "No difficulty",
+    "fallbackType": "No type",
+    "imageFormatInfo": "Formats: JPG, PNG, WEBP (max. 5MB)",
+    "kpiApproved": "Approved",
+    "kpiAverageScore": "Average Score",
+    "kpiFailed": "Failed",
+    "kpiGlobalScore": "Global Score",
+    "kpiHintsUsed": "Hints Used",
+    "kpiPending": "Pending",
+    "labelcountry": "Country",
+    "leader": "Leader",
+    "leave": "Leave",
+    "loading": "Loading...",
+    "loadingDetails": "Loading team details...",
+    "loadingMembers": "Loading equipment details...",
+    "manageTeamTitle": "Manage team",
+    "manageUsers": "Manage Users",
+    "member": "Member",
+    "membersColonLabel": "Members:",
+    "membersCount": "Member count",
+    "membersLabel": "members",
+    "membersManagement": "Members management",
+    "moreMembers": "more...",
+    "name": "Team name",
+    "noAvailableStudents": "No students available to add.",
+    "noMembersFound": "No members found with that criteria.",
+    "noMembersInTeam": "This team has no members.",
+    "noStudentsFound": "No students found with that criteria.",
+    "noTeamsInModule": "You don't have teams in this module",
+    "noTeamsYetDescription": "This module doesn't have any teams yet. You can create the first team or allow students to create their own teams.",
+    "owner": "Owner",
+    "placeholderCountry": "Select a country (optional)",
+    "promptName": "Input team name",
+    "scoreAnalysisByCategory": "Score by Category",
+    "scoreAnalysisByDifficulty": "Score by Difficulty",
+    "scoreAnalysisByType": "Score by Activity Type",
+    "scoreAnalysisNoByCategory": "No score by category data",
+    "scoreAnalysisNoByDifficulty": "No score by difficulty data",
+    "scoreAnalysisNoByType": "No score by type data",
+    "scoreAnalysisProgress": "Score Progress Over Time",
+    "scoreAnalysisTitle": "Score Analysis",
+    "scoresChartDescription": "Scores obtained by the student in each exercise",
+    "scoresChartSubtitle": "Scores obtained by the team in each exercise",
+    "scoresChartTitle": "Score Breakdown per Activity",
+    "searchAddPlaceholder": "Search students to add...",
+    "searchRemovePlaceholder": "Search team members...",
+    "selectUser": "Select a user",
+    "studentAddToTeamError": "Failed to add student to the team",
+    "studentAddedToTeam": "Student successfully added to the team",
+    "studentRemoveFromTeamError": "Failed to remove student from the team",
+    "studentRemovedFromTeam": "Student successfully removed from the team",
+    "teacherAssignOrAllow": "Teachers must assign you to a team or allow students to create teams.",
+    "team": "Team",
+    "teamAssignedByTeacher": "This team was assigned by the teacher.",
+    "teamCreatedError": "User already in a team",
+    "teamCreatedSuccess": "Team created successfully",
+    "teamHasMembers": "This team has {count} members",
+    "teamMembers": "Team Members ({count})",
+    "teamName": "Team: {name}",
+    "teamNameRequired": "Team name is required",
+    "teamPhotoOptional": "Team photo (optional)",
+    "teamUpdatedError": "Error updating the team",
+    "teamUpdatedSuccess": "Team updated successfully",
+    "teams": "Teams",
+    "unblockTeamTitle": "Unblock team",
+    "uploadTeamAvatar": "Upload team photo",
+    "username": "Username"
+  },
+  "TeamsFeature": {
+    "createTeam": {
+      "creating": "Creating...",
+      "error": "Error creating team",
+      "name": "Team name",
+      "namePlaceholder": "Enter team name",
+      "nameRequired": "Name is required",
+      "photo": "Team photo (optional)",
+      "submit": "Create team",
+      "success": "Team created successfully",
+      "title": "Create team"
+    },
+    "description": "Manage course teams",
+    "joinTeam": {
+      "code": "Team code",
+      "codePlaceholder": "Enter the code",
+      "codeRequired": "Code is required",
+      "error": "Error joining team",
+      "invalidCode": "Invalid code",
+      "joining": "Joining...",
+      "submit": "Join",
+      "success": "You have joined the team successfully",
+      "title": "Join a team"
+    },
+    "members": {
+      "confirmRemove": "Are you sure you want to remove this member?",
+      "leader": "Leader",
+      "makeLeader": "Make leader",
+      "member": "Member",
+      "remove": "Remove",
+      "removeError": "Error removing member",
+      "removeSuccess": "Member removed successfully",
+      "role": "Role",
+      "title": "Team members"
+    },
+    "noTeams": "No teams available",
+    "noTeamsDescription": "Create a team or join an existing one using an invite code",
+    "teamCard": {
+      "codeCopied": "Code copied",
+      "copyCode": "Copy code",
+      "members": "{count} members",
+      "regenerateCode": "Regenerate code",
+      "viewDetails": "View details"
+    },
+    "teamDetail": {
+      "confirmDelete": "Are you sure you want to delete this team?",
+      "deleteError": "Error deleting team",
+      "deleteSuccess": "Team deleted successfully",
+      "deleteTeam": "Delete team",
+      "inviteCode": "Invite code",
+      "members": "Members",
+      "settings": "Settings",
+      "title": "Team detail"
+    },
+    "title": "Teams"
+  },
+  "TenantForm": {
+    "cancelButton": "Cancel",
+    "createButton": "Create tenant",
+    "createDescription": "Register a new tenant on the platform",
+    "createSuccess": "Tenant created successfully",
+    "createTitle": "New tenant",
+    "editDescription": "Modify the tenant information",
+    "editTitle": "Edit tenant",
+    "productNameLabel": "Product name",
+    "productNamePlaceholder": "E.g.: Virtual Campus",
+    "saveButton": "Save changes",
+    "savingButton": "Saving...",
+    "statusLabel": "Status",
+    "tenantNameLabel": "Tenant name",
+    "tenantNamePlaceholder": "E.g.: Example University",
+    "updateSuccess": "Tenant updated successfully"
+  },
+  "TenantsPage": {
+    "addTenant": "Add tenant",
+    "columnActions": "Actions",
+    "columnId": "UUID",
+    "columnName": "Name",
+    "columnProduct": "Product",
+    "columnStatus": "Status",
+    "copiedId": "UUID copied to clipboard",
+    "copyId": "Copy UUID",
+    "description": "Manage the tenants registered on the platform",
+    "editAction": "Edit",
+    "emptyTable": "No tenants registered",
+    "statusActive": "Active",
+    "statusProvisioning": "Provisioning",
+    "statusSuspended": "Suspended",
+    "title": "Tenant management"
+  },
+  "Title": {
+    "AuditLogs": {
+      "changesCount": "{count} change(s)",
+      "columns": {
+        "action": "Action",
+        "actor": "Actor",
+        "category": "Category",
+        "date": "Date",
+        "details": "Details",
+        "entity": "Entity"
+      },
+      "description": "View and query system audit logs",
+      "emptyState": "No audit logs found",
+      "metadata": "+ metadata",
+      "pagination": {
+        "page": "Page {current} of {totalPages}",
+        "showing": "Showing {from} - {to} of {total} logs"
+      },
+      "systemActor": "System",
+      "title": "Audit logs"
+    },
+    "Companies": {
+      "deleteError": "Error deleting company",
+      "deleteSuccess": "Company deleted successfully",
+      "description": "Manage companies",
+      "title": "Companies"
+    },
+    "Dashboard": {
+      "description": "Home page",
+      "title": "Dashboard"
+    },
+    "Files": {
+      "description": "Manage files",
+      "title": "Files"
+    },
+    "Profile": {
+      "description": "Profile settings",
+      "loading": "Loading profile...",
+      "title": "Profile"
+    },
+    "Qualifier": {
+      "description": "Courses general qualifier",
+      "title": "Qualifier"
+    },
+    "Tickets": {
+      "description": "Manage tickets",
+      "title": "Tickets"
+    },
+    "Users": {
+      "description": "Platform user management",
+      "title": "User management"
+    }
+  },
+  "Titles": {
+    "forgotPassword": "Forgot Password",
+    "login": "Login",
+    "register": "Register",
+    "resetPassword": "Reset Password",
+    "twoFactor": "Two-Factor Authentication",
+    "verifyEmail": "Email Verification"
+  },
+  "Toast": {
+    "deleteError": "Error deleting user",
+    "deleteSuccess": "User deleted successfully"
+  },
+  "ToggleComponent": {
+    "ResetPassword": {
+      "title": "Reset Password"
+    },
+    "ResetPasswordFinalStep": {
+      "description": "The password was changed successfully.",
+      "title": "Password changed!"
+    },
+    "active": "Active",
+    "activeAction": "Activate",
+    "ariaDarkLabel": "Switch to light mode",
+    "ariaLightLabel": "Switch to dark mode",
+    "darkMode": "Dark mode",
+    "deactivate": "Inactive",
+    "deactivateAction": "Deactivate",
+    "lightMode": "Light mode"
+  },
+  "Trips": {
+    "backToTrips": "Back to trips",
+    "card": {
+      "budget": "{spent} / {total} €",
+      "members": "+{count}"
+    },
+    "create": "Create trip",
+    "createFirst": "Create your first trip",
+    "createForm": {
+      "budget": "Budget (€)",
+      "budgetPlaceholder": "E.g.: 1500",
+      "creating": "Creating...",
+      "description": "Description",
+      "descriptionPlaceholder": "Describe the trip...",
+      "endDate": "End date",
+      "locality": "Locality",
+      "localityPlaceholder": "Search locality...",
+      "name": "Trip name",
+      "namePlaceholder": "E.g.: Route through Galicia",
+      "invalidDate": "Invalid date format. Use the format shown.",
+      "startDate": "Start date",
+      "submit": "Create trip",
+      "title": "New trip"
+    },
+    "detail": "Trip detail",
+    "detailView": {
+      "budget": "Budget",
+      "dates": "Dates",
+      "description": "Description",
+      "duration": "Duration",
+      "locality": "Locality",
+      "memberSince": "Member since {date}",
+      "members": "Members",
+      "noDescription": "No description",
+      "notFound": "Trip not found",
+      "notFoundDescription": "The trip you are looking for does not exist or you do not have access to it.",
+      "rating": "Rating",
+      "viewExpenses": "View expenses",
+      "viewItinerary": "View itinerary",
+      "viewTickets": "View tickets"
+    },
+    "editForm": {
+      "save": "Save changes",
+      "saving": "Saving...",
+      "title": "Edit trip"
+    },
+    "expenses": {
+      "allExpenses": "All expenses",
+      "backToTrip": "Back to trip",
+      "balance": "Balances",
+      "addExpense": "Add expense",
+      "noExpenses": "No expenses recorded",
+      "paidBy": "Paid by",
+      "perPerson": "per person",
+      "settled": "Settled",
+      "sharedBy": "Shared by",
+      "simplifiedDebts": "Simplified debts",
+      "title": "Expenses",
+      "totalSpent": "Total spent",
+      "tripNotFound": "Trip not found",
+      "you": "you",
+      "youAreOwed": "You are owed",
+      "youOwe": "You owe"
+    },
+    "filters": {
+      "active": "Active",
+      "all": "All",
+      "cancelled": "Cancelled",
+      "finished": "Finished",
+      "planned": "Planned"
+    },
+    "invitations": {
+      "accept": "Accept",
+      "decline": "Decline",
+      "invitedBy": "Invited by {name}",
+      "noInvitations": "You have no pending invitations",
+      "title": "Pending invitations"
+    },
+    "itinerary": {
+      "allStops": "All",
+      "arriveAt": "Arrival",
+      "backToTrip": "Back to trip",
+      "day": "Day",
+      "addStop": "Add stop",
+      "noStops": "No stops in the itinerary",
+      "selectStop": "Select a stop",
+      "title": "Itinerary",
+      "travelMethodCar": "By car",
+      "travelMethodWalking": "On foot",
+      "travelTime": "Travel time",
+      "tripNotFound": "Trip not found",
+      "unscheduled": "Unscheduled"
+    },
+    "newTrip": "New trip",
+    "noTrips": "You don't have any trips yet",
+    "permissions": {
+      "canEditBudget": "Edit budget",
+      "canEditDetails": "Edit details",
+      "canEditTrip": "Edit trip",
+      "canInviteMembers": "Invite members",
+      "canManageTickets": "Manage tickets",
+      "canModifyMembers": "Manage members",
+      "confirmRemove": "This member will be removed from the trip.",
+      "creator": "Creator",
+      "removeMember": "Remove member"
+    },
+    "status": {
+      "ACTIVE": "Active",
+      "CANCELLED": "Cancelled",
+      "FINISHED": "Finished",
+      "PLANNED": "Planned"
+    },
+    "subtitle": "Manage and organize all your adventures",
+    "tickets": {
+      "backToTrip": "Back to trip",
+      "download": "Download",
+      "downloading": "Downloading...",
+      "linkedStop": "Stop",
+      "noDescription": "No description",
+      "noFile": "No file",
+      "addTicket": "Add ticket",
+      "noTickets": "No tickets",
+      "title": "Tickets",
+      "tripNotFound": "Trip not found"
+    },
+    "title": "My trips"
+  },
+  "TwoFA": {
+    "enterCode": "Enter the verification code you received by email",
+    "invalidCode": "Invalid verification code",
+    "title": "Two factor authentication",
+    "unexpectedError": "Unexpected error",
+    "verificationCode": "Verification code",
+    "verificationError": "Verification error",
+    "verificationSuccess": "Verification successful",
+    "verify": "Verify",
+    "verifying": "Verifying..."
+  },
+  "TwoFactor": {
+    "backToLogin": "Back to login",
+    "description": "Enter the verification code sent to your email.",
+    "differentAccount": "Want to use a different account?"
+  },
+  "UsersPage": {
+    "adminPasswordModalTitle": "Reset password for {userName}",
+    "approveUser": "Approve user",
+    "approveUserDescription": "Allow the user to log in to the platform",
+    "blockError": "Error changing user status",
+    "blockSuccess": "User blocked successfully",
+    "blockUser": "Block user",
+    "blockUserDescription": "Suspend the user's access to the platform",
+    "cancelButton": "Cancel",
+    "columnActions": "Actions",
+    "columnActionsEmpty": "",
+    "columnAvatar": "",
+    "columnEmail": "Email",
+    "columnName": "Name",
+    "columnRole": "Role",
+    "columnStatus": "Status",
+    "confirmApproveMessage": "Are you sure you want to approve {userName}? The user will be able to log in.",
+    "confirmApproveTitle": "Confirm approval",
+    "confirmBlockMessage": "Are you sure you want to block {userName}? The user will not be able to log in.",
+    "confirmBlockTitle": "Confirm block",
+    "confirmButton": "Confirm",
+    "confirmPasswordPlaceholder": "Confirm new password",
+    "confirmRejectMessage": "Are you sure you want to reject {userName}? The user will not be able to log in.",
+    "confirmRejectTitle": "Confirm rejection",
+    "confirmUnblockMessage": "Are you sure you want to unblock {userName}? The user will be able to log in again.",
+    "confirmUnblockTitle": "Confirm unblock",
+    "description": "Manage users registered on the platform",
+    "emptyTable": "No users available",
+    "filters": {
+      "allRoles": "All roles",
+      "allStatuses": "All statuses",
+      "apply": "Apply",
+      "clear": "Clear",
+      "email": "Email",
+      "lastName": "Last name",
+      "name": "Name",
+      "role": "Role",
+      "status": "Status",
+      "title": "Filters"
+    },
+    "loading": "Loading users...",
+    "modalTitle": "Reset password",
+    "newPasswordPlaceholder": "New password",
+    "pagination": {
+      "next": "Next",
+      "page": "Page {current} of {totalPages}",
+      "previous": "Previous",
+      "showing": "Showing {from} to {to} of {total}"
+    },
+    "passwordMismatch": "Passwords do not match",
+    "passwordResetError": "Error updating password",
+    "passwordResetSuccess": "Password updated successfully",
+    "passwordTooShort": "Password must be at least 8 characters",
+    "pendingVerificationRestriction": "Until the user verifies their account, no changes can be made to their status.",
+    "rejectUser": "Reject user",
+    "rejectUserDescription": "Deny the user's access to the platform",
+    "resetPassword": "Reset password",
+    "resetPasswordDescription": "Set a new password for the user",
+    "saveButton": "Save",
+    "savingButton": "Saving...",
+    "sectionAccess": "Access control",
+    "sectionAccount": "Account",
+    "sectionReview": "Review",
+    "status": {
+      "APPROVED": "Approved",
+      "BLOCKED": "Blocked",
+      "IMPORTED": "Imported",
+      "PENDING_REVIEW": "Pending review",
+      "PENDING_VERIFICATION": "Pending verification",
+      "REJECTED": "Rejected"
+    },
+    "statusApproved": "Approved",
+    "statusBlocked": "Blocked",
+    "statusImported": "Imported",
+    "statusPendingReview": "Pending review",
+    "statusPendingVerification": "Pending verification",
+    "statusRejected": "Rejected",
+    "title": "User management",
+    "unblockSuccess": "User unblocked successfully",
+    "unblockUser": "Unblock user",
+    "unblockUserDescription": "Restore the user's access to the platform",
+    "viewActivity": "View activity",
+    "viewActivityDescription": "Consult the user's action history"
+  },
+  "UsersVerification": {
+    "description": "Manage user verification",
+    "errorUnverifyingUser": "Error unverifying user",
+    "errorVerifyingUser": "Error verifying user",
+    "title": "User verification",
+    "unverifyUser": "Unverify user",
+    "userUnverified": "User unverified successfully",
+    "userVerified": "User verified successfully",
+    "verifyUser": "Verify user"
+  },
+  "Validation": {
+    "badCredentials": "Invalid credentials",
+    "invalidDurationFormat": "Invalid duration format: \"{value}\". Valid formats: 15m, 30d, 1h, 500ms, 60s, 1w",
+    "languageEmpty": "Select a language",
+    "mailInvalid": "Invalid email",
+    "nameFormat": "Username must start with an uppercase letter and can only contain letters and spaces",
+    "nameMaxLength": "Username cannot be more than 30 characters",
+    "nameMinLength": "Username must be at least 3 characters",
+    "passwordDigit": "Password must have at least one digit",
+    "passwordDigits": "Password must have at least one digit",
+    "passwordLowerCase": "Password must have at least one lowercase letter",
+    "passwordMaxLength": "Password must be 24 characters or less",
+    "passwordMinLength": "Password must be at least 8 characters",
+    "passwordNoSpaces": "Password cannot contain spaces",
+    "passwordRequired": "Password is required",
+    "passwordSpecialChar": "Password must have at least one special character",
+    "passwordUpperCase": "Password must have at least one uppercase letter",
+    "repeatPassword": "Repeat password",
+    "repeatPasswordMismatch": "Passwords must match",
+    "unsupportedTimeUnit": "Unsupported time unit: \"{unit}\""
+  }
+}

@@ -1,0 +1,48 @@
+# Directorios de herramientas y configuración del editor:
+.claude
+.codacy
+.git
+.github
+.idea
+.playwright-mcp
+.serena
+.vscode
+
+# Artefactos de compilación y caché (se generan dentro del contenedor):
+.next
+**/dist
+**/coverage
+**/node_modules
+
+# Ficheros Docker y compose (no necesarios dentro del contexto de build):
+compose*.yml
+docker-compose*.yml
+Dockerfile
+
+# Documentación y archivos de configuración no necesarios para el build:
+docs
+logs
+*.md
+LICENSE*
+.env*
+.gitignore
+.lefthook.yml
+.mcp.json
+.prettierignore
+.syncpackrc
+prettier.config.mjs
+Makefile
+pve-root-ca.pem
+
+# Proyectos independientes (no son parte del build principal):
+catfisher
+
+# Logs de depuración:
+npm-debug.log
+
+# Excepciones - ficheros que SÍ deben incluirse aunque coincidan con patrones:
+!package.json
+!package-lock.json
+!**/package.json
+!prettier.config.mjs
+!.prettierignore

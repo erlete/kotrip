@@ -1,0 +1,19 @@
+name: ${PROJECT_NAME:-kotrip}
+
+networks:
+  # region Per-category networks:
+
+  # Comunicación interna de servicios de datos (no publica puertos al host):
+  data:
+    driver: bridge
+    internal: true
+
+  # Comunicación de servicios backend, frontend:
+  backend:
+    driver: bridge
+
+  # region Per-data-direction networks:
+
+  # Acceso saliente a internet (actualizaciones de ClamAV, etc.):
+  egress:
+    driver: bridge

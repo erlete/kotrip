@@ -1,4 +1,4 @@
-import { Href, redirect } from '@/features/i18n';
+import { redirect } from '@/features/i18n';
 import { Role } from '@kotrip/data';
 import { forbidden, unauthorized } from 'next/navigation';
 import { PropsWithChildren } from 'react';
@@ -18,8 +18,8 @@ export type ServerAuthGuardProps = PropsWithChildren & {
    */
   roles?: Role[];
 
-  /** A dónde redirigir si ya está autenticado. Por defecto `/dashboard`. */
-  authenticatedRedirectTo?: Href;
+  /** A donde redirigir si ya esta autenticado. Por defecto `/home`. */
+  authenticatedRedirectTo?: string;
 };
 
 /**
@@ -74,10 +74,6 @@ export async function ServerAuthGuard({
   return children;
 }
 
-/**
- * Redirige usando la API tipada de next-intl en servidor.
- */
-async function doRedirect(to: Href) {
-  // La API tipada de next-intl en servidor espera un objeto con { href }.
-  return redirect({ href: to });
+async function doRedirect(to: string) {
+  return redirect(to);
 }

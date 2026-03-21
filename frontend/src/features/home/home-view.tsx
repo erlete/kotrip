@@ -239,7 +239,7 @@ function UpcomingTripCard({ trip }: { trip: TripListItem }) {
 
   return (
     <Link
-      href={{ pathname: '/trips/[id]', params: { id: trip.id } }}
+      href={`/trips/${trip.id}`}
       className="no-underline"
     >
       <div className="bg-[var(--bg)] border border-[var(--border)] rounded-[var(--rounded-lg)] overflow-hidden transition-all duration-200 hover:border-[rgba(42,168,148,0.25)] hover:-translate-y-0.5 cursor-pointer">

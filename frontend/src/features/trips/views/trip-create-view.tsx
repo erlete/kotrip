@@ -123,10 +123,7 @@ export default function TripCreateView() {
         return;
       }
 
-      router.push({
-        pathname: '/trips/[id]',
-        params: { id: result.trip.id },
-      });
+      router.push(`/trips/${result.trip.id}`);
     });
   }
 

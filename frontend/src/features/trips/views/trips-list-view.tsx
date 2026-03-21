@@ -248,7 +248,7 @@ function TripCard({
 
   return (
     <Link
-      href={{ pathname: '/trips/[id]', params: { id: trip.id } }}
+      href={`/trips/${trip.id}`}
       className="no-underline"
     >
       <div className="bg-[var(--bg)] border border-[var(--border)] rounded-[var(--rounded-lg)] overflow-hidden transition-all duration-[250ms] ease-[cubic-bezier(0.22,1,0.36,1)] hover:border-[rgba(42,168,148,0.25)] hover:-translate-y-[3px] cursor-pointer h-full">

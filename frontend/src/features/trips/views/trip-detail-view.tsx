@@ -252,7 +252,7 @@ export default function TripDetailView({
       {/* Acciones del viaje */}
       <div className="grid grid-cols-3 gap-3 max-sm:grid-cols-1">
         <Link
-          href={{ pathname: '/trips/[id]/itinerary', params: { id: trip.id } }}
+          href={`/trips/${trip.id}/itinerary`}
           className="flex items-center gap-3 p-4 bg-[var(--bg)] border border-[var(--border)] rounded-[var(--rounded-lg)] no-underline transition-all hover:border-[rgba(42,168,148,0.2)]"
         >
           <div className="w-9 h-9 rounded-[var(--rounded-sm)] bg-[rgba(42,168,148,0.12)] flex items-center justify-center shrink-0">
@@ -266,7 +266,7 @@ export default function TripDetailView({
           </span>
         </Link>
         <Link
-          href={{ pathname: '/trips/[id]/expenses', params: { id: trip.id } }}
+          href={`/trips/${trip.id}/expenses`}
           className="flex items-center gap-3 p-4 bg-[var(--bg)] border border-[var(--border)] rounded-[var(--rounded-lg)] no-underline transition-all hover:border-[rgba(42,168,148,0.2)]"
         >
           <div className="w-9 h-9 rounded-[var(--rounded-sm)] bg-[rgba(42,168,148,0.12)] flex items-center justify-center shrink-0">
@@ -280,7 +280,7 @@ export default function TripDetailView({
           </span>
         </Link>
         <Link
-          href={{ pathname: '/trips/[id]/tickets', params: { id: trip.id } }}
+          href={`/trips/${trip.id}/tickets`}
           className="flex items-center gap-3 p-4 bg-[var(--bg)] border border-[var(--border)] rounded-[var(--rounded-lg)] no-underline transition-all hover:border-[rgba(42,168,148,0.2)]"
         >
           <div className="w-9 h-9 rounded-[var(--rounded-sm)] bg-[rgba(42,168,148,0.12)] flex items-center justify-center shrink-0">

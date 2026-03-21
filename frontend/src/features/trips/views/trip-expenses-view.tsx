@@ -114,7 +114,7 @@ export default function TripExpensesView({
       <div className="flex items-center justify-between gap-3">
         <div className="flex items-center gap-3">
           <Link
-            href={{ pathname: '/trips/[id]', params: { id: trip.id } }}
+            href={`/trips/${trip.id}`}
             className="flex items-center gap-1.5 text-sm text-[var(--primary-500)] no-underline hover:underline"
           >
             <ArrowLeft size={16} />

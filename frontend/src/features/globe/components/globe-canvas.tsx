@@ -53,7 +53,7 @@ export function GlobeCanvas({
     () =>
       visitedPlaces.map((place) => ({
         location: [place.lat, place.lng] as [number, number],
-        size: 0.07,
+        size: 0.05,
       })),
     [visitedPlaces],
   );
@@ -109,10 +109,10 @@ export function GlobeCanvas({
       dark: 1,
       diffuse: 1.2,
       mapSamples: 16000,
-      mapBrightness: 2.5,
-      baseColor: [0.12, 0.14, 0.18],
-      markerColor,
-      glowColor: [0.08, 0.08, 0.12],
+      mapBrightness: 3,
+      baseColor: [0.3, 0.3, 0.3],
+      markerColor: [1.0, 0.6, 0.2],
+      glowColor: [0.7, 0.7, 0.7],
       markers,
       onRender: (state) => {
         if (pointerStart.current === null) {

@@ -158,8 +158,8 @@ export function HomeView({ trips, pendingInvitationCount }: HomeViewProps) {
           />
           <QuickAction
             icon={Headset}
-            title={t('quickActions.support')}
-            description={t('quickActions.supportDesc')}
+            title={t('quickActions.support' as any)}
+            description={t('quickActions.supportDesc' as any)}
             href="/support"
             color="amber"
           />

@@ -4,7 +4,7 @@ import type { ItineraryStop } from '@/features/trips/services/trips-api';
 import type { LatLngBoundsExpression } from 'leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import {
   MapContainer,
   Marker,
@@ -15,10 +15,6 @@ import {
 
 /**
  * Crea un icono numerado circular para los marcadores del mapa.
- *
- * @param index Número a mostrar en el marcador (posición en el itinerario).
- * @param selected Indica si el marcador está seleccionado.
- * @returns Instancia de DivIcon de Leaflet.
  */
 function createNumberedIcon(index: number, selected: boolean): L.DivIcon {
   const bg = selected
@@ -64,22 +60,66 @@ function FitBounds({ stops }: { stops: ItineraryStop[] }) {
 }
 
 /**
- * Props del componente de mapa del itinerario.
+ * Obtiene la ruta a pie real entre todas las paradas usando OSRM público.
+ *
+ * @param stops Lista de paradas con coordenadas.
+ * @returns Array de segmentos de ruta, donde cada segmento es un array de [lat, lng].
  */
+async function fetchWalkingRoutes(
+  stops: ItineraryStop[],
+): Promise<[number, number][][]> {
+  if (stops.length < 2) return [];
+
+  const segments: [number, number][][] = [];
+
+  // Peticiones por pares consecutivos para obtener cada tramo individual
+  for (let i = 0; i < stops.length - 1; i++) {
+    const from = stops[i];
+    const to = stops[i + 1];
+    const coords = `${from.longitude},${from.latitude};${to.longitude},${to.latitude}`;
+
+    try {
+      const res = await fetch(
+        `https://router.project-osrm.org/route/v1/foot/${coords}?overview=full&geometries=geojson`,
+      );
+      const data = await res.json();
+
+      if (data.code === 'Ok' && data.routes?.[0]?.geometry?.coordinates) {
+        // OSRM devuelve [lng, lat], Leaflet necesita [lat, lng]
+        const coords = data.routes[0].geometry.coordinates.map(
+          ([lng, lat]: [number, number]) => [lat, lng] as [number, number],
+        );
+        segments.push(coords);
+      } else {
+        // Fallback: línea recta si OSRM falla para este tramo
+        segments.push([
+          [from.latitude, from.longitude],
+          [to.latitude, to.longitude],
+        ]);
+      }
+    } catch {
+      // Fallback: línea recta si la petición falla
+      segments.push([
+        [from.latitude, from.longitude],
+        [to.latitude, to.longitude],
+      ]);
+    }
+  }
+
+  return segments;
+}
+
 interface ItineraryMapProps {
-  /** Lista de paradas a renderizar en el mapa. */
   stops: ItineraryStop[];
-  /** Índice de la parada actualmente seleccionada. */
   selectedIndex: number;
-  /** Callback al seleccionar una parada. */
   onSelectStop: (index: number) => void;
 }
 
 /**
- * Mapa interactivo del itinerario con marcadores numerados y polilíneas.
+ * Mapa interactivo del itinerario con marcadores numerados y rutas a pie reales.
  *
- * Utiliza OpenStreetMap como capa de teselas y Leaflet para la renderización.
- * Los marcadores se muestran con números circulares y se conectan con líneas rectas.
+ * Utiliza OpenStreetMap como capa de teselas, Leaflet para la renderización
+ * y la API pública de OSRM para calcular rutas peatonales reales entre paradas.
  */
 export function ItineraryMap({
   stops,
@@ -89,9 +129,25 @@ export function ItineraryMap({
   const defaultCenter: [number, number] =
     stops.length > 0 ? [stops[0].latitude, stops[0].longitude] : [40.4, -3.7];
 
-  const polylinePositions = stops.map(
-    (s) => [s.latitude, s.longitude] as [number, number],
-  );
+  const [routeSegments, setRouteSegments] = useState<[number, number][][]>([]);
+
+  // Calcular rutas reales cuando cambian las paradas
+  useEffect(() => {
+    if (stops.length < 2) {
+      setRouteSegments([]);
+      return;
+    }
+
+    let cancelled = false;
+
+    fetchWalkingRoutes(stops).then((segments) => {
+      if (!cancelled) setRouteSegments(segments);
+    });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [stops]);
 
   return (
     <MapContainer
@@ -106,17 +162,17 @@ export function ItineraryMap({
       />
       <FitBounds stops={stops} />
 
-      {/* Polilínea que conecta las paradas */}
-      {polylinePositions.length > 1 && (
+      {/* Rutas a pie reales entre paradas */}
+      {routeSegments.map((segment, idx) => (
         <Polyline
-          positions={polylinePositions}
+          key={`route-${idx}`}
+          positions={segment}
           pathOptions={{
-            color: 'rgba(42, 168, 148, 0.6)',
-            weight: 3,
-            dashArray: '8, 6',
+            color: 'rgba(42, 168, 148, 0.7)',
+            weight: 4,
           }}
         />
-      )}
+      ))}
 
       {/* Marcadores numerados */}
       {stops.map((stop, idx) => (

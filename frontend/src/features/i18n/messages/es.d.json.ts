@@ -904,7 +904,7 @@ declare const messages: {
       "pendingInvitations": "Invitaciones",
       "totalTrips": "Total de viajes"
     },
-    "welcomeSubtitle": "Bienvenida a tu espacio de viajes",
+    "welcomeSubtitle": "Tu espacio de viajes",
     "welcomeTitle": "¡Hola, {name}!"
   },
   "HoverCardComponent": {

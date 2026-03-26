@@ -887,7 +887,9 @@
       "manageExpenses": "Manage expenses",
       "manageExpensesDesc": "Review the current budget",
       "newTrip": "New trip",
-      "newTripDesc": "Create a trip from scratch"
+      "newTripDesc": "Create a trip from scratch",
+      "support": "Support",
+      "supportDesc": "Need help? Contact us"
     },
     "sections": {
       "noUpcomingTrips": "You have no upcoming trips",

@@ -33,13 +33,5 @@ async function Page() {
   ]);
 
   const trips = 'trips' in tripsResult ? tripsResult.trips : [];
-  const invitations =
-    'invitations' in invitationsResult ? invitationsResult.invitations : [];
-
-  return (
-    <TripsListView
-      trips={trips}
-      invitations={invitations}
-    />
-  );
+  return <TripsListView trips={trips} />;
 }

@@ -21,28 +21,29 @@ const Footer = () => {
   const { theme } = useTheme();
 
   return (
-    <footer className="row-start-3 border-t border-[var(--border)] text-[var(--text-muted)] mt-12 px-2 pt-4 pb-1 flex flex-col items-center justify-center gap-2">
-      <section className="px-4 flex flex-row items-center justify-center gap-4 overflow-hidden h-11 w-full [&_img]:w-fit [&_img]:h-full [&_img]:object-cover">
-        {appConfig.brand.footerImages.map((logo) => (
-          <Image
-            key={logo.alt}
-            src={logo.src[theme]}
-            alt={logo.alt}
-            width={logo.dimmensions.width || 100}
-            height={logo.dimmensions.height || 100}
-          />
-        ))}
-      </section>
-      <p className="inline-flex items-center text-xs [&_img]:mr-2">
+    <footer className="row-start-3 border-t border-[var(--border)] text-[var(--text-muted)] mt-12 px-2 py-5 flex flex-col items-center justify-center gap-3">
+      {appConfig.brand.footerImages.length > 0 && (
+        <section className="px-4 flex flex-row items-center justify-center gap-4 overflow-hidden h-11 w-full [&_img]:w-fit [&_img]:h-full [&_img]:object-cover">
+          {appConfig.brand.footerImages.map((logo) => (
+            <Image
+              key={logo.alt}
+              src={logo.src[theme]}
+              alt={logo.alt}
+              width={logo.dimmensions.width || 100}
+              height={logo.dimmensions.height || 100}
+            />
+          ))}
+        </section>
+      )}
+      <div className="flex items-center gap-2.5 text-sm font-medium">
         <Image
           src="/assets/svg/logo.svg"
-          alt={'footerIsotip'}
-          width={32}
-          height={32}
-        />{' '}
-        {year}
-        {' - Kotrip'}
-      </p>
+          alt="footerIsotip"
+          width={24}
+          height={24}
+        />
+        <span>Kotrip · {year}</span>
+      </div>
     </footer>
   );
 };

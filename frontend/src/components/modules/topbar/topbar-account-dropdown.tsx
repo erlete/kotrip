@@ -143,6 +143,7 @@ export function TopbarAccountDropdown() {
               <Dropdown.Item
                 id="profile-header"
                 textValue={displayName}
+                className="cursor-default hover:bg-transparent data-[hovered]:bg-transparent"
               >
                 <div className="flex flex-col items-start gap-0 py-0.5">
                   <Label className="text-sm font-semibold">{displayName}</Label>

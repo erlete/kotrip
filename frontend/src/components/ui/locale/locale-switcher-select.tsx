@@ -12,7 +12,7 @@ import { Locale, setUserLocale } from '@/features/i18n';
 import type { Key } from '@heroui/react';
 import { ListBox, Select } from '@heroui/react';
 import clsx from 'clsx';
-import { LanguagesIcon } from 'lucide-react';
+import { ChevronDown } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { useTransition } from 'react';
 
@@ -56,25 +56,22 @@ export default function LocaleSwitcherSelect({
   return (
     <Select
       aria-label={label}
-      className={clsx(
-        'w-[180px]',
-        isPending && 'pointer-events-none opacity-60',
-      )}
+      className={clsx('w-auto', isPending && 'pointer-events-none opacity-60')}
       defaultSelectedKey={defaultValue}
       name="language"
       placeholder={placeholders('placeholderLanguage')}
       onSelectionChange={handleChange}
     >
-      <Select.Trigger className="flex items-center gap-2 rounded-[var(--rounded-sm)] border border-[var(--border)] bg-transparent px-3 py-2 text-sm text-[var(--text)] transition-colors hover:border-[var(--primary-500)]/40">
-        <LanguagesIcon
-          aria-hidden
-          className="shrink-0 text-[var(--text-muted)]"
-          size={16}
+      <Select.Trigger className="flex items-center gap-1 rounded-[var(--rounded-sm)] border border-[var(--border)] bg-transparent px-2 py-1.5 text-xs font-medium text-[var(--text-muted)] transition-colors hover:border-[var(--primary-500)]/40 hover:text-[var(--text)]">
+        <span className="uppercase tracking-wide">
+          {defaultValue.toUpperCase()}
+        </span>
+        <ChevronDown
+          size={12}
+          className="opacity-50"
         />
-        <Select.Value className="flex-1 truncate" />
-        <Select.Indicator />
       </Select.Trigger>
-      <Select.Popover className="rounded-[var(--rounded-sm)] border border-[var(--border)] bg-[var(--bg)] shadow-lg">
+      <Select.Popover className="rounded-[var(--rounded-sm)] border border-[var(--border)] bg-[var(--bg)] shadow-lg min-w-[120px]">
         <ListBox className="p-1">
           {items.map((item) => (
             <ListBox.Item

@@ -3,7 +3,7 @@
 
 import type { RouteRegistryEntry } from '@/features/routing';
 import { Role } from '@kotrip/data';
-import { Globe2, Headset, House, Mail, Plane } from 'lucide-react';
+import { Globe2, House, Mail, Plane } from 'lucide-react';
 
 export const ROUTE_REGISTRY: RouteRegistryEntry[] = [
   { path: '/globe', sidebar: { labelKey: '/globe', icon: Globe2, order: 20 } },
@@ -12,10 +12,6 @@ export const ROUTE_REGISTRY: RouteRegistryEntry[] = [
     path: '/invitations',
     access: { roles: [Role.USER, Role.ADMIN] },
     sidebar: { labelKey: '/invitations', icon: Mail, order: 15 },
-  },
-  {
-    path: '/support',
-    sidebar: { labelKey: '/support', icon: Headset, order: 90 },
   },
   {
     path: '/trips',

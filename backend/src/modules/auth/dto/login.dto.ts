@@ -15,8 +15,6 @@ import { I18nTranslations } from 'src/i18n/generated/i18n.generated';
  * DTO para los datos de entrada de inicio de sesion.
  *
  * Contiene el email y la contrasena necesarios para autenticarse en la plataforma.
-
-
  */
 export class LoginDto {
   /**

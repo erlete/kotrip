@@ -181,7 +181,6 @@ Idiomas soportados:
 
 - Español (es, por defecto)
 - Inglés (en)
-- Gallego (gl)
 
 La configuración de idioma se almacena en una cookie, no en la URL. Este enfoque evita problemas con el historial del navegador: al cambiar de idioma con sub-path routing, se añade una entrada al historial, de forma que al pulsar "atrás" el usuario vuelve al idioma anterior en lugar de a la página anterior. Con cookies esto no ocurre.
 

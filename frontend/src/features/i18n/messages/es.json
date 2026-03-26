@@ -887,7 +887,9 @@
       "manageExpenses": "Gestionar gastos",
       "manageExpensesDesc": "Revisa el presupuesto actual",
       "newTrip": "Nuevo viaje",
-      "newTripDesc": "Crea un viaje desde cero"
+      "newTripDesc": "Crea un viaje desde cero",
+      "support": "Soporte",
+      "supportDesc": "¿Necesitas ayuda? Contáctanos"
     },
     "sections": {
       "noUpcomingTrips": "No tienes viajes próximos",
@@ -901,7 +903,7 @@
       "pendingInvitations": "Invitaciones",
       "totalTrips": "Total de viajes"
     },
-    "welcomeSubtitle": "Bienvenida a tu espacio de viajes",
+    "welcomeSubtitle": "Tu espacio de viajes",
     "welcomeTitle": "¡Hola, {name}!"
   },
   "HoverCardComponent": {

@@ -7,6 +7,7 @@ import { Button } from '@heroui/react';
 import {
   Calendar,
   Compass,
+  Headset,
   MapPin,
   Plane,
   PlusCircle,
@@ -87,11 +88,13 @@ export function HomeView({ trips, pendingInvitationCount }: HomeViewProps) {
             icon={MapPin}
           />
         </Link>
-        <StatCard
-          label={t('stats.totalTrips')}
-          value={String(trips.length)}
-          icon={Calendar}
-        />
+        <Link href="/trips">
+          <StatCard
+            label={t('stats.totalTrips')}
+            value={String(trips.length)}
+            icon={Calendar}
+          />
+        </Link>
         <Link href="/invitations">
           <StatCard
             label={t('stats.pendingInvitations')}
@@ -114,7 +117,7 @@ export function HomeView({ trips, pendingInvitationCount }: HomeViewProps) {
               className="text-[var(--primary-500)]"
             >
               {t('sections.viewAll')}
-              {' ->'}
+              {' →'}
             </Button>
           </Link>
         </div>
@@ -154,10 +157,10 @@ export function HomeView({ trips, pendingInvitationCount }: HomeViewProps) {
             color="teal"
           />
           <QuickAction
-            icon={UserPlus}
-            title={t('quickActions.inviteFriends')}
-            description={t('quickActions.inviteFriendsDesc')}
-            href="/trips"
+            icon={Headset}
+            title={t('quickActions.support')}
+            description={t('quickActions.supportDesc')}
+            href="/support"
             color="amber"
           />
           <QuickAction

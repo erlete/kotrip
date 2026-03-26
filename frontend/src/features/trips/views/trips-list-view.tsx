@@ -22,13 +22,7 @@ type FilterKey = 'all' | Lowercase<TripStatus>;
  * Muestra los viajes del usuario en un grid de tarjetas con filtros por estado,
  * toggle de vista (grid/lista) y sección de invitaciones pendientes.
  */
-export default function TripsListView({
-  trips,
-  invitations,
-}: {
-  trips: TripListItem[];
-  invitations: Invitation[];
-}) {
+export default function TripsListView({ trips }: { trips: TripListItem[] }) {
   const t = useTranslations('Trips');
   const [activeFilter, setActiveFilter] = useState<FilterKey>('all');
 
@@ -66,8 +60,6 @@ export default function TripsListView({
     activeFilter === 'all'
       ? trips
       : trips.filter((trip) => trip.status.toLowerCase() === activeFilter);
-
-  const pendingInvitations = invitations.filter((i) => i.status === 'PENDING');
 
   return (
     <div className="flex flex-col gap-[var(--spacing-lg)] py-10 px-8 w-full mx-auto max-w-[72rem]">
@@ -157,34 +149,6 @@ export default function TripsListView({
           )}
         </div>
       )}
-
-      {/* Sección de invitaciones */}
-      <section>
-        <div className="flex items-center gap-2 mb-3">
-          <h2 className="text-base font-semibold text-[var(--text)] tracking-tight">
-            {t('invitations.title')}
-          </h2>
-          {pendingInvitations.length > 0 && (
-            <span className="bg-[rgba(42,168,148,0.15)] text-[var(--primary-400)] text-[0.625rem] font-bold px-[0.4375rem] py-0.5 rounded-full">
-              {pendingInvitations.length}
-            </span>
-          )}
-        </div>
-        {pendingInvitations.length > 0 ? (
-          <div className="flex flex-col gap-2">
-            {pendingInvitations.map((inv) => (
-              <InvitationCard
-                key={inv.id}
-                invitation={inv}
-              />
-            ))}
-          </div>
-        ) : (
-          <p className="text-sm text-[var(--text-muted)] py-3">
-            {t('invitations.noInvitations')}
-          </p>
-        )}
-      </section>
     </div>
   );
 }

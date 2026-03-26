@@ -12,11 +12,6 @@ export async function generateMetadata() {
 }
 
 export default composePage({
-  sidebar: {
-    labelKey: '/support',
-    icon: Headset,
-    order: 90,
-  },
   component: Page,
 });
 
